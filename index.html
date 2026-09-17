@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>월량번역행정사 | 중국어 번역공증·아포스티유</title>
+  <meta name="description" content="중국어번역행정사 방혜림. 중국어 번역, 번역확인증명서, 국내 번역공증·아포스티유, 중국 현지 공증·아포스티유 업무를 진행합니다.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* 상단 */
+    header {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #735b9e;
+    }
+
+    .language {
+      padding-left: 20px;
+      border-left: 1px solid #ddd;
+      font-size: 13px;
+    }
+
+    /* 메인 */
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(110deg, #faf9fc 0%, #fff 62%, #f4f1f8 100%);
+    }
+
+    .hero-content {
+      max-width: 790px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: #735b9e;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.2;
+      letter-spacing: -2.5px;
+      margin-bottom: 27px;
+    }
+
+    .hero-text {
+      font-size: 19px;
+      color: #555;
+      line-height: 1.9;
+      letter-spacing: -0.3px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background: #2f2738;
+      color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid #aaa;
+      background: white;
+    }
+
+    /* 공통 섹션 */
+    section {
+      padding: 105px 0;
+    }
+
+    .section-label {
+      color: #735b9e;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    h2 {
+      font-size: 35px;
+      letter-spacing: -1.5px;
+      line-height: 1.35;
+      margin-bottom: 17px;
+    }
+
+    .section-desc {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 46px;
+    }
+
+    /* 서비스 */
+    .services {
+      background: #fff;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #222;
+    }
+
+    .service-card {
+      padding: 36px 28px 38px;
+      border-right: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      min-height: 235px;
+      transition: .2s ease;
+    }
+
+    .service-card:first-child {
+      border-left: 1px solid #e5e5e5;
+    }
+
+    .service-card:hover {
+      background: #faf8fc;
+      transform: translateY(-3px);
+    }
+
+    .service-number {
+      font-size: 12px;
+      color: #8a789f;
+      font-weight: 700;
+      margin-bottom: 36px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 11px;
+      letter-spacing: -0.7px;
+    }
+
+    .service-card p {
+      color: #777;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* 소개 */
+    .about {
+      background: #f7f6f8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .about-name {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .about-cn {
+      color: #777;
+      font-size: 16px;
+    }
+
+    .career-list {
+      list-style: none;
+      border-top: 1px solid #bbb;
+    }
+
+    .career-list li {
+      padding: 17px 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      gap: 25px;
+      font-size: 15px;
+    }
+
+    .career-list strong {
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    /* 업무 방식 */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-top: 45px;
+    }
+
+    .process-item {
+      border-top: 2px solid #322b3a;
+      padding: 22px 8px 0;
+    }
+
+    .process-item span {
+      display: block;
+      color: #8a789f;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .process-item strong {
+      font-size: 16px;
+    }
+
+    /* 상담 */
+    .contact {
+      background: #2f2935;
+      color: white;
+    }
+
+    .contact .section-label {
+      color: #c8b9dc;
+    }
+
+    .contact h2 {
+      max-width: 680px;
+    }
+
+    .contact p {
+      color: #d6d1d9;
+      margin: 18px 0 32px;
+    }
+
+    .contact .btn-primary {
+      background: white;
+      color: #2f2935;
+    }
+
+    /* 하단 */
+    footer {
+      background: #201d23;
+      color: #aaa;
+      padding: 42px 0;
+      font-size: 13px;
+    }
+
+    .footer-name {
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* 모바일 */
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container,
+      .header-inner {
+        width: min(100% - 32px, 1180px);
+      }
+
+      header {
+        height: 68px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 34px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .career-list li {
+        display: block;
+      }
+
+      .career-list strong {
+        display: block;
+        width: auto;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">월량번역행정사</a>
+
+    <nav>
+      <a href="#services">번역 서비스</a>
+      <a href="#services">번역공증·아포스티유</a>
+      <a href="#services">중국 아포스티유</a>
+      <a href="#cases">업무사례</a>
+      <a href="#about">사무소 소개</a>
+      <a href="#contact">상담문의</a>
+      <span class="language">KR &nbsp;|&nbsp; 中文</span>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">CHINESE TRANSLATION · NOTARIZATION · APOSTILLE</div>
+
+        <h1>중국어번역행정사<br>방혜림입니다.</h1>
+
+        <p class="hero-text">
+          前 인천광역시 지방행정직 공무원 10년 8개월의 행정 실무 경험과<br>
+          중국어 번역 전문성을 바탕으로 직접 업무를 진행합니다.<br><br>
+          번역확인증명서 발급부터 국내 번역공증·아포스티유,<br>
+          중국 현지 공증·아포스티유까지 안내해 드립니다.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">업무 안내</a>
+          <a href="#contact" class="btn btn-outline">상담 문의</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-label">SERVICES</div>
+      <h2>중국어 서류 업무를<br>한 곳에서 진행합니다.</h2>
+      <p class="section-desc">
+        서류의 목적과 제출기관에 따라 필요한 번역 및 인증 절차를 확인하여 안내합니다.
+      </p>
+
+      <div class="service-grid">
+
+        <a href="#" class="service-card">
+          <div class="service-number">01</div>
+          <h3>중국어 번역</h3>
+          <p>학력·가족관계·법인·계약·시험성적서 등 각종 중국어 서류 번역</p>
+        </a>
+
+        <a href="#" class="service-card">
+          <div class="service-number">02</div>
+          <h3>번역확인증명서</h3>
+          <p>외국어번역행정사가 직접 번역하고 번역확인증명서를 발급합니다.</p>
+        </a>
+
+        <a href="#" class="service-card">
+          <div class="service-number">03</div>
+          <h3>번역공증 · 아포스티유</h3>
+          <p>국내에서 발급된 서류의 중국어 번역부터 공증 촉탁 및 아포스티유까지</p>
+        </a>
+
+        <a href="#" class="service-card">
+          <div class="service-number">04</div>
+          <h3>중국 현지 공증 · 아포스티유</h3>
+          <p>중국에서 발급된 서류의 현지 공증 및 아포스티유 절차를 안내합니다.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div>
+          <div class="section-label">ABOUT</div>
+          <div class="about-name">방혜림 행정사</div>
+          <div class="about-cn">中国语翻译行政士</div>
+        </div>
+
+        <div>
+          <h2>행정 실무 경험과<br>중국어 전문성을 함께 갖추었습니다.</h2>
+
+          <ul class="career-list">
+            <li>
+              <strong>국가자격</strong>
+              <span>국가공인 외국어번역행정사(중국어)</span>
+            </li>
+            <li>
+              <strong>공직경력</strong>
+              <span>前 인천광역시 지방행정직 공무원 · 10년 8개월 근무</span>
+            </li>
+            <li>
+              <strong>2012</strong>
+              <span>인천광역시 공무원 외국어경진대회 중국어 부문 우수상</span>
+            </li>
+            <li>
+              <strong>2014</strong>
+              <span>제12회 한중지방정부교류회의 참석 · 중국 시안</span>
+            </li>
+            <li>
+              <strong>2016</strong>
+              <span>전국 공무원 외국어 스피치대회 중국어 부문 우수상</span>
+            </li>
+            <li>
+              <strong>현재</strong>
+              <span>월량번역행정사사무소 대표 행정사</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="container">
+      <div class="section-label">PROCESS</div>
+      <h2>서류 확인부터 완료까지<br>직접 진행합니다.</h2>
+
+      <div class="process-grid">
+        <div class="process-item">
+          <span>01</span>
+          <strong>서류 및 제출처 확인</strong>
+        </div>
+        <div class="process-item">
+          <span>02</span>
+          <strong>번역</strong>
+        </div>
+        <div class="process-item">
+          <span>03</span>
+          <strong>번역문 검수</strong>
+        </div>
+        <div class="process-item">
+          <span>04</span>
+          <strong>공증·인증 절차</strong>
+        </div>
+        <div class="process-item">
+          <span>05</span>
+          <strong>완성 서류 전달</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">CONTACT</div>
+      <h2>중국어 서류,<br>제출 목적에 맞게 안내해 드립니다.</h2>
+      <p>
+        서류를 촬영하거나 스캔하여 보내주시면 확인 후 진행 방법을 안내해 드립니다.
+      </p>
+
+      <a href="#" class="btn btn-primary">상담 문의하기</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-name">월량번역행정사사무소</div>
+    <p>중국어번역행정사 방혜림</p>
+    <p>© 월량번역행정사사무소. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
