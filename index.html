@@ -451,7 +451,71 @@
   color: #d6d1d9 !important;
   line-height: 1.8 !important;
 }
+.location-map {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 28px 0 20px;
+  padding: 28px 30px;
+  background: #f7f5f2;
+  border-radius: 10px;
+  color: #222;
+}
 
+.map-start,
+.map-end {
+  background: #fff;
+  border: 1px solid #ddd6ce;
+  border-radius: 8px;
+  padding: 15px 18px;
+  text-align: center;
+}
+
+.map-start {
+  min-width: 150px;
+}
+
+.map-end {
+  min-width: 230px;
+}
+
+.map-end strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.map-end span {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.map-route {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-route > span:first-child {
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e63943;
+}
+
+.route-line {
+  flex: 1;
+  height: 2px;
+  background: #e63943;
+}
+
+.route-arrow {
+  color: #e63943;
+  font-size: 22px;
+  font-weight: 700;
+}
 .location-info {
   padding: 22px 24px;
   background: rgba(255,255,255,.06);
@@ -844,7 +908,22 @@
     월량번역행정사사무소는 평촌역 1번 출구와 연결된
     동아프라자아케이드상가에 위치하고 있습니다.
   </p>
+<div class="location-map">
+  <div class="map-start">
+    <strong>평촌역 1번 출구</strong>
+  </div>
 
+  <div class="map-route">
+    <span>지하 연결</span>
+    <div class="route-line"></div>
+    <span class="route-arrow">→</span>
+  </div>
+
+  <div class="map-end">
+    <strong>월량번역행정사사무소</strong>
+    <span>동아프라자아케이드상가 B113호</span>
+  </div>
+</div>
   <div class="location-info">
     <strong>월량번역행정사사무소</strong>
     <p>
