@@ -426,28 +426,74 @@
 }
 .office-location {
   max-width: 720px;
-  margin-top: 38px;
-  padding-top: 26px;
+  margin-top: 46px;
+  padding-top: 34px;
   border-top: 1px solid #555;
 }
 
-.office-location strong {
+.location-label {
+  color: #e63943;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  margin-bottom: 10px;
+}
+
+.office-location h3 {
+  margin: 0 0 14px;
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.location-intro {
+  margin: 0 0 26px !important;
+  color: #d6d1d9 !important;
+  line-height: 1.8 !important;
+}
+
+.location-info {
+  padding: 22px 24px;
+  background: rgba(255,255,255,.06);
+  border-radius: 10px;
+}
+
+.location-info strong {
   display: block;
+  color: #fff;
   font-size: 16px;
   margin-bottom: 8px;
 }
 
-.office-location p {
-  margin: 0 0 8px;
+.location-info p {
+  margin: 0 0 10px;
   font-size: 14px;
   line-height: 1.7;
   color: #d6d1d9;
 }
 
-.office-location a {
-  color: white;
+.location-info span {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.location-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.location-buttons a {
+  display: inline-block;
+  padding: 11px 17px;
+  border: 1px solid #777;
+  border-radius: 6px;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
+  text-decoration: none;
 }
     /* 하단 */
     footer {
@@ -790,15 +836,29 @@
     <span>WeChat · hyelim314</span>
   </div>
 </div>
-    <div class="office-location">
-  <strong>월량번역행정사사무소</strong>
- <p>
-  경기 안양시 동안구 부림로 121 지하층 B113호 (관양동, 동아프라자아케이드상가)<br>
-  <strong class="location-note">평촌역 1번 출구 연결 상가</strong>
-</p>
-  <a href="https://naver.me/FLy2S2LA" target="_blank">네이버지도에서 위치 확인 →</a>
+   <div class="office-location">
+  <div class="location-label">LOCATION</div>
+  <h3>오시는 길</h3>
+
+  <p class="location-intro">
+    월량번역행정사사무소는 평촌역 1번 출구와 연결된
+    동아프라자아케이드상가에 위치하고 있습니다.
+  </p>
+
+  <div class="location-info">
+    <strong>월량번역행정사사무소</strong>
+    <p>
+      경기 안양시 동안구 부림로 121 지하층 B113호<br>
+      (관양동, 동아프라자아케이드상가)
+    </p>
+    <span>평촌역 1번 출구 연결 상가</span>
+  </div>
+
+  <div class="location-buttons">
+    <a href="https://naver.me/FLy2S2LA" target="_blank">네이버지도에서 보기 →</a>
+    <a href="tel:01086395165">전화하기 →</a>
+  </div>
 </div>
-    </div>
   </section>
 
 </main>
