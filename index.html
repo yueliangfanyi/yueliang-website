@@ -396,6 +396,24 @@
   background: white;
   color: #2b2b2b;
 }
+    .contact-buttons .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.contact-buttons .btn strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-buttons .btn small {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.65;
+}
   .contact-qr {
   margin-top: 24px;
   display: flex;
@@ -883,12 +901,31 @@
         서류를 촬영하거나 스캔하여 보내주시면 확인 후 진행 방법을 안내해 드립니다.
       </p>
 
-  <div class="contact-buttons">
- <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary" target="_blank">카카오톡 채널</a>
-<span class="btn btn-secondary">WeChat · hyelim314</span>
-<span class="btn btn-secondary">카카오톡 ID · hyelim314</span>
-<a href="tel:01086395165" class="btn btn-secondary">전화 상담 · 010-8639-5165</a>
-<a href="mailto:hyelim314@naver.com" class="btn btn-secondary">이메일 · hyelim314@naver.com</a>
+ <div class="contact-buttons">
+  <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary" target="_blank">
+    <strong>카카오톡 채널</strong>
+    <small>1:1 채팅으로 빠르게 상담</small>
+  </a>
+
+  <span class="btn btn-secondary">
+    <strong>WeChat · hyelim314</strong>
+    <small>중국어 상담 가능</small>
+  </span>
+
+  <span class="btn btn-secondary">
+    <strong>카카오톡 ID · hyelim314</strong>
+    <small>친구 추가 후 문의</small>
+  </span>
+
+  <a href="tel:01086395165" class="btn btn-secondary">
+    <strong>전화 상담 · 010-8639-5165</strong>
+    <small>업무 중 부재 시 문자 남겨주세요.</small>
+  </a>
+
+  <a href="mailto:hyelim314@naver.com" class="btn btn-secondary">
+    <strong>이메일 · hyelim314@naver.com</strong>
+    <small>서류 첨부 후 보내주세요.</small>
+  </a>
 </div>
       <div class="contact-qr">
   <div class="qr-item">
