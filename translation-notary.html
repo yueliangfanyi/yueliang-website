@@ -154,6 +154,58 @@
   color: #666;
   word-break: keep-all;
 }
+    .hero-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 42px;
+}
+
+.hero-bottom-grid .yueliang-point {
+  max-width: none;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+.document-example-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 26px 28px;
+  background: #fff;
+  border: 1px solid #e5e1dd;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #222;
+}
+
+.document-example-card > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #e63943;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.document-example-card > strong {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #222;
+}
+
+.document-example-card > b {
+  color: #e63943;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.document-example-card:hover {
+  border-color: #e63943;
+}
     .china-process {
   padding: 70px 0;
   background: #f7f5f2;
@@ -509,14 +561,25 @@
   <br><br>
  한국에서 발급된 서류의 중국어 번역부터 번역공증 촉탁, 아포스티유까지 진행합니다.
 </p>
-     <div class="yueliang-point">
-  <div class="point-label">月亮 POINT</div>
-  <strong>영사확인 시절부터 이어온 중국 서류 업무 경험</strong>
-  <p>
-    아포스티유 협약 발효 전 영사확인 절차부터 관련 업무를 진행해 왔습니다.
-    당시 서류의 내용과 형식, 번역문 등을 확인하며 업무를 진행한 경험을 바탕으로,
-    중국 제출 서류에서 확인이 필요한 부분과 보완이 발생할 수 있는 사항을 꼼꼼히 살펴 안내합니다.
-  </p>
+  <div class="hero-bottom-grid">
+
+  <div class="yueliang-point">
+    <div class="point-label">月亮 POINT</div>
+    <strong>영사확인 시절부터 이어온 중국 서류 업무 경험</strong>
+    <p>
+      아포스티유 협약 발효 전 영사확인 절차부터 관련 업무를 진행해 왔습니다.
+      당시 서류의 내용과 형식, 번역문 등을 확인하며 업무를 진행한 경험을 바탕으로,
+      중국 제출 서류에서 확인이 필요한 부분과 보완이 발생할 수 있는 사항을 꼼꼼히 살펴 안내합니다.
+    </p>
+  </div>
+
+  <a class="document-example-card" href="translation-apostille-example.html">
+    <span>DOCUMENT EXAMPLE</span>
+    <strong>중국어 번역공증·아포스티유<br>서류 예시</strong>
+    <b>실제 서류 예시 보기 →</b>
+  </a>
+
+</div>
 </div>
 </p>
     </div>
