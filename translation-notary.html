@@ -338,15 +338,28 @@
 
 .case-arrow {
   position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  color: #e63943;
-  font-size: 22px;
+  top: 20px;
+  right: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  background: #fdebec;
+  color: #c96b6f;
+
+  font-size: 21px;
   line-height: 1;
   font-weight: 400;
 }
-
+.case-link:hover .case-arrow {
+  background: #f9dfe1;
+  color: #e63943;
+}
 .check-before h2 {
   font-size: 36px;
   letter-spacing: -1.5px;
