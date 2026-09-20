@@ -199,18 +199,22 @@
       overflow: hidden;
     }
 
-    .example-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 330px;
-      padding: 30px;
-      background: #f1efec;
-      color: #aaa;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.7;
-    }
+   .example-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 520px;
+  padding: 24px;
+  background: #f1efec;
+  overflow: hidden;
+}
+
+.example-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
     .example-content {
       padding: 25px 26px 28px;
