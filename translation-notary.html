@@ -246,54 +246,80 @@
   color: #666;
   word-break: keep-all;
 }
-    .document-title {
+   .document-item {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid #e5e1dd;
+  background: #fff;
+}
+
+.document-title {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-  padding-bottom: 16px;
+  gap: 16px;
+  min-height: 52px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #eee9e5;
 }
 
 .document-title strong {
-  font-size: 21px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
   font-weight: 700;
-  color: #2b2b2b;
+  color: #222;
 }
 
 .document-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: #fff1f1;
+  background: #fff0f0;
 }
 
 .document-icon svg {
-  width: 22px;
-  height: 22px;
+  display: block;
+  width: 25px;
+  height: 25px;
   fill: none;
   stroke: #e63943;
-  stroke-width: 1.7;
+  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-  .case-link {
-  margin-top: 22px;
-  padding: 16px 18px;
-  border-top: none;
+
+.document-list {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  word-break: keep-all;
+}
+
+.case-link {
+  position: relative;
+  margin-top: auto;
+  min-height: 126px;
+  padding: 18px 58px 18px 20px;
   border-radius: 8px;
   background: #fff7f6;
+  box-sizing: border-box;
 }
 
 .case-link span {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   color: #e63943;
   font-size: 13px;
+  line-height: 1.4;
   font-weight: 700;
 }
 
@@ -309,9 +335,16 @@
 .case-link a:hover {
   color: #e63943;
 }
-    .check-before {
-  padding: 90px 0;
-  background: #f7f5f2;
+
+.case-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #e63943;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .check-before h2 {
@@ -553,118 +586,156 @@
       중국어 번역·번역공증·아포스티유 업무를 진행합니다.
     </p>
 
-  <div class="document-grid">
+ <div class="document-grid">
 
   <div class="document-item">
     <div class="document-title">
       <span class="document-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="4" y="7" width="16" height="12" rx="2"></rect>
-          <path d="M9 7V5h6v2M4 12h16M10 12v2h4v-2"></path>
+          <rect x="3.5" y="7" width="17" height="12" rx="2"></rect>
+          <path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"></path>
+          <path d="M3.5 11.5h17"></path>
+          <path d="M10 11.5v2h4v-2"></path>
         </svg>
       </span>
       <strong>중국 취업·체류</strong>
     </div>
-    <p>범죄수사경력회보서 · 졸업증명서 · 학위증명서 · 외국인신체검사서 · 경력증명서 · 국민연금가입자가입증명 · 재직증명서 · 의사면허증 · 각종 자격증 등</p>
+
+    <p class="document-list">범죄수사경력회보서 · 졸업증명서 · 학위증명서 · 외국인신체검사서 · 경력증명서 · 국민연금가입자가입증명 · 재직증명서 · 의사면허증 · 각종 자격증 등</p>
+
     <div class="case-link">
       <span>주요 사례</span>
       <a href="https://blog.naver.com/hyelim314/224391364582" target="_blank">
-        중국 취업비자 신청에 필요한 범죄수사경력회보서 중국어 번역공증·아포스티유 →
+        중국 취업비자 신청에 필요한 범죄수사경력회보서 중국어 번역공증·아포스티유
       </a>
+      <b class="case-arrow">→</b>
     </div>
   </div>
+
 
   <div class="document-item">
     <div class="document-title">
       <span class="document-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 9l9-5 9 5-9 5-9-5z"></path>
-          <path d="M7 11.5V16c3 2 7 2 10 0v-4.5M20 10v6"></path>
+          <path d="M7 11.5V16c3 2 7 2 10 0v-4.5"></path>
+          <path d="M20 10v6"></path>
         </svg>
       </span>
       <strong>학력·자격</strong>
     </div>
-    <p>졸업증명서 · 학위증명서 · 성적증명서 · 재학증명서 · 수료증 · 한국어교원자격증 · 테니스코치자격증 · 축구코치자격증 · 각종 자격증 등</p>
+
+    <p class="document-list">졸업증명서 · 학위증명서 · 성적증명서 · 재학증명서 · 수료증 · 한국어교원자격증 · 테니스코치자격증 · 축구코치자격증 · 각종 자격증 등</p>
+
     <div class="case-link">
       <span>주요 사례</span>
       <a href="https://blog.naver.com/hyelim314/224242940823" target="_blank">
-        중국 취업비자 신청에 필요한 졸업증명서 중국어 번역공증·아포스티유 →
+        중국 취업비자 신청에 필요한 졸업증명서 중국어 번역공증·아포스티유
       </a>
+      <b class="case-arrow">→</b>
     </div>
   </div>
+
 
   <div class="document-item">
     <div class="document-title">
       <span class="document-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 20S4 15 4 9.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 8 3.5C20 15 12 20 12 20z"></path>
+          <circle cx="8" cy="8" r="3"></circle>
+          <circle cx="16" cy="8" r="3"></circle>
+          <path d="M3.5 19v-2a4.5 4.5 0 0 1 4.5-4.5"></path>
+          <path d="M20.5 19v-2a4.5 4.5 0 0 0-4.5-4.5"></path>
+          <circle cx="12" cy="11" r="2.5"></circle>
+          <path d="M8 20v-2a4 4 0 0 1 8 0v2"></path>
         </svg>
       </span>
       <strong>혼인·가족관계</strong>
     </div>
-    <p>혼인관계증명서 · 가족관계증명서 · 기본증명서 · 주민등록등본 · 주민등록초본 · 친자확인 유전자검사결과지 · 친권자지정동의서 · 송달받을 대리인지정신고서 등</p>
+
+    <p class="document-list">혼인관계증명서 · 가족관계증명서 · 기본증명서 · 주민등록등본 · 주민등록초본 · 친자확인 유전자검사결과지 · 친권자지정동의서 · 송달받을 대리인지정신고서 등</p>
+
     <div class="case-link">
       <span>주요 사례</span>
       <a href="https://blog.naver.com/hyelim314/224293286738" target="_blank">
-        선중국 혼인신고를 위한 혼인관계증명서(상세) 중국어 번역공증·아포스티유 →
+        선중국 혼인신고를 위한 혼인관계증명서(상세) 중국어 번역공증·아포스티유
       </a>
+      <b class="case-arrow">→</b>
     </div>
   </div>
+
 
   <div class="document-item">
     <div class="document-title">
       <span class="document-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="8" r="3"></circle>
-          <path d="M6 20v-2a6 6 0 0 1 12 0v2M8 13l-3 2M16 13l3 2"></path>
+          <circle cx="12" cy="11" r="6"></circle>
+          <path d="M10 5c0-2 1.2-3 3-3"></path>
+          <path d="M9.5 11h.01M14.5 11h.01"></path>
+          <path d="M10 14c1.2 1 2.8 1 4 0"></path>
+          <path d="M6 10H4M20 10h-2"></path>
         </svg>
       </span>
       <strong>출생·국적</strong>
     </div>
-    <p>출생증명서 · 사망진단서 · 화장증명서 · 동일인증명서 · 국적취득사실증명서 · 기본증명서 · 외국인등록사실증명서 · 출입국사실증명서 · 여권발급기록증명서 등</p>
+
+    <p class="document-list">출생증명서 · 사망진단서 · 화장증명서 · 동일인증명서 · 국적취득사실증명서 · 기본증명서 · 외국인등록사실증명서 · 출입국사실증명서 · 여권발급기록증명서 등</p>
+
     <div class="case-link">
       <span>주요 사례</span>
       <a href="https://blog.naver.com/hyelim314/224376040215" target="_blank">
-        중국 호구 등록을 위한 한중커플 아기 국내 출생증명서 중국어 번역공증·아포스티유 →
+        중국 호구 등록을 위한 한중커플 아기 국내 출생증명서 중국어 번역공증·아포스티유
       </a>
+      <b class="case-arrow">→</b>
     </div>
   </div>
+
 
   <div class="document-item">
     <div class="document-title">
       <span class="document-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M5 20V5h10v15M15 10h4v10M8 8h2M8 12h2M8 16h2"></path>
+          <path d="M5 21V4h10v17"></path>
+          <path d="M15 9h4v12"></path>
+          <path d="M8 8h3M8 12h3M8 16h3"></path>
         </svg>
       </span>
       <strong>기업·법인</strong>
     </div>
-    <p>사업자등록증 · 사업자등록증명 · 법인등기부등본 · 정관 · 이사회의사록 · 이사회결의서 · 주주명부 · 여권 · 수권위탁서 · 법정대표자신분증명서 · 회사분할계획서 · 중국 경내책임자 수권서 · 거주자증명서 · 폐업사실증명 등</p>
+
+    <p class="document-list">사업자등록증 · 사업자등록증명 · 법인등기부등본 · 정관 · 이사회의사록 · 이사회결의서 · 주주명부 · 여권 · 수권위탁서 · 법정대표자신분증명서 · 회사분할계획서 · 중국 경내책임자 수권서 · 거주자증명서 · 폐업사실증명 등</p>
+
     <div class="case-link">
       <span>주요 사례</span>
       <a href="https://blog.naver.com/hyelim314/224323298957" target="_blank">
-        중국 법인 설립을 위한 국내 사업자등록증 등 회사 서류 중국어 번역공증·아포스티유 →
+        중국 법인 설립을 위한 국내 사업자등록증 등 회사 서류 중국어 번역공증·아포스티유
       </a>
+      <b class="case-arrow">→</b>
     </div>
   </div>
-
   <div class="document-item">
     <div class="document-title">
       <span class="document-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 3h9l4 4v14H6z"></path>
-          <path d="M15 3v5h5M9 12h6M9 16h6"></path>
+          <path d="M15 3v5h5"></path>
+          <path d="M9 12h6M9 16h6"></path>
         </svg>
       </span>
       <strong>기타 서류</strong>
     </div>
-    <p>법원결정문 · 송달증명서 · 국외송달소장 · 민사위탁대리계약서 · 시험·검사성적서 · 위탁서 · 위임장 · 정보공개결정통지서 · 각종 증명서 및 중국 제출용 서류</p>
+
+    <p class="document-list">법원결정문 · 송달증명서 · 국외송달소장 · 민사위탁대리계약서 · 시험·검사성적서 · 위탁서 · 위임장 · 정보공개결정통지서 · 각종 증명서 및 중국 제출용 서류</p>
+
     <div class="case-link">
       <span>주요 사례</span>
       <a href="https://blog.naver.com/hyelim314/224415899347" target="_blank">
-        중국 현지 로펌 소송 대리를 위한 수권위탁서, 법정대표자신분증명서 등 공증·아포스티유 →
+        중국 현지 로펌 소송 대리를 위한 수권위탁서, 법정대표자신분증명서 등 공증·아포스티유
       </a>
+      <b class="case-arrow">→</b>
     </div>
+  </div>
+
+</div>
   </div>
 </div>
   </div>
