@@ -126,6 +126,58 @@
   font-size: 13px;
   color: #888;
 }
+   .hero-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 42px;
+}
+
+.hero-bottom-grid .yueliang-point {
+  max-width: none;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+.document-example-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 26px 28px;
+  background: #fff;
+  border: 1px solid #e5e1dd;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #222;
+}
+
+.document-example-card > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #e63943;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.document-example-card > strong {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #222;
+}
+
+.document-example-card > b {
+  color: #e63943;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.document-example-card:hover {
+  border-color: #e63943;
+}
     .yueliang-point {
   max-width: 760px;
   margin-top: 42px;
@@ -397,58 +449,7 @@
   중국 대학교 졸업증서, 학위증서, 성적표 등 학적 서류, 무범죄증명서, 친속관계공증서, 중국 결혼증, 중국 운전면허증 등 중국 발급 서류의
   현지 공증부터 아포스티유까지 대행합니다.
    <div class="hero-bottom-grid">
-.hero-bottom-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
-  gap: 24px;
-  align-items: stretch;
-  margin-top: 42px;
-}
 
-.hero-bottom-grid .yueliang-point {
-  max-width: none;
-  margin-top: 0;
-  box-sizing: border-box;
-}
-
-.document-example-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 26px 28px;
-  background: #fff;
-  border: 1px solid #e5e1dd;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: #222;
-}
-
-.document-example-card > span {
-  display: block;
-  margin-bottom: 10px;
-  color: #e63943;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.document-example-card > strong {
-  display: block;
-  margin-bottom: 18px;
-  font-size: 17px;
-  line-height: 1.55;
-  color: #222;
-}
-
-.document-example-card > b {
-  color: #e63943;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.document-example-card:hover {
-  border-color: #e63943;
-}
   <div class="yueliang-point">
     <div class="point-label">月亮 POINT</div>
     <strong>영사확인 시절부터 이어온 중국 서류 업무 경험</strong>
