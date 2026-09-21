@@ -849,7 +849,38 @@
   margin-top: 30px;
   max-width: 300px;
 }
+.about .container {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 85px;
+  align-items: start;
+}
 
+.about-left {
+  min-width: 0;
+}
+
+.about-right {
+  min-width: 0;
+}
+
+.about-profile-photo {
+  margin-top: 30px;
+  max-width: 300px;
+}
+
+.about-profile-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .about .container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
 .about-profile-photo img {
   display: block;
   width: 100%;
@@ -900,22 +931,177 @@
 </header>
 <main>
 
-  <section class="about" id="about">
+  <style>
+    .about-page {
+      padding: 75px 0 80px;
+      background: #f7f5f4;
+    }
+
+    .about-page .container {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 90px;
+      align-items: start;
+    }
+
+    .about-page-left h2 {
+      margin: 10px 0 8px;
+      font-size: 32px;
+      line-height: 1.3;
+    }
+
+    .about-chinese {
+      margin: 0;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .about-profile-photo {
+      margin-top: 32px;
+      width: 100%;
+    }
+
+    .about-profile-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .about-page-right h3 {
+      margin: 0 0 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #bbb;
+      font-size: 30px;
+      line-height: 1.4;
+      letter-spacing: -1px;
+    }
+
+    .about-career {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .about-career li {
+      display: grid;
+      grid-template-columns: 125px minmax(0, 1fr);
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .about-career strong {
+      color: #111;
+      font-weight: 700;
+    }
+
+    .about-career span {
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .about-career a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .about-career a:hover {
+      color: #e63943;
+    }
+
+
+    .about-story {
+      padding: 75px 0 85px;
+      background: #fff;
+    }
+
+    .about-story .container {
+      display: block;
+    }
+
+    .about-story h2 {
+      max-width: 800px;
+      margin: 10px 0 30px;
+      font-size: 30px;
+      line-height: 1.5;
+      letter-spacing: -1px;
+    }
+
+    .story-text {
+      max-width: 800px;
+    }
+
+    .story-text p {
+      margin: 0 0 18px;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.9;
+      word-break: keep-all;
+    }
+
+    .story-text p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    @media (max-width: 900px) {
+      .about-page {
+        padding: 55px 0 65px;
+      }
+
+      .about-page .container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .about-profile-photo {
+        max-width: 300px;
+      }
+
+      .about-page-right h3 {
+        font-size: 26px;
+      }
+
+      .about-career li {
+        grid-template-columns: 90px minmax(0, 1fr);
+      }
+
+      .about-story {
+        padding: 60px 0 70px;
+      }
+
+      .about-story h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+
+
+  <section class="about-page">
+
     <div class="container">
 
-    <div class="about-left">
-  <div class="section-label">ABOUT</div>
-  <h2>방혜림 행정사</h2>
-  <p class="about-chinese">中国语翻译行政士</p>
+      <div class="about-page-left">
 
-  <div class="about-profile-photo">
-    <img src="id.jpg" alt="중국어번역행정사 방혜림">
-  </div>
-</div>
-      <div class="about-right">
+        <div class="section-label">ABOUT</div>
+
+        <h2>방혜림 행정사</h2>
+
+        <p class="about-chinese">中国语翻译行政士</p>
+
+        <div class="about-profile-photo">
+          <img src="id.jpg" alt="중국어번역행정사 방혜림">
+        </div>
+
+      </div>
+
+
+      <div class="about-page-right">
+
         <h3>중국어와 행정 실무를 함께 쌓아온 경력입니다.</h3>
 
-        <ul class="career-list">
+        <ul class="about-career">
+
           <li>
             <strong>국가자격</strong>
             <span>국가공인 외국어번역행정사(중국어)</span>
@@ -925,13 +1111,18 @@
             <strong>정회원</strong>
             <span>
               대한행정사회 정회원 ·
-              <a href="https://daaa.or.kr/vtSub07/index01.html" target="_blank">공식 등록 확인 ↗</a>
+              <a href="https://daaa.or.kr/vtSub07/index01.html" target="_blank">
+                공식 등록 확인 ↗
+              </a>
             </span>
           </li>
 
           <li>
             <strong>공직경력</strong>
-            <span>前 인천광역시 지방행정직 공무원(2012.8.27-2023.3.2. / 10년 8개월 근무)</span>
+            <span>
+              前 인천광역시 지방행정직 공무원
+              (2012.8.27-2023.3.2. / 10년 8개월 근무)
+            </span>
           </li>
 
           <li>
@@ -941,80 +1132,94 @@
 
           <li>
             <strong>2017</strong>
-            <span>민원처리 단축 우수공무원 1등(2017.12.18. / 인천 연수구청)</span>
+            <span>
+              민원처리 단축 우수공무원 1등
+              (2017.12.18. / 인천 연수구청)
+            </span>
           </li>
 
           <li>
             <strong>2016</strong>
-            <span>전국 공무원 외국어 스피치대회 중국어 부문 우수상(2016.11.12.)</span>
+            <span>
+              전국 공무원 외국어 스피치대회 중국어 부문 우수상
+              (2016.11.12.)
+            </span>
           </li>
 
           <li>
             <strong>2014</strong>
-            <span>제12회 한중지방정부교류회의 참석(중국 시안·西安)</span>
+            <span>
+              제12회 한중지방정부교류회의 참석
+              (중국 시안·西安)
+            </span>
           </li>
 
           <li>
             <strong>2012</strong>
-            <span>인천광역시 공무원 외국어경진대회 중국어 부문 우수상(2012.11.6.)</span>
+            <span>
+              인천광역시 공무원 외국어경진대회 중국어 부문 우수상
+              (2012.11.6.)
+            </span>
           </li>
 
           <li>
             <strong>2008</strong>
-            <span>중국 길수대학교(吉首大学) 교환학생 (호남성 길수시)</span>
+            <span>
+              중국 길수대학교(吉首大学) 교환학생
+              (호남성 길수시)
+            </span>
           </li>
 
           <li>
             <strong>2007</strong>
-            <span>중국 동북사범대학교(东北师范大学) 교류학생 (길림성 장춘시)</span>
+            <span>
+              중국 동북사범대학교(东北师范大学) 교류학생
+              (길림성 장춘시)
+            </span>
           </li>
+
         </ul>
+
       </div>
 
     </div>
+
   </section>
 
 
-  <section class="about-office">
+  <section class="about-story">
+
     <div class="container">
 
-      <div class="section-label">OFFICE</div>
-      <h2>월량번역행정사사무소</h2>
+      <div class="section-label">MY STORY</div>
 
-      <div class="office-info">
+      <h2>
+        좋아하는 중국어를 계속하며,<br>
+        사람과 사람을 잇는 일을 하고 싶었습니다.
+      </h2>
 
-        <div class="office-info-row">
-          <strong>주소</strong>
-          <span>
-            경기도 안양시 동안구 부림로 121 지하층 B113호<br>
-            (관양동, 동아프라자아케이드상가)
-          </span>
-        </div>
+      <div class="story-text">
 
-        <div class="office-info-row">
-          <strong>우편번호</strong>
-          <span>14066</span>
-        </div>
+        <p>
+          공무원으로 근무하던 시절에도 중국어 공부를 이어가며
+          중국과 관련된 다양한 경험을 꾸준히 쌓았습니다.
+        </p>
 
-        <div class="office-info-row">
-          <strong>오시는 길</strong>
-          <span>평촌역 1번 출구와 연결된 동아프라자아케이드상가</span>
-        </div>
+        <p>
+          그 과정에서 중국어와 중국 문화를 더 깊이 이해하고 경험할수록,
+          제가 좋아하는 중국어를 계속하며 사람과 사람을 잇는 일을 하고 싶다는 마음이 커졌습니다.
+          그렇게 공직을 떠나 외국어번역행정사의 길을 선택했습니다.
+        </p>
 
-        <div class="office-info-row">
-          <strong>업무지역</strong>
-          <span>서울·경기·인천을 중심으로 전국의 중국 관련 서류 업무를 진행합니다.</span>
-        </div>
+        <p>
+          지금도 그 마음으로 한 건 한 건의 서류를 직접 살펴보고 번역하며,
+          중국과 한국을 오가는 중요한 서류가 원활하게 진행될 수 있도록 업무하고 있습니다.
+        </p>
 
       </div>
 
-      <a href="https://naver.me/FLy2S2LA"
-         target="_blank"
-         class="btn btn-primary">
-        네이버 지도에서 위치 확인 →
-      </a>
-
     </div>
+
   </section>
 
 </main>
