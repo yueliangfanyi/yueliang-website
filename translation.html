@@ -572,85 +572,119 @@
         grid-template-columns: 1fr;
       }
     }
-        /* 번역 후 절차 */
-   .after-process {
+  /* 번역 후 절차 */
+.after-process {
   display: grid;
-  grid-template-columns: 220px 45px 290px 45px 220px;
-      align-items: center;
-      gap: 12px;
-      max-width: 900px;
-      margin: 35px 0 22px;
-    }
+  grid-template-columns: 260px 45px 330px 45px 260px;
+  align-items: center;
+  gap: 12px;
+  margin: 40px 0 28px;
+}
 
-    .after-card,
-    .after-branch {
-      border: 1px solid #ddd;
-      background: #fff;
-    }
+.after-card {
+  height: 260px;
+  padding: 26px;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
 
-    .after-card {
-      min-height: 150px;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .after-card span,
-    .after-number {
-      display: block;
-      margin-bottom: 16px;
-      color: #e63943;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .after-card strong {
-      font-size: 19px;
-    }
-
-    .after-branch {
-      padding: 20px;
-      background: #fff7f7;
-    }
-
-    .after-subcard {
-      padding: 18px 20px;
-      background: #fff;
-      border: 1px solid #e5e5e5;
-    }
-
-    .after-subcard + .after-subcard {
-      margin-top: 10px;
-    }
-
-    .after-subcard strong {
-      font-size: 17px;
-    }
-
-    .after-arrow {
-      text-align: center;
-      color: #777;
-      font-size: 25px;
-    }
-
-    @media (max-width: 800px) {
-      .after-process {
-        grid-template-columns: 1fr;
-      }
-
-      .after-arrow {
-        transform: rotate(90deg);
-      }
-    }
-    .after-card small {
-  margin-top: 10px;
-  color: #777;
+.after-step {
+  display: block;
+  color: #e63943;
   font-size: 12px;
+  font-weight: 700;
+}
+
+.after-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.after-card-content strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #111;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.after-card-content p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.after-branch {
+  min-height: 260px;
+  padding: 22px;
+  border: 1px solid #ddd;
+  background: #fff6f6;
+  box-sizing: border-box;
+}
+
+.after-branch .after-step {
+  margin-bottom: 16px;
+}
+
+.after-subcard {
+  padding: 18px 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.after-subcard + .after-subcard {
+  margin-top: 10px;
+}
+
+.after-subcard strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #111;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.after-subcard p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.after-arrow {
+  color: #777;
+  font-size: 26px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .after-process {
+    grid-template-columns: 1fr;
+  }
+
+  .after-card {
+    width: 100%;
+    height: auto;
+    min-height: 190px;
+  }
+
+  .after-branch {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .after-arrow {
+    transform: rotate(90deg);
+  }
 }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -844,35 +878,48 @@
       번역한 서류의 제출 목적과 제출기관에 따라 필요한 절차가 달라집니다.
     </p>
 
-    <div class="after-process">
+   <div class="after-process">
 
-      <div class="after-card">
-        <span>01</span>
-        <strong>중국어 번역</strong>
-      </div>
+  <!-- 01 중국어 번역 -->
+  <div class="after-card">
+    <span class="after-step">01</span>
 
-      <div class="after-arrow">→</div>
+    <div class="after-card-content">
+      <strong>중국어 번역</strong>
+      <p>한국어 ↔ 중국어<br>번역 진행</p>
+    </div>
+  </div>
 
-      <div class="after-branch">
-        <span class="after-number">02</span>
+  <div class="after-arrow">→</div>
 
-        <div class="after-subcard">
-          <strong>번역공증</strong>
-        </div>
+  <!-- 02 번역공증 / 번역확인증명서 -->
+  <div class="after-branch">
+    <span class="after-step">02</span>
 
-        <div class="after-subcard">
-          <strong>번역확인증명서</strong>
-        </div>
-      </div>
-
-     <div class="after-card">
-  <span>03</span>
-  <strong>아포스티유</strong>
-  <small>필요한 경우 진행</small>
-</div>
-
+    <div class="after-subcard">
+      <strong>번역공증</strong>
+      <p>공증사무소를 통한<br>번역공증 촉탁</p>
     </div>
 
+    <div class="after-subcard">
+      <strong>번역확인증명서</strong>
+      <p>행정사가 발급하는<br>번역확인증명서</p>
+    </div>
+  </div>
+
+  <div class="after-arrow">→</div>
+
+  <!-- 03 아포스티유 -->
+  <div class="after-card">
+    <span class="after-step">03</span>
+
+    <div class="after-card-content">
+      <strong>아포스티유</strong>
+      <p>해외 제출을 위한<br>아포스티유 발급<br>(필요한 경우 진행)</p>
+    </div>
+  </div>
+
+</div>
     <p class="process-note">
       ※ 모든 서류가 위 절차를 전부 거치는 것은 아니며,
       제출기관의 요구사항에 따라 필요한 절차만 진행합니다.
