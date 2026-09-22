@@ -548,7 +548,17 @@
       font-size: 21px;
       line-height: 1.5;
     }
+/* 상세페이지 버튼 2개 배치 */
+.detail-link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
 
+.detail-link-buttons .detail-link-button {
+  margin-top: 0;
+}
     /* 흰 배경용 상세페이지 버튼 */
     .detail-link-button {
       display: inline-block;
@@ -926,9 +936,17 @@
       제출기관의 요구사항에 따라 필요한 절차만 진행합니다.
     </p>
 
-    <a class="detail-link-button" href="translation-notary.html">
-      번역공증·아포스티유 자세히 보기 →
-    </a>
+   <div class="detail-link-buttons">
+
+  <a class="detail-link-button" href="translation-notary.html">
+    번역공증·아포스티유 자세히 보기 →
+  </a>
+
+  <a class="detail-link-button" href="translation-confirmation.html">
+    번역확인증명서 자세히 보기 →
+  </a>
+
+</div>
 
   </div>
 </section>
