@@ -572,6 +572,77 @@
         grid-template-columns: 1fr;
       }
     }
+        /* 번역 후 절차 */
+    .after-process {
+      display: grid;
+      grid-template-columns: 1fr 45px 1.25fr 45px 1fr;
+      align-items: center;
+      gap: 12px;
+      max-width: 900px;
+      margin: 35px 0 22px;
+    }
+
+    .after-card,
+    .after-branch {
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .after-card {
+      min-height: 150px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .after-card span,
+    .after-number {
+      display: block;
+      margin-bottom: 16px;
+      color: #e63943;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .after-card strong {
+      font-size: 19px;
+    }
+
+    .after-branch {
+      padding: 20px;
+      background: #fff7f7;
+    }
+
+    .after-subcard {
+      padding: 18px 20px;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+    }
+
+    .after-subcard + .after-subcard {
+      margin-top: 10px;
+    }
+
+    .after-subcard strong {
+      font-size: 17px;
+    }
+
+    .after-arrow {
+      text-align: center;
+      color: #777;
+      font-size: 25px;
+    }
+
+    @media (max-width: 800px) {
+      .after-process {
+        grid-template-columns: 1fr;
+      }
+
+      .after-arrow {
+        transform: rotate(90deg);
+      }
+    }
   </style>
 </head>
 
