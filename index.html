@@ -677,7 +677,55 @@ footer {
 .footer-business-title:hover {
   color: #e63943;
 }
+/* 상위 업무 접기 */
+.footer-main-details {
+  border: 0 !important;
+}
 
+.footer-main-details > .footer-business-title {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0 28px 20px 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.footer-main-details > .footer-business-title::-webkit-details-marker {
+  display: none;
+}
+
+.footer-main-details > .footer-business-title::after {
+  content: "+";
+  position: absolute;
+  right: 2px;
+  top: -2px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+.footer-main-details[open] > .footer-business-title::after {
+  content: "−";
+}
+
+.footer-sub-business {
+  margin-top: 2px;
+}
+
+.footer-page-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #888;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer-page-link:hover {
+  color: #fff;
+}
 
 /* 펼치기 세부업무 */
 .footer-business details {
@@ -1256,58 +1304,67 @@ footer {
     <!-- 세부 업무 -->
     <div class="footer-business">
 
-      <!-- 국내 서류 -->
-      <div class="footer-business-column">
+   <!-- 국내 서류 -->
+<div class="footer-business-column">
 
-        <span class="footer-category">국내 서류</span>
+  <span class="footer-category">국내 서류</span>
 
-        <a class="footer-business-title" href="translation-notary.html">
-          번역공증 · 아포스티유 →
-        </a>
+  <details class="footer-main-details">
+    <summary class="footer-business-title">
+      번역공증 · 아포스티유
+    </summary>
 
-        <details>
-          <summary>중국 취업비자 서류</summary>
-          <p>범죄수사경력회보서 · 졸업증명서 · 외국인신체검사서</p>
-        </details>
+    <div class="footer-sub-business">
 
-        <details>
-          <summary>중국 법인설립 서류</summary>
-          <p>
-            사업자등록증 · 사업자등록증명 · 법인등기부등본 · 정관 ·
-            이사회의사록 · 이사회결의서 · 주주명부 · 대표이사 여권
-          </p>
-        </details>
+      <details>
+        <summary>중국 취업비자 서류</summary>
+        <p>범죄수사경력회보서 · 졸업증명서 · 외국인신체검사서</p>
+      </details>
 
-        <details>
-          <summary>중국 현지 소송 대리 서류</summary>
-          <p>
-            수권위탁서 · 법정대표자 신분증명서 · 대표이사 여권 · 사업자등록증
-          </p>
-        </details>
+      <details>
+        <summary>중국 법인설립 서류</summary>
+        <p>
+          사업자등록증 · 사업자등록증명 · 법인등기부등본 · 정관 ·
+          이사회의사록 · 이사회결의서 · 주주명부 · 대표이사 여권
+        </p>
+      </details>
 
-        <details>
-          <summary>중국 혼인신고 서류</summary>
-          <p>혼인관계증명서(상세)</p>
-        </details>
+      <details>
+        <summary>중국 현지 소송 대리 서류</summary>
+        <p>
+          수권위탁서 · 법정대표자 신분증명서 · 대표이사 여권 · 사업자등록증
+        </p>
+      </details>
 
-        <details>
-          <summary>중국 호구 등록 서류</summary>
-          <p>한국 출생증명서</p>
-        </details>
+      <details>
+        <summary>중국 혼인신고 서류</summary>
+        <p>혼인관계증명서(상세)</p>
+      </details>
 
-        <details>
-          <summary>중국 호구 말소 서류</summary>
-          <p>
-            동일인증명서 · 국적취득사실증명서 · 기본증명서(상세) · 한국 여권
-          </p>
-        </details>
+      <details>
+        <summary>중국 호구 등록 서류</summary>
+        <p>한국 출생증명서</p>
+      </details>
 
-        <details>
-          <summary>대만 혼인신고 서류</summary>
-        </details>
+      <details>
+        <summary>중국 호구 말소 서류</summary>
+        <p>
+          동일인증명서 · 국적취득사실증명서 · 기본증명서(상세) · 한국 여권
+        </p>
+      </details>
 
-      </div>
+      <details>
+        <summary>대만 혼인신고 서류</summary>
+      </details>
 
+    </div>
+  </details>
+
+  <a class="footer-page-link" href="translation-notary.html">
+    자세히 보기 →
+  </a>
+
+</div>
 
       <!-- 중국 서류 -->
       <div class="footer-business-column">
