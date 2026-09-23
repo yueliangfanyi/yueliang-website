@@ -582,18 +582,20 @@
   text-decoration: none;
 }
     /* 하단 */
-  footer {
+footer {
   background: #201d23;
   color: #aaa;
   padding: 55px 0 28px;
   font-size: 13px;
 }
 
-.footer-main {
+/* 푸터 상단 */
+.footer-top {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 70px;
-  padding-bottom: 42px;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+  align-items: start;
+  padding-bottom: 38px;
 }
 
 .footer-name {
@@ -615,14 +617,13 @@
   line-height: 1.8;
 }
 
-.footer-links,
 .footer-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 220px;
 }
 
-.footer-links strong,
 .footer-contact strong {
   display: block;
   color: #fff;
@@ -630,7 +631,6 @@
   margin-bottom: 18px;
 }
 
-.footer-links a,
 .footer-contact a {
   display: block;
   color: #aaa;
@@ -640,8 +640,110 @@
   transition: .2s;
 }
 
-.footer-links a:hover,
 .footer-contact a:hover {
+  color: #fff;
+}
+
+
+/* 세부 업무 영역 */
+.footer-business {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  padding: 38px 0 42px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.footer-category {
+  display: block;
+  margin-bottom: 7px;
+  color: #777;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.footer-business-title {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.footer-business-title:hover {
+  color: #e63943;
+}
+
+
+/* 펼치기 세부업무 */
+.footer-business details {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-business details:last-child {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-business summary {
+  position: relative;
+  padding: 12px 24px 12px 0;
+  color: #bbb;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+
+.footer-business summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-business summary::after {
+  content: "+";
+  position: absolute;
+  right: 2px;
+  top: 11px;
+  color: #777;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer-business details[open] summary {
+  color: #fff;
+}
+
+.footer-business details[open] summary::after {
+  content: "−";
+}
+
+.footer-business details p {
+  margin: 0;
+  padding: 0 20px 13px 0;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* 하단 바로가기 */
+.footer-nav {
+  display: flex;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.footer-nav a {
+  color: #aaa;
+  font-size: 13px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.footer-nav a:hover {
   color: #fff;
 }
 
@@ -652,14 +754,26 @@
   font-size: 12px;
 }
 
-@media (max-width: 800px) {
-  .footer-main {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
 
+/* 푸터 모바일 */
+@media (max-width: 800px) {
   footer {
     padding: 45px 0 25px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-business {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 12px 22px;
   }
 }
 
