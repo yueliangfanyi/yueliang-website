@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://yueliang.kr/</loc>
+  </url>
+
+  <url>
+    <loc>https://yueliang.kr/translation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://yueliang.kr/translation-confirmation.html</loc>
   </url>
 
   <url>
@@ -15,4 +24,17 @@
   <url>
     <loc>https://yueliang.kr/cases.html</loc>
   </url>
+
+  <url>
+    <loc>https://yueliang.kr/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://yueliang.kr/translation-apostille-example.html</loc>
+  </url>
+
+  <url>
+    <loc>https://yueliang.kr/china-apostille-example.html</loc>
+  </url>
+
 </urlset>
