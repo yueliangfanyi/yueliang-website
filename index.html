@@ -582,19 +582,86 @@
   text-decoration: none;
 }
     /* 하단 */
-    footer {
-      background: #201d23;
-      color: #aaa;
-      padding: 42px 0;
-      font-size: 13px;
-    }
+  footer {
+  background: #201d23;
+  color: #aaa;
+  padding: 55px 0 28px;
+  font-size: 13px;
+}
 
-    .footer-name {
-      color: white;
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 70px;
+  padding-bottom: 42px;
+}
+
+.footer-name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-admin {
+  color: #ddd;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-info p,
+.footer-contact p {
+  margin: 0 0 14px;
+  line-height: 1.8;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-links strong,
+.footer-contact strong {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.footer-links a,
+.footer-contact a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  transition: .2s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  color: #777;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  footer {
+    padding: 45px 0 25px;
+  }
+}
 
     /* 모바일 */
     @media (max-width: 900px) {
@@ -1033,9 +1100,63 @@
 
 <footer>
   <div class="container">
-    <div class="footer-name">월량번역행정사사무소</div>
-    <p>중국어번역행정사 방혜림</p>
-    <p>© 월량번역행정사사무소. All rights reserved.</p>
+
+    <div class="footer-main">
+
+      <!-- 사무소 정보 -->
+      <div class="footer-info">
+        <div class="footer-name">월량번역행정사사무소</div>
+        <p class="footer-admin">중국어번역행정사 방혜림</p>
+
+        <p>
+          경기 안양시 동안구 부림로 121 지하층 B113호<br>
+          (관양동, 동아프라자아케이드상가)
+        </p>
+
+        <p>
+          국가공인 외국어번역행정사(중국어)<br>
+          자격증 번호 22310005509
+        </p>
+      </div>
+
+
+      <!-- 주요 업무 -->
+      <div class="footer-links">
+        <strong>주요 업무</strong>
+
+        <a href="translation.html">중국어 번역</a>
+        <a href="translation-confirmation.html">번역확인증명서</a>
+        <a href="translation-notary.html">번역공증·아포스티유</a>
+        <a href="china-apostille.html">중국 아포스티유</a>
+        <a href="cases.html">업무사례</a>
+      </div>
+
+
+      <!-- 상담 -->
+      <div class="footer-contact">
+        <strong>상담 문의</strong>
+
+        <p>
+          TEL. 010-8639-5165<br>
+          E-mail. hyelim314@naver.com
+        </p>
+
+        <a href="https://pf.kakao.com/_vxoCEX" target="_blank">
+          카카오톡 채널 →
+        </a>
+
+        <a href="index.html#contact">
+          상담방법 자세히 보기 →
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      <span>© 월량번역행정사사무소. All rights reserved.</span>
+    </div>
+
   </div>
 </footer>
 
