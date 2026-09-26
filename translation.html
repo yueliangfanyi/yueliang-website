@@ -6,6 +6,11 @@
 <title>중국어 번역 | 한중·중한 번역 | 월량번역행정사</title>
 <meta name="description" content="공무원 출신 국가공인 외국어번역행정사가 중국어 번역을 직접 진행합니다. 행정·공공서류, 학력·자격, 기업·법률, 혼인·가족관계, 전문자료 등 한중·중한 번역과 제출 목적에 따른 후속 절차를 안내합니다.">
 <link rel="canonical" href="https://yueliang.kr/translation.html">
+<link rel="icon" type="image/png" href="/yueliang-symbol-red.png">
+<meta property="og:title" content="중국어 번역 | 한중·중한 번역 | 월량번역행정사">
+<meta property="og:description" content="공무원 출신 국가공인 외국어번역행정사가 행정·공공서류, 학력·자격, 기업·법률, 혼인·가족관계, 전문자료 등 한중·중한 중국어 번역을 직접 진행합니다.">
+<meta property="og:url" content="https://yueliang.kr/translation.html">
+<meta name="robots" content="index, follow">
   <style>
     * {
       box-sizing: border-box;
@@ -705,7 +710,6 @@ footer {
   font-size: 13px;
 }
 
-/* 푸터 상단 */
 .footer-top {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -756,147 +760,17 @@ footer {
   transition: .2s;
 }
 
-.footer-contact a:hover {
+.footer-contact a:hover,
+.footer-nav a:hover {
   color: #fff;
 }
 
-/* 세부 업무 영역 */
-.footer-business {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 55px;
-  padding: 30px 0 32px;
-  border-top: 1px solid rgba(255,255,255,.12);
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-.footer-category {
-  display: block;
-  margin-bottom: 7px;
-  color: #777;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-
-.footer-business-title {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: .2s;
-}
-
-.footer-business-title:hover {
-  color: #e63943;
-}
-
-/* 상위 업무 접기 */
-.footer-main-details {
-  border: 0 !important;
-}
-
-.footer-main-details > .footer-business-title {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding: 0 28px 12px 0;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 700;
-  cursor: pointer;
-  list-style: none;
-}
-
-.footer-main-details > .footer-business-title::-webkit-details-marker {
-  display: none;
-}
-
-.footer-main-details > .footer-business-title::after {
-  content: "+";
-  position: absolute;
-  right: 2px;
-  top: -2px;
-  color: #aaa;
-  font-size: 18px;
-}
-
-.footer-main-details[open] > .footer-business-title::after {
-  content: "−";
-}
-
-.footer-sub-business {
-  margin-top: 2px;
-}
-
-/* 세부 업무 */
-.footer-business details {
-  border-top: 1px solid rgba(255,255,255,.08);
-}
-
-.footer-business details:last-child {
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-.footer-business summary {
-  position: relative;
-  padding: 12px 24px 12px 0;
-  color: #bbb;
-  font-size: 13px;
-  line-height: 1.5;
-  cursor: pointer;
-  list-style: none;
-}
-
-.footer-business summary::-webkit-details-marker {
-  display: none;
-}
-
-.footer-business summary::after {
-  content: "+";
-  position: absolute;
-  right: 2px;
-  top: 11px;
-  color: #777;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.footer-business details[open] > summary::after {
-  content: "−";
-}
-
-.footer-business details[open] > summary {
-  color: #fff;
-}
-
-.footer-business details p {
-  margin: 0;
-  padding: 0 20px 13px 0;
-  color: #777;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.footer-page-link {
-  display: inline-block;
-  margin-top: 8px;
-  color: #888;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.footer-page-link:hover {
-  color: #fff;
-}
-
-/* 하단 바로가기 */
 .footer-nav {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 12px 24px;
   padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,.12);
 }
 
 .footer-nav a {
@@ -906,10 +780,6 @@ footer {
   transition: .2s;
 }
 
-.footer-nav a:hover {
-  color: #fff;
-}
-
 .footer-bottom {
   padding-top: 22px;
   border-top: 1px solid rgba(255,255,255,.12);
@@ -917,7 +787,16 @@ footer {
   font-size: 12px;
 }
 
-/* 푸터 모바일 */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .document-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 800px) {
   footer {
     padding: 45px 0 25px;
@@ -926,16 +805,6 @@ footer {
   .footer-top {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-
-  .footer-business {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-nav {
-    flex-wrap: wrap;
-    gap: 12px 22px;
   }
 }
   </style>
@@ -957,7 +826,7 @@ footer {
   <a href="about.html">사무소 소개</a>
   <a href="index.html#contact">상담문의</a>
   <span class="nav-divider">｜</span>
-  <a href="https://blog.naver.com/hyelim314">블로그</a>
+  <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener">블로그</a>
   <span class="language">KR &nbsp;|&nbsp; 中文</span>
 </nav>
   </div>
@@ -1289,7 +1158,7 @@ footer {
 
       <div class="footer-info">
         <div class="footer-name">월량번역행정사사무소</div>
-        <p class="footer-admin">중국어번역행정사 방혜림</p>
+        <p class="footer-admin">중국어번역행정사 방혜림 · 方慧碄</p>
 
         <p>
           경기 안양시 동안구 부림로 121 지하층 B113호<br>
@@ -1300,6 +1169,8 @@ footer {
           국가공인 외국어번역행정사(중국어)<br>
           자격증 번호 22310005509
         </p>
+
+        <p>사업자등록번호 542-03-03050</p>
       </div>
 
       <div class="footer-contact">
@@ -1310,7 +1181,7 @@ footer {
           E-mail. hyelim314@naver.com
         </p>
 
-        <a href="https://pf.kakao.com/_vxoCEX" target="_blank">
+        <a href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener">
           카카오톡 채널 →
         </a>
 
@@ -1321,193 +1192,19 @@ footer {
 
     </div>
 
-
-    <div class="footer-business">
-
-      <!-- 국내 서류 -->
-      <div class="footer-business-column">
-
-        <span class="footer-category">국내 서류</span>
-
-        <details class="footer-main-details">
-          <summary class="footer-business-title">
-            번역공증 · 아포스티유
-          </summary>
-
-          <div class="footer-sub-business">
-
-            <details>
-              <summary>중국 취업비자 서류</summary>
-              <p>범죄수사경력회보서 · 졸업증명서 · 외국인신체검사서</p>
-            </details>
-
-            <details>
-              <summary>중국 법인설립 서류</summary>
-              <p>
-                사업자등록증 · 사업자등록증명 · 법인등기부등본 · 정관 ·
-                이사회의사록 · 이사회결의서 · 주주명부 · 대표이사 여권
-              </p>
-            </details>
-
-            <details>
-              <summary>중국 현지 소송 대리 서류</summary>
-              <p>
-                수권위탁서 · 법정대표자 신분증명서 · 대표이사 여권 · 사업자등록증
-              </p>
-            </details>
-
-            <details>
-              <summary>중국 혼인신고 서류</summary>
-              <p>혼인관계증명서(상세)</p>
-            </details>
-
-            <details>
-              <summary>중국 호구 등록 서류</summary>
-              <p>한국 출생증명서</p>
-            </details>
-
-            <details>
-              <summary>중국 호구 말소 서류</summary>
-              <p>동일인증명서 · 국적취득사실증명서 · 기본증명서(상세) · 한국 여권</p>
-            </details>
-
-            <details>
-              <summary>대만 혼인신고 서류</summary>
-            </details>
-
-          </div>
-        </details>
-
-        <a class="footer-page-link" href="translation-notary.html">
-          자세히 보기 →
-        </a>
-
-      </div>
-
-
-      <!-- 중국 서류 -->
-      <div class="footer-business-column">
-
-        <span class="footer-category">중국 서류</span>
-
-        <details class="footer-main-details">
-          <summary class="footer-business-title">
-            중국 공증 · 아포스티유
-          </summary>
-
-          <div class="footer-sub-business">
-
-            <details>
-              <summary>중국 대학교 서류</summary>
-              <p>졸업증서 · 학위증서 · 성적표</p>
-            </details>
-
-            <details>
-              <summary>중국 회사 서류</summary>
-              <p>영업집조 · 개인소득세 납세기록 · 세수완납증명서 · 재직증명서</p>
-            </details>
-
-            <details>
-              <summary>중국 결혼증 · 혼인사실공증서</summary>
-            </details>
-
-            <details>
-              <summary>중국 이혼증 · 이혼협의서 · 이혼판결문</summary>
-            </details>
-
-            <details>
-              <summary>중국 운전면허증 교환</summary>
-            </details>
-
-            <details>
-              <summary>피부양자 등록</summary>
-              <p>친속공증 · 부부공증</p>
-            </details>
-
-            <details>
-              <summary>외국인 특별전형</summary>
-              <p>친속공증(쌍호공증 · 단호공증) · 호구부</p>
-            </details>
-
-          </div>
-        </details>
-
-        <a class="footer-page-link" href="china-apostille.html">
-          자세히 보기 →
-        </a>
-
-      </div>
-
-
-      <!-- 번역확인증명서 -->
-      <div class="footer-business-column">
-
-        <span class="footer-category">국내 행정기관 제출</span>
-
-        <details class="footer-main-details">
-          <summary class="footer-business-title">
-            번역확인증명서
-          </summary>
-
-          <div class="footer-sub-business">
-
-            <details>
-              <summary>해외제조업소 등록</summary>
-              <p>영업집조 · 식품생산허가증</p>
-            </details>
-
-            <details>
-              <summary>학점은행제 등록</summary>
-              <p>
-                중국대학교 졸업증서 · 학위증서 · 성적표 ·
-                중국고등교육학력인증보고서
-              </p>
-            </details>
-
-            <details>
-              <summary>대만 · 마카오 서류</summary>
-              <p>상업등기증명서</p>
-            </details>
-
-            <details>
-              <summary>큐넷 기사자격증 시험</summary>
-              <p>중국대학교 졸업증서 · 학위증서 · 성적표</p>
-            </details>
-
-            <details>
-              <summary>대만 국적상실허가증서</summary>
-            </details>
-
-            <details>
-              <summary>한성화교협회 호적등록</summary>
-            </details>
-
-            <details>
-              <summary>투자비자 신청</summary>
-              <p>금전증여계약서 · 송금신청서</p>
-            </details>
-
-          </div>
-        </details>
-
-        <a class="footer-page-link" href="translation-confirmation.html">
-          자세히 보기 →
-        </a>
-
-      </div>
-
-    </div>
-
-
     <div class="footer-nav">
       <a href="translation.html">중국어 번역</a>
+      <a href="translation-notary.html">번역공증·아포스티유</a>
+      <a href="china-apostille.html">중국 공증·아포스티유</a>
       <a href="cases.html">업무사례</a>
       <a href="about.html">사무소 소개</a>
+      <a href="index.html#contact">상담문의</a>
+      <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener">블로그</a>
+      <a href="privacy.html">개인정보처리방침</a>
     </div>
 
-
     <div class="footer-bottom">
-      <span>© 월량번역행정사사무소. All rights reserved.</span>
+      © 월량번역행정사사무소. All rights reserved.
     </div>
 
   </div>
