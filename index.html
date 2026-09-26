@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://yueliang.kr/">
   <link rel="icon" type="image/png" href="/yueliang-symbol-red.png">
   <meta property="og:title" content="월량번역행정사 | 중국어번역행정사·중국어 번역공증·아포스티유">
-  <meta property="og:description" content="前 인천광역시 지방행정직 공무원 출신 중국어번역행정사 방혜림입니다. 중국어 번역, 중국어 번역공증 촉탁, 번역확인증명서, 한국·중국 아포스티유 업무를 진행합니다.">
+  <meta property="og:description" content="前 인천광역시 지방행정직 공무원 출신 중국어번역행정사 방혜림입니다. 중국어 번역, 중국어 번역공증, 번역확인증명서, 한국·중국 아포스티유 업무를 진행합니다.">
   <meta property="og:url" content="https://yueliang.kr/">
   <meta name="robots" content="index, follow">
   <style>
@@ -349,7 +349,7 @@
 .case-card strong {
   display: block;
   font-size: 20px;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   color: #2b2b2b;
 }
 
@@ -383,12 +383,20 @@
       background: white;
       color: #2b2b2b;
     }
-    .contact-buttons {
+    .contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 720px) auto;
+  gap: 55px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+.contact-buttons {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   max-width: 720px;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .contact-buttons .btn {
@@ -396,11 +404,13 @@
   text-align: center;
   box-sizing: border-box;
 }
-    .contact-buttons .btn-secondary {
+
+.contact-buttons .btn-secondary {
   background: white;
   color: #2b2b2b;
 }
-    .contact-buttons .btn {
+
+.contact-buttons .btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -418,10 +428,10 @@
   font-weight: 400;
   opacity: 0.65;
 }
-  .contact-qr {
-  margin-top: 24px;
+
+.contact-qr {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   align-items: flex-start;
 }
 
@@ -429,12 +439,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .qr-item img {
-  width: 110px;
-  height: 110px;
+  width: 145px;
+  height: 145px;
   object-fit: contain;
   background: white;
   padding: 6px;
@@ -445,6 +455,17 @@
   font-size: 13px;
   color: #d6d1d9;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-qr {
+    margin-top: 0;
+  }
 }
 .office-location {
   max-width: 720px;
@@ -1003,32 +1024,38 @@
       <div class="case-card">
         <span>01</span>
         <strong>중국 취업·체류</strong>
+        <p>범죄수사경력회보서 · 졸업증명서 · 경력증명서 · 중국 의사 행의비자 관련 서류</p>
       </div>
 
       <div class="case-card">
         <span>02</span>
         <strong>학력·자격</strong>
+        <p>중국 대학교 졸업증서 · 학위증서 · 성적표 · 큐넷 · 학점은행제 제출서류</p>
       </div>
 
       <div class="case-card">
         <span>03</span>
         <strong>혼인·가족관계</strong>
+        <p>중국 혼인신고 · 결혼증 · 친속관계공증서 · 호구부 등 가족관계 서류</p>
       </div>
 
       <div class="case-card">
         <span>04</span>
         <strong>출생·국적</strong>
+        <p>출생증명서 · 중국 호구 등록·말소 · 동일인증명서 · 사망진단서 관련 서류</p>
       </div>
 
       <div class="case-card">
         <span>05</span>
         <strong>기업·법인</strong>
+        <p>중국 법인설립 · 합자회사 · 사업자등록증명 · 정관 · 주주·이사회 관련 서류</p>
       </div>
 
-     <div class="case-card">
-  <span>06</span>
-  <strong>소송·법률·증거서류</strong>
-</div>
+      <div class="case-card">
+        <span>06</span>
+        <strong>소송·법률·증거서류</strong>
+        <p>수권위탁서 · 중국 은행서류 · 위챗 대화 · 중국어 녹취·증거자료 번역</p>
+      </div>
     </div>
 
     <a href="cases.html">업무사례 자세히 보기 →</a>
@@ -1042,50 +1069,55 @@
         서류를 촬영하거나 스캔하여 보내주시면 확인 후 진행 방법을 안내해 드립니다.
       </p>
 
- <div class="contact-buttons">
-  <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary" target="_blank" rel="noopener">
-    <strong>카카오톡 채널</strong>
-    <small>1:1 채팅으로 빠르게 상담</small>
-  </a>
+      <div class="contact-layout">
 
-  <span class="btn btn-secondary">
-    <strong>WeChat · hyelim314</strong>
-    <small>중국어 상담 가능</small>
-  </span>
+        <div class="contact-buttons">
+          <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary" target="_blank" rel="noopener">
+            <strong>카카오톡 채널</strong>
+            <small>1:1 채팅 상담</small>
+          </a>
 
-  <span class="btn btn-secondary">
-    <strong>카카오톡 ID · hyelim314</strong>
-    <small>친구 추가 후 문의</small>
-  </span>
+          <span class="btn btn-secondary">
+            <strong>WeChat · hyelim314</strong>
+            <small>중국어 상담</small>
+          </span>
 
-  <a href="tel:01086395165" class="btn btn-secondary">
-    <strong>전화 상담 · 010-8639-5165</strong>
-    <small>업무 중 부재 시 문자 남겨주세요.</small>
-  </a>
+          <span class="btn btn-secondary">
+            <strong>카카오톡 ID · hyelim314</strong>
+            <small>친구 추가 후 문의</small>
+          </span>
 
-  <a href="mailto:hyelim314@naver.com" class="btn btn-secondary">
-    <strong>이메일 · hyelim314@naver.com</strong>
-    <small>서류 첨부 후 보내주세요.</small>
-  </a>
-</div>
-      <div class="contact-qr">
-  <div class="qr-item">
-    <img src="kakao-qr.png" alt="월량번역행정사사무소 카카오톡 채널 QR코드">
-    <span>카카오톡 채널</span>
-  </div>
+          <a href="tel:01086395165" class="btn btn-secondary">
+            <strong>전화 상담 · 010-8639-5165</strong>
+            <small>부재 시 문자 요청</small>
+          </a>
 
-  <div class="qr-item">
-    <img src="wechet-qr.png" alt="월량번역행정사사무소 WeChat QR코드">
-    <span>WeChat · hyelim314</span>
-  </div>
-</div>
+          <a href="mailto:hyelim314@naver.com" class="btn btn-secondary">
+            <strong>이메일 · hyelim314@naver.com</strong>
+            <small>서류 첨부 가능</small>
+          </a>
+        </div>
+
+        <div class="contact-qr">
+          <div class="qr-item">
+            <img src="kakao-qr.png" alt="월량번역행정사사무소 카카오톡 채널 QR코드">
+            <span>카카오톡 채널</span>
+          </div>
+
+          <div class="qr-item">
+            <img src="wechet-qr.png" alt="월량번역행정사사무소 WeChat QR코드">
+            <span>WeChat · hyelim314</span>
+          </div>
+        </div>
+
+      </div>
    <div class="office-location">
   <div class="location-label">LOCATION</div>
   <h3>오시는 길</h3>
 
   <p class="location-intro">
-    월량번역행정사사무소는 평촌역 1번 출구와 연결된
-    동아프라자아케이드상가에 위치하고 있습니다.
+    월량번역행정사사무소는 평촌역 1번 출구에서 약 141m,
+    연결된 동아프라자아케이드상가에 위치하고 있습니다.
   </p>
 <div class="location-map">
   <div class="map-start">
@@ -1093,7 +1125,7 @@
   </div>
 
   <div class="map-route">
-    <span>지하 연결</span>
+    <span>지하 연결 · 약 141m</span>
     <div class="route-line"></div>
     <span class="route-arrow">→</span>
   </div>
