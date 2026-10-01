@@ -222,7 +222,90 @@
       font-size: 12px;
       color: #555;
     }
+.case-tabs-section {
+  padding: 45px 0 35px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
 
+.case-tabs-label {
+  margin-bottom: 18px;
+  color: #e63943;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.case-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.case-tab {
+  min-height: 88px;
+  padding: 16px 12px;
+  border: 1px solid #ddd8d3;
+  border-radius: 50px;
+  background: #fff;
+  color: #333;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.case-tab span {
+  display: block;
+  margin-bottom: 5px;
+  color: #e63943;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.case-tab:hover {
+  border-color: #e63943;
+}
+
+.case-tab.active {
+  background: #e63943;
+  border-color: #e63943;
+  color: #fff;
+}
+
+.case-tab.active span {
+  color: #fff;
+}
+
+/* 선택한 분야만 표시 */
+.case-sections-grid .case-section {
+  display: none;
+}
+
+.case-sections-grid .case-section.active {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .case-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .case-tab {
+    min-height: 76px;
+    border-radius: 40px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .case-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
    .case-sections-grid {
   width: 100%;
   margin: 0;
@@ -501,7 +584,45 @@
   </div>
 </section>
 
+<section class="case-tabs-section">
+  <div class="container">
 
+    <div class="case-tabs-label">분야 선택</div>
+
+    <div class="case-tabs">
+      <button class="case-tab active" data-target="employment">
+        <span>01</span>
+        중국 취업·체류
+      </button>
+
+      <button class="case-tab" data-target="education">
+        <span>02</span>
+        학력·자격
+      </button>
+
+      <button class="case-tab" data-target="family">
+        <span>03</span>
+        혼인·가족관계
+      </button>
+
+      <button class="case-tab" data-target="nationality">
+        <span>04</span>
+        출생·국적
+      </button>
+
+      <button class="case-tab" data-target="corporate">
+        <span>05</span>
+        기업·법인
+      </button>
+
+      <button class="case-tab" data-target="other">
+        <span>06</span>
+        소송·법률·증거서류
+      </button>
+    </div>
+
+  </div>
+</section>
 <div class="case-sections-grid">
 
   <!-- 01 중국 취업·체류 -->
@@ -1697,6 +1818,38 @@
 
   </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const tabs = document.querySelectorAll(".case-tab");
+  const sections = document.querySelectorAll(".case-sections-grid .case-section");
+
+  function showCaseSection(targetId) {
+
+    tabs.forEach(function(tab) {
+      tab.classList.toggle(
+        "active",
+        tab.dataset.target === targetId
+      );
+    });
+
+    sections.forEach(function(section) {
+      section.classList.toggle(
+        "active",
+        section.id === targetId
+      );
+    });
+  }
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener("click", function() {
+      showCaseSection(this.dataset.target);
+    });
+  });
+
+  showCaseSection("employment");
+
+});
+</script>
 </body>
 </html>
