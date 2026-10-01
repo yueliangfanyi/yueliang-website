@@ -243,26 +243,42 @@
 }
 
 .case-tab {
-  min-height: 88px;
-  padding: 16px 12px;
+  min-height: 96px;
+  padding: 18px 16px;
   border: 1px solid #ddd8d3;
-  border-radius: 50px;
+  border-radius: 8px;
   background: #fff;
-  color: #333;
+  color: #2b2b2b;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.4;
+  text-align: left;
   cursor: pointer;
   transition: .2s ease;
 }
 
 .case-tab span {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #e63943;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
+}
+
+.case-tab:hover {
+  border-color: #e63943;
+  transform: translateY(-2px);
+}
+
+.case-tab.active {
+  background: #e63943;
+  border-color: #e63943;
+  color: #fff;
+}
+
+.case-tab.active span {
+  color: #fff;
 }
 
 .case-tab:hover {
