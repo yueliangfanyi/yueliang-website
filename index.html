@@ -1177,7 +1177,7 @@
  <a href="translation.html">중국어 번역</a>
   <a href="translation-confirmation.html">번역확인증명서</a>
   <a href="translation-notary.html">한국 번역공증·아포스티유</a>
-  <a href="china-apostille.html">중국 아포스티유</a>
+  <a href="china-apostille.html">중국 공증·아포스티유</a>
   <a href="cases.html">업무사례</a>
   <a href="about.html">행정사 소개</a>
   <a href="#contact">상담문의</a>
@@ -1280,6 +1280,22 @@
       <h3><a href="https://blog.naver.com/hyelim314/224419213132" target="_blank" rel="noopener noreferrer">학점은행제 제출용<br>북경사범대학교 성적표 번역</a></h3>
       <p class="home-recent-summary">학점은행제 제출을 위해 북경사범대학교 중문 성적표를 국문으로 번역하고, 번역확인증명서를 발급한 사례입니다.</p>
       <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224419213132" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
+    </article>
+
+    <article class="home-recent-card" data-category="korea">
+      <div><span class="home-recent-badge badge-notary-apostille">한국 공증·아포스티유</span></div>
+      <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-18">2026.09.18.</time></p>
+      <h3><a href="https://blog.naver.com/hyelim314/224415899347" target="_blank" rel="noopener noreferrer">중국 현지 로펌 소송대리 위임용<br>법인 서류 공증·아포스티유</a></h3>
+      <p class="home-recent-summary">한국 법인이 중국 현지 로펌에 소송대리를 위임하기 위해, 수권위탁서·법정대표자 신분증명서·대표이사 여권·사업자등록증명 4종, 총 17부의 공증·아포스티유를 진행한 사례입니다.</p>
+      <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224415899347" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
+    </article>
+
+    <article class="home-recent-card" data-category="korea">
+      <div><span class="home-recent-badge badge-notary-apostille">한국 번역공증·아포스티유</span></div>
+      <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-16">2026.09.16.</time></p>
+      <h3><a href="https://blog.naver.com/hyelim314/224413601446" target="_blank" rel="noopener noreferrer">중국 축구 코치 취업용<br>자격·학력 서류 번역공증·아포스티유</a></h3>
+      <p class="home-recent-summary">중국에서 축구 코치로 취업하고 가족과 동반하기 위해, 축구지도자자격증·범죄수사경력회보서·최종학력증명서·가족관계증명서·경력증명서의 번역공증·아포스티유를 진행한 사례입니다.</p>
+      <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224413601446" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
     </article>
 
     <article class="home-recent-card" data-category="china">
@@ -1451,18 +1467,35 @@
 (() => {
   const section = document.querySelector('.home-recent-cases');
   if (!section) return;
+  const list = section.querySelector('#home-case-list');
   const buttons = section.querySelectorAll('.home-case-filter');
-  const cards = section.querySelectorAll('.home-recent-card');
+  const cards = Array.from(list.querySelectorAll('.home-recent-card'));
   const status = section.querySelector('.home-filter-status');
+
+  // 게시일 최신순으로 정렬하고 메인에는 최신 6개만 표시합니다.
+  const publishedDate = card => {
+    const time = card.querySelector('time[datetime]');
+    return time ? time.getAttribute('datetime') : '';
+  };
+  cards.sort((a, b) => publishedDate(b).localeCompare(publishedDate(a)));
+  cards.forEach(card => list.appendChild(card));
+  const recentCards = new Set(cards.slice(0, 6));
+
+  const showCategory = category => {
+    let count = 0;
+    cards.forEach(card => {
+      card.hidden = !recentCards.has(card) ||
+        (category !== 'all' && card.dataset.category !== category);
+      if (!card.hidden) count += 1;
+    });
+    return count;
+  };
+  showCategory('all');
+
   buttons.forEach(button => {
     button.addEventListener('click', () => {
-      const category = button.dataset.filter;
       buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      let count = 0;
-      cards.forEach(card => {
-        card.hidden = category !== 'all' && card.dataset.category !== category;
-        if (!card.hidden) count += 1;
-      });
+      const count = showCategory(button.dataset.filter);
       status.textContent = button.textContent.trim() + ' 사례 ' + count + '건';
     });
   });
