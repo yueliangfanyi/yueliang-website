@@ -1264,7 +1264,19 @@ footer .footer-admin { color: #e0e6ed; }
 footer .footer-contact a, footer .footer-nav a { color: #c5cfda; }
 footer .footer-contact a:hover, footer .footer-nav a:hover { color: #fff; }
 footer .footer-bottom { color: #acbacb; }
-  </style>
+  
+/* 상담·위치 중문 라벨: 상단 중문 안내와 동일한 크기 */
+.contact .section-label,
+.contact .location-label {
+  color: #e63943;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  line-height: 1.7;
+  text-transform: none;
+}
+
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1449,7 +1461,7 @@ footer .footer-bottom { color: #acbacb; }
 
 <section class="contact" id="contact">
     <div class="container">
-      <div class="section-label">CONTACT</div>
+      <div class="section-label" lang="zh-CN">咨询联系</div>
      <h2>중국어 서류 상담,<br>편한 방법으로 문의해 주세요.</h2>
       <p>
         서류를 촬영하거나 스캔하여 보내주시면 확인 후 진행 방법을 안내해 드립니다.
@@ -1502,7 +1514,7 @@ footer .footer-bottom { color: #acbacb; }
 
       </div>
    <div class="office-location" id="office-location">
-  <div class="location-label">LOCATION</div>
+  <div class="location-label" lang="zh-CN">办公地址</div>
   <h3>오시는 길</h3>
 
   <p class="location-intro">
