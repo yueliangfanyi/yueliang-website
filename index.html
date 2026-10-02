@@ -1220,6 +1220,23 @@
   .location-buttons a { min-width: 0; text-align: center; }
   .header-inner .mobile-menu nav { max-height: calc(100dvh - 68px); }
 }
+
+/* 항목별 소개: PC 내용 유지, 모바일 줄맞춤 */
+.hero-info-row { display: block; }
+.hero-info-row > strong { margin-right: 12px; }
+@media (max-width: 900px) {
+  .hero-info-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 8px; margin-bottom: 8px; }
+  .hero-info-row > strong { margin-right: 0; }
+  .hero-info-value { min-width: 0; word-break: keep-all; overflow-wrap: break-word; }
+  .hero-certificate { display: block; font-size: 12px; color: #777; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 26px 0 30px; }
+  .hero h1 { font-size: 30px; margin-bottom: 20px; line-height: 1.3; }
+  .hero .eyebrow { margin-bottom: 18px; }
+  .hero-text { font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+  .hero-photo { max-width: 210px; }
+}
   </style>
   <script type="application/ld+json">
 {
@@ -1289,12 +1306,12 @@
 
    <h1>중국어번역행정사<br>방혜림입니다.</h1>
 
-       <p class="hero-text">
-  <strong>경력</strong>　前 인천광역시 지방행정직 공무원 10년 8개월<br>
-  <strong>자격</strong>　국가공인 외국어번역행정사(10기) · 자격증 번호 22310005509 (행정안전부)<br>
-  <strong>번역</strong>　중국어 직접 번역 · 번역확인증명서 발급<br>
-  <strong>공증·인증</strong>　번역공증 촉탁 및 한국/중국 아포스티유 대행<br>
-<strong>업무지역</strong>　서울 · 경기(안양·평촌역) · 인천 중심 · 전국 대응
+       <p class="hero-text hero-info">
+<span class="hero-info-row"><strong>경력</strong><span class="hero-info-value">前 인천광역시 지방행정직 공무원 10년 8개월</span></span>
+<span class="hero-info-row"><strong>자격</strong><span class="hero-info-value">국가공인 외국어번역행정사(10기)<span class="hero-certificate"> · 자격증 번호 22310005509 (행정안전부)</span></span></span>
+<span class="hero-info-row"><strong>번역</strong><span class="hero-info-value">중국어 직접 번역 · 번역확인증명서 발급</span></span>
+<span class="hero-info-row"><strong>공증·인증</strong><span class="hero-info-value">번역공증 촉탁 및 한국/중국 아포스티유 대행</span></span>
+<span class="hero-info-row"><strong>업무지역</strong><span class="hero-info-value">서울 · 경기(안양·평촌역) · 인천 중심 · 전국 대응</span></span>
 </p>
 
         <div class="hero-buttons">
