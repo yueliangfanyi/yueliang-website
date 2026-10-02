@@ -910,6 +910,25 @@
     font-size: 24px;
   }
 }
+    /* 번역확인증명서: 연한 파랑 */
+.home-recent-badge {
+  background: #edf3f8;
+  color: #34546b;
+}
+
+/* 번역공증·아포스티유: 연한 주황 */
+.home-recent-badge.badge-notary-apostille,
+.home-recent-badge.badge-notary,
+.home-recent-badge.badge-apostille {
+  background: #fff2e5;
+  color: #8a521f;
+}
+
+/* 중국 아포스티유: 연한 빨강 */
+.home-recent-badge.badge-china-apostille {
+  background: #fceeee;
+  color: #a33d43;
+}
   </style>
   <script type="application/ld+json">
 {
@@ -1051,11 +1070,12 @@
 
       <!-- 사례 1: 진단서 번역공증·아포스티유 -->
     <article class="home-recent-card">
-      <div>
-        <span class="home-recent-badge badge-notary">번역공증</span>
-        <span class="home-recent-badge badge-apostille">아포스티유</span>
-      </div>
-
+     
+<div>
+  <span class="home-recent-badge badge-notary-apostille">
+    번역공증·아포스티유
+  </span>
+</div>
       <p class="home-recent-date">
         블로그 게시일 ·
         <time datetime="2026-09-28">2026.09.28.</time>
