@@ -1113,33 +1113,32 @@
 }
 
 /* 실제 업무 콘텐츠를 살린 상단 블로그 버튼 */
-.header-inner nav .nav-blog {
-  position: relative;
-  min-width: 96px;
-  text-align: center;
+ .header-inner nav .nav-blog {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
-  padding: 8px 26px;
-  border: 1px solid #ebc4c7;
+  width: 80px;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid #f0dfe1;
   border-radius: 5px;
   background: #fff8f8;
-  color: #bc3540;
+  color: #a84b53;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.5;
+  text-align: center;
   white-space: nowrap;
 }
-.header-inner nav .nav-blog > span {
-  position: absolute;
-  right: 9px;
-  top: 50%;
-  transform: translateY(-50%);
-  line-height: 1;
+.header-inner nav .nav-blog:hover {
+  background: #fff0f1;
+  border-color: #e1bec2;
+  color: #943d45;
 }
-.header-inner nav .nav-blog:hover { background: #fff0f1; border-color: #d8848b; color: #a82934; }
-.header-inner nav .nav-blog:focus-visible { outline: 2px solid #bc3540; outline-offset: 3px; }
+.header-inner nav .nav-blog:focus-visible {
+  outline: 2px solid #a84b53;
+  outline-offset: 3px;
+}
   </style>
   <script type="application/ld+json">
 {
@@ -1182,7 +1181,7 @@
   <a href="cases.html">업무사례</a>
   <a href="about.html">행정사 소개</a>
   <a href="#contact">상담문의</a>
-  <a class="nav-blog" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer" aria-label="블로그, 새 창에서 열기">블로그 <span aria-hidden="true">↗</span></a>
+  <a class="nav-blog" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer" aria-label="블로그, 새 창에서 열기">블로그</a>
 </nav>
   </div>
 </header>
