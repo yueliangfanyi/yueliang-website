@@ -1061,6 +1061,22 @@
 /* 상단 상세 주소: 작은 두 줄 안내 */
 .header-location { font-size: 11px; line-height: 1.5; }
 .header-location span { display: block; }
+
+/* 로고를 이름과 짧은 위치 안내의 가운데에 정렬 */
+.header-brand { position: relative; padding-left: 46px; }
+.header-brand .logo { display: block; line-height: 1.35; }
+.header-brand .logo img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+.header-brand .header-location {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
   </style>
   <script type="application/ld+json">
 {
@@ -1092,10 +1108,7 @@
   <div class="header-inner">
    <div class="header-brand">
      <a class="logo" href="/"><img src="yueliang-symbol-red.png" alt="">월량번역행정사사무소</a>
-     <a class="header-location" href="#office-location">
-       <span>경기도 안양시 동안구 부림로 121, 지하층 B113호</span>
-       <span>평촌역 1번 출구 연결 상가</span>
-     </a>
+     <a class="header-location" href="#office-location">경기도 안양시 · 평촌역</a>
    </div>
 
    <nav>
