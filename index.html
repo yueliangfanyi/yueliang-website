@@ -70,7 +70,7 @@
     margin-right: 12px;
     vertical-align: middle;
 }
-    nav {
+    .header-inner nav {
       display: flex;
       align-items: center;
       gap: 30px;
@@ -78,7 +78,7 @@
       font-weight: 600;
     }
 
-    nav a:hover {
+    .header-inner nav a:hover {
       color: #e63943;
     }
 
@@ -209,156 +209,6 @@
       font-size: 16px;
       margin-bottom: 46px;
     }
-
-    /* 서비스 */
-    .services {
-    background: #fff;
-    padding-top: 45px;
-}
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid #222;
-    }
-
-    .service-card {
-      padding: 36px 28px 38px;
-      border-right: 1px solid #e5e5e5;
-      border-bottom: 1px solid #e5e5e5;
-      min-height: 235px;
-      transition: .2s ease;
-    }
-
-    .service-card:first-child {
-      border-left: 1px solid #e5e5e5;
-    }
-
-    .service-card:hover {
-      background: #fff7f6;
-      transform: translateY(-3px);
-    }
-
-    .service-number {
-      font-size: 12px;
-      color: #e63943;
-      font-weight: 700;
-      margin-bottom: 36px;
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      margin-bottom: 11px;
-      letter-spacing: -0.7px;
-    }
-
-    .service-card p {
-      color: #777;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    /* 소개 */
-    .about {
-      background: #f7f5f2;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 90px;
-      align-items: start;
-    }
-
-    .about-name {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 7px;
-    }
-
-    .about-cn {
-      color: #777;
-      font-size: 16px;
-    }
-
-    .career-list {
-      list-style: none;
-      border-top: 1px solid #bbb;
-    }
-
-    .career-list li {
-      padding: 17px 0;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      gap: 25px;
-      font-size: 15px;
-    }
-
-    .career-list strong {
-      width: 120px;
-      flex-shrink: 0;
-    }
-
-    /* 업무 방식 */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
-      margin-top: 45px;
-    }
-
-    .process-item {
-      border-top: 2px solid #322b3a;
-      padding: 22px 8px 0;
-    }
-
-    .process-item span {
-      display: block;
-      color: #e63943;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 9px;
-    }
-
-    .process-item strong {
-      font-size: 16px;
-    }
-    .case-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 45px;
-  margin-bottom: 35px;
-}
-
-.case-card {
-  border: 1px solid #e5e1dd;
-  padding: 26px 28px;
-  min-height: 105px;
-  background: #fff;
-}
-
-.case-card span {
-  display: block;
-  color: #e63943;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-
-.case-card strong {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #2b2b2b;
-}
-
-.case-card p {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-  margin: 0;
-}
 
     /* 상담 */
     .contact {
@@ -706,7 +556,7 @@
 
     /* 모바일 */
     @media (max-width: 900px) {
-      nav {
+      .header-inner nav {
         display: none;
       }
 
@@ -720,19 +570,6 @@
 
       h1 {
         font-size: 40px;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -765,28 +602,6 @@
 
       h2 {
         font-size: 28px;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: auto;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .career-list li {
-        display: block;
-      }
-
-      .career-list strong {
-        display: block;
-        width: auto;
-        margin-bottom: 5px;
       }
     }
  .hero-profile-link {
@@ -929,6 +744,62 @@
   background: #fceeee;
   color: #a33d43;
 }
+
+/* 사례 하단의 간략한 업무 안내 */
+.home-service-summary {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #e5e5e5;
+  scroll-margin-top: 100px;
+}
+.home-service-summary h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+.home-service-summary p {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  word-break: keep-all;
+}
+.home-service-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.home-service-links a {
+  color: #444;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.home-service-links a:hover { color: #e63943; }
+#contact { scroll-margin-top: 82px; }
+@media (max-width: 900px) {
+  .hero .container { gap: 30px; transform: none; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 40px 0; }
+  .hero .container { flex-direction: column; align-items: stretch; }
+  .hero-content { width: 100%; max-width: none; padding: 0; }
+  .hero-photo { width: 100%; max-width: 260px; }
+  .home-recent-cases { width: 100%; padding: 40px 16px 50px; }
+  .home-recent-card { padding: 22px; }
+  .contact-buttons { grid-template-columns: 1fr; }
+  .contact-qr { gap: 12px; flex-wrap: wrap; }
+  .qr-item { flex: 1; min-width: 120px; max-width: 180px; }
+  .qr-item img { width: 100%; height: auto; aspect-ratio: 1; }
+  .location-map { flex-direction: column; padding: 20px 16px; }
+  .map-start, .map-end { min-width: 0; width: 100%; }
+  .map-route { width: 100%; }
+  .location-buttons { flex-wrap: wrap; }
+  .logo { font-size: 16px; white-space: normal; }
+  .logo img { width: 28px; height: 28px; margin-right: 8px; }
+}
   </style>
   <script type="application/ld+json">
 {
@@ -1006,266 +877,51 @@
 </div>
     </div>
   </section>
-<section class="services" id="services">
-  <div class="container">
 
-    <div class="section-label">CHINESE TRANSLATION</div>
-
-    <h2>중국어 번역부터<br>번역공증 촉탁·아포스티유까지</h2>
-
-    <p class="section-desc">
-      공무원 출신 국가공인 외국어번역행정사가 직접 중국어로 번역하고,
-      제출 목적과 제출기관에 따라 필요한 번역확인증명서·번역공증 촉탁·아포스티유 절차를 안내합니다.
-    </p>
-
-    <div class="service-grid">
-
-   
 <!-- 최근 처리 사례 -->
-<section class="home-recent-cases"
-         aria-labelledby="home-recent-cases-title">
-
+<section class="home-recent-cases" aria-labelledby="home-recent-cases-title">
   <p class="home-recent-label">RECENT CASES</p>
   <h2 id="home-recent-cases-title">최근 처리 사례</h2>
-
   <div class="home-recent-grid">
-
-    <!-- 사례 1: 진단서 번역공증·아포스티유 -->
     <article class="home-recent-card">
-      <div>
-        <span class="home-recent-badge badge-notary-apostille">
-          번역공증·아포스티유
-        </span>
-      </div>
+      <div><span class="home-recent-badge badge-notary-apostille">번역공증·아포스티유</span></div>
+      <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-28">2026.09.28.</time></p>
+      <h3><a href="https://blog.naver.com/hyelim314/224424601216" target="_blank" rel="noopener noreferrer">중국 법원 출국금지 해제 신청용<br>진단서 중국어 번역</a></h3>
+      <p class="home-recent-summary">중국 법원에 출국금지 해제를 신청하며 모친의 건강상 사유를 소명하기 위해, 국내 병원에서 발급한 모친의 진단서를 중국 제출용으로 준비한 사례입니다.</p>
+      <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224424601216" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
+    </article>
 
-      <p class="home-recent-date">
-        블로그 게시일 ·
-        <time datetime="2026-09-28">2026.09.28.</time>
-      </p>
+    <article class="home-recent-card">
+      <div><span class="home-recent-badge ">번역확인증명서</span></div>
+      <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-22">2026.09.22.</time></p>
+      <h3><a href="https://blog.naver.com/hyelim314/224419213132" target="_blank" rel="noopener noreferrer">학점은행제 제출용<br>북경사범대학교 성적표 번역</a></h3>
+      <p class="home-recent-summary">학점은행제 제출을 위해 북경사범대학교 중문 성적표를 국문으로 번역하고, 번역확인증명서를 발급한 사례입니다.</p>
+      <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224419213132" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
+    </article>
 
-      <h3>
-        <a href="https://blog.naver.com/hyelim314/224424601216"
-           target="_blank"
-           rel="noopener noreferrer">
-          중국 법원 출국금지 해제 신청용<br>
-          진단서 중국어 번역
-        </a>
-      </h3>
-
-      <p class="home-recent-summary">
-        중국 법원에 출국금지 해제를 신청하며 모친의 건강상 사유를
-        소명하기 위해, 국내 병원에서 발급한 모친의 진단서를
-        중국 제출용으로 준비한 사례입니다.
-      </p>
-
-      <a class="home-recent-link"
-         href="https://blog.naver.com/hyelim314/224424601216"
-         target="_blank"
-         rel="noopener noreferrer">
-        </article>
-
+    <article class="home-recent-card">
+      <div><span class="home-recent-badge badge-china-apostille">중국 공증</span></div>
+      <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-09">2026.09.09.</time></p>
+      <h3><a href="https://blog.naver.com/hyelim314/224405761850" target="_blank" rel="noopener noreferrer">한양대학교 외국인전형 제출용<br>친속관계증명서 쌍호공증</a></h3>
+      <p class="home-recent-summary">한양대학교 외국인전형에 지원하는 중국인 의뢰인을 위해, 국문 번역을 포함한 친속관계증명서 쌍호공증(双号公证) 3부를 대행한 사례입니다.</p>
+      <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224405761850" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
+    </article>
   </div>
 
   <!-- 간략한 업무 안내 -->
-  <div id="services" style="
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid #e5e5e5;
-    scroll-margin-top: 100px;
-  ">
-    <h3 style="
-      margin: 0 0 10px;
-      font-size: 17px;
-      font-weight: 600;
-      color: #333;
-    ">업무 안내</h3>
-
-    <p style="
-      margin: 0 0 14px;
-      font-size: 14px;
-      line-height: 1.8;
-      color: #666;
-      word-break: keep-all;
-    ">
-      중국어 서류를 직접 번역하고, 제출 목적과 기관에 맞춰
-      번역확인증명서·번역공증 촉탁·아포스티유 절차를 안내합니다.
-    </p>
-
-    <nav aria-label="업무별 상세 안내" style="
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 24px;
-      font-size: 14px;
-      line-height: 1.8;
-    ">
-      <a href="translation.html"
-         style="color: #444; text-decoration: underline; text-underline-offset: 4px;">
-        중국어 번역 →
-      </a>
-      <a href="translation-confirmation.html"
-         style="color: #444; text-decoration: underline; text-underline-offset: 4px;">
-        번역확인증명서 →
-      </a>
-      <a href="translation-notary.html"
-         style="color: #444; text-decoration: underline; text-underline-offset: 4px;">
-        한국 번역공증·아포스티유 →
-      </a>
-      <a href="china-apostille.html"
-         style="color: #444; text-decoration: underline; text-underline-offset: 4px;">
-        중국 공증·아포스티유 →
-      </a>
-    </nav>
-  </div>
-
-</section>
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-
-        <div>
-          <div class="section-label">ABOUT</div>
-          <div class="about-name">방혜림 행정사</div>
-          <div class="about-cn">中国语翻译行政士</div>
-        </div>
-
-        <div>
-    <h2>
-  중국어와 행정 실무를<br>
-  함께 쌓아온 경력입니다.
-</h2>
-         
- <ul class="career-list">
-  <li>
-  <strong>국가자격</strong>
-  <span>국가공인 외국어번역행정사(중국어)</span>
-</li>
-
-<li>
-  <strong>정회원</strong>
-  <span>
-    대한행정사회 정회원 ·
-    <a href="https://daaa.or.kr/vtSub07/index01.html" target="_blank" rel="noopener">공식 등록 확인 ↗</a>
-  </span>
-</li>
-
-<li>
-  <strong>공직경력</strong>
-  <span>前 인천광역시 지방행정직 공무원(2012.8.27-2023.3.2. / 10년 8개월 근무)</span>
-</li>
-  <li>
-  <strong>2026</strong>
-  <span>대한행정사회 표창장(2026.2.27.)</span>
-</li>
-<li>
-  <strong>2017</strong>
-  <span>민원처리 단축 우수공무원 1등(2017.12.18. / 인천 연수구청)</span>
-</li>
-<li>
-  <strong>2016</strong>
-    <span>전국 공무원 외국어 스피치대회 중국어 부문 우수상(2016.11.12.)</span>
-  </li>
-  <li>
-    <strong>2014</strong>
-    <span>제12회 한중지방정부교류회의 참석(중국 시안·西安)</span>
-  </li>
-  <li>
-    <strong>2012</strong>
-    <span>인천광역시 공무원 외국어경진대회 중국어 부문 우수상(2012.11.6.)</span>
-  </li>
-   <li>
-  <strong>2008</strong>
-  <span>중국 길수대학교(吉首大学) 교환학생 (호남성 길수시)</span>
-</li>
-
-<li>
-  <strong>2007</strong>
-  <span>중국 동북사범대학교(东北师范大学) 교류학생 (길림성 장춘시)</span>
-</li>
-</ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="process">
-  <div class="container">
-    <div class="section-label">PROCESS</div>
-    <h2>서류 확인부터 완료까지<br>직접 진행합니다.</h2>
-
-    <div class="process-grid">
-      <div class="process-item">
-        <span>01</span>
-        <strong>서류 및 제출처 확인</strong>
-      </div>
-      <div class="process-item">
-        <span>02</span>
-        <strong>번역</strong>
-      </div>
-      <div class="process-item">
-        <span>03</span>
-        <strong>번역문 검수</strong>
-      </div>
-      <div class="process-item">
-        <span>04</span>
-        <strong>공증·인증 절차</strong>
-      </div>
-      <div class="process-item">
-        <span>05</span>
-        <strong>완성 서류 전달</strong>
-      </div>
+  <div class="home-service-summary" id="services">
+    <h3>업무 안내</h3>
+    <p>중국어 서류를 직접 번역하고, 제출 목적과 기관에 맞춰 번역확인증명서·번역공증 촉탁·아포스티유 절차를 안내합니다.</p>
+    <div class="home-service-links" role="navigation" aria-label="업무별 상세 안내">
+      <a href="translation.html">중국어 번역 →</a>
+      <a href="translation-confirmation.html">번역확인증명서 →</a>
+      <a href="translation-notary.html">한국 번역공증·아포스티유 →</a>
+      <a href="china-apostille.html">중국 공증·아포스티유 →</a>
     </div>
   </div>
 </section>
 
-<section id="cases">
-  <div class="container">
-    <div class="section-label">CASES</div>
-    <h2>주요 업무사례</h2>
-    <p>중국 관련 서류 업무를 취업·학력·가족관계·기업·소송·법률·증거서류 등 분야별로 확인하실 수 있습니다.</p>
-
-    <div class="case-grid">
-      <div class="case-card">
-        <span>01</span>
-        <strong>중국 취업·체류</strong>
-        <p>범죄수사경력회보서 · 졸업증명서 · 경력증명서 · 중국 의사 행의비자 관련 서류</p>
-      </div>
-
-      <div class="case-card">
-        <span>02</span>
-        <strong>학력·자격</strong>
-        <p>중국 대학교 졸업증서 · 학위증서 · 성적표 · 큐넷 · 학점은행제 제출서류</p>
-      </div>
-
-      <div class="case-card">
-        <span>03</span>
-        <strong>혼인·가족관계</strong>
-        <p>중국 혼인신고 · 결혼증 · 친속관계공증서 · 호구부 등 가족관계 서류</p>
-      </div>
-
-      <div class="case-card">
-        <span>04</span>
-        <strong>출생·국적</strong>
-        <p>출생증명서 · 중국 호구 등록·말소 · 동일인증명서 · 사망진단서 관련 서류</p>
-      </div>
-
-      <div class="case-card">
-        <span>05</span>
-        <strong>기업·법인</strong>
-        <p>중국 법인설립 · 합자회사 · 사업자등록증명 · 정관 · 주주·이사회 관련 서류</p>
-      </div>
-
-      <div class="case-card">
-        <span>06</span>
-        <strong>소송·법률·증거서류</strong>
-        <p>수권위탁서 · 중국 은행서류 · 위챗 대화 · 중국어 녹취·증거자료 번역</p>
-      </div>
-    </div>
-
-    <a href="cases.html">업무사례 자세히 보기 →</a>
-  </div>
-</section>
-  <section class="contact" id="contact">
+<section class="contact" id="contact">
     <div class="container">
       <div class="section-label">CONTACT</div>
      <h2>중국어 서류 상담,<br>편한 방법으로 문의해 주세요.</h2>
@@ -1351,6 +1007,7 @@
     <a href="tel:01086395165">전화하기 →</a>
   </div>
 </div>
+    </div>
   </section>
 
 </main>
