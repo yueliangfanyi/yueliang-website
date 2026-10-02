@@ -745,39 +745,6 @@
   color: #a33d43;
 }
 
-/* 사례 하단의 간략한 업무 안내 */
-.home-service-summary {
-  margin-top: 28px;
-  padding-top: 22px;
-  border-top: 1px solid #e5e5e5;
-  scroll-margin-top: 100px;
-}
-.home-service-summary h3 {
-  margin: 0 0 10px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #333;
-}
-.home-service-summary p {
-  margin: 0 0 14px;
-  font-size: 14px;
-  line-height: 1.8;
-  color: #666;
-  word-break: keep-all;
-}
-.home-service-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 24px;
-  font-size: 14px;
-  line-height: 1.8;
-}
-.home-service-links a {
-  color: #444;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.home-service-links a:hover { color: #e63943; }
 #contact { scroll-margin-top: 82px; }
 @media (max-width: 900px) {
   .hero .container { gap: 30px; transform: none; }
@@ -799,6 +766,68 @@
   .location-buttons { flex-wrap: wrap; }
   .logo { font-size: 16px; white-space: normal; }
   .logo img { width: 28px; height: 28px; margin-right: 8px; }
+}
+
+/* 최근 처리 사례: 업무별 선택 */
+.home-recent-cases { scroll-margin-top: 100px; }
+.home-recent-cases h2 { margin-bottom: 12px; }
+.home-recent-intro {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  word-break: keep-all;
+}
+.home-case-filters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.home-case-filter {
+  position: relative;
+  min-height: 54px;
+  padding: 12px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: keep-all;
+  cursor: pointer;
+}
+.filter-all { background: #fff; color: #333; border-color: #ddd; }
+.filter-confirmation { background: #edf3f8; color: #34546b; }
+.filter-korea { background: #fff2e5; color: #8a521f; }
+.filter-china { background: #fceeee; color: #a33d43; }
+.home-case-filter[aria-pressed="true"] { border-color: currentColor; }
+.home-case-filter[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  left: 38%;
+  right: 38%;
+  bottom: 0;
+  height: 3px;
+  background: currentColor;
+}
+.home-case-filter:hover { border-color: currentColor; }
+.home-case-filter:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
+.home-recent-card[hidden] { display: none; }
+.home-recent-badge { display: inline-block; }
+.home-recent-card h3 { font-size: 19px; font-weight: 600; }
+.home-filter-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .home-case-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .home-case-filter { font-size: 13px; }
 }
   </style>
   <script type="application/ld+json">
@@ -879,11 +908,19 @@
   </section>
 
 <!-- 최근 처리 사례 -->
-<section class="home-recent-cases" aria-labelledby="home-recent-cases-title">
+<section class="home-recent-cases" id="services" aria-labelledby="home-recent-cases-title">
   <p class="home-recent-label">RECENT CASES</p>
   <h2 id="home-recent-cases-title">최근 처리 사례</h2>
-  <div class="home-recent-grid">
-    <article class="home-recent-card">
+  <p class="home-recent-intro">중국어 서류를 직접 번역하고, 제출 목적과 기관에 맞춰 번역확인증명서·번역공증 촉탁·아포스티유 절차를 안내합니다.</p>
+  <div class="home-case-filters" role="group" aria-label="처리 사례 업무별 선택">
+    <button type="button" class="home-case-filter filter-all" data-filter="all" aria-pressed="true" aria-controls="home-case-list">전체 사례</button>
+    <button type="button" class="home-case-filter filter-confirmation" data-filter="confirmation" aria-pressed="false" aria-controls="home-case-list">번역확인증명서</button>
+    <button type="button" class="home-case-filter filter-korea" data-filter="korea" aria-pressed="false" aria-controls="home-case-list">한국 번역공증·아포스티유</button>
+    <button type="button" class="home-case-filter filter-china" data-filter="china" aria-pressed="false" aria-controls="home-case-list">중국 공증·아포스티유</button>
+  </div>
+  <p class="home-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  <div class="home-recent-grid" id="home-case-list">
+    <article class="home-recent-card" data-category="korea">
       <div><span class="home-recent-badge badge-notary-apostille">번역공증·아포스티유</span></div>
       <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-28">2026.09.28.</time></p>
       <h3><a href="https://blog.naver.com/hyelim314/224424601216" target="_blank" rel="noopener noreferrer">중국 법원 출국금지 해제 신청용<br>진단서 중국어 번역</a></h3>
@@ -891,7 +928,7 @@
       <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224424601216" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
     </article>
 
-    <article class="home-recent-card">
+    <article class="home-recent-card" data-category="confirmation">
       <div><span class="home-recent-badge ">번역확인증명서</span></div>
       <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-22">2026.09.22.</time></p>
       <h3><a href="https://blog.naver.com/hyelim314/224419213132" target="_blank" rel="noopener noreferrer">학점은행제 제출용<br>북경사범대학교 성적표 번역</a></h3>
@@ -899,7 +936,7 @@
       <a class="home-recent-link" href="https://blog.naver.com/hyelim314/224419213132" target="_blank" rel="noopener noreferrer">블로그에서 사례 보기 ↗</a>
     </article>
 
-    <article class="home-recent-card">
+    <article class="home-recent-card" data-category="china">
       <div><span class="home-recent-badge badge-china-apostille">중국 공증</span></div>
       <p class="home-recent-date">블로그 게시일 · <time datetime="2026-09-09">2026.09.09.</time></p>
       <h3><a href="https://blog.naver.com/hyelim314/224405761850" target="_blank" rel="noopener noreferrer">한양대학교 외국인전형 제출용<br>친속관계증명서 쌍호공증</a></h3>
@@ -908,17 +945,6 @@
     </article>
   </div>
 
-  <!-- 간략한 업무 안내 -->
-  <div class="home-service-summary" id="services">
-    <h3>업무 안내</h3>
-    <p>중국어 서류를 직접 번역하고, 제출 목적과 기관에 맞춰 번역확인증명서·번역공증 촉탁·아포스티유 절차를 안내합니다.</p>
-    <div class="home-service-links" role="navigation" aria-label="업무별 상세 안내">
-      <a href="translation.html">중국어 번역 →</a>
-      <a href="translation-confirmation.html">번역확인증명서 →</a>
-      <a href="translation-notary.html">한국 번역공증·아포스티유 →</a>
-      <a href="china-apostille.html">중국 공증·아포스티유 →</a>
-    </div>
-  </div>
 </section>
 
 <section class="contact" id="contact">
@@ -1070,5 +1096,27 @@
 
   </div>
 </footer>
+
+<script>
+(() => {
+  const section = document.querySelector('.home-recent-cases');
+  if (!section) return;
+  const buttons = section.querySelectorAll('.home-case-filter');
+  const cards = section.querySelectorAll('.home-recent-card');
+  const status = section.querySelector('.home-filter-status');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.dataset.filter;
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      let count = 0;
+      cards.forEach(card => {
+        card.hidden = category !== 'all' && card.dataset.category !== category;
+        if (!card.hidden) count += 1;
+      });
+      status.textContent = button.textContent.trim() + ' 사례 ' + count + '건';
+    });
+  });
+})();
+</script>
 </body>
 </html>
