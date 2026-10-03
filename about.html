@@ -1000,23 +1000,6 @@ footer {
     line-height: 1.6;
   }
 }
-   /* 카카오톡·위챗 버튼 색상 통일 */
-.contact .contact-buttons .contact-kakao,
-.contact .contact-buttons .contact-wechat {
-  background: #ffffff !important;
-  border-color: #dddddd !important;
-  color: #0f3d61 !important;
-}
-
-.contact .contact-buttons .contact-kakao small,
-.contact .contact-buttons .contact-wechat small {
-  color: #666666 !important;
-}
-
-.contact .contact-buttons a.contact-kakao:hover {
-  background: #f5f7f9 !important;
-  border-color: #0f3d61 !important;
-}
   </style>
   <script type="application/ld+json">
 {
@@ -1549,29 +1532,6 @@ header{
 .contact h2, .contact .office-location h3{ color: #222; }
 .contact p, .contact .qr-item span, .contact .location-info p{ color: #606060; }
 .contact .location-intro{ color: #606060 !important; }
-.contact .contact-buttons .btn{
-  background: #fff;
-  color: #2b2b2b;
-  border: 1px solid #d2d2ce;
-}
-.contact .contact-buttons .btn small{ color: #606060; opacity: 1; }
-.contact .contact-buttons a.btn:hover{ background: #f0f0ed; border-color: #aaa; }
-.contact .contact-buttons .contact-kakao{
-  background: #fff5cc;
-  border-color: #e8d694;
-  color: #493c20;
-}
-.contact .contact-buttons .contact-kakao small{ color: #665737; }
-.contact .contact-buttons a.contact-kakao:hover{
-  background: #ffedaf;
-  border-color: #d7bb63;
-}
-.contact .contact-buttons .contact-wechat{
-  background: #edf6eb;
-  border-color: #c2d9ba;
-  color: #365c32;
-}
-.contact .contact-buttons .contact-wechat small{ color: #52704d; }
 .contact .office-location{ border-top-color: #d8d8d5; }
 .contact .location-map{ background: #fff; border: 1px solid #e2e2df; }
 .contact .map-end{ background: #fff5f6; border-color: #e6c3c8; }
@@ -1825,7 +1785,36 @@ footer .footer-bottom{ color: #acbacb; }
         font-size: 26px;
       }
     }
-  </style>
+  
+/* Final contact button palette */
+.contact .contact-buttons .btn {
+  background: #faf0f2;
+  border: 1px solid #e8d8dd;
+  color: #222222;
+}
+.contact .contact-buttons .btn strong,
+.contact .contact-buttons .btn small {
+  color: #222222;
+  opacity: 1;
+}
+.contact .contact-buttons a.btn:hover {
+  background: #f5e5e9;
+  border-color: #d6b8c1;
+  color: #222222;
+}
+@media (max-width: 768px) {
+  .about-page-right h3:has(.career-heading-cn) {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .about-page-right h3 .career-heading-cn {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+}
+</style>
 
 
   <section class="about-page">
