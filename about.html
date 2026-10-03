@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>외국어번역행정사 방혜림 | 중국어번역행정사 | 월량번역행정사</title>
+<title>외국어번역행정사 방혜림 | 중국어번역행정사 | 월량번역행정사사무소</title>
 <meta name="description" content="국가공인 외국어번역행정사(중국어) 방혜림입니다. 前 인천광역시 지방행정직 공무원 10년 8개월 경력을 바탕으로 중국어 번역, 번역확인증명서, 번역공증·아포스티유 등 중국 관련 서류 업무를 직접 진행합니다.">
 <link rel="canonical" href="https://yueliang.kr/about.html">
 
@@ -1024,25 +1024,585 @@ footer {
   "url": "https://yueliang.kr/about.html"
 }
 </script>
+<style>
+/* 메인과 동일한 상단·상담·위치·푸터 */
+header{
+      height: 82px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+.header-inner{
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+.logo{
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      white-space: nowrap;
+    }
+.logo img{
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+.header-inner nav{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+.header-inner nav a:hover{
+      color: #e63943;
+    }
+.btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+.btn-primary{
+      background: #2b2b2b;
+      color: white;
+    }
+.section-label{
+      color: #e63943;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+.contact{
+      background: #2b2b2b;
+      color: white;
+    }
+.contact .section-label{
+      color: #e63943;
+    }
+.contact h2{
+      max-width: 680px;
+    }
+.contact p{
+      color: #d6d1d9;
+      margin: 18px 0 32px;
+    }
+.contact .btn-primary{
+      background: white;
+      color: #2b2b2b;
+    }
+.contact-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 720px) auto;
+  gap: 55px;
+  align-items: start;
+  margin-top: 30px;
+}
+.contact-buttons{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 720px;
+  margin-top: 0;
+}
+.contact-buttons .btn{
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.contact-buttons .btn-secondary{
+  background: white;
+  color: #2b2b2b;
+}
+.contact-buttons .btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.contact-buttons .btn strong{
+  font-size: 14px;
+  font-weight: 700;
+}
+.contact-buttons .btn small{
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.65;
+}
+.contact-qr{
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.qr-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.qr-item img{
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background: white;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.qr-item span{
+  font-size: 13px;
+  color: #d6d1d9;
+  text-align: center;
+}
+@media (max-width: 1000px){.contact-layout{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+.contact-qr{
+    margin-top: 0;
+  }}
+.office-location{
+  max-width: 720px;
+  margin-top: 46px;
+  padding-top: 34px;
+  border-top: 1px solid #555;
+}
+.location-label{
+  color: #e63943;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  margin-bottom: 10px;
+}
+.office-location h3{
+  margin: 0 0 14px;
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.location-intro{
+  margin: 0 0 26px !important;
+  color: #d6d1d9 !important;
+  line-height: 1.8 !important;
+}
+.location-map{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 28px 0 20px;
+  padding: 28px 30px;
+  background: #f7f5f2;
+  border-radius: 10px;
+  color: #222;
+}
+.map-start,
+.map-end{
+  background: #fff;
+  border: 1px solid #ddd6ce;
+  border-radius: 8px;
+  padding: 15px 18px;
+  text-align: center;
+}
+.map-start{
+  min-width: 150px;
+}
+.map-end{
+  min-width: 230px;
+}
+.map-end strong{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.map-end span{
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+.map-route{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-route > span:first-child{
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e63943;
+}
+.location-info{
+  padding: 22px 24px;
+  background: rgba(255,255,255,.06);
+  border-radius: 10px;
+}
+.location-info strong{
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.location-info p{
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d6d1d9;
+}
+.location-info span{
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.location-buttons{
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.location-buttons a{
+  display: inline-block;
+  padding: 11px 17px;
+  border: 1px solid #777;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+footer{
+      background: #201d23;
+      color: #aaa;
+      padding: 55px 0 28px;
+      font-size: 13px;
+    }
+.footer-top{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 80px;
+      align-items: start;
+      padding-bottom: 30px;
+    }
+.footer-name{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+.footer-admin{
+      color: #ddd;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+.footer-info p,
+    .footer-contact p{
+      margin: 0 0 14px;
+      line-height: 1.8;
+    }
+.footer-contact{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 220px;
+    }
+.footer-contact strong{
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+.footer-contact a{
+      display: block;
+      color: #aaa;
+      text-decoration: none;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      transition: .2s;
+    }
+.footer-contact a:hover{
+      color: #fff;
+    }
+.footer-nav{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      padding: 22px 0;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+.footer-nav a{
+      color: #aaa;
+      font-size: 13px;
+      text-decoration: none;
+      transition: .2s;
+    }
+.footer-nav a:hover{
+      color: #fff;
+    }
+.footer-bottom{
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: #777;
+      font-size: 12px;
+    }
+@media (max-width: 800px){footer{
+        padding: 45px 0 25px;
+      }
+.footer-top{
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }}
+@media (max-width: 900px){.header-inner nav{
+        display: none;
+      }}
+@media (max-width: 560px){.container,
+      .header-inner{
+        width: min(100% - 32px, 1180px);
+      }
+header{
+        height: 68px;
+      }
+.logo{
+        font-size: 18px;
+      }}
+#contact{ scroll-margin-top: 82px; }
+@media (max-width: 600px){.contact-buttons{ grid-template-columns: 1fr; }
+.contact-qr{ gap: 12px; flex-wrap: wrap; }
+.qr-item{ flex: 1; min-width: 120px; max-width: 180px; }
+.qr-item img{ width: 100%; height: auto; aspect-ratio: 1; }
+.location-map{ flex-direction: column; padding: 20px 16px; }
+.map-start, .map-end{ min-width: 0; width: 100%; }
+.map-route{ width: 100%; }
+.location-buttons{ flex-wrap: wrap; }
+.logo{ font-size: 16px; white-space: normal; }
+.logo img{ width: 28px; height: 28px; margin-right: 8px; }}
+.header-brand{ flex-shrink: 0; }
+.header-location{
+  display: block;
+  margin: 2px 0 0 46px;
+  color: #777;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.header-location:hover{ color: #e63943; }
+.header-location:focus-visible{ outline: 2px solid #333; outline-offset: 3px; }
+#office-location{ scroll-margin-top: 100px; }
+.header-location{ font-size: 11px; line-height: 1.5; }
+.header-location span{ display: block; }
+.header-brand{ position: relative; padding-left: 46px; }
+.header-brand .logo{ display: block; line-height: 1.35; }
+.header-brand .logo img{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+.header-brand .header-location{
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.qr-enlarge{ display: block; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+.qr-enlarge:focus-visible{ outline: 2px solid #fff; outline-offset: 5px; }
+.qr-dialog{
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(460px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 24px;
+  border: 0;
+  border-radius: 12px;
+  color: #222;
+  background: #fff;
+  box-shadow: 0 16px 64px rgba(0,0,0,.2);
+}
+.qr-dialog::backdrop{ background: rgba(0,0,0,.6); }
+.qr-dialog-header{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.qr-dialog h2{ margin: 0; font-size: 18px; }
+.qr-dialog-close{ padding: 6px 12px; border: 1px solid #ddd; border-radius: 4px; background: #fff; color: #333; font: inherit; font-size: 13px; cursor: pointer; }
+.qr-dialog-image{ display: block; width: 100%; max-height: 65dvh; object-fit: contain; }
+.qr-dialog-caption{ margin: 12px 0 0; color: #666; font-size: 13px; text-align: center; }
+.header-inner nav .nav-blog{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid #f0dfe1;
+  border-radius: 5px;
+  background: #fff8f8;
+  color: #a84b53;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+.header-inner nav .nav-blog:hover{
+  background: #fff0f1;
+  border-color: #e1bec2;
+  color: #943d45;
+}
+.header-inner nav .nav-blog:focus-visible{
+  outline: 2px solid #a84b53;
+  outline-offset: 3px;
+}
+.mobile-menu{ display: none; }
+@media (max-width: 1200px){.header-inner{ gap: 12px; }
+.header-inner > nav{ display: none; }
+.mobile-menu{ display: block; flex-shrink: 0; }
+.mobile-menu summary{
+    display: flex; align-items: center; justify-content: center;
+    gap: 7px; min-height: 44px; padding: 8px 12px;
+    border: 1px solid #ddd; border-radius: 4px;
+    background: #f2f2f2; color: #2b2b2b;
+    font-size: 14px; font-weight: 600; cursor: pointer; list-style: none;
+  }
+.mobile-menu summary::-webkit-details-marker{ display: none; }
+.mobile-menu summary:focus-visible{ outline: 2px solid #a84b53; outline-offset: 3px; }
+.mobile-menu summary::after{ content: '+'; font-size: 20px; line-height: 1; }
+.mobile-menu[open] summary::after{ content: '−'; }
+.header-inner .mobile-menu nav{
+    position: absolute; top: 100%; left: 0; right: 0;
+    display: flex; flex-direction: column; align-items: stretch;
+    gap: 0; max-height: calc(100dvh - 82px); overflow-y: auto;
+    padding: 10px 24px 16px; background: #fff;
+    border-bottom: 1px solid #ddd; box-shadow: 0 8px 16px rgba(0,0,0,.06);
+    white-space: normal; font-size: 14px;
+  }
+.header-inner .mobile-menu nav a{
+    display: flex; align-items: center; min-height: 44px;
+    padding: 9px 8px; border-bottom: 1px solid #eee;
+  }
+.header-inner .mobile-menu nav a:last-child{ border-bottom: 0; color: #a84b53; }}
+@media (max-width: 600px){.header-inner{ width: calc(100% - 32px); }
+.header-brand{ min-width: 0; }
+.header-brand .logo{ font-size: 17px; }
+.header-brand .header-location{ font-size: 10px; }
+.mobile-menu summary{ padding: 8px 10px; }
+.header-inner .mobile-menu nav{ padding-left: 16px; padding-right: 16px; }}
+@media (max-width: 900px){.contact-layout{ grid-template-columns: 1fr; gap: 28px; }}
+@media (max-width: 600px){.contact{ padding: 44px 0; }
+.contact h2{ font-size: 26px; line-height: 1.4; }
+.contact-buttons{ grid-template-columns: 1fr; }
+.contact-buttons .btn{ min-width: 0; padding: 14px 12px; }
+.contact-qr{ justify-content: center; gap: 16px; }
+.qr-item{ min-width: 0; width: calc(50% - 8px); max-width: 160px; }
+.qr-item img{ width: 100%; height: auto; }
+.location-map{ flex-direction: column; padding: 20px 16px; }
+.location-buttons{ display: flex; flex-direction: column; gap: 10px; }
+.location-buttons a{ min-width: 0; text-align: center; }
+.header-inner .mobile-menu nav{ max-height: calc(100dvh - 68px); }}
+.contact{ background: #f3f3f1; color: #222; border-top: 1px solid #e2e2df; }
+.contact h2, .contact .office-location h3{ color: #222; }
+.contact p, .contact .qr-item span, .contact .location-info p{ color: #606060; }
+.contact .location-intro{ color: #606060 !important; }
+.contact .contact-buttons .btn{
+  background: #fff;
+  color: #2b2b2b;
+  border: 1px solid #d2d2ce;
+}
+.contact .contact-buttons .btn small{ color: #606060; opacity: 1; }
+.contact .contact-buttons a.btn:hover{ background: #f0f0ed; border-color: #aaa; }
+.contact .contact-buttons .contact-kakao{
+  background: #fff5cc;
+  border-color: #e8d694;
+  color: #493c20;
+}
+.contact .contact-buttons .contact-kakao small{ color: #665737; }
+.contact .contact-buttons a.contact-kakao:hover{
+  background: #ffedaf;
+  border-color: #d7bb63;
+}
+.contact .contact-buttons .contact-wechat{
+  background: #edf6eb;
+  border-color: #c2d9ba;
+  color: #365c32;
+}
+.contact .contact-buttons .contact-wechat small{ color: #52704d; }
+.contact .office-location{ border-top-color: #d8d8d5; }
+.contact .location-map{ background: #fff; border: 1px solid #e2e2df; }
+.contact .map-end{ background: #fff5f6; border-color: #e6c3c8; }
+.contact .map-end strong{ color: #a84b53; }
+.contact .map-end span{ color: #79636a; }
+.contact .location-info{ background: #fff; border: 1px solid #e2e2df; }
+.contact .location-info strong, .contact .location-info span{ color: #333; }
+.contact .location-buttons a{ background: #fff; color: #333; border-color: #ccc; }
+.contact .location-buttons a:hover{ background: #ededeb; border-color: #aaa; }
+.contact a:focus-visible, .contact .qr-enlarge:focus-visible{
+  outline: 2px solid #a84b53; outline-offset: 3px;
+}
+footer{ background: #0f3d61; color: #c5cfda; }
+footer .footer-admin{ color: #e0e6ed; }
+footer .footer-contact a, footer .footer-nav a{ color: #c5cfda; }
+footer .footer-contact a:hover, footer .footer-nav a:hover{ color: #fff; }
+footer .footer-bottom{ color: #acbacb; }
+.contact .section-label,
+.contact .location-label{
+  color: #e63943;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  line-height: 1.7;
+  text-transform: none;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="header-inner">
-   <a class="logo" href="/"><img src="yueliang-symbol-red.png" alt="">월량번역행정사사무소</a>
+   <div class="header-brand">
+     <a class="logo" href="/"><img src="yueliang-symbol-red.png" alt="">월량번역행정사사무소</a>
+     <a class="header-location" href="#office-location">경기도 안양시 · 평촌역 · 1번 출구 141m</a>
+   </div>
 
    <nav>
  <a href="translation.html">중국어 번역</a>
-  <a href="translation-notary.html">번역공증·아포스티유</a>
-  <a href="china-apostille.html">중국 아포스티유</a>
+  <a href="translation-confirmation.html">번역확인증명서</a>
+  <a href="translation-notary.html">한국 번역공증·아포스티유</a>
+  <a href="china-apostille.html">중국 공증·아포스티유</a>
   <a href="cases.html">업무사례</a>
-<a href="about.html">사무소 소개</a>
-  <a href="index.html#contact">상담문의</a>
-  <span class="nav-divider">｜</span>
-  <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener">블로그</a>
-  <span class="language">KR &nbsp;|&nbsp; 中文</span>
+  <a href="about.html">행정사 소개</a>
+  <a href="#contact">상담문의</a>
+  <a class="nav-blog" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer" aria-label="블로그, 새 창에서 열기">블로그</a>
 </nav>
+   <details class="mobile-menu">
+     <summary>메뉴</summary>
+     <nav aria-label="모바일 주요 메뉴">
+       <a href="translation.html">중국어 번역</a>
+       <a href="translation-confirmation.html">번역확인증명서</a>
+       <a href="translation-notary.html">한국 번역공증·아포스티유</a>
+       <a href="china-apostille.html">중국 공증·아포스티유</a>
+       <a href="cases.html">업무사례</a>
+       <a href="about.html">행정사 소개</a>
+       <a href="#contact">상담문의</a>
+       <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer">블로그 ↗</a>
+     </nav>
+   </details>
   </div>
 </header>
 <main>
@@ -1065,17 +1625,8 @@ footer {
       font-size: 32px;
       line-height: 1.3;
     }
-.name-cn {
-  margin-left: 8px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #777;
-}
-    .about-chinese {
-      margin: 0;
-      color: #555;
-      font-size: 16px;
-    }
+.about-chinese {display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px;margin:0;color:#555;font-size:16px;line-height:1.7;}
+    .about-chinese .name-cn {margin:0;font-size:18px;font-weight:500;color:#555;}
 
     .about-profile-photo {
       margin-top: 32px;
@@ -1089,7 +1640,7 @@ footer {
     }
 
     .about-page-right h3 {
-      margin: 0 0 24px;
+      margin: 0;
       padding-bottom: 20px;
       border-bottom: 1px solid #bbb;
       font-size: 30px;
@@ -1107,7 +1658,9 @@ footer {
       display: grid;
       grid-template-columns: 125px minmax(0, 1fr);
       gap: 20px;
+      align-items: start;
       padding: 18px 0;
+      line-height: 1.8;
       border-bottom: 1px solid #ddd;
     }
 
@@ -1118,7 +1671,7 @@ footer {
 
     .about-career span {
       color: #222;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     .about-career a {
@@ -1153,11 +1706,12 @@ footer {
     }
 
     .story-text p {
-      margin: 0 0 18px;
+      margin: 0 0 24px;
       color: #555;
       font-size: 16px;
       line-height: 1.9;
       word-break: keep-all;
+      overflow-wrap: anywhere;
     }
 
     .story-text p:last-child {
@@ -1206,8 +1760,8 @@ footer {
 
         <div class="section-label">ABOUT</div>
 
-        <h1>방혜림 행정사 <span class="name-cn">方慧碄</span></h1>
-<p class="about-chinese">中国语翻译行政士</p>
+        <h1>방혜림 행정사</h1>
+        <p class="about-chinese" lang="zh-CN"><span class="name-cn">方慧碄</span><span>中国语翻译行政士</span></p>
 
         <div class="about-profile-photo">
           <img src="id.jpg" alt="중국어번역행정사 방혜림">
@@ -1327,6 +1881,9 @@ footer {
   <p>
     중국어를 공부하는 것도 좋았고, 중국에 가는 것도,
     중국 사람들과 이야기하는 것도 좋아했습니다.
+  </p>
+
+  <p>
     제 이름 ‘방혜림’의 중국어 발음(팡훼이린) 때문에 중국인으로 오해받는 일도 종종 있었는데,
     그런 에피소드마저 재미있을 만큼 중국어와 중국을 좋아했습니다.
   </p>
@@ -1341,11 +1898,109 @@ footer {
     한 건 한 건 직접 살펴보고 번역하며 업무하고 있습니다.
   </p>
 
+  <p>
+    좋아하는 일을 오래 이어가고 싶기에, 맡겨주신 서류를 소중히 다루고
+    정확하게 확인한 내용을 바탕으로 정직하게 안내해 드리려 합니다.
+  </p>
+
 </div>
 
   </div>
 
 </section>
+
+<section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label" lang="zh-CN">咨询联系</div>
+     <h2>중국어 서류 상담,<br>편한 방법으로 문의해 주세요.</h2>
+      <p>
+        서류를 촬영하거나 스캔하여 보내주시면 확인 후 진행 방법을 안내해 드립니다.
+      </p>
+
+      <div class="contact-layout">
+
+        <div class="contact-buttons">
+          <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary contact-kakao" target="_blank" rel="noopener">
+            <strong>카카오톡 채널</strong>
+            <small>1:1 채팅 상담</small>
+          </a>
+
+          <span class="btn btn-secondary contact-wechat">
+            <strong>WeChat · hyelim314</strong>
+            <small>可用中文咨询</small>
+          </span>
+
+          <span class="btn btn-secondary">
+            <strong>카카오톡 ID · hyelim314</strong>
+            <small>친구 추가 후 문의</small>
+          </span>
+
+          <a href="tel:01086395165" class="btn btn-secondary">
+            <strong>전화 상담 · 010-8639-5165</strong>
+            <small>부재 시 문자 요청</small>
+          </a>
+
+          <a href="mailto:hyelim314@naver.com" class="btn btn-secondary">
+            <strong>이메일 · hyelim314@naver.com</strong>
+            <small>서류 파일 첨부 시 빠른 견적·상담</small>
+          </a>
+        </div>
+
+        <div class="contact-qr">
+          <div class="qr-item">
+            <button type="button" class="qr-enlarge" data-qr-title="카카오톡 채널" aria-label="카카오톡 채널 QR코드 크게 보기" aria-haspopup="dialog" aria-controls="qr-dialog">
+              <img src="kakao-qr.png" alt="월량번역행정사사무소 카카오톡 채널 QR코드">
+            </button>
+            <span>카카오톡 채널</span>
+          </div>
+
+          <div class="qr-item">
+            <button type="button" class="qr-enlarge" data-qr-title="WeChat · hyelim314" aria-label="WeChat · hyelim314 QR코드 크게 보기" aria-haspopup="dialog" aria-controls="qr-dialog">
+              <img src="wechet-qr.png" alt="월량번역행정사사무소 WeChat QR코드">
+            </button>
+            <span>WeChat · hyelim314</span>
+          </div>
+        </div>
+
+      </div>
+   <div class="office-location" id="office-location">
+  <div class="location-label" lang="zh-CN">办公地址</div>
+  <h3>오시는 길</h3>
+
+  <p class="location-intro">
+    월량번역행정사사무소는 평촌역 1번 출구에서 약 141m,
+    연결된 동아프라자아케이드상가에 위치하고 있습니다.
+  </p>
+<div class="location-map">
+  <div class="map-start">
+    <strong>평촌역 1번 출구</strong>
+  </div>
+
+  <div class="map-route">
+    <span>지하 연결 · 약 141m</span>
+    <div class="route-line"></div>
+    <span class="route-arrow">→</span>
+  </div>
+
+  <div class="map-end">
+    <strong>월량번역행정사사무소</strong>
+    <span>동아프라자아케이드상가 B113호</span>
+  </div>
+</div>
+ <div class="location-info">
+ <p>
+  (14066) 경기 안양시 동안구 부림로 121 지하층 B113호<br>
+  (관양동, 동아프라자아케이드상가)
+</p>
+  <span>평촌역 1번 출구 연결 상가</span>
+</div>
+  <div class="location-buttons">
+    <a href="https://naver.me/FLy2S2LA" target="_blank" rel="noopener">네이버지도에서 보기 →</a>
+    <a href="tel:01086395165">전화하기 →</a>
+  </div>
+</div>
+    </div>
+  </section>
 
 </main>
 
@@ -1383,7 +2038,7 @@ footer {
           카카오톡 채널 →
         </a>
 
-        <a href="index.html#contact">
+        <a href="#contact">
           상담방법 자세히 보기 →
         </a>
       </div>
@@ -1395,8 +2050,8 @@ footer {
       <a href="translation-notary.html">번역공증·아포스티유</a>
       <a href="china-apostille.html">중국 공증·아포스티유</a>
       <a href="cases.html">업무사례</a>
-      <a href="about.html">사무소 소개</a>
-      <a href="index.html#contact">상담문의</a>
+      <a href="about.html">행정사 소개</a>
+      <a href="#contact">상담문의</a>
       <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener">블로그</a>
       <a href="privacy.html">개인정보처리방침</a>
     </div>
@@ -1407,5 +2062,62 @@ footer {
 
   </div>
 </footer>
+<dialog class="qr-dialog" id="qr-dialog" aria-labelledby="qr-dialog-title">
+  <div class="qr-dialog-header">
+    <h2 id="qr-dialog-title">QR코드</h2>
+    <button type="button" class="qr-dialog-close" autofocus>닫기</button>
+  </div>
+  <img class="qr-dialog-image" alt="">
+  <p class="qr-dialog-caption">QR코드를 스캔하여 연결하세요.</p>
+</dialog>
+<script>
+(() => {
+  const dialog = document.getElementById('qr-dialog');
+  const image = dialog.querySelector('.qr-dialog-image');
+  const title = dialog.querySelector('#qr-dialog-title');
+  let previousOverflow = '';
+  document.querySelectorAll('.qr-enlarge').forEach(button => {
+    button.addEventListener('click', () => {
+      const source = button.querySelector('img');
+      image.src = source.getAttribute('src');
+      image.alt = source.alt;
+      title.textContent = button.dataset.qrTitle;
+      previousOverflow = document.body.style.overflow;
+      dialog.showModal();
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  dialog.querySelector('.qr-dialog-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => { document.body.style.overflow = previousOverflow; });
+})();
+</script>
+<script>
+(() => {
+  const menu = document.querySelector('.mobile-menu');
+  if (!menu) return;
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => { menu.open = false; });
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+  const desktop = window.matchMedia('(min-width: 1201px)');
+  desktop.addEventListener('change', event => {
+    if (event.matches) menu.open = false;
+  });
+})();
+</script>
+
 </body>
 </html>
