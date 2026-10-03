@@ -987,6 +987,19 @@ footer {
     gap: 30px;
   }
 }
+    @media (max-width: 768px) {
+  h3:has(.career-heading-cn) {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .career-heading-cn {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+}
   </style>
   <script type="application/ld+json">
 {
