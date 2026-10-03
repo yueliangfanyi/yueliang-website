@@ -1275,7 +1275,39 @@ footer .footer-bottom { color: #acbacb; }
   line-height: 1.7;
   text-transform: none;
 }
+/* 제목 글자 바로 옆에 아이콘과 비교 링크 배치 */
+.document-direction-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
 
+.document-direction .document-direction-heading h2 {
+  margin: 0;
+}
+
+.document-direction-heading .certification-guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 0;
+  color: #777;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.certification-guide-link svg {
+  flex-shrink: 0;
+}
+
+.document-direction-heading .certification-guide-link:hover {
+  color: #e63943;
+}
 </style>
   <script type="application/ld+json">
 {
