@@ -933,14 +933,14 @@
   transform: none;
 }
 @media (min-width: 901px) {
-  .hero { padding: 48px 0 48px; }
+  .hero { padding: 28px 0 28px; }
   .hero .container { justify-content: space-between; gap: 36px; }
   .hero-content { width: 64%; max-width: 720px; padding: 0; }
   .hero-photo { width: 30%; max-width: 320px; margin-left: auto; flex-shrink: 0; }
   .hero h1 { font-size: clamp(32px, 3vw, 42px); margin-bottom: 20px; }
   .hero-text { font-size: 17px; line-height: 1.8; margin-bottom: 24px; }
 }
-.document-direction { padding-top: 28px; }
+.document-direction { padding-top: 12px; }
 .document-direction-inner {
   padding: 18px 22px;
   border: 1px solid #e5e5e5;
@@ -1296,7 +1296,7 @@ footer .footer-bottom { color: #acbacb; }
   line-height: 1.7;
   text-transform: none;
 }
-/* 제출 안내 제목 및 비교 버튼: 중복 스타일 통합 */
+/* 제출 안내: 중문 라벨과 비교 버튼을 같은 상단 줄에 배치 */
 .document-direction-heading {
   display: flex;
   width: 100%;
@@ -1306,7 +1306,7 @@ footer .footer-bottom { color: #acbacb; }
   gap: 10px 24px;
   margin-bottom: 18px;
 }
-.document-direction .document-direction-heading h2 {
+.document-direction .document-direction-heading .home-recent-label {
   margin: 0;
 }
 .document-direction-heading .certification-guide-link {
@@ -1451,11 +1451,8 @@ footer .footer-bottom { color: #acbacb; }
 <!-- 제출 방향별 짧은 업무 안내 -->
 <section class="document-direction" id="services" aria-labelledby="document-direction-title">
   <div class="document-direction-inner">
-    <p class="home-recent-label" lang="zh-CN">材料办理指南</p>
   <div class="document-direction-heading">
-  <h2 id="document-direction-title">
-    중국 관련 서류 제출처에 맞게 준비해 드립니다.
-  </h2>
+    <p class="home-recent-label" lang="zh-CN">材料办理指南</p>
 
   <a class="certification-guide-link"
      href="translation-certification-guide.html"
@@ -1471,6 +1468,9 @@ footer .footer-bottom { color: #acbacb; }
     <span aria-hidden="true">→</span>
   </a>
 </div>
+  <h2 id="document-direction-title">
+    중국 관련 서류 제출처에 맞게 준비해 드립니다.
+  </h2>
     <div class="document-direction-grid">
       <div class="document-direction-item">
         <h3>중국 서류 → 한국 제출 <span class="direction-chinese" lang="zh-CN">(中国材料提交韩国)</span></h3>
