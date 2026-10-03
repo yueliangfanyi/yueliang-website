@@ -1625,8 +1625,9 @@ footer .footer-bottom{ color: #acbacb; }
       font-size: 32px;
       line-height: 1.3;
     }
-.about-chinese {display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;max-width:100%;margin:4px 0 0;padding:8px 12px;border-radius:5px;background:#f2f2f2;color:#555;font-size:16px;line-height:1.7;}
-    .about-chinese .name-cn {margin:0;font-size:16px;font-weight:500;color:#555;}
+.about-chinese {display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin:12px 0 0;padding:11px 14px;border:1px solid #ddd;border-radius:5px;background:#f2f2f2;color:#555;font-size:16px;font-weight:500;line-height:1.6;white-space:nowrap;}
+    .about-chinese .name-cn {margin:0;font-size:17px;font-weight:600;color:#555;}
+    .about-page .section-label, .about-story .section-label {font-size:20px;font-weight:600;line-height:1.7;letter-spacing:.02em;}
 
     .about-profile-photo {
       margin-top: 32px;
@@ -1646,6 +1647,16 @@ footer .footer-bottom{ color: #acbacb; }
       font-size: 30px;
       line-height: 1.4;
       letter-spacing: -1px;
+    }
+
+    .about-page-right h3 .career-heading-cn {
+      display: block;
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 0;
     }
 
     .about-career {
@@ -1694,7 +1705,7 @@ footer .footer-bottom{ color: #acbacb; }
     }
 
     .about-story h2 {
-      max-width: 720px;
+      max-width: none;
       margin: 10px 0 28px;
       font-size: 28px;
       line-height: 1.5;
@@ -1703,8 +1714,9 @@ footer .footer-bottom{ color: #acbacb; }
     }
 
     .story-text {
-      max-width: 780px;
-      padding: 28px 30px;
+      width: 100%;
+      max-width: none;
+      padding: 30px 36px;
       border: 1px solid #e8e8e6;
       border-radius: 8px;
       background: #fafaf9;
@@ -1722,6 +1734,8 @@ footer .footer-bottom{ color: #acbacb; }
 
     @media (max-width: 600px) {
       .story-text {padding:22px 20px;}
+      .about-page .section-label, .about-story .section-label {font-size:19px;}
+      .about-chinese {gap:8px;padding:11px 10px;font-size:15px;}
       .story-text p {font-size:16px;line-height:1.85;margin-bottom:22px;}
       .about-story h2 {font-size:25px;line-height:1.5;}
     }
@@ -1784,7 +1798,7 @@ footer .footer-bottom{ color: #acbacb; }
 
       <div class="about-page-right">
 
-        <h3>중국어와 행정 실무를 함께 쌓아온 경력입니다.</h3>
+        <h3>중국어와 행정 실무를 함께 쌓아온 경력입니다.<span class="career-heading-cn" lang="zh-CN">中文能力与行政实务经验的积累</span></h3>
 
         <ul class="about-career">
 
