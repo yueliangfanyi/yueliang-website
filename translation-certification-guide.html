@@ -1,92 +1,18 @@
-
-방금 대화한 내용 반영하여 코드 다시 알려줘. 창이 느려서 다시 새채팅으로 열었어
-네. 방금 마지막에 요청하신 ① 법무부 안내 링크로 교체 ② 빨간 중문 글자 확대를 반영한 코드입니다.
-
-수정할 파일은 **translation-certification-guide.html**입니다.
-
-1. ‘관련 근거 및 안내’ 링크 교체
-
-Ctrl + F로 한정화를 검색하세요. 해당 링크의 <li>부터 </li>까지 지우고 아래 코드를 붙여넣으세요.
-
-<li>
-  <a
-    href="https://www.moj.go.kr/moj/222/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgzJTJGMjIzOTU5JTJGYXJ0Y2xWaWV3LmRvJTNG"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    법무부 · 번역문 인증사무 지침 설명
-  </a>
-</li>
-이 링크는 법무부가 게시한 번역문 인증사무 지침 설명자료로 연결됩니다. 
-
-2. 빨간 중문 글자 크게 하기
-
-Ctrl + F로 **</style>**을 검색한 다음, 바로 위에 아래 코드를 붙여넣으세요.
-
-/* 안내 페이지의 빨간 중문 글자 크기 */
-.guide-hero .section-label,
-.guide-content .section-label {
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.7;
-}
-붙여넣은 모습은 이렇게 됩니다.
-
-/* 안내 페이지의 빨간 중문 글자 크기 */
-.guide-hero .section-label,
-.guide-content .section-label {
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.7;
-}
-
-</style>
-
-상단 제목은 방금 정한 아래 문구를 그대로 사용하면 됩니다.
-
-<h1>번역확인증명서와 번역공증,<br>뭐가 다른가요?</h1>
-
-이미 같은 코드가 들어 있다면 중복으로 추가하지 말고, 저장하면 됩니다.
-
-위 내용을 다시 반영하여 전체 코드 알려줘
-두 수정사항을 반영한 전체 코드 파일입니다. 상단 제목, 비교표, 아포스티유 설명, 사례, 상담·푸터까지 모두 포함되어 있습니다.
-
-아래 순서대로 교체하세요.
-
-위 파일을 내려받아 메모장으로 열기
-Ctrl + A → Ctrl + C로 전체 코드 복사
-GitHub에서 기존 translation-certification-guide.html 열고 연필 버튼 클릭
-기존 코드 전체 선택 → 복사한 코드 붙여넣기
-Commit changes로 저장
-반영 내용은 법무부 ‘번역문 인증사무 지침 설명’ 링크 교체, 빨간 중문 라벨 17px 확대입니다.
-
-
-translation-certification-guide.html
-HTML
-이게 바로 화면이 뜨는데 코드 복붙하려고 해. 텍스트로
-전체 코드를 텍스트 파일로 드립니다.
-
-열어서 **Ctrl + A → Ctrl + C**로 복사한 뒤, GitHub의 translation-certification-guide.html 기존 코드를 모두 지우고 붙여넣으세요.
-
-
-translation-certification-guide.txt
-문서
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <title>번역확인증명서와 번역공증 차이 | 중국어 번역 | 월량번역행정사</title>
-<meta name="description" content="번역확인증명서와 번역공증의 차이를 비교합니다. 발급 주체, 절차, 공증 수수료와 제출기관 요구사항을 확인하고, 번역문·원문에 필요한 아포스티유를 안내합니다.">
+<title>번역확인증명서와 번역공증 차이 | 중국어 번역공증 | 월량번역행정사사무소</title>
+<meta name="description" content="번역확인증명서와 번역공증, 무엇이 다른가요? 발급·인증 주체, 진행 절차와 비용을 비교하고 아포스티유가 필요한 경우를 안내합니다. 중국어 서류의 한국 제출과 한국 서류의 중국 제출 시 필요한 인증 절차를 확인하세요.">
 <link rel="canonical" href="https://yueliang.kr/translation-certification-guide.html">
-  <link rel="icon" type="image/png" href="/yueliang-symbol-red.png">
-  <meta property="og:title" content="번역확인증명서와 번역공증 차이 | 중국어 번역 | 월량번역행정사">
-  <meta property="og:description" content="번역확인증명서와 번역공증의 차이를 비교합니다. 발급 주체, 절차, 공증 수수료와 제출기관 요구사항을 확인하고, 번역문·원문에 필요한 아포스티유를 안내합니다.">
-  <meta property="og:url" content="https://yueliang.kr/translation-certification-guide.html">
-  <meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/yueliang-symbol-red.png">
+
+<meta property="og:title" content="번역확인증명서와 번역공증 차이 | 중국어 번역공증 | 월량번역행정사사무소">
+<meta property="og:description" content="번역확인증명서와 번역공증, 무엇이 다른가요? 발급·인증 주체, 진행 절차와 비용을 비교하고 아포스티유가 필요한 경우를 안내합니다. 중국어 서류의 한국 제출과 한국 서류의 중국 제출 시 필요한 인증 절차를 확인하세요.">
+<meta property="og:url" content="https://yueliang.kr/translation-certification-guide.html">
+<meta name="robots" content="index, follow">
   <style>
     * {
       box-sizing: border-box;
@@ -1387,8 +1313,8 @@ footer .footer-bottom { color: #acbacb; }
 .guide-case { padding:22px 24px; margin-top:24px; border:1px solid #e5e5e5; border-radius:6px; }
 .guide-case h3 { font-size:18px; margin-bottom:8px; font-weight:600; }
 .guide-case p { font-size:14px; }
-.guide-sources { padding:25px 0 45px; font-size:12px; color:#777; }
-.guide-sources ul { padding-left:20px; margin-top:10px; }
+.guide-sources { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 20px; margin-top:16px; padding:0; font-size:12px; line-height:1.8; color:#777; }
+.guide-sources ul { display:flex; flex-wrap:wrap; gap:6px 20px; list-style:none; padding:0; margin:0; }
 .guide-sources a { text-decoration:underline; text-underline-offset:3px; }
 .guide-content a:focus-visible,.guide-breadcrumb a:focus-visible { outline:2px solid #e63943; outline-offset:4px; }
 @media(max-width:900px) { .guide-detail-grid { grid-template-columns:1fr; } }
@@ -1534,13 +1460,18 @@ footer .footer-bottom { color: #acbacb; }
     <thead><tr><th scope="col">구분</th><th scope="col">번역확인증명서</th><th scope="col">번역공증</th></tr></thead>
     <tbody>
      <tr><th scope="row">확인 대상</th><td>외국어번역행정사가 직접 번역한 번역문</td><td>원문과 번역문이 일치한다는 서약</td></tr>
-     <tr><th scope="row">발급·인증 주체</th><td>해당 번역문을 번역한 외국어번역행정사</td><td>공증인</td></tr>
+     <tr><th scope="row">발급·인증 주체</th><td>해당 번역문을 번역한 외국어번역행정사</td><td>공증인 변호사</td></tr>
      <tr><th scope="row">진행 절차</th><td>직접 번역 → 번역확인증명서 발급</td><td>번역 → 번역공증 촉탁 → 공증인의 인증</td></tr>
-     <tr><th scope="row">공증 수수료</th><td>별도의 번역공증을 진행하지 않는 경우 발생하지 않음<br><small>번역·증명서 발급 비용은 발생합니다.</small></td><td>공증 수수료 발생<br><small>번역·촉탁 대행 비용과 별도로 확인합니다.</small></td></tr>
+     <tr><th scope="row">공증 수수료</th><td>별도의 번역공증을 진행하지 않는 경우 발생하지 않음<br><small>번역확인증명서 비용은 발생합니다.</small></td><td>공증 수수료 발생<br><small>번역·촉탁 대행 비용과 별도로 확인합니다.</small></td></tr>
     </tbody>
    </table>
   </div>
   <p class="guide-scroll-note">비교표를 좌우로 움직여 확인해 주세요.</p>
+  <div class="guide-sources"><strong>관련 근거 및 안내</strong><ul>
+ <li><a href="https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1031059549" target="_blank" rel="noopener noreferrer">행정사법 제20조 · 번역확인증명서 발급</a></li>
+ <li><a href="https://www.moj.go.kr/moj/222/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgzJTJGMjIzOTU5JTJGYXJ0Y2xWaWV3LmRvJTNG" target="_blank" rel="noopener noreferrer">법무부 · 번역문 인증사무 지침 설명</a></li>
+ <li><a href="https://www.hcch.net/en/instruments/conventions/full-text/?cid=41" target="_blank" rel="noopener noreferrer">HCCH · 아포스티유 협약</a></li>
+</ul></div>
  </div>
 </section>
 <section class="guide-content guide-apostille" aria-labelledby="guide-apostille-title"><div class="container">
@@ -1572,11 +1503,7 @@ footer .footer-bottom { color: #acbacb; }
   </div>
  </div>
 </section>
-<div class="guide-sources"><div class="container"><strong>관련 근거 및 안내</strong><ul>
- <li><a href="https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1031059549" target="_blank" rel="noopener noreferrer">행정사법 제20조 · 번역확인증명서 발급</a></li>
- <li><a href="https://www.moj.go.kr/moj/222/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgzJTJGMjIzOTU5JTJGYXJ0Y2xWaWV3LmRvJTNG" target="_blank" rel="noopener noreferrer">법무부 · 번역문 인증사무 지침 설명</a></li>
- <li><a href="https://www.hcch.net/en/instruments/conventions/full-text/?cid=41" target="_blank" rel="noopener noreferrer">HCCH · 아포스티유 협약</a></li>
-</ul></div></div>
+
 <!-- 6. 기존 상담 안내 -->
 <section class="contact" id="contact">
     <div class="container">
