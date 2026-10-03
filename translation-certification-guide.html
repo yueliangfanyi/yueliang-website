@@ -420,21 +420,47 @@
       .hero-photo {max-width:210px;}
     }
 
-    /* 상담·오시는 길 색상 */
-    .contact {background:#e9e9e7;color:#222;border-top:1px solid #dededb;}
-    .contact h2, .contact .office-location h3 {color:#222;}
-    .contact p, .contact .qr-item span, .contact .location-info p {color:#606060;}
-    .contact .location-intro {color:#606060 !important;}
-    .contact .contact-buttons .btn {background:#fff;color:#2b2b2b;border:1px solid #dcdcdc;}
-    .contact .contact-buttons .btn small {color:#606060;opacity:1;}
-    .contact .contact-buttons a.btn:hover {background:#ededeb;border-color:#aaa;}
-    .contact .office-location {border-top-color:#d8d8d5;}
-    .contact .location-map {background:#fff;border:1px solid #e2e2df;}
-    .contact .location-info {background:#fff;border:1px solid #e2e2df;}
-    .contact .location-info strong, .contact .location-info span {color:#333;}
-    .contact .location-buttons a {background:#fff;color:#333;border-color:#ccc;}
-    .contact .location-buttons a:hover {background:#ededeb;border-color:#aaa;}
-    .contact a:focus-visible, .contact .qr-enlarge:focus-visible {outline:2px solid #a84b53;outline-offset:3px;}
+/* 상담과 오시는 길: 밝은 배경과 채널별 색상 */
+.contact { background: #f3f3f1; color: #222; border-top: 1px solid #e2e2df; }
+.contact h2, .contact .office-location h3 { color: #222; }
+.contact p, .contact .qr-item span, .contact .location-info p { color: #606060; }
+.contact .location-intro { color: #606060 !important; }
+.contact .contact-buttons .btn {
+  background: #fff;
+  color: #2b2b2b;
+  border: 1px solid #d2d2ce;
+}
+.contact .contact-buttons .btn small { color: #606060; opacity: 1; }
+.contact .contact-buttons a.btn:hover { background: #f0f0ed; border-color: #aaa; }
+.contact .contact-buttons .contact-kakao {
+  background: #fff5cc;
+  border-color: #e8d694;
+  color: #493c20;
+}
+.contact .contact-buttons .contact-kakao small { color: #665737; }
+.contact .contact-buttons a.contact-kakao:hover {
+  background: #ffedaf;
+  border-color: #d7bb63;
+}
+.contact .contact-buttons .contact-wechat {
+  background: #edf6eb;
+  border-color: #c2d9ba;
+  color: #365c32;
+}
+.contact .contact-buttons .contact-wechat small { color: #52704d; }
+.contact .office-location { border-top-color: #d8d8d5; }
+.contact .location-map { background: #fff; border: 1px solid #e2e2df; }
+.contact .map-end { background: #fff5f6; border-color: #e6c3c8; }
+.contact .map-end strong { color: #a84b53; }
+.contact .map-end span { color: #79636a; }
+.contact .location-info { background: #fff; border: 1px solid #e2e2df; }
+.contact .location-info strong, .contact .location-info span { color: #333; }
+.contact .location-buttons a { background: #fff; color: #333; border-color: #ccc; }
+.contact .location-buttons a:hover { background: #ededeb; border-color: #aaa; }
+.contact a:focus-visible, .contact .qr-enlarge:focus-visible {
+  outline: 2px solid #a84b53; outline-offset: 3px;
+}
+
 
     /* 푸터 색상 */
     footer {background:#0f3d61;color:#c5cfda;}
@@ -528,8 +554,9 @@
     .guide-hero .section-label, .guide-content .section-label {font-size:17px;font-weight:600;letter-spacing:.02em;line-height:1.7;}
 
     /* 질문 박스 */
-    .guide-hero .guide-opening-questions {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 24px;width:100%;max-width:none;margin:26px 0 24px;padding:18px 24px;border:1px solid #ddd;border-radius:4px;background:#f2f2f2;color:#2b2b2b;font-size:16px;font-weight:600;line-height:1.7;word-break:keep-all;}
-    .guide-opening-questions span {max-width:100%;}
+    .guide-hero .guide-opening-questions {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 24px;width:100%;max-width:none;margin:26px 0 24px;padding:18px 24px;border:1px solid #efdadd;border-radius:6px;background:#fff8f8;color:#b74b55;font-size:16px;font-weight:600;line-height:1.7;word-break:keep-all;}
+    .guide-opening-questions > span {display:inline-flex;align-items:flex-start;gap:9px;max-width:100%;}
+    .guide-question-icon {width:20px;height:20px;flex-shrink:0;margin-top:3px;}
     .guide-hero .guide-lead {max-width:none;}
     .guide-lead p {margin:0;word-break:keep-all;}
     .guide-lead p + p {margin-top:8px;}
@@ -593,19 +620,6 @@
     }
     /* 제출 방향 제목 옆에 중문 병기 */
 .guide-scenario h3 .guide-zh {
-  display: inline;
-  margin-top: 0;
-  margin-left: 12px;
-  font-size: 13px;
-  font-weight: 400;
-  color: #777;
-}
-    /* 아포스티유 POINT: 한글 질문 옆에 중문 병기 */
-.guide-apostille .guide-point strong {
-  display: inline;
-}
-
-.guide-apostille .guide-point > .guide-zh {
   display: inline;
   margin-top: 0;
   margin-left: 12px;
@@ -704,9 +718,9 @@
       </p>
 
       <div class="guide-opening-questions">
-        <span>“번역공증을 받아야 하나요?”</span>
-        <span>“번역확인증명서로 제출해도 되나요?”</span>
-        <span>“아포스티유도 필요한가요?”</span>
+        <span><svg class="guide-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M6 9h3M15 9h3M6 14h3M15 14h3"/></svg>“번역공증을 받아야 하나요?”</span>
+        <span><svg class="guide-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 15l3 3 5-6"/></svg>“번역확인증명서로 제출해도 되나요?”</span>
+        <span><svg class="guide-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a17 17 0 0 1 0 18 17 17 0 0 1 0-18z"/></svg>“아포스티유도 필요한가요?”</span>
       </div>
     </div>
   </section>
@@ -813,12 +827,12 @@
       <div class="contact-layout">
 
         <div class="contact-buttons">
-          <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary" target="_blank" rel="noopener">
+          <a href="https://pf.kakao.com/_vxoCEX" class="btn btn-primary contact-kakao" target="_blank" rel="noopener">
             <strong>카카오톡 채널</strong>
             <small>1:1 채팅 상담</small>
           </a>
 
-          <span class="btn btn-secondary">
+          <span class="btn btn-secondary contact-wechat">
             <strong>WeChat · hyelim314</strong>
             <small>可用中文咨询</small>
           </span>
