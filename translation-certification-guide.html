@@ -472,7 +472,7 @@
     .contact .section-label, .contact .location-label {color:#e63943;font-size:17px;font-weight:600;letter-spacing:.02em;line-height:1.7;text-transform:none;}
 
     /* 인증 절차 비교 안내 */
-    .guide-hero {background:#faf9f7;padding:60px 0;}
+    .guide-hero {background:#faf9f7;padding:60px 0 32px;}
     .guide-breadcrumb {font-size:13px;color:#777;margin-bottom:28px;}
     .guide-breadcrumb a:hover {color:#e63943;}
     .guide-hero h1 {max-width:900px;font-size:clamp(28px,3.4vw,42px);font-weight:600;line-height:1.4;}
@@ -516,7 +516,7 @@
     }
 
     @media (max-width:600px) {
-      .guide-hero {padding:36px 0;}
+      .guide-hero {padding:36px 0 24px;}
       .guide-hero h1 {font-size:28px;letter-spacing:-1px;}
       .guide-hero .guide-lead {font-size:15px;}
       .guide-content {padding:40px 0;}
@@ -554,22 +554,24 @@
     .guide-hero .section-label, .guide-content .section-label {font-size:17px;font-weight:600;letter-spacing:.02em;line-height:1.7;}
 
     /* 질문 박스 */
-    .guide-hero .guide-opening-questions {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 24px;width:100%;max-width:none;margin:26px 0 24px;padding:18px 24px;border:1px solid #efdadd;border-radius:6px;background:#fff8f8;color:#222;font-size:16px;font-weight:600;line-height:1.7;word-break:keep-all;}
-    .guide-opening-questions > span {display:inline-flex;align-items:flex-start;gap:9px;max-width:100%;}
-    .guide-question-icon {color:#b74b55;width:20px;height:20px;flex-shrink:0;margin-top:3px;}
+    .guide-hero .guide-opening-questions {display:flex;align-items:center;gap:18px;width:100%;max-width:none;margin:22px 0 0;padding:18px 24px;border:1px solid #efdadd;border-radius:6px;background:#fff8f8;color:#222;font-size:16px;font-weight:500;line-height:1.7;text-align:left;word-break:keep-all;}
+    .guide-question-icon {color:#b74b55;width:20px;height:20px;flex-shrink:0;}
+    .guide-question-list {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:12px 24px;flex:1;min-width:0;}
+    .guide-question-list > span {min-width:0;overflow-wrap:anywhere;}
     .guide-hero .guide-lead {max-width:none;}
     .guide-lead p {margin:0;word-break:keep-all;}
     .guide-lead p + p {margin-top:8px;}
 
     @media (max-width:600px) {
-      .guide-hero .guide-opening-questions {flex-direction:column;align-items:flex-start;padding:16px 18px;gap:8px;font-size:15px;}
+      .guide-hero .guide-opening-questions {align-items:flex-start;padding:16px 18px;gap:12px;font-size:15px;}
+      .guide-question-icon {margin-top:3px;}
     }
 
-    .guide-comparison {padding-top:28px;}
+    .guide-comparison {padding-top:16px;}
     .guide-comparison .guide-table-wrap {margin-top:0;}
 
     @media (max-width:600px) {
-      .guide-comparison {padding-top:20px;}
+      .guide-comparison {padding-top:12px;}
     }
 
     /* 비교표: 제목은 왼쪽, 자세히 보기는 오른쪽 끝 */
@@ -598,7 +600,9 @@
     /* 상단 제목·설명 및 질문 왼쪽 정렬 */
     .guide-hero h1 {max-width:none;font-size:clamp(26px, 3vw, 34px);line-height:1.45;letter-spacing:-1.2px;margin-bottom:10px;word-break:keep-all;}
     .guide-hero .guide-lead {max-width:none;margin:0;font-size:14px;line-height:1.8;color:#666;word-break:keep-all;}
-    .guide-hero .guide-opening-questions {justify-content:flex-start;text-align:left;margin:22px 0 0;}
+    @media (max-width:900px) {
+      .guide-question-list {grid-template-columns:1fr;gap:8px;}
+    }
 
     @media (max-width:600px) {
       .guide-hero h1 {font-size:26px;}
@@ -718,9 +722,12 @@
       </p>
 
       <div class="guide-opening-questions">
-        <span><svg class="guide-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M6 9h3M15 9h3M6 14h3M15 14h3"/></svg>“번역공증을 받아야 하나요?”</span>
-        <span>“번역확인증명서로 제출해도 되나요?”</span>
-        <span>“아포스티유도 필요한가요?”</span>
+        <svg class="guide-question-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M6 9h3M15 9h3M6 14h3M15 14h3"/></svg>
+        <div class="guide-question-list">
+          <span>번역공증을 받아야 하나요?</span>
+          <span>번역확인증명서로 제출해도 되나요?</span>
+          <span>아포스티유도 필요한가요?</span>
+        </div>
       </div>
     </div>
   </section>
