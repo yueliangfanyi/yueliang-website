@@ -1409,6 +1409,49 @@ footer .footer-bottom { color: #acbacb; }
 }
 .guide-table-detail-link:hover { color: #e63943; }
 
+
+/* 상단 제목·설명 간소화 및 질문 왼쪽 정렬 */
+.guide-hero h1 {
+  max-width: none;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.45;
+  letter-spacing: -1.2px;
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+.guide-hero .guide-lead {
+  max-width: none;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  word-break: keep-all;
+}
+.guide-hero .guide-opening-questions {
+  justify-content: flex-start;
+  text-align: left;
+  margin: 22px 0 0;
+}
+@media (max-width: 600px) {
+  .guide-hero h1 { font-size: 26px; }
+  .guide-hero .guide-lead { font-size: 13px; }
+}
+
+
+/* 안내 박스 문단 간격 및 중문 병기 */
+.guide-point, .guide-scenario, .guide-table { word-break: keep-all; overflow-wrap: anywhere; }
+.guide-point strong { display: block; line-height: 1.7; }
+.guide-point p { margin: 12px 0 0; line-height: 1.9; }
+.guide-point p + p { margin-top: 10px; }
+.guide-zh { display: block; margin-top: 5px; color: #777; font-size: 13px; font-weight: 400; line-height: 1.7; letter-spacing: 0; }
+.guide-point .guide-zh { margin-top: 4px; }
+.guide-table-detail-link { margin: 8px 0 0; }
+@media (max-width: 600px) {
+  .guide-pc-break { display: none; }
+  .guide-point p { line-height: 1.85; }
+  .guide-zh { font-size: 12px; }
+}
+
 </style>
   <script type="application/ld+json">
 {
@@ -1475,17 +1518,14 @@ footer .footer-bottom { color: #acbacb; }
  <div class="container">
   <p class="guide-breadcrumb"><a href="index.html">홈</a> / 서류 인증 절차 안내</p>
   <div class="section-label" lang="zh-CN">认证方式对比</div>
-  <h1>번역확인증명서와 번역공증,<br>뭐가 다른가요?</h1>
+  <h1>번역확인증명서와 번역공증, 뭐가 다른가요?</h1>
+  <p class="guide-lead">번역확인증명서와 번역공증의 발급·인증 주체와 절차를 비교하고, 서류의 발급 국가와 제출기관 요구사항에 맞는 절차를 안내합니다.</p>
   <div class="guide-opening-questions">
     <span>“번역공증을 받아야 하나요?”</span>
     <span>“번역확인증명서로 제출해도 되나요?”</span>
     <span>“아포스티유도 필요한가요?”</span>
   </div>
-  <div class="guide-lead">
-    <p>중국 관련 서류를 준비하면서 자주 문의하시는 내용입니다.</p>
-    <p>번역확인증명서와 번역공증은 발급·인증하는 주체와 절차가 다릅니다.</p>
-    <p>서류의 발급 국가와 제출기관의 요구사항에 따라 필요한 절차를 안내해 드립니다.</p>
-  </div>
+
  </div>
 </section>
 <!-- 3. 비교표 -->
@@ -1497,23 +1537,23 @@ footer .footer-bottom { color: #acbacb; }
     <thead>
      <tr>
       <th scope="col">구분</th>
-      <th scope="col">번역확인증명서 <a class="guide-table-detail-link" href="translation-confirmation.html" aria-label="번역확인증명서 상세페이지 보기">자세히 보기 →</a></th>
-      <th scope="col">한국 번역공증 <a class="guide-table-detail-link" href="translation-notary.html" aria-label="한국 번역공증 상세페이지 보기">자세히 보기 →</a></th>
+      <th scope="col">번역확인증명서 <span class="guide-zh" lang="zh-CN">翻译确认书</span><a class="guide-table-detail-link" href="translation-confirmation.html" aria-label="번역확인증명서 상세페이지 보기">자세히 보기 →</a></th>
+      <th scope="col">한국 번역공증 <span class="guide-zh" lang="zh-CN">韩国翻译公证</span><a class="guide-table-detail-link" href="translation-notary.html" aria-label="한국 번역공증 상세페이지 보기">자세히 보기 →</a></th>
      </tr>
     </thead>
     <tbody>
      <tr><th scope="row">확인 대상</th><td>외국어번역행정사가 직접 번역한 번역문</td><td>원문과 번역문이 일치한다는 서약</td></tr>
      <tr><th scope="row">발급·인증 주체</th><td>해당 번역문을 번역한 외국어번역행정사</td><td>공증인 변호사</td></tr>
      <tr><th scope="row">진행 절차</th><td>직접 번역 → 번역확인증명서 발급</td><td>번역 → 번역공증 촉탁 → 공증인 변호사의 인증</td></tr>
-     <tr><th scope="row">공증 수수료</th><td>별도의 번역공증을 진행하지 않는 경우 발생하지 않음<br><small>번역확인증명서 비용은 발생합니다.</small></td><td>공증 수수료 발생<br><small>번역·촉탁 대행 비용과 별도로 확인합니다.</small></td></tr>
+     <tr><th scope="row">공증 수수료</th><td>별도의 번역공증을 진행하지 않는 경우 발생하지 않음<br><small>번역확인증명서 비용은 발생합니다.</small></td><td>공증 수수료 및 공증 촉탁대행비가<br>별도 발생합니다.</td></tr>
     </tbody>
    </table>
   </div>
   <p class="guide-scroll-note">비교표를 좌우로 움직여 확인해 주세요.</p>
   <div class="guide-sources"><strong>관련 근거 및 안내</strong><ul>
  <li><a href="https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1031059549" target="_blank" rel="noopener noreferrer">행정사법 제20조 · 번역확인증명서 발급</a></li>
- <li><a href="https://www.moj.go.kr/moj/222/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbW9qJTJGMTgzJTJGMjIzOTU5JTJGYXJ0Y2xWaWV3LmRvJTNG" target="_blank" rel="noopener noreferrer">법무부 · 번역문 인증사무 지침 설명</a></li>
- <li><a href="https://www.hcch.net/en/instruments/conventions/full-text/?cid=41" target="_blank" rel="noopener noreferrer">HCCH · 아포스티유 협약</a></li>
+ <li>법무부 · 번역문 인증사무 지침 설명</li>
+ <li>HCCH · 아포스티유 협약</li>
 </ul></div>
  </div>
 </section>
@@ -1521,7 +1561,7 @@ footer .footer-bottom { color: #acbacb; }
  <div class="section-label" lang="zh-CN">海牙认证</div>
  <h2 id="guide-apostille-title">아포스티유도 필요한가요?</h2>
  <p>아포스티유는 문서를 다른 협약 적용 국가에 제출하기 위해 문서의 서명·서명자의 자격·직인 등을 인증하는 절차입니다. 번역확인증명서나 번역공증과는 확인 대상이 다릅니다.</p>
- <div class="guide-point"><div class="point-label">月亮 POINT</div><strong>번역문에 아포스티유가 필요한 경우에는 어떻게 준비하나요?</strong><p>한국에서 작성한 번역문에 아포스티유가 필요한 경우에는 일반적으로 번역공증을 거쳐 공증문에 아포스티유를 받는 방식으로 준비합니다. 공문서 원본에 아포스티유를 받는 경우에는 별도의 번역공증 없이 진행할 수 있습니다.</p></div>
+ <div class="guide-point"><div class="point-label">月亮 POINT</div><strong>번역문에 아포스티유가 필요한 경우에는 어떻게 준비하나요?</strong><span class="guide-zh" lang="zh-CN">译文需要海牙认证时，应如何准备？</span><p>한국에서 작성한 번역문에 아포스티유가 필요한 경우에는<br class="guide-pc-break">일반적으로 번역공증을 거쳐 공증문에 아포스티유를 받는 방식으로 준비합니다.</p><p>공문서 원본에 아포스티유를 받는 경우에는<br class="guide-pc-break">별도의 번역공증 없이 진행할 수 있습니다.</p></div>
  <p style="margin-top:18px">원문에 필요한 인증인지, 번역문에 필요한 인증인지 제출기관의 안내를 먼저 확인합니다.</p>
 </div></section>
 <!-- 4. 내 서류의 제출 요건 -->
@@ -1530,9 +1570,9 @@ footer .footer-bottom { color: #acbacb; }
   <div class="section-label" lang="zh-CN">提交要求确认</div>
   <h2 id="requirements-title">그래서 내 서류에는 무엇이 필요한가요?</h2>
   <p>제출기관의 안내문에서 요구하는 번역과 인증의 종류를 확인하면 됩니다. 서류와 안내문을 함께 보내주시면 필요한 절차를 안내해 드립니다.</p>
-  <div class="guide-scenario"><h3>중국 서류 → 한국 제출</h3><p>중국어 서류의 국문 번역본에 번역확인증명서 또는 번역공증본을 요구하는지 확인합니다. 중국 원문이나 공증문에 아포스티유가 필요한지도 함께 살펴봅니다.</p><p class="guide-example">예: 중국 대학교 학위증서·성적표, 무범죄증명서, 친속공증서 등</p></div>
-  <div class="guide-scenario"><h3>한국 서류 → 중국 제출</h3><p>중국어 번역과 번역공증이 필요한지, 한국 원문 또는 공증문에 아포스티유가 필요한지 확인합니다. 서류의 종류와 제출기관의 요구에 따라 준비 순서가 달라질 수 있습니다.</p><p class="guide-example">예: 범죄수사경력회보서, 혼인관계증명서, 진단서, 법인 서류 등</p></div>
-  <div class="guide-point"><div class="point-label">月亮 POINT</div><strong>번역확인증명서로 제출하면 별도 번역공증을 생략할 수 있나요?</strong><p>제출기관에서 외국어번역행정사의 번역확인증명서를 인정하는 경우에는 별도의 번역공증 없이 번역문과 증명서를 제출할 수 있습니다. 다만 원문에 대한 공증이나 아포스티유가 필요한지는 별도로 확인합니다.</p></div>
+  <div class="guide-scenario"><h3>중국 서류 → 한국 제출<span class="guide-zh" lang="zh-CN">中国材料 → 提交至韩国</span></h3><p>중국어 서류의 국문 번역본에 번역확인증명서 또는 번역공증본을 요구하는지 확인합니다. 중국 원문이나 공증문에 아포스티유가 필요한지도 함께 살펴봅니다.</p><p class="guide-example">예: 중국 대학교 학위증서·성적표, 무범죄증명서, 친속공증서 등</p></div>
+  <div class="guide-scenario"><h3>한국 서류 → 중국 제출<span class="guide-zh" lang="zh-CN">韩国材料 → 提交至中国</span></h3><p>중국어 번역과 번역공증이 필요한지, 한국 원문 또는 공증문에 아포스티유가 필요한지 확인합니다. 서류의 종류와 제출기관의 요구에 따라 준비 순서가 달라질 수 있습니다.</p><p class="guide-example">예: 범죄수사경력회보서, 혼인관계증명서, 진단서, 법인 서류 등</p></div>
+  <div class="guide-point"><div class="point-label">月亮 POINT</div><strong>번역확인증명서로 제출하면 별도 번역공증을 생략할 수 있나요?</strong><span class="guide-zh" lang="zh-CN">提交翻译确认书后，可以免去另行办理翻译公证吗？</span><p>제출기관에서 외국어번역행정사의 번역확인증명서를 인정하는 경우에는<br class="guide-pc-break">별도의 번역공증 없이 번역문과 증명서를 제출할 수 있습니다.</p><p>다만 원문에 대한 공증이나 아포스티유가 필요한지는 별도로 확인합니다.</p></div>
  </div>
 </section>
 <!-- 5. 실제 진행 사례 -->
@@ -1799,5 +1839,3 @@ footer .footer-bottom { color: #acbacb; }
 </script>
 </body>
 </html>
-
-
