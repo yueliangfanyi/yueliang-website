@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>중국 아포스티유 | 중국 서류 공증·아포스티유 | 월량번역행정사</title>
+<title>중국 아포스티유 | 중국 서류 공증·아포스티유 | 월량번역행정사사무소</title>
   <meta name="description" content="중국에서 발급된 졸업증서·학위증서·성적표·무범죄증명서·친속관계공증서 등 중국 서류의 현지 공증 및 아포스티유를 대행합니다. 중국 방문 없이 진행 가능한 서류와 절차를 확인하여 안내합니다.">
   <link rel="canonical" href="https://yueliang.kr/china-apostille.html">
   <link rel="icon" type="image/png" href="/yueliang-symbol-red.png">
-  <meta property="og:title" content="중국 아포스티유 | 중국 서류 공증·아포스티유 | 월량번역행정사">
+  <meta property="og:title" content="중국 아포스티유 | 중국 서류 공증·아포스티유 | 월량번역행정사사무소">
   <meta property="og:description" content="중국 대학교 학력서류, 무범죄증명서, 친속관계공증서, 결혼증, 호구부 등 중국 발급 서류의 현지 공증 및 아포스티유 절차를 안내합니다.">
   <meta property="og:url" content="https://yueliang.kr/china-apostille.html">
   <meta name="robots" content="index, follow">
@@ -548,7 +548,26 @@ footer {
     gap: 12px;
   }
 }
-  </style>
+  
+/* 서류별 선택 탭 */
+.page-hero{padding:48px 0 42px}h1{color:#0f3d61}
+.document-browser{padding:36px 0 48px}.document-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.document-tab{font:inherit;font-size:15px;font-weight:700;text-align:left;background:#fff;border:1px solid #dedad6;border-radius:6px;padding:13px 18px;cursor:pointer;color:#222;line-height:1.6}
+.document-tab span{display:block;font-size:13px;font-weight:400}.document-tab[aria-selected="true"]{background:#e63943;border-color:#e63943;color:#fff}.document-tab:focus-visible{outline:3px solid #0f3d61;outline-offset:3px}
+.document-panel[hidden]{display:none}.document-panel h2{font-size:28px;color:#0f3d61;margin-bottom:18px;word-break:keep-all}.document-panel h2 span{display:block;font-size:16px;font-weight:400;color:#666;margin-top:5px}
+.service-card{border:1px solid #e2ded9;border-radius:8px;padding:24px;background:#fff}.service-card .case-label{color:#e63943;font-size:13px;font-weight:700;margin-bottom:8px}.service-card h3{font-size:23px;line-height:1.5;margin-bottom:12px}.service-card p{color:#666;margin-bottom:18px;word-break:keep-all}.detail-link{color:#e63943;font-weight:700}.detail-link:hover{text-decoration:underline}
+.consultation{padding:46px 0;background:#f3f3f1}.consultation h2{color:#0f3d61;font-size:30px;margin-bottom:12px}.consultation p{color:#666;margin-bottom:20px}.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.contact-card{display:block;border:1px solid #dedad6;border-radius:6px;background:#fff;padding:18px;font:inherit;text-align:left;cursor:pointer}.contact-card strong{display:block;margin-bottom:5px}.contact-card span{font-size:14px}.contact-card.kakao{background:#fff5cc;border-color:#e8d694;color:#493c20}.contact-card.wechat{background:#edf6eb;border-color:#c2d9ba;color:#365c32}
+footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a{color:#c5cfda}.footer-bottom{color:#c5cfda}
+.qr-dialog{border:0;border-radius:10px;padding:24px;max-width:90vw;width:380px;margin:auto}.qr-dialog::backdrop{background:rgba(0,0,0,.5)}.qr-dialog img{display:block;width:100%;height:auto;margin:16px 0}.qr-dialog button{padding:8px 16px;cursor:pointer}
+@media(max-width:700px){.page-hero{padding:28px 0 30px}.page-hero p{font-size:16px}.document-tab{flex:1 1 45%;padding:12px;font-size:14px}.document-tab:first-child{flex-basis:100%}.document-panel h2{font-size:24px}.contact-cards{grid-template-columns:1fr}.service-card h3{font-size:20px}}
+
+  /* 10개 탭: PC 5열, 태블릿·모바일 2열 */
+.document-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:stretch}
+.document-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:106px;padding:14px 10px;word-break:keep-all;overflow-wrap:anywhere}
+.document-tab span{margin-top:4px}
+@media(max-width:1000px){.document-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.document-tab{min-height:92px}}
+@media(max-width:400px){.document-tab{font-size:13px}.document-tab span{font-size:12px}}
+</style>
 </head>
 
 <body>
@@ -579,7 +598,7 @@ footer {
     <div class="container">
      <div class="section-label">中国文件公证 · 海牙认证</div>
      <h1 class="hero-title">
-  중국 서류 공증·아포스티유
+  중국 서류 <span style="color:#222">공증·아포스티유</span>
   <span class="china-badge">중국 서류 → 한국 제출</span>
 </h1>
    <p>
@@ -609,179 +628,31 @@ footer {
 </div>
     </div>
   </section>
-  <section class="apostille-info">
-  <div class="container">
-    <div class="section-label">APOSTILLE</div>
-    <h2>아포스티유란?</h2>
-
-    <p>
-      한 국가에서 발행한 문서를 다른 국가에서 사용하기 위해서는
-      문서의 국외사용을 위한 확인(Legalization)이 필요합니다.
-    </p>
-
-    <p>
-      아포스티유는 「외국공문서에 대한 인증의 요구를 폐지하는 협약」에 따라
-      문서 발행국의 권한 있는 당국이 자국 문서를 확인하고,
-      협약 가입국이 이를 인정하도록 하는 제도입니다.
-    </p>
-
-   <p>
-  중국에서는 외교부가 아포스티유 발급 권한기관으로 지정되어 있으며,
-  외교부의 위임을 받은 각 지역 외사판공실에서도 해당 지역에서 발급된 문서에 아포스티유를 발급할 수 있습니다.
-</p>
-
-<p>
-  중국은 2023년 11월 7일부터 아포스티유 협약이 발효되어,
-  중국에서 발급된 공문서를 협약 가입국에 제출하는 경우 종전의 영사인증 절차 없이
-  아포스티유를 통해 사용할 수 있습니다.
-</p>
-
-<p class="source-note">
-  ※ 중국 외교부 및 헤이그국제사법회의(HCCH)의 아포스티유 제도 안내를 바탕으로 정리하였습니다.
-</p>
-  </div>
-</section>
-  <section class="china-process">
-  <div class="container">
-    <div class="section-label">PROCESS</div>
-    <h2>중국 발급 서류, 아포스티유는 어떻게 진행되나요?</h2>
-
-    <p class="process-intro">
-      중국에서 발급된 서류의 종류와 제출 목적을 확인한 후,
-      중국 현지 공증 및 아포스티유 절차를 진행합니다.
-    </p>
-
-   <div class="process-grid">
-  <div class="process-step">
-    <span>01</span>
-    <strong>서류 사본 전달</strong>
-    <p>컬러스캔본 등 진행에 필요한 서류 사본을 전달해 주시면 확인 후 절차를 진행합니다.</p>
-  </div>
-
-  <div class="process-step">
-    <span>02</span>
-    <strong>중국 현지 공증</strong>
-    <p>중국 현지 공증처에서 서류 번역 및 공증 절차를 진행합니다.</p>
-  </div>
-
-  <div class="process-step">
-    <span>03</span>
-    <strong>중국 아포스티유</strong>
-    <p>공증이 완료된 서류에 중국 외교부 아포스티유 인증을 진행합니다.</p>
-  </div>
-
-  <div class="process-step">
-    <span>04</span>
-    <strong>완성 원본 서류 전달</strong>
-    <p>공증 및 아포스티유가 완료된 원본 서류를 우편으로 전달합니다.</p>
-  </div>
+<section class="document-browser" aria-label="중국 서류별 공증·아포스티유"><div class="container">
+<div class="document-tabs" role="tablist" aria-label="서류 종류">
+<button type="button" class="document-tab" role="tab" id="tab-university" aria-controls="panel-university" aria-selected="true" tabindex="0">중국 대학교 졸업증서·학위증서·성적표<span lang="zh-CN">(毕业证书·学位证书·成绩单)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-criminal" aria-controls="panel-criminal" aria-selected="false" tabindex="-1">무범죄증명<span lang="zh-CN">(无犯罪记录证明)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-kinship" aria-controls="panel-kinship" aria-selected="false" tabindex="-1">친속공증<span lang="zh-CN">(亲属关系公证)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-spouse" aria-controls="panel-spouse" aria-selected="false" tabindex="-1">부부공증<span lang="zh-CN">(夫妻关系公证)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-marriage" aria-controls="panel-marriage" aria-selected="false" tabindex="-1">결혼증<span lang="zh-CN">(结婚证)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-divorce" aria-controls="panel-divorce" aria-selected="false" tabindex="-1">이혼증<span lang="zh-CN">(离婚证)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-license" aria-controls="panel-license" aria-selected="false" tabindex="-1">중국 운전면허증 교환<span lang="zh-CN">(中国驾驶证换领韩国驾驶证)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-household" aria-controls="panel-household" aria-selected="false" tabindex="-1">호구부<span lang="zh-CN">(户口簿)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-business" aria-controls="panel-business" aria-selected="false" tabindex="-1">영업집조<span lang="zh-CN">(营业执照)</span></button>
+<button type="button" class="document-tab" role="tab" id="tab-tax" aria-controls="panel-tax" aria-selected="false" tabindex="-1">개인소득세납세기록<span lang="zh-CN">(个人所得税纳税记录)</span></button>
 </div>
-
-<p class="process-note">
-  ※ 중국 현지 공증처의 진행 상황 및 서류별 요구사항에 따라 추가 서류가 필요할 수 있으며, 소요기간도 달라질 수 있습니다.
-</p>
-  </div>
-</section>
-  <section class="document-types">
-  <div class="container">
-    <div class="section-label">DOCUMENTS</div>
-    <h2>주로 어떤 중국 서류를<br>진행하나요?</h2>
-<p class="documents-intro">
-  중국에서 발급된 다양한 서류의 현지 공증 및 아포스티유 업무를 진행합니다.
-</p>
-
- <div class="document-grid">
-
-  <div class="document-item">
-    <strong>중국 대학교 학력서류</strong>
-    <p>졸업증서 · 학위증서 · 성적표 · 재학증명서 등</p>
-  </div>
-
-  <div class="document-item">
-    <strong>중국 무범죄 서류</strong>
-    <p>무범죄증명서(무범죄기록증명서) · 미수형사처분공증서 등</p>
-  </div>
-
-  <div class="document-item">
-    <strong>혼인·이혼 서류</strong>
-    <p>결혼증 · 이혼증 · 이혼협의서(합의서) · 혼인사실공증 등</p>
-  </div>
-
-  <div class="document-item">
-    <strong>호구·친족관계 서류</strong>
-    <p>호구부 · 친속관계공증서 · 부부관계공증서 등</p>
-  </div>
-
-  <div class="document-item">
-    <strong>기업·세무 서류</strong>
-    <p>영업집조 · 개인소득세 납세기록 · 세수완납증명서 등</p>
-  </div>
-
-    <div class="document-item">
-    <strong>신분·자격 서류</strong>
-    <p>중국 운전면허증 · 중식 요리사 자격증 · 각종 자격 관련 서류 등</p>
-  </div>
-
-</div>
-</div>
-</section>
-  <section class="check-before">
-  <div class="container">
-    <div class="section-label">CHECK BEFORE</div>
-    <h2>진행 전 꼭<br>확인해 주세요.</h2>
-
-    <div class="check-list">
-      <div class="check-item">
-        <span>01</span>
-        <div>
-          <strong>제출기관의 요구사항을 먼저 확인해 주세요.</strong>
-          <p>같은 종류의 서류라도 제출기관에 따라 요구하는 서류, 번역 언어, 공증·아포스티유 여부가 다를 수 있습니다.</p>
-        </div>
-      </div>
-
-      <div class="check-item">
-        <span>02</span>
-        <div>
-          <strong>서류의 발급일과 유효기간을 확인해 주세요.</strong>
-          <p>제출기관에서 최근 발급본을 요구하거나 별도의 유효기간을 정해 두는 경우가 있습니다.</p>
-        </div>
-      </div>
-       <div class="check-item">
-  <span>03</span>
-  <div>
-    <strong>아포스티유가 제출기관의 수리를 보장하는 것은 아닙니다.</strong>
-    <p>아포스티유와 별개로 실제 제출기관에서 요구하는 서류의 형식과 내용, 번역 요건 등을 확인해야 합니다.</p>
-  </div>
-</div>
-<div class="yueliang-tip">
-  <div class="tip-label">月亮 TIP</div>
-  <strong>번역을 시작하기 전에 원문부터 한 번 확인해 주세요.</strong>
-  <p>
-    성명, 생년월일, 주민등록번호 등 원문에 잘못 기재된 내용은
-    번역문에서 임의로 수정할 수 없습니다.
-    번역·공증 진행 중 원문 오류가 확인되면 서류를 다시 발급받아야 하는 경우도 있으므로,
-    진행 전 원문 내용을 먼저 확인해 주세요.
-  </p>
-</div>
-
-</div>
-</div>
-</section>
-  <section class="detail-contact">
-  <div class="container">
-    <div class="section-label">CONTACT</div>
-    <h2>중국어 서류 상담,<br>편한 방법으로 문의해 주세요.</h2>
-
-   <p class="contact-intro">
-  중국 발급 서류를 촬영하거나 컬러스캔하여 보내주시면 확인 후 진행 방법을 안내해 드립니다.<br>
-  서류의 종류와 현지 공증처의 요구사항에 따라 필요한 서류를 별도로 안내해 드립니다.
-</p>
-
-    <a class="contact-button" href="index.html#contact">
-      상담방법 및 연락처 확인 →
-    </a>
-  </div>
-</section>
+<section class="document-panel" role="tabpanel" id="panel-university" aria-labelledby="tab-university" tabindex="0"><h2>중국 대학교 졸업증서·학위증서·성적표<span lang="zh-CN">(毕业证书·学位证书·成绩单)</span></h2><article class="service-card"><p class="case-label">CASE 01</p><h3>중국 대학교 졸업증서·학위증서·성적표 공증·아포스티유</h3><p>중국 대학교 학력서류의 공증·아포스티유 진행 절차, 필요서류 및 소요기간·비용 안내를 확인해 주세요.</p><a class="detail-link" href="china-university-apostille.html">필요서류 및 상세 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-criminal" aria-labelledby="tab-criminal" tabindex="0" hidden><h2>무범죄증명<span lang="zh-CN">(无犯罪记录证明)</span></h2><article class="service-card"><p class="case-label">CASE 02</p><h3>중국 무범죄증명 발급·공증·아포스티유 — 인천공항 정규출입증 신청용</h3><p>인천공항 정규출입증 신청을 위해 중국 무범죄증명 공증·아포스티유와 국문 번역공증을 진행한 사례입니다.</p><a class="detail-link" href="china-criminal-record-airport-pass.html">업무사례 및 필요서류 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-kinship" aria-labelledby="tab-kinship" tabindex="0" hidden><h2>친속공증<span lang="zh-CN">(亲属关系公证)</span></h2><article class="service-card"><h3>중국 친속공증 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-spouse" aria-labelledby="tab-spouse" tabindex="0" hidden><h2>부부공증<span lang="zh-CN">(夫妻关系公证)</span></h2><article class="service-card"><h3>중국 부부관계공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-marriage" aria-labelledby="tab-marriage" tabindex="0" hidden><h2>결혼증<span lang="zh-CN">(结婚证)</span></h2><article class="service-card"><h3>중국 결혼증 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-divorce" aria-labelledby="tab-divorce" tabindex="0" hidden><h2>이혼증<span lang="zh-CN">(离婚证)</span></h2><article class="service-card"><h3>중국 이혼증 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-license" aria-labelledby="tab-license" tabindex="0" hidden><h2>중국 운전면허증 교환<span lang="zh-CN">(中国驾驶证换领韩国驾驶证)</span></h2><article class="service-card"><h3>중국 운전면허증 교환용 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-household" aria-labelledby="tab-household" tabindex="0" hidden><h2>호구부<span lang="zh-CN">(户口簿)</span></h2><article class="service-card"><h3>중국 호구부 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-business" aria-labelledby="tab-business" tabindex="0" hidden><h2>영업집조<span lang="zh-CN">(营业执照)</span></h2><article class="service-card"><h3>중국 영업집조 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+<section class="document-panel" role="tabpanel" id="panel-tax" aria-labelledby="tab-tax" tabindex="0" hidden><h2>개인소득세납세기록<span lang="zh-CN">(个人所得税纳税记录)</span></h2><article class="service-card"><h3>중국 개인소득세납세기록 공증·아포스티유 상담</h3><p>보유한 서류와 제출 목적을 알려 주시면 확인 후 진행 가능 여부, 필요서류, 예상 소요기간과 비용을 안내해 드립니다.</p><a class="detail-link" href="#contact">상담 안내 보기 →</a></article></section>
+</div></section>
+<section class="consultation" id="contact"><div class="container"><div class="section-label">CONTACT · 咨询</div><h2>상담안내</h2><p>중국 서류의 종류와 제출 목적을 알려 주세요. 파일을 보내 주시면 확인 후 진행 방법을 안내해 드립니다.</p><div class="contact-cards"><a class="contact-card kakao" href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener"><strong>카카오톡 상담</strong><span>월량번역행정사사무소 채널 →</span></a><button type="button" class="contact-card wechat" data-dialog="wechat-qr"><strong>위챗 상담</strong><span>WeChat ID: hyelim314 · QR 보기</span></button><a class="contact-card" href="tel:01086395165"><strong>전화 상담</strong><span>010-8639-5165</span></a><a class="contact-card" href="mailto:hyelim314@naver.com"><strong>이메일</strong><span>hyelim314@naver.com</span></a><a class="contact-card" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener"><strong>블로그 업무사례</strong><span>실제 진행 사례 보기 →</span></a></div></div></section>
 </main>
 <footer>
   <div class="container">
@@ -841,5 +712,12 @@ footer {
 
   </div>
 </footer>
+<dialog class="qr-dialog" id="wechat-qr"><h2>위챗 상담</h2><p>WeChat ID: hyelim314</p><img src="wechet-qr.png" alt="위챗 hyelim314 상담 QR 코드"><form method="dialog"><button>닫기</button></form></dialog>
+<script>
+const tabs=Array.from(document.querySelectorAll('[role="tab"]'));
+function selectTab(tab){tabs.forEach(t=>{const active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!active;});}
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{let next;if(e.key==='ArrowRight')next=(i+1)%tabs.length;else if(e.key==='ArrowLeft')next=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();selectTab(tabs[next]);tabs[next].focus();});});
+document.querySelectorAll('[data-dialog]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.dialog).showModal()));
+</script>
 </body>
 </html>
