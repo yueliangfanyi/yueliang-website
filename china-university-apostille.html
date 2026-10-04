@@ -875,6 +875,73 @@ main a.detail-case-link:hover{color:#333;}
 .detail-contact .section-cn{color:#d94452;}
 .detail-contact .university-actions a{margin-top:0;}
 @media(max-width:600px){.detail-contact{padding:36px 0;}.detail-contact h2{font-size:25px;}.detail-contact .university-actions{gap:8px;}}
+/* Compact first screen, distinct major sections, neutral action buttons. */
+.page-hero{padding:28px 0 26px;}
+.detail-back{margin-bottom:12px;}
+.page-hero h1{margin:8px 0 14px;}
+.hero-description p{font-size:17px;line-height:1.7;margin-bottom:6px;}
+.hero-actions{margin-top:14px;}
+.hero-actions a{margin-top:0;}
+.university-content{padding-top:24px;}
+.university-prep{margin-bottom:44px;}
+.university-flow{margin-bottom:44px;}
+.university-timing{margin-bottom:44px;}
+.university-content{padding-bottom:42px;}
+.university-actions .detail-primary,.university-actions .detail-secondary{background:#f0f0f0;border-color:#d7d7d7;color:#222;}
+.university-actions a:hover{background:#e5e5e5;}
+@media(max-width:600px){
+.page-hero{padding:24px 0;}
+.page-hero h1{margin-bottom:12px;}
+.hero-description p{font-size:16px;}
+.hero-actions{margin-top:14px;gap:8px;}
+.university-content{padding-top:24px;padding-bottom:34px;}
+.university-prep,.university-flow,.university-timing{margin-bottom:36px;}
+}
+/* First-screen refinement and numbered FAQ badges. */
+.page-hero{padding:18px 0 20px;}
+.detail-back{margin-bottom:8px;}
+.page-hero h1{margin:6px 0 10px;}
+.hero-description p{font-size:16px;line-height:1.65;margin-bottom:5px;}
+.hero-actions{margin-top:10px;}
+.university-content{padding-top:18px;}
+.university-prep{padding:16px 22px;}
+.required-notes{margin-top:10px;padding-top:10px;}
+.required-notes p{margin-bottom:6px;}
+.university-faq article h3{display:flex;align-items:flex-start;gap:9px;}
+.university-faq .faq-number{display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:#ededed;color:#333;font-size:14px;font-weight:700;line-height:1;margin-top:1px;}
+.university-faq article p{padding-left:33px;}
+@media(max-width:600px){
+.page-hero{padding:18px 0 20px;}
+.university-content{padding-top:20px;}
+.university-prep{padding:16px 18px;}
+.university-faq .faq-number{flex-basis:22px;width:22px;height:22px;font-size:13px;}
+.university-faq article p{padding-left:31px;}
+}
+/* Shared consultation block. */
+.common-contact{background:#f6f5f3;color:#222;padding:46px 0;}
+.common-contact h2{font-size:30px;line-height:1.4;margin:0 0 16px;word-break:keep-all;}
+.common-contact .common-contact-intro{margin:0 0 26px;color:#555;}
+.common-contact-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:36px;align-items:center;}
+.common-contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.common-contact .common-contact-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:94px;padding:16px 12px;background:#fff;border:1px solid #d7d7d7;border-radius:6px;color:#222;font:inherit;text-align:center;overflow-wrap:anywhere;}
+button.common-contact-card,a.common-contact-card{cursor:pointer;}
+.common-contact .common-contact-card strong{font-size:16px;line-height:1.5;}
+.common-contact .common-contact-card span{font-size:14px;color:#606060;line-height:1.5;}
+.common-contact a.common-contact-card:hover,.common-contact button.common-contact-card:hover{background:#ededed;}
+.common-contact-qrs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.common-contact-qrs figure{margin:0;text-align:center;min-width:0;}
+.common-qr-button{display:block;border:0;background:#fff;padding:8px;width:100%;cursor:zoom-in;}
+.common-qr-button img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;}
+.common-contact-qrs figcaption{font-size:14px;color:#555;margin-top:12px;line-height:1.5;}
+.common-contact a:focus-visible,.common-contact button:focus-visible{outline:2px solid #0f3d61;outline-offset:4px;}
+.contact-qr-dialog{width:min(460px,90vw);max-height:90dvh;padding:20px;border:0;border-radius:8px;}
+.contact-qr-dialog::backdrop{background:rgba(0,0,0,.6);}
+.contact-qr-dialog-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;}
+.contact-qr-dialog h2{font-size:18px;margin:0;}
+.contact-qr-dialog button{font:inherit;padding:6px 12px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer;}
+.contact-qr-dialog img{display:block;width:100%;max-height:65dvh;object-fit:contain;}
+@media(max-width:900px){.common-contact-layout{grid-template-columns:1fr;gap:24px;}.common-contact-qrs{max-width:360px;}}
+@media(max-width:600px){.common-contact{padding:34px 0;}.common-contact h2{font-size:25px;}.common-contact-cards{grid-template-columns:1fr;gap:9px;}.common-contact .common-contact-card{min-height:76px;padding:13px;}.common-contact-qrs{max-width:280px;margin:0 auto;width:100%;gap:14px;}}
 </style>
 </head>
 
@@ -920,7 +987,7 @@ main a.detail-case-link:hover{color:#333;}
 <h1>중국대학교 졸업증서·학위증서·성적표 공증·아포스티유</h1>
 <div class="hero-description">
 <p>중국대학교에서 발급받은 졸업증서·학위증서·성적표의 아포스티유는 중국에서 진행해야 합니다.</p>
-<p>먼저 중국 공증처에서 공증을 받은 뒤, 아포스티유를 받습니다.<br>월량번역행정사사무소에서 두 절차를 대행해 드립니다.</p>
+<p>먼저 중국 공증처에서 공증을 받은 뒤, 아포스티유를 받습니다. 월량번역행정사사무소에서 두 절차를 대행해 드립니다.</p>
 </div>
 <div class="university-actions hero-actions">
 <a class="detail-primary" href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener noreferrer">카카오톡 상담 →</a>
@@ -946,12 +1013,12 @@ main a.detail-case-link:hover{color:#333;}
 </div>
 </div>
 <p class="section-cn" lang="zh-CN">办理流程</p>
-<h2>이렇게 진행합니다</h2>
+<h2>진행절차</h2>
 <ol class="university-flow">
 <li><strong>학적서류·학신망 확인</strong><p>보내주신 학적서류와 신분자료를 확인하고, 학신망(学信网)에서 해당 학력·학위정보가 조회되는지 살펴봅니다.</p></li>
 <li><strong>비용·추가서류 안내</strong><p>예상 소요기간, 비용과 추가로 필요한 자료를 안내합니다.</p></li>
 <li><strong>중국 공증·아포스티유</strong><p>비용 입금과 자료 준비가 완료되면 중국 현지 공증처에 접수하고, 공증 후 아포스티유를 진행합니다.</p></li>
-<li><strong>완성 서류 전달</strong><p>완료된 서류를 전달합니다.</p></li>
+<li><strong>완성 서류 전달</strong><p>완성된 서류는 우체국 등기로 전달드립니다.</p></li>
 </ol>
 <div class="university-timing">
 <p class="section-cn" lang="zh-CN">办理时间与费用</p>
@@ -980,24 +1047,33 @@ main a.detail-case-link:hover{color:#333;}
 <section class="university-faq"><div class="container">
 <p class="section-cn" lang="zh-CN">常见问题</p>
 <h2>자주 묻는 질문</h2>
-<article><h3><span class="faq-number">1.</span> 중국에 직접 가지 않고 맡길 수 있나요?</h3>
+<article><h3><span class="faq-number">1</span> 중국에 직접 가지 않고 맡길 수 있나요?</h3>
 <p>보내주신 서류를 확인하여 중국 방문 없이 대행할 수 있는지 안내합니다. 필요한 위탁서와 본인 확인 자료도 함께 안내해 드립니다.</p></article>
-<article><h3><span class="faq-number">2.</span> 학신망에서 조회되지 않는 서류도 진행할 수 있나요?</h3>
+<article><h3><span class="faq-number">2</span> 학신망에서 조회되지 않는 서류도 진행할 수 있나요?</h3>
 <p>조회되지 않는다고 바로 진행이 불가능한 것은 아닙니다. 학교 확인이나 추가 증빙자료를 통해 진행할 수 있는지 확인해 드립니다.</p></article>
-<article><h3><span class="faq-number">3.</span> 번역문은 어떤 언어로 준비되나요?</h3>
+<article><h3><span class="faq-number">3</span> 번역문은 어떤 언어로 준비되나요?</h3>
 <p>중국 현지에서 공증서와 함께 준비하는 번역문은 국문을 기본으로 합니다.</p>
 <p>한국 외 국가에 제출하는 경우에는 영문으로도 준비할 수 있습니다. 제출할 국가와 기관을 알려 주시면 필요한 번역 언어와 인증 방식을 확인해 드립니다.</p></article>
-<article><h3><span class="faq-number">4.</span> 제출기관에서 받은 안내문도 보내야 하나요?</h3>
+<article><h3><span class="faq-number">4</span> 제출기관에서 받은 안내문도 보내야 하나요?</h3>
 <p>안내문이나 모집요강이 있다면 함께 보내 주세요. 회사·학교마다 요구하는 서류와 인증 방식이 달라, 안내문을 기준으로 준비사항을 확인해 드립니다.</p></article>
 <p class="university-source">공식 안내: <a href="https://cs.mfa.gov.cn/lh/lsrz_149494/cjwd/" target="_blank" rel="noopener noreferrer">중국 외교부 영사서비스 공증·아포스티유 안내 ↗</a></p>
 </div></section>
-<section class="detail-contact"><div class="container"><p class="section-cn" lang="zh-CN">学历材料咨询</p>
-<h2>학력서류 상담이 필요하신가요?</h2><p>궁금한 점은 카카오톡이나 전화로 문의해 주세요.</p><div class="university-actions">
-<a class="detail-primary" href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener noreferrer">카카오톡 상담 →</a>
-<a class="detail-secondary" href="tel:01086395165">전화 010-8639-5165</a>
-<a class="detail-secondary" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer">네이버 블로그 →</a>
-<a class="detail-secondary" href="index.html#contact">상담방법 및 연락처 →</a>
-</div></div></section>
+<section class="detail-contact common-contact" id="document-contact"><div class="container">
+<p class="section-cn" lang="zh-CN">咨询联系</p>
+<h2>서류 상담,<br>편한 방법으로 문의해 주세요.</h2>
+<p class="common-contact-intro">서류 사본을 보내 주시면 확인 후 진행 방법을 안내해 드립니다.</p>
+<div class="common-contact-layout">
+<div class="common-contact-cards">
+<a class="common-contact-card" href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener noreferrer"><strong>카카오톡 채널</strong><span>1:1 채팅 상담</span></a>
+<button class="common-contact-card" type="button" data-contact-qr="wechet-qr.png" data-contact-title="WeChat · hyelim314"><strong>WeChat · hyelim314</strong><span lang="zh-CN">可用中文咨询</span></button>
+<div class="common-contact-card"><strong>카카오톡 ID · hyelim314</strong><span>친구 추가 후 문의</span></div>
+<a class="common-contact-card" href="tel:01086395165"><strong>전화 상담 · 010-8639-5165</strong><span>부재 시 문자 요청</span></a>
+<a class="common-contact-card" href="mailto:hyelim314@naver.com"><strong>이메일 · hyelim314@naver.com</strong><span>서류 파일 첨부 시 빠른 견적·상담</span></a>
+</div>
+<div class="common-contact-qrs">
+<figure><button type="button" class="common-qr-button" data-contact-qr="kakao-qr.png" data-contact-title="카카오톡 채널" aria-label="카카오톡 채널 QR코드 확대"><img src="kakao-qr.png" alt="월량번역행정사사무소 카카오톡 QR코드" loading="lazy"></button><figcaption>카카오톡 채널</figcaption></figure>
+<figure><button type="button" class="common-qr-button" data-contact-qr="wechet-qr.png" data-contact-title="WeChat · hyelim314" aria-label="위챗 QR코드 확대"><img src="wechet-qr.png" alt="월량번역행정사사무소 위챗 QR코드" loading="lazy"></button><figcaption>WeChat · hyelim314</figcaption></figure>
+</div></div></div></section>
 </main>
 <footer>
   <div class="container">
@@ -1060,5 +1136,31 @@ main a.detail-case-link:hover{color:#333;}
 </footer>
 
 
+<dialog id="contact-qr-dialog" class="contact-qr-dialog" aria-labelledby="contact-qr-title">
+<div class="contact-qr-dialog-top"><h2 id="contact-qr-title">QR코드</h2><button type="button" id="contact-qr-close" autofocus>닫기</button></div>
+<img id="contact-qr-image" alt="">
+</dialog>
+<script>
+(() => {
+ const dialog = document.getElementById('contact-qr-dialog');
+ const qrImage = document.getElementById('contact-qr-image');
+ const title = document.getElementById('contact-qr-title');
+ document.querySelectorAll('[data-contact-qr]').forEach(button => {
+  button.setAttribute('aria-haspopup', 'dialog');
+  button.setAttribute('aria-controls', 'contact-qr-dialog');
+  button.addEventListener('click', () => {
+   qrImage.src = button.dataset.contactQr;
+   qrImage.alt = button.dataset.contactTitle + ' QR코드';
+   title.textContent = button.dataset.contactTitle;
+   dialog.showModal();
+  });
+ });
+ document.getElementById('contact-qr-close').addEventListener('click', () => dialog.close());
+ dialog.addEventListener('click', event => {
+  const bounds = dialog.getBoundingClientRect();
+  if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+ });
+})();
+</script>
 </body>
 </html>
