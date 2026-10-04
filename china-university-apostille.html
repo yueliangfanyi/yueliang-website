@@ -770,8 +770,8 @@ footer .footer-bottom{color:#acbacb;}
 @media(max-width:600px){.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px;}.hero-actions a{margin-top:0;padding:12px 8px;font-size:14px;}}
 
 .university-note p{margin:0 0 16px;}.university-note p:last-child{margin-bottom:0;}
-.university-case .detail-case-link{display:inline-block;color:#c83240;margin-top:8px;}
-.university-case .detail-case-link:hover{color:#a72330;}
+.university-case .detail-case-link{display:inline-block;color:#595959;margin-top:8px;}
+.university-case .detail-case-link:hover{color:#333;}
 @media(max-width:600px){.case-line-break{display:none;}}
 
 .page-hero h1{font-size:30px;letter-spacing:-1px;}
@@ -796,7 +796,7 @@ footer .footer-bottom{color:#acbacb;}
 .university-timing li strong{display:block;color:#333;margin-bottom:6px;}.university-timing li p{margin:0;}
 .university-case{padding:22px 26px;}.university-case h3{font-size:23px;margin:8px 0 16px;}.university-case p{margin:0 0 14px;line-height:1.8;}
 .university-case .university-note{margin:16px 0;padding:14px 18px;}.university-case .university-note p{margin:0 0 12px;}.university-case .university-note p:last-child{margin-bottom:0;}
-.university-related .detail-case-link{color:#c83240;}.university-related .detail-case-link:hover{color:#a72330;}
+.university-related .detail-case-link{color:#595959;}.university-related .detail-case-link:hover{color:#333;}
 .university-faq article p{margin:0 0 14px;}.university-faq article p:last-child{margin-bottom:0;}
 .detail-contact p.section-cn{color:#d94452;}.detail-contact .university-actions{margin-top:8px;}
 @media(max-width:600px){.section-cn{font-size:14px;}.university-case{padding:20px 18px;}.university-case h3{font-size:20px;}.university-case .university-note{padding:14px;}}
@@ -809,6 +809,72 @@ main .section-cn,.university-timing .section-cn{color:#d94452;}
 .university-faq article p:last-child{margin-bottom:0;}
 .faq-number{color:#d94452;font-weight:700;}
 @media(max-width:600px){.university-faq article{padding:14px 0;}}
+
+/* Larger title, clear file formats, compact but readable FAQ. */
+.page-hero h1{font-size:34px;line-height:1.45;}
+.university-prep ol li{padding:3px 0;margin-bottom:10px;line-height:1.8;}
+.university-prep ol li strong{font-weight:700;color:#222;}
+.university-case .detail-case-link,.university-related .detail-case-link{color:#595959;text-decoration:underline;text-underline-offset:4px;}
+.university-case .detail-case-link:hover,.university-related .detail-case-link:hover{color:#333;}
+.university-faq article{padding:10px 0;}
+.university-faq article h3{font-size:18px;font-weight:700;line-height:1.5;margin:0 0 7px;}
+.university-faq article p{font-size:15px;line-height:1.7;margin:0 0 6px;}
+.university-faq article p:last-child{margin-bottom:0;}
+@media(max-width:600px){.page-hero h1{font-size:26px;}.university-faq article{padding:9px 0;}.university-faq article h3{font-size:17px;}}
+
+/* Consolidated compact reading layout. */
+main .section-cn{margin:0 0 6px;color:#d94452;}
+.university-content{padding:44px 0 30px;}
+.university-content h2,.university-faq h2{margin-bottom:16px;}
+.hero-description p{margin-bottom:8px;line-height:1.75;}
+.university-content p,.detail-contact p{line-height:1.75;}
+.documents-send-note{margin:0 0 12px;}
+.university-prep{padding:20px 24px;margin-bottom:32px;}
+.university-prep ol li{padding:0;margin-bottom:6px;line-height:1.7;}
+.university-prep ol li:last-child{margin-bottom:0;}
+.required-notes{margin-top:14px;padding-top:12px;}
+.required-notes p{margin:0 0 8px;line-height:1.7;}
+.required-notes p:last-child{margin-bottom:0;}
+.university-flow{gap:16px;margin-bottom:32px;}
+.university-flow li{padding-top:12px;}
+.university-flow li:before{margin-bottom:6px;}
+.university-flow p{margin-top:6px;line-height:1.7;}
+.university-timing{padding:20px 24px;margin-bottom:32px;}
+.university-timing>p:not(.section-cn){margin-bottom:12px;}
+.university-timing li{margin-bottom:12px;}
+.university-timing li strong{margin-bottom:4px;}
+.university-timing li p{margin:0;}
+.university-case{padding:18px 22px;}
+.university-case h3{margin:6px 0 12px;}
+.university-case p{margin-bottom:9px;line-height:1.75;}
+.university-case .university-note{margin:12px 0;padding:12px 16px;}
+.university-related{margin-top:16px;padding:18px 22px;}
+.university-related h3{margin-bottom:8px;}
+.university-related p{margin-bottom:10px;}
+main a.detail-case-link,main a.detail-case-link:visited{color:#595959;text-decoration:underline;text-underline-offset:4px;}
+main a.detail-case-link:hover{color:#333;}
+.university-faq{padding:0 0 36px;}
+.university-faq article{padding:9px 0;}
+.university-faq article h3{margin:0 0 5px;line-height:1.5;}
+.university-faq article p{margin:0 0 5px;line-height:1.65;}
+.university-faq article p:last-child{margin-bottom:0;}
+.university-source{margin-top:14px;}
+@media(max-width:600px){
+.university-content{padding:32px 0 24px;}
+.university-prep,.university-timing{padding:18px;margin-bottom:26px;}
+.university-flow{gap:18px 14px;margin-bottom:26px;}
+.university-case,.university-related{padding:16px 18px;}
+.university-case .university-note{padding:12px;}
+.university-faq{padding-bottom:28px;}
+.university-faq article{padding:8px 0;}
+}
+/* Light consultation background matching the introduction-page direction. */
+.detail-contact{background:#f6f5f3;color:#222;padding:52px 0;border-top:1px solid #e3e0dc;}
+.detail-contact h2{color:#222;font-size:30px;margin-bottom:12px;}
+.detail-contact p:not(.section-cn){color:#555;margin-bottom:14px;}
+.detail-contact .section-cn{color:#d94452;}
+.detail-contact .university-actions a{margin-top:0;}
+@media(max-width:600px){.detail-contact{padding:36px 0;}.detail-contact h2{font-size:25px;}.detail-contact .university-actions{gap:8px;}}
 </style>
 </head>
 
@@ -868,14 +934,14 @@ main .section-cn,.university-timing .section-cn{color:#d94452;}
 <h2>필요서류</h2>
 <p class="documents-send-note">아래 서류를 이메일·카카오톡·위챗 등으로 파일로 보내 주세요. 원본 서류는 보내실 필요가 없습니다.</p>
 <div class="university-prep"><ol>
-<li>중국대학교 졸업증서, 학위증서, 성적표 등 학적서류 컬러스캔본</li>
-<li>현 여권 컬러스캔본</li>
-<li>여권발급기록증명서 PDF 저장본</li>
-<li>기본증명서(상세) PDF 저장본</li>
+<li>중국대학교 졸업증서, 학위증서, 성적표 등 학적서류 <strong>컬러스캔본</strong></li>
+<li>현 여권 <strong>컬러스캔본</strong></li>
+<li>여권발급기록증명서 <strong>PDF 저장본</strong></li>
+<li>기본증명서(상세) <strong>PDF 저장본</strong></li>
 </ol>
 <div class="required-notes">
 <p>졸업증서·학위증서·성적표는 글자와 도장, 서류 가장자리가 모두 선명하게 보이도록 컬러로 스캔하여 보내 주세요.</p>
-<p>중국 국적자는 현재 유효한 중국 신분증 앞·뒷면 컬러스캔본도 함께 보내 주세요.</p>
+<p>중국 국적자는 현재 유효한 중국 신분증 앞·뒷면과 중국 여권의 컬러스캔본도 함께 보내 주세요.</p>
 
 </div>
 </div>
@@ -883,7 +949,7 @@ main .section-cn,.university-timing .section-cn{color:#d94452;}
 <h2>이렇게 진행합니다</h2>
 <ol class="university-flow">
 <li><strong>학적서류·학신망 확인</strong><p>보내주신 학적서류와 신분자료를 확인하고, 학신망(学信网)에서 해당 학력·학위정보가 조회되는지 살펴봅니다.</p></li>
-<li><strong>비용·추가서류 안내</strong><p>확인 결과에 따라 비용과 필요한 자료를 안내합니다. 학신망에서 조회되지 않으면 별도의 확인 절차와 추가 자료가 필요할 수 있습니다.</p></li>
+<li><strong>비용·추가서류 안내</strong><p>예상 소요기간, 비용과 추가로 필요한 자료를 안내합니다.</p></li>
 <li><strong>중국 공증·아포스티유</strong><p>비용 입금과 자료 준비가 완료되면 중국 현지 공증처에 접수하고, 공증 후 아포스티유를 진행합니다.</p></li>
 <li><strong>완성 서류 전달</strong><p>완료된 서류를 전달합니다.</p></li>
 </ol>
@@ -894,7 +960,6 @@ main .section-cn,.university-timing .section-cn{color:#d94452;}
 <ul>
 <li><strong>추가 확인이 필요한 경우</strong><p>학신망(중국 학력·학위 조회 사이트)에서 정보가 확인되지 않으면, 학교 확인이나 추가 증빙자료가 필요하여 시간이 더 걸릴 수 있습니다.</p></li>
 <li><strong>제출 기한이 있는 경우</strong><p>상담 시 필요한 날짜를 알려 주세요. 기한 내 완료가 가능한지와 급행 가능 여부를 확인해 드립니다.</p></li>
-<li><strong>한국 외 국가에 제출하는 경우</strong><p>제출할 국가와 기관을 알려 주세요. 해당 제출처에서 요구하는 인증 방식에 맞춰 안내해 드립니다.</p></li>
 </ul>
 </div>
 <p class="section-cn" lang="zh-CN">实际办理案例</p>
@@ -904,8 +969,7 @@ main .section-cn,.university-timing .section-cn{color:#d94452;}
 <p>졸업증서와 학위증서의 학신망 조회 상태를 확인한 뒤, 조회가 가능한 학위증서부터 진행한 사례입니다.</p>
 <p>공증처에서 요구한 위탁서와 본인 확인 자료를 준비하여 중국 공증·아포스티유를 완료했습니다.</p>
 <div class="university-note">
-<p>이 사례에서는 위탁서와 여권을 들고 본인 얼굴이 나오도록 촬영한 사진을 준비했습니다.</p>
-<p>필요한 자료와 확인 방식은 접수하는 공증처의 요구에 따라 안내합니다.</p>
+<p>공증처의 요청에 따라 위탁서와 여권을 들고 본인 얼굴이 나오도록 촬영한 사진을 준비했습니다.</p>
 </div>
 <a class="detail-case-link" href="https://blog.naver.com/hyelim314/224360988044" target="_blank" rel="noopener noreferrer">북경대학교 학위증서 업무사례 자세히 보기 ↗</a>
 </article>
@@ -917,25 +981,18 @@ main .section-cn,.university-timing .section-cn{color:#d94452;}
 <p class="section-cn" lang="zh-CN">常见问题</p>
 <h2>자주 묻는 질문</h2>
 <article><h3><span class="faq-number">1.</span> 중국에 직접 가지 않고 맡길 수 있나요?</h3>
-<p>서류를 보내 주시면 중국 방문 없이 대행할 수 있는지 확인해 드립니다.</p>
-<p>진행에 필요한 위탁서와 본인 확인 자료는 별도로 안내합니다.</p></article>
-<article><h3><span class="faq-number">2.</span> 어떤 서류를 보내야 하나요?</h3>
-<p>위 ‘필요서류’에 있는 학적서류·여권 컬러스캔본과 증명서 PDF 파일을 보내 주세요.</p>
-<p>제출기관의 안내문과 제출 기한도 함께 알려 주시면 좋습니다.</p></article>
-<article><h3><span class="faq-number">3.</span> 학신망에서 조회되지 않는 서류도 진행할 수 있나요?</h3>
-<p>조회되지 않는다고 바로 진행이 불가능한 것은 아닙니다.</p>
-<p>학교 확인이나 추가 증빙자료가 필요한지 확인한 후, 진행 가능 여부와 예상 기간을 안내합니다.</p></article>
-<article><h3><span class="faq-number">4.</span> 번역문은 어떤 언어로 준비되나요?</h3>
+<p>보내주신 서류를 확인하여 중국 방문 없이 대행할 수 있는지 안내합니다. 필요한 위탁서와 본인 확인 자료도 함께 안내해 드립니다.</p></article>
+<article><h3><span class="faq-number">2.</span> 학신망에서 조회되지 않는 서류도 진행할 수 있나요?</h3>
+<p>조회되지 않는다고 바로 진행이 불가능한 것은 아닙니다. 학교 확인이나 추가 증빙자료를 통해 진행할 수 있는지 확인해 드립니다.</p></article>
+<article><h3><span class="faq-number">3.</span> 번역문은 어떤 언어로 준비되나요?</h3>
 <p>중국 현지에서 공증서와 함께 준비하는 번역문은 국문을 기본으로 합니다.</p>
-<p>한국 외 국가에 제출하는 경우에는 영문으로도 준비할 수 있습니다. 상담 시 제출할 국가와 기관을 알려 주세요.</p>
-</article>
-<article><h3><span class="faq-number">5.</span> 취업이나 대학 입학·편입용으로 무엇을 준비해야 하나요?</h3>
-<p>회사·학교마다 요구하는 서류와 인증 방식이 다릅니다.</p>
-<p>제출서류 안내문이나 모집요강을 보내 주시면 필요한 준비사항을 안내해 드립니다.</p></article>
+<p>한국 외 국가에 제출하는 경우에는 영문으로도 준비할 수 있습니다. 제출할 국가와 기관을 알려 주시면 필요한 번역 언어와 인증 방식을 확인해 드립니다.</p></article>
+<article><h3><span class="faq-number">4.</span> 제출기관에서 받은 안내문도 보내야 하나요?</h3>
+<p>안내문이나 모집요강이 있다면 함께 보내 주세요. 회사·학교마다 요구하는 서류와 인증 방식이 달라, 안내문을 기준으로 준비사항을 확인해 드립니다.</p></article>
 <p class="university-source">공식 안내: <a href="https://cs.mfa.gov.cn/lh/lsrz_149494/cjwd/" target="_blank" rel="noopener noreferrer">중국 외교부 영사서비스 공증·아포스티유 안내 ↗</a></p>
 </div></section>
 <section class="detail-contact"><div class="container"><p class="section-cn" lang="zh-CN">学历材料咨询</p>
-<h2>학력서류 상담이 필요하신가요?</h2><p>서류 사본과 제출기관 안내문을 보내 주세요. 진행 방법, 비용과 예상 기간을 안내해 드립니다.</p><div class="university-actions">
+<h2>학력서류 상담이 필요하신가요?</h2><p>궁금한 점은 카카오톡이나 전화로 문의해 주세요.</p><div class="university-actions">
 <a class="detail-primary" href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener noreferrer">카카오톡 상담 →</a>
 <a class="detail-secondary" href="tel:01086395165">전화 010-8639-5165</a>
 <a class="detail-secondary" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer">네이버 블로그 →</a>
