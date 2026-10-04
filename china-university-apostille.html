@@ -1083,6 +1083,16 @@ footer .footer-contact a:hover, footer .footer-nav a:hover { color: #fff; }
 footer .footer-bottom { color: #acbacb; }
   
 
+
+/* 항목 제목 왼쪽, 안내문 같은 줄 맨 오른쪽 */
+.university-content .section-heading-row { display:flex; align-items:flex-start; justify-content:space-between; gap:18px 32px; margin-bottom:16px; }
+.university-content .section-heading-row h2 { flex-shrink:0; margin:0; }
+.university-content .section-heading-row .section-heading-note { flex:0 1 780px; margin:0 0 0 auto; padding-top:4px; font-size:14px; line-height:1.7; color:#555; text-align:right; word-break:keep-all; }
+@media(max-width:700px) {
+.university-content .section-heading-row { flex-wrap:wrap; gap:10px; }
+.university-content .section-heading-row .section-heading-note { flex-basis:100%; padding-top:0; font-size:13px; }
+}
+
 </style>
 </head>
 
@@ -1139,8 +1149,8 @@ footer .footer-bottom { color: #acbacb; }
 </div></section>
 <section class="university-content"><div class="container">
 <p class="section-cn" lang="zh-CN">所需材料</p>
-<h2>필요서류</h2>
-<p class="documents-send-note">아래 서류를 이메일·카카오톡·위챗 등으로 파일로 보내 주세요. 원본 서류는 보내실 필요가 없습니다.</p>
+<div class="section-heading-row"><h2>필요서류</h2>
+<p class="section-heading-note documents-send-note">아래 서류를 이메일·카카오톡·위챗 등으로 파일로 보내 주세요. 원본 서류는 보내실 필요가 없습니다.</p></div>
 <div class="university-prep"><ol>
 <li>중국대학교 졸업증서, 학위증서, 성적표 등 학적서류 <strong>컬러스캔본</strong></li>
 <li>현 여권 <strong>컬러스캔본</strong></li>
@@ -1163,8 +1173,8 @@ footer .footer-bottom { color: #acbacb; }
 </ol>
 <div class="university-timing">
 <p class="section-cn" lang="zh-CN">办理时间与费用</p>
-<h2>소요기간·비용</h2>
-<p>서류를 보내 주시면 진행 가능 여부를 확인한 후, 예상 소요기간과 비용을 안내해 드립니다.</p>
+<div class="section-heading-row"><h2>소요기간·비용</h2>
+<p class="section-heading-note">서류를 보내 주시면 진행 가능 여부를 확인한 후, 예상 소요기간과 비용을 안내해 드립니다.</p></div>
 <ul>
 <li><strong>추가 확인이 필요한 경우</strong><p>학신망(중국 학력·학위 조회 사이트)에서 정보가 확인되지 않으면, 학교 확인이나 추가 증빙자료가 필요하여 시간이 더 걸릴 수 있습니다.</p></li>
 <li><strong>제출 기한이 있는 경우</strong><p>상담 시 필요한 날짜를 알려 주세요. 기한 내 완료가 가능한지와 급행 가능 여부를 확인해 드립니다.</p></li>
