@@ -852,6 +852,18 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 @media(max-width:900px){.process-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-bottom-grid{grid-template-columns:1fr}.document-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.process-steps{grid-template-columns:1fr}.certification-guide-row{justify-content:flex-start}.certification-guide-link{font-size:14px;padding:9px 12px;gap:8px}.document-icon{width:40px;height:40px;flex-basis:40px}.document-title{gap:12px}}
 
+
+/* 최종 정리: 절차 색상 통일 및 사례 링크 배치 */
+.china-process .process-step,
+.china-process .process-step:nth-child(2),
+.china-process .process-step:nth-child(3),
+.china-process .process-step:nth-child(4){background:#fff4e9;border-color:#efd8be}
+.treaty-note{margin-top:20px;color:#777;font-size:13px;line-height:1.8;word-break:keep-all}
+.document-item .case-link{display:flex;flex-direction:column;gap:0;min-height:150px;padding:18px 20px}
+.case-link .case-text{margin-bottom:14px}
+.case-more{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-top:auto;color:#b95f64;font-size:13px;font-weight:700;line-height:1.5}
+.case-link:hover .case-more{color:#e63943}
+
 </style>
 </head>
 
@@ -937,8 +949,8 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     </p>
 
     <div class="notary-explanation">
-      <strong>번역공증 촉탁이란?</strong>
-      <p>중국어 번역문과 필요한 서류를 준비하여 공증사무소에 번역공증을 신청하는 절차입니다. 월량은 중국어 번역과 번역공증 촉탁 업무를 진행합니다.</p>
+      <strong>번역공증, 번역인의 자격을 확인합니다.</strong>
+      <p>법무부 「번역문 인증사무 지침」에 따라 공증인은 번역인의 자격·학력·경력 등을 확인하여 해당 외국어의 번역능력을 심사합니다. 월량은 <b>국가공인 외국어번역행정사가 직접 번역하고, 번역공증 촉탁까지 진행합니다.</b></p>
     </div>
     <div class="certification-guide-row">
       <a class="certification-guide-link" href="translation-certification-guide.html">
@@ -974,6 +986,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     </div>
 
 
+    <p class="treaty-note">※ 2023년 11월 7일부터 중국과 한국 사이에 아포스티유 협약이 발효되어, 협약 적용 대상 문서는 기존 영사확인 대신 문서 발급국의 아포스티유를 받아 제출합니다.</p>
   </div>
 </section>
   <section class="document-types">
@@ -1006,7 +1019,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     <a class="case-link" href="https://blog.naver.com/hyelim314/224323298957" target="_blank" rel="noopener">
       <span>주요 사례</span>
       <span class="case-text">중국 법인 설립을 위한 국내 사업자등록증 등 회사 서류 중국어 번역공증·아포스티유</span>
-      <b class="case-arrow">→</b>
+      <span class="case-more">사례 보기 <span aria-hidden="true">→</span></span>
     </a>
   </div>
 
@@ -1029,7 +1042,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     <a class="case-link" href="https://blog.naver.com/hyelim314/224415899347" target="_blank" rel="noopener">
       <span>주요 사례</span>
       <span class="case-text">중국 현지 로펌 소송 대리를 위한 수권위탁서, 법정대표자신분증명서 등 공증·아포스티유</span>
-      <b class="case-arrow">→</b>
+      <span class="case-more">사례 보기 <span aria-hidden="true">→</span></span>
     </a>
   </div>
 
@@ -1053,7 +1066,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
    <a class="case-link" href="china-work-visa-criminal-record.html">
       <span>주요 사례</span>
       <span class="case-text">중국 취업비자 신청에 필요한 범죄수사경력회보서 중국어 번역공증·아포스티유</span>
-      <b class="case-arrow">→</b>
+      <span class="case-more">사례 보기 <span aria-hidden="true">→</span></span>
     </a>
   </div>
 
@@ -1076,7 +1089,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     <a class="case-link" href="https://blog.naver.com/hyelim314/224242940823" target="_blank" rel="noopener">
       <span>주요 사례</span>
       <span class="case-text">중국 취업비자 신청에 필요한 졸업증명서 중국어 번역공증·아포스티유</span>
-      <b class="case-arrow">→</b>
+      <span class="case-more">사례 보기 <span aria-hidden="true">→</span></span>
     </a>
   </div>
 
@@ -1102,7 +1115,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     <a class="case-link" href="https://blog.naver.com/hyelim314/224293286738" target="_blank" rel="noopener">
       <span>주요 사례</span>
       <span class="case-text">선중국 혼인신고를 위한 혼인관계증명서(상세) 중국어 번역공증·아포스티유</span>
-      <b class="case-arrow">→</b>
+      <span class="case-more">사례 보기 <span aria-hidden="true">→</span></span>
     </a>
   </div>
   <!-- 06 출생·국적 -->
@@ -1125,46 +1138,13 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
     <a class="case-link" href="https://blog.naver.com/hyelim314/224376040215" target="_blank" rel="noopener">
       <span>주요 사례</span>
       <span class="case-text">중국 호구 등록을 위한 한중커플 아기 국내 출생증명서 중국어 번역공증·아포스티유</span>
-      <b class="case-arrow">→</b>
+      <span class="case-more">사례 보기 <span aria-hidden="true">→</span></span>
     </a>
   </div>
 
 </div>
 </div>
 </section>
-  <section class="apostille-info">
-  <div class="container">
-    <div class="section-label">APOSTILLE</div>
-    <h2>아포스티유란?</h2>
-    <p>2023년 11월 7일부터 중국과 한국 사이에 아포스티유 협약이 발효되었습니다.<br>
-  이에 따라 협약 적용 대상 문서는 기존의 영사확인 절차 없이,
-  문서 발급국에서 아포스티유를 발급받아 상대국에 제출하는 방식으로 변경되었습니다.</p>
-
-    <p>
-      한 국가에서 발행한 문서를 다른 국가에서 사용하기 위해서는
-      문서의 국외사용을 위한 확인(Legalization)이 필요합니다.
-    </p>
-
-    <p>
-      아포스티유는 「외국공문서에 대한 인증의 요구를 폐지하는 협약」에 따라
-      문서 발행국의 권한 있는 당국이 자국 문서를 확인하고,
-      협약 가입국이 이를 인정하도록 하는 제도입니다.
-    </p>
-
-    <p>
-      우리나라에서는 재외동포청과 법무부가 권한 있는 당국으로 지정되어 있으며,
-      문서의 관인 또는 서명을 대조하여 진위를 확인하고 아포스티유(Apostille)를 발급합니다.
-    </p>
-<p>
-  따라서 아포스티유가 부착된 공문서는 주한 공관의 영사확인 없이
-  협약 가입국에서 공문서로서의 효력을 인정받게 됩니다.
-</p>
-    <p class="source-note">
-      ※ 대한민국 아포스티유 공식 홈페이지의 제도 안내를 바탕으로 정리하였습니다.
-    </p>
-  </div>
-</section>
-
   <section class="check-before">
   <div class="container">
     <div class="section-label">CHECK BEFORE</div>
