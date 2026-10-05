@@ -867,6 +867,16 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
 .apostille-info h2{margin-bottom:18px}
 .apostille-info p{margin-bottom:10px}
 .apostille-info p:last-child{margin-bottom:0}
+
+/* 페이지 전체 문단과 하단 편집 정리 */
+.apostille-info p{max-width:none;word-break:keep-all;overflow-wrap:break-word}
+.process-intro{word-break:keep-all;overflow-wrap:break-word}
+.document-title{min-height:54px}
+.check-before{padding-top:42px}
+.check-before h2{margin-bottom:28px}
+.detail-contact h2{max-width:900px;word-break:keep-all}
+.contact-button{border-color:#aaa;background:#ffffff08}
+@media(max-width:700px){.document-title{min-height:0}.check-before{padding-top:36px}}
 </style>
 </head>
 <body>
@@ -973,8 +983,6 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
         번역확인증명서를 발급할 수 있습니다.
        
          </p>
-      <p>번역확인증명서는 행정사법 시행규칙 별지 제18호서식에 따라 발급합니다.
-      </p>
 
     </div>
   </section>
@@ -989,7 +997,7 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
       <h2>번역확인증명서란?</h2>
 
       <p class="process-intro">
-        번역확인증명서는 외국어번역행정사가 직접 번역한 번역문이 원문과 틀림없음을 확인하여 발급하는 증명서입니다. <strong>행정사법 제20조 제2항</strong>은 외국어번역행정사가 자신이 번역한 번역문에 대해 번역확인증명서를 발급할 수 있도록 규정하고 있습니다.
+        번역확인증명서는 외국어번역행정사가 직접 번역한 번역문이 원문과 틀림없음을 확인하여 발급하는 증명서입니다.
       </p>
 
       
@@ -1079,7 +1087,7 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
 
       <div class="section-label" lang="zh-CN">委托前须知</div>
 
-      <h2>의뢰 전<br>확인해 주세요.</h2>
+      <h2>의뢰 전 확인사항</h2>
 
       <div class="check-list">
 
@@ -1148,9 +1156,9 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
   <section class="detail-contact">
     <div class="container">
 
-      <div class="section-label">CONTACT</div>
+      <div class="section-label" lang="zh-CN">咨询联系</div>
 
-      <h2>번역확인증명서 상담,<br>편한 방법으로 문의해 주세요.</h2>
+      <h2>번역확인증명서 상담, 편한 방법으로 문의해 주세요.</h2>
 
       <p class="contact-intro">
         중국어 원문을 촬영하거나 스캔하여 보내주시면
