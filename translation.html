@@ -1022,6 +1022,18 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
 .certification-guide-link{padding:9px 12px;gap:8px;font-size:14px}
 }
 
+
+/* 중문 강조 및 인증 절차 제목 옆 안내 */
+.direction-item .direction-cn{font-weight:700}
+.certification-heading{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.certification-heading h2{flex-shrink:0;margin-bottom:0}
+.certification-heading .certification-intro{max-width:650px;margin:0;text-align:right;font-size:15px;line-height:1.8;word-break:keep-all}
+.after-subcard .translator-emphasis{font-weight:800;color:#333}
+@media(max-width:800px){
+.certification-heading{flex-direction:column;align-items:flex-start;gap:12px}
+.certification-heading .certification-intro{max-width:none;text-align:left}
+}
+
 </style>
 </head>
 <body>
@@ -1115,8 +1127,10 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
 <section class="apostille-info">
   <div class="container">
     <div class="section-label" lang="zh-CN">翻译后的认证手续</div>
-    <h2>번역 후 인증 절차</h2>
-    <p class="certification-intro">제출 목적과 제출기관의 요구사항에 따라 필요한 인증 절차만 진행합니다.</p>
+    <div class="certification-heading">
+      <h2>번역 후 인증 절차</h2>
+      <p class="certification-intro">제출 목적과 제출기관의 요구사항에 따라 필요한 인증 절차만 진행합니다.</p>
+    </div>
     <div class="after-process">
       <div class="after-card">
         <span class="after-step">01</span>
@@ -1135,7 +1149,7 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
         </a>
         <a class="after-subcard" href="translation-confirmation.html">
           <strong>번역확인증명서</strong>
-          <p>행정사가 발급하는 번역확인증명서</p>
+          <p><b class="translator-emphasis">번역행정사</b>가 발급하는 번역확인증명서</p>
           <span class="after-detail-link">자세히 보기 →</span>
         </a>
       </div>
