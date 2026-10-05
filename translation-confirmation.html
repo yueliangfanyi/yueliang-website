@@ -696,7 +696,7 @@
 ========================= */
 
 footer {
-  background: #201d23;
+  background: #17263c;
   color: #aaa;
   padding: 55px 0 28px;
   font-size: 13px;
@@ -1062,6 +1062,40 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
 /* 상단 비교 안내 탭을 조금 왼쪽으로 이동 */
 @media(min-width:1101px){.hero-comparison{margin-right:36px}}
+
+/* 상단 비교 안내 버튼 강조 */
+.hero-comparison .comparison-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 14px 20px;
+  background: #fce3e7;
+  border: 1px solid #e7a1ac;
+  border-radius: 6px;
+  color: #b9303b;
+  text-decoration: none;
+  line-height: 1.6;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.hero-comparison .comparison-question {
+  font-size: 13px;
+  font-weight: 800;
+  word-break: keep-all;
+}
+.hero-comparison .comparison-sub {
+  font-size: 12px;
+  font-weight: 500;
+}
+.hero-comparison .comparison-link:hover {
+  background: #f9d7dd;
+  border-color: #d98290;
+}
+.hero-comparison .comparison-link:focus-visible {
+  outline: 2px solid #b9303b;
+  outline-offset: 3px;
+}
 </style>
 </head>
 <body>
@@ -1120,13 +1154,16 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <span class="domestic-badge">중국어 서류 → 한국 제출</span>
 </h1>
 <div class="hero-comparison">
-    <a class="comparison-link" href="translation-certification-guide.html">번역확인증명서·번역공증 차이 | 아포스티유 안내 <span aria-hidden="true">→</span></a>
+    <a class="comparison-link" href="translation-certification-guide.html">
+      <strong class="comparison-question">번역확인증명서와 번역공증, 뭐가 다른가요?</strong>
+      <span class="comparison-sub">아포스티유 안내 <span aria-hidden="true">→</span></span>
+    </a>
   </div>
 </div>
 
       <p>
         중국에서 발급된 중국어 서류를 국내 행정기관(공공기관 포함)에 제출하는 경우,
-        국가공인 외국어번역행정사가 직접 국문으로 번역하고
+        국가공인 외국어번역행정사가 직접 국문으로 번역하고<br>
         번역확인증명서를 발급합니다.
         <br><br>
         제출기관과 제출 목적을 확인하여
