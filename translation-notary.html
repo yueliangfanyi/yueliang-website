@@ -864,6 +864,14 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 .case-more{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-top:auto;color:#b95f64;font-size:13px;font-weight:700;line-height:1.5}
 .case-link:hover .case-more{color:#e63943}
 
+
+/* 진행 절차 회색 탭 및 직접 번역 문장 분리 */
+.china-process .process-step,
+.china-process .process-step:nth-child(2),
+.china-process .process-step:nth-child(3),
+.china-process .process-step:nth-child(4){background:#f3f3f1;border-color:#dcdcd8}
+.notary-explanation .notary-direct{margin-top:10px}
+
 </style>
 </head>
 
@@ -921,7 +929,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
   <div class="hero-bottom-grid">
 
   <div class="yueliang-point">
-    <div class="point-label">月亮 POINT</div>
+    <div class="point-label">月亮 经验</div>
     <strong>영사확인 시절부터 이어온 중국 서류 업무 경험</strong>
     <p>
       아포스티유 협약 발효 전 영사확인 절차부터 관련 업무를 진행해 왔습니다.
@@ -931,7 +939,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
   </div>
 
   <a class="document-example-card" href="translation-apostille-example.html">
-    <span>DOCUMENT EXAMPLE</span>
+    <span>材料示例</span>
     <strong>중국어 번역공증·아포스티유<br>서류 예시</strong>
     <b>실제 서류 예시 보기 →</b>
   </a>
@@ -940,17 +948,13 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
   </section>
   <section class="china-process">
   <div class="container">
-    <div class="section-label">PROCESS</div>
+    <div class="section-label" lang="zh-CN">办理流程</div>
     <h2>중국 제출 서류 진행 절차</h2>
-
-    <p class="process-intro">
-      한국에서 발급된 서류를 중국에 제출하는 경우,
-      서류의 종류와 제출기관을 확인한 후 필요한 절차를 진행합니다.
-    </p>
 
     <div class="notary-explanation">
       <strong>번역공증, 번역인의 자격을 확인합니다.</strong>
-      <p>법무부 「번역문 인증사무 지침」에 따라 공증인은 번역인의 자격·학력·경력 등을 확인하여 해당 외국어의 번역능력을 심사합니다. 월량은 <b>국가공인 외국어번역행정사가 직접 번역하고, 번역공증 촉탁까지 진행합니다.</b></p>
+      <p>법무부 「번역문 인증사무 지침」에 따라 공증인은 번역인의 자격·학력·경력 등을 확인하여 해당 외국어의 번역능력을 심사합니다.</p>
+      <p class="notary-direct">월량은 <b>국가공인 외국어번역행정사가 직접 번역하고, 번역공증 촉탁까지 진행합니다.</b></p>
     </div>
     <div class="certification-guide-row">
       <a class="certification-guide-link" href="translation-certification-guide.html">
@@ -991,7 +995,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 </section>
   <section class="document-types">
   <div class="container">
-    <div class="section-label">DOCUMENTS</div>
+    <div class="section-label" lang="zh-CN">办理材料</div>
     <h2>주요 진행 서류</h2>
 
     <p class="documents-intro">
@@ -1147,7 +1151,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 </section>
   <section class="check-before">
   <div class="container">
-    <div class="section-label">CHECK BEFORE</div>
+    <div class="section-label" lang="zh-CN">办理前确认</div>
     <h2>진행 전 확인사항</h2>
 
     <div class="check-list">
