@@ -877,6 +877,191 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
 .detail-contact h2{max-width:900px;word-break:keep-all}
 .contact-button{border-color:#aaa;background:#ffffff08}
 @media(max-width:700px){.document-title{min-height:0}.check-before{padding-top:36px}}
+    .common-contact {
+      padding: 46px 0;
+      border-top: 1px solid #e2e2df;
+      background: #f3f3f1;
+      color: #222;
+    }
+
+    .common-contact h2 {
+      margin-bottom: 16px;
+    }
+
+    .common-contact-intro {
+      margin-bottom: 26px;
+      color: #606060;
+    }
+
+    .common-contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0,1.7fr) minmax(0,1fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .common-contact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .common-contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 94px;
+      padding: 16px 12px;
+      border: 1px solid #d2d2ce;
+      border-radius: 6px;
+      background: #fff;
+      color: #2b2b2b;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    a.common-contact-card,
+    button.common-contact-card {
+      cursor: pointer;
+    }
+
+    .common-contact-card strong {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .common-contact-card span {
+      color: #606060;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    a.common-contact-card:hover {
+      background: #f0f0ed;
+      border-color: #aaa;
+    }
+
+    .common-contact-card.contact-kakao {
+      background: #fff5cc;
+      border-color: #e8d694;
+      color: #493c20;
+    }
+
+    .contact-kakao span {
+      color: #665737;
+    }
+
+    a.common-contact-card.contact-kakao:hover {
+      background: #ffedaf;
+      border-color: #d7bb63;
+    }
+
+    .common-contact-card.contact-wechat {
+      background: #edf6eb;
+      border-color: #c2d9ba;
+      color: #365c32;
+    }
+
+    .contact-wechat span {
+      color: #52704d;
+    }
+
+    button.common-contact-card.contact-wechat:hover {
+      background: #e1efdd;
+      border-color: #aac79f;
+    }
+
+    .common-contact-qrs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .common-contact-qrs figure {
+      min-width: 0;
+      text-align: center;
+    }
+
+    .common-qr-button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border: 0;
+      background: #fff;
+      cursor: zoom-in;
+    }
+
+    .common-qr-button img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .common-contact-qrs figcaption {
+      margin-top: 12px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* QR 확대 */
+    .contact-qr-dialog {
+      width: min(460px,90vw);
+      max-height: 90dvh;
+      margin: auto;
+      padding: 20px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .contact-qr-dialog::backdrop {
+      background: rgba(0,0,0,.6);
+    }
+
+    .contact-qr-dialog-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .contact-qr-dialog h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .contact-qr-dialog button {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .contact-qr-dialog img {
+      display: block;
+      width: 100%;
+      max-height: 65dvh;
+      object-fit: contain;
+    }
+
+
+
+
+.common-contact{padding:60px 0;background:#f3f3f1;color:#222}
+.common-contact h2{font-size:clamp(26px,3vw,32px);line-height:1.4;letter-spacing:-1px}
+.common-contact .section-cn{color:#e63943;font-size:16px;font-weight:800;margin-bottom:16px}
+header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:0;border-radius:5px;padding:6px 12px;text-align:center}
+@media(max-width:1000px){.common-contact-layout{grid-template-columns:1fr;gap:28px}.common-contact-qrs{max-width:440px}}
+@media(max-width:700px){.common-contact{padding:44px 0}.common-contact-cards{grid-template-columns:1fr}}
+
+/* 상단 비교 안내 탭을 조금 왼쪽으로 이동 */
+@media(min-width:1101px){.hero-comparison{margin-right:36px}}
 </style>
 </head>
 <body>
@@ -1153,24 +1338,75 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
 
 
   <!-- CONTACT -->
-  <section class="detail-contact">
-    <div class="container">
+  <section class="common-contact" id="document-contact">
+      <div class="container">
+        <p class="section-cn" lang="zh-CN">咨询联系</p>
+        <h2>중국어 번역 상담,<br>편한 방법으로 문의해 주세요.</h2>
+        <p class="common-contact-intro">번역할 서류나 자료를 보내 주시면 내용과 제출 목적을 확인한 후 진행 방법을 안내해 드립니다.</p>
 
-      <div class="section-label" lang="zh-CN">咨询联系</div>
+        <div class="common-contact-layout">
+          <div class="common-contact-cards">
+            <a class="common-contact-card contact-kakao"
+               href="https://pf.kakao.com/_vxoCEX"
+               target="_blank" rel="noopener noreferrer">
+              <strong>카카오톡 채널</strong>
+              <span>1:1 채팅 상담</span>
+            </a>
 
-      <h2>번역확인증명서 상담, 편한 방법으로 문의해 주세요.</h2>
+            <button class="common-contact-card contact-wechat"
+                    type="button"
+                    data-contact-qr="wechet-qr.png"
+                    data-contact-title="WeChat · hyelim314">
+              <strong>WeChat · hyelim314</strong>
+              <span lang="zh-CN">可用中文咨询</span>
+            </button>
 
-      <p class="contact-intro">
-        중국어 원문을 촬영하거나 스캔하여 보내주시면
-        서류와 제출 목적을 확인한 후 진행 방법을 안내해 드립니다.
-      </p>
+            <div class="common-contact-card">
+              <strong>카카오톡 ID · hyelim314</strong>
+              <span>친구 추가 후 문의</span>
+            </div>
 
-      <a class="contact-button" href="index.html#contact">
-        상담방법 및 연락처 확인 →
-      </a>
+            <a class="common-contact-card" href="tel:01086395165">
+              <strong>전화 상담 · 010-8639-5165</strong>
+              <span>부재 시 문자 요청</span>
+            </a>
 
-    </div>
-  </section>
+            <a class="common-contact-card" href="mailto:hyelim314@naver.com">
+              <strong>이메일 · hyelim314@naver.com</strong>
+              <span>서류 파일 첨부 시 빠른 견적·상담</span>
+            </a>
+          </div>
+
+          <div class="common-contact-qrs">
+            <figure>
+              <button type="button"
+                      class="common-qr-button"
+                      data-contact-qr="kakao-qr.png"
+                      data-contact-title="카카오톡 채널"
+                      aria-label="카카오톡 채널 QR코드 확대">
+                <img src="kakao-qr.png"
+                     alt="월량번역행정사사무소 카카오톡 QR코드"
+                     loading="lazy">
+              </button>
+              <figcaption>카카오톡 채널</figcaption>
+            </figure>
+
+            <figure>
+              <button type="button"
+                      class="common-qr-button"
+                      data-contact-qr="wechet-qr.png"
+                      data-contact-title="WeChat · hyelim314"
+                      aria-label="위챗 QR코드 확대">
+                <img src="wechet-qr.png"
+                     alt="월량번역행정사사무소 위챗 QR코드"
+                     loading="lazy">
+              </button>
+              <figcaption>WeChat · hyelim314</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
 </main>
   <footer>
@@ -1232,5 +1468,65 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
 
   </div>
 </footer>
+  <dialog id="contact-qr-dialog"
+          class="contact-qr-dialog"
+          aria-labelledby="contact-qr-title">
+    <div class="contact-qr-dialog-top">
+      <h2 id="contact-qr-title">QR코드</h2>
+      <button type="button" id="contact-qr-close" autofocus>닫기</button>
+    </div>
+    <img id="contact-qr-image" alt="">
+  </dialog>
+
+  <script>
+    (() => {
+      const dialog = document.getElementById("contact-qr-dialog");
+      const qrImage = document.getElementById("contact-qr-image");
+      const title = document.getElementById("contact-qr-title");
+
+      document.querySelectorAll("[data-contact-qr]").forEach(button => {
+        button.setAttribute("aria-haspopup", "dialog");
+        button.setAttribute("aria-controls", "contact-qr-dialog");
+
+        button.addEventListener("click", () => {
+          qrImage.src = button.dataset.contactQr;
+          qrImage.alt = button.dataset.contactTitle + " QR코드";
+          title.textContent = button.dataset.contactTitle;
+          dialog.showModal();
+        });
+      });
+
+      document.getElementById("contact-qr-close")
+        .addEventListener("click", () => dialog.close());
+
+      dialog.addEventListener("click", event => {
+        const bounds = dialog.getBoundingClientRect();
+
+        if (
+          event.target === dialog &&
+          (
+            event.clientX < bounds.left ||
+            event.clientX > bounds.right ||
+            event.clientY < bounds.top ||
+            event.clientY > bounds.bottom
+          )
+        ) {
+          dialog.close();
+        }
+      });
+
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.open = false;
+        });
+      });
+    })();
+  </script>
+
+
+
+
 </body>
 </html>
