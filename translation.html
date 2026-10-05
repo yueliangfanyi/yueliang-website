@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>중국어 번역 | 한중·중한 번역 | 월량번역행정사</title>
+<title>중국어 번역 | 한중·중한 번역 | 월량번역행정사사무소</title>
 <meta name="description" content="공무원 출신 국가공인 외국어번역행정사가 중국어 번역을 직접 진행합니다. 행정·공공서류, 학력·자격, 기업·법률, 혼인·가족관계, 전문자료 등 한중·중한 번역과 제출 목적에 따른 후속 절차를 안내합니다.">
 <link rel="canonical" href="https://yueliang.kr/translation.html">
 <link rel="icon" type="image/png" href="/yueliang-symbol-red.png">
-<meta property="og:title" content="중국어 번역 | 한중·중한 번역 | 월량번역행정사">
+<meta property="og:title" content="중국어 번역 | 한중·중한 번역 | 월량번역행정사사무소">
 <meta property="og:description" content="공무원 출신 국가공인 외국어번역행정사가 행정·공공서류, 학력·자격, 기업·법률, 혼인·가족관계, 전문자료 등 한중·중한 중국어 번역을 직접 진행합니다.">
 <meta property="og:url" content="https://yueliang.kr/translation.html">
 <meta name="robots" content="index, follow">
@@ -807,29 +807,235 @@ footer {
     gap: 30px;
   }
 }
-  </style>
+      /* 상담안내 */
+    .common-contact {
+      padding: 46px 0;
+      border-top: 1px solid #e2e2df;
+      background: #f3f3f1;
+      color: #222;
+    }
+
+    .common-contact h2 {
+      margin-bottom: 16px;
+    }
+
+    .common-contact-intro {
+      margin-bottom: 26px;
+      color: #606060;
+    }
+
+    .common-contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0,1.7fr) minmax(0,1fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .common-contact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .common-contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 94px;
+      padding: 16px 12px;
+      border: 1px solid #d2d2ce;
+      border-radius: 6px;
+      background: #fff;
+      color: #2b2b2b;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    a.common-contact-card,
+    button.common-contact-card {
+      cursor: pointer;
+    }
+
+    .common-contact-card strong {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .common-contact-card span {
+      color: #606060;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    a.common-contact-card:hover {
+      background: #f0f0ed;
+      border-color: #aaa;
+    }
+
+    .common-contact-card.contact-kakao {
+      background: #fff5cc;
+      border-color: #e8d694;
+      color: #493c20;
+    }
+
+    .contact-kakao span {
+      color: #665737;
+    }
+
+    a.common-contact-card.contact-kakao:hover {
+      background: #ffedaf;
+      border-color: #d7bb63;
+    }
+
+    .common-contact-card.contact-wechat {
+      background: #edf6eb;
+      border-color: #c2d9ba;
+      color: #365c32;
+    }
+
+    .contact-wechat span {
+      color: #52704d;
+    }
+
+    button.common-contact-card.contact-wechat:hover {
+      background: #e1efdd;
+      border-color: #aac79f;
+    }
+
+    .common-contact-qrs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .common-contact-qrs figure {
+      min-width: 0;
+      text-align: center;
+    }
+
+    .common-qr-button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border: 0;
+      background: #fff;
+      cursor: zoom-in;
+    }
+
+    .common-qr-button img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .common-contact-qrs figcaption {
+      margin-top: 12px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* QR 확대 */
+    .contact-qr-dialog {
+      width: min(460px,90vw);
+      max-height: 90dvh;
+      margin: auto;
+      padding: 20px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .contact-qr-dialog::backdrop {
+      background: rgba(0,0,0,.6);
+    }
+
+    .contact-qr-dialog-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .contact-qr-dialog h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .contact-qr-dialog button {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .contact-qr-dialog img {
+      display: block;
+      width: 100%;
+      max-height: 65dvh;
+      object-fit: contain;
+    }
+
+
+
+/* 공통 디자인 */
+.page-hero{padding:48px 0 40px}.hero-title{color:#0f3d61;font-size:clamp(32px,4vw,44px);line-height:1.4;letter-spacing:-1.5px}.section-label{font-size:17px;letter-spacing:0;margin-bottom:16px}.hero-title .domestic-badge{background:#fbeff1;font-weight:800;color:#b9303b}
+.page-hero p{max-width:920px;font-size:17px}.yueliang-point{margin-top:28px;max-width:920px;padding:22px 26px;background:#fff7f6}.yueliang-point .point-label,.yueliang-tip .tip-label{color:#e63943;font-size:16px}
+.china-process,.document-types,.apostille-info,.check-before{padding:48px 0}.china-process{background:#fff}.document-types{background:#f7f5f2}.check-before{background:#f7f5f2}h2,.china-process h2,.document-types h2,.apostille-info h2,.check-before h2{font-size:30px;line-height:1.4;letter-spacing:-1px;margin-bottom:22px}
+.translation-direction{max-width:920px;margin-top:24px;gap:14px}.direction-card{padding:18px 22px}.direction-card span{font-size:15px;margin-bottom:8px}.direction-card strong{font-size:20px}
+.document-grid{margin-top:24px;gap:14px}.document-item{padding:20px 22px}.document-title{min-height:0;margin-bottom:12px;padding-bottom:12px}.document-title strong{font-size:19px}.after-process{grid-template-columns:minmax(0,1fr) 30px minmax(0,1.25fr) 30px minmax(0,1fr);gap:12px;margin:28px 0 22px}.after-card{height:auto;min-height:250px;padding:22px}.after-branch{min-height:250px;padding:20px}.after-card-content strong{font-size:19px}.after-subcard{padding:14px 16px}.process-note{margin-top:22px}.detail-link-button{padding:10px 16px;border:1px solid #ecd6da;background:#fbeff1;color:#b9303b;border-radius:5px}.detail-link-button:hover{background:#f9dfe1;color:#b9303b}.check-item{padding:20px 0}.yueliang-tip{margin:28px 0 0;padding:22px 26px}
+.common-contact .section-cn{color:#e63943;font-size:17px;font-weight:700;margin-bottom:16px}.common-contact-layout{grid-template-columns:1.7fr 1fr}.common-contact-intro{margin-bottom:30px}footer{background:#172b3a}
+header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wrap;gap:14px;font-size:13px}header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border-radius:5px;padding:6px 12px}.mobile-menu{display:none}.mobile-menu summary{cursor:pointer;font-weight:700}.mobile-menu nav{padding:18px 0}.mobile-menu nav a{display:block;padding:7px 0}
+@media(max-width:1200px){header .desktop-nav{display:none}.mobile-menu{display:block;margin-left:auto}.mobile-menu nav{display:flex;flex-direction:column}header .container{position:relative}.mobile-menu[open]{width:100%;margin:0}}
+@media(max-width:1000px){.after-process{grid-template-columns:1fr}.after-card{min-height:160px}.after-branch{min-height:0}.common-contact-layout{grid-template-columns:1fr;gap:24px}.common-contact-qrs{max-width:440px}}
+@media(max-width:700px){.page-hero{padding:34px 0}.hero-title{font-size:32px}.hero-title .domestic-badge{margin:8px 0 0;transform:none}.page-hero p{font-size:16px}.document-grid{grid-template-columns:1fr}.document-item{padding:18px}.china-process,.document-types,.apostille-info,.check-before{padding:36px 0}.common-contact-cards{grid-template-columns:1fr}.common-contact-qrs{gap:14px}.check-item{grid-template-columns:32px 1fr;gap:12px}.logo{font-size:18px}}
+</style>
 </head>
 <body>
 
 <header>
+
   <div class="container">
-    <a class="logo" href="index.html">
-      <img src="yueliang-symbol-red.png" alt="">
+
+    <a class="logo"
+       href="index.html">
+
+      <img src="yueliang-symbol-red.png"
+           alt="">
+
       월량번역행정사사무소
+
     </a>
 
-   <nav>
-<a href="translation.html">중국어 번역</a>
-  <a href="translation-notary.html">번역공증·아포스티유</a>
- <a href="china-apostille.html">중국 아포스티유</a>
- <a href="cases.html">업무사례</a>
-  <a href="about.html">사무소 소개</a>
-  <a href="index.html#contact">상담문의</a>
-  <span class="nav-divider">｜</span>
-  <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener">블로그</a>
-  <span class="language">KR &nbsp;|&nbsp; 中文</span>
-</nav>
+
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a href="translation.html">중국어 번역</a>
+      <a href="translation-confirmation.html">번역확인증명서</a>
+      <a href="translation-notary.html">한국 번역공증·아포스티유</a>
+      <a href="china-apostille.html">중국 공증·아포스티유</a>
+      <a href="cases.html">업무사례</a>
+      <a href="about.html">행정사 소개</a>
+      <a href="index.html#contact">상담문의</a>
+      <a class="nav-blog" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer">블로그</a>
+    </nav>
+    <details class="mobile-menu"><summary>메뉴</summary><nav aria-label="모바일 주요 메뉴">
+      <a href="translation.html">중국어 번역</a>
+      <a href="translation-confirmation.html">번역확인증명서</a>
+      <a href="translation-notary.html">한국 번역공증·아포스티유</a>
+      <a href="china-apostille.html">중국 공증·아포스티유</a>
+      <a href="cases.html">업무사례</a>
+      <a href="about.html">행정사 소개</a>
+      <a href="index.html#contact">상담문의</a>
+      <a class="nav-blog" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer">블로그</a>
+    </nav></details>
+
   </div>
+
 </header>
 
 <main>
@@ -838,7 +1044,7 @@ footer {
   <section class="page-hero">
     <div class="container">
 
-      <div class="section-label">CHINESE TRANSLATION · 中文翻译</div>
+      <div class="section-label">中文翻译</div>
 
       <h1 class="hero-title">
         중국어 번역
@@ -855,8 +1061,8 @@ footer {
       </p>
 
       <div class="yueliang-point">
-        <div class="point-label">月亮 POINT</div>
-        <strong>번역부터 제출에 필요한 후속 절차까지 함께 확인합니다.</strong>
+        <div class="point-label">月亮 TIP</div>
+        <strong>제출 목적에 따른 번역·인증 절차</strong>
         <p>
           같은 서류라도 제출기관과 사용 목적에 따라 번역만 필요한 경우,
           번역확인증명서가 필요한 경우, 번역공증이나 아포스티유까지 필요한 경우가 다릅니다.
@@ -872,9 +1078,9 @@ footer {
   <section class="china-process">
     <div class="container">
 
-      <div class="section-label">TRANSLATION</div>
+      <div class="section-label">双向翻译</div>
 
-      <h2>한국어와 중국어,<br>양방향으로 번역합니다.</h2>
+      <h2>한중·중한 번역</h2>
 
       <p class="process-intro">
         한국에서 발급된 서류의 중국어 번역과
@@ -884,12 +1090,12 @@ footer {
      <div class="translation-direction">
 
   <div class="direction-card">
-    <span>01 · KOREAN → CHINESE</span>
+    <span>01 · 韩文 → 中文</span>
     <strong>한국어 → 중국어</strong>
   </div>
 
   <div class="direction-card">
-    <span>02 · CHINESE → KOREAN</span>
+    <span>02 · 中文 → 韩文</span>
     <strong>중국어 → 한국어</strong>
   </div>
 
@@ -908,9 +1114,9 @@ footer {
   <section class="document-types">
     <div class="container">
 
-      <div class="section-label">DOCUMENTS</div>
+      <div class="section-label">翻译领域</div>
 
-      <h2>어떤 중국어 번역을<br>진행하나요?</h2>
+      <h2>주요 번역 분야</h2>
 
       <p class="documents-intro">
         행정서류뿐 아니라 기업·법률서류, 전문자료와 녹취 내용 등
@@ -995,9 +1201,9 @@ footer {
 <section class="apostille-info">
   <div class="container">
 
-    <div class="section-label">AFTER TRANSLATION</div>
+    <div class="section-label">翻译后的认证手续</div>
 
-    <h2>번역 후 필요한 절차도<br>함께 진행할 수 있습니다.</h2>
+    <h2>번역 후 인증 절차</h2>
 
     <p>
       번역한 서류의 제출 목적과 제출기관에 따라 필요한 절차가 달라집니다.
@@ -1022,7 +1228,7 @@ footer {
     <span class="after-step">02</span>
 
     <div class="after-subcard">
-      <strong>번역공증</strong>
+      <strong>한국 번역공증</strong>
       <p>공증사무소를 통한<br>번역공증 촉탁</p>
     </div>
 
@@ -1053,7 +1259,7 @@ footer {
    <div class="detail-link-buttons">
 
   <a class="detail-link-button" href="translation-notary.html">
-    번역공증·아포스티유 자세히 보기 →
+    한국 번역공증·아포스티유 자세히 보기 →
   </a>
 
   <a class="detail-link-button" href="translation-confirmation.html">
@@ -1070,16 +1276,16 @@ footer {
   <section class="check-before">
     <div class="container">
 
-      <div class="section-label">CHECK BEFORE</div>
+      <div class="section-label">办理前确认</div>
 
-      <h2>번역 의뢰 전<br>확인해 주세요.</h2>
+      <h2>진행 전 확인사항</h2>
 
       <div class="check-list">
 
         <div class="check-item">
           <span>01</span>
           <div>
-            <strong>서류를 어디에 제출하는지 알려주세요.</strong>
+            <strong>제출처·사용 목적</strong>
             <p>
               같은 서류라도 제출기관과 사용 목적에 따라 필요한 번역 방식과
               후속 절차가 달라질 수 있습니다.
@@ -1091,7 +1297,7 @@ footer {
         <div class="check-item">
           <span>02</span>
           <div>
-            <strong>중문 성명과 여권 영문명을 함께 알려주세요.</strong>
+            <strong>중문 성명·여권 영문명</strong>
             <p>
               중국어 번역에 사용할 중문 성명과 여권에 기재된 영문명이 있다면
               의뢰할 때 함께 알려주세요. 서류 간 성명 표기를 일관되게 확인하는 데 도움이 됩니다.
@@ -1103,7 +1309,7 @@ footer {
         <div class="check-item">
           <span>03</span>
           <div>
-            <strong>제출기관에서 안내받은 요건이 있다면 함께 보내주세요.</strong>
+            <strong>제출기관 안내문</strong>
             <p>
               번역문만 필요한지, 번역확인증명서나 번역공증이 필요한지 등
               제출기관에서 안내받은 내용이 있다면 확인 후 진행 방법을 안내해 드립니다.
@@ -1117,7 +1323,7 @@ footer {
       <div class="yueliang-tip">
         <div class="tip-label">月亮 TIP</div>
 
-        <strong>번역을 의뢰하기 전에 원문부터 한 번 확인해 주세요.</strong>
+        <strong>원문 기재사항 확인</strong>
 
         <p>
           성명, 생년월일 등 원문에 잘못 기재된 내용은 번역문에서 임의로 수정할 수 없습니다.
@@ -1131,34 +1337,96 @@ footer {
 
 
   <!-- CONTACT -->
-  <section class="detail-contact">
-    <div class="container">
+  <section class="common-contact" id="document-contact">
+      <div class="container">
+        <p class="section-cn" lang="zh-CN">咨询联系</p>
+        <h2>중국어 번역 상담,<br>편한 방법으로 문의해 주세요.</h2>
+        <p class="common-contact-intro">
+          번역할 서류나 자료를 보내 주시면 내용과 제출 목적을 확인한 후 진행 방법을 안내해 드립니다.
+        </p>
 
-      <div class="section-label">CONTACT</div>
+        <div class="common-contact-layout">
+          <div class="common-contact-cards">
+            <a class="common-contact-card contact-kakao"
+               href="https://pf.kakao.com/_vxoCEX"
+               target="_blank" rel="noopener noreferrer">
+              <strong>카카오톡 채널</strong>
+              <span>1:1 채팅 상담</span>
+            </a>
 
-      <h2>중국어 번역 상담,<br>편한 방법으로 문의해 주세요.</h2>
+            <button class="common-contact-card contact-wechat"
+                    type="button"
+                    data-contact-qr="wechet-qr.png"
+                    data-contact-title="WeChat · hyelim314">
+              <strong>WeChat · hyelim314</strong>
+              <span lang="zh-CN">可用中文咨询</span>
+            </button>
 
-      <p class="contact-intro">
-        번역할 서류나 자료를 촬영 또는 스캔하여 보내주시면
-        내용과 제출 목적을 확인한 후 진행 방법을 안내해 드립니다.
-      </p>
+            <div class="common-contact-card">
+              <strong>카카오톡 ID · hyelim314</strong>
+              <span>친구 추가 후 문의</span>
+            </div>
 
-      <a class="contact-button" href="index.html#contact">
-        상담방법 및 연락처 확인 →
-      </a>
+            <a class="common-contact-card" href="tel:01086395165">
+              <strong>전화 상담 · 010-8639-5165</strong>
+              <span>부재 시 문자 요청</span>
+            </a>
 
-    </div>
-  </section>
+            <a class="common-contact-card" href="mailto:hyelim314@naver.com">
+              <strong>이메일 · hyelim314@naver.com</strong>
+              <span>서류 파일 첨부 시 빠른 견적·상담</span>
+            </a>
+          </div>
+
+          <div class="common-contact-qrs">
+            <figure>
+              <button type="button"
+                      class="common-qr-button"
+                      data-contact-qr="kakao-qr.png"
+                      data-contact-title="카카오톡 채널"
+                      aria-label="카카오톡 채널 QR코드 확대">
+                <img src="kakao-qr.png"
+                     alt="월량번역행정사사무소 카카오톡 QR코드"
+                     loading="lazy">
+              </button>
+              <figcaption>카카오톡 채널</figcaption>
+            </figure>
+
+            <figure>
+              <button type="button"
+                      class="common-qr-button"
+                      data-contact-qr="wechet-qr.png"
+                      data-contact-title="WeChat · hyelim314"
+                      aria-label="위챗 QR코드 확대">
+                <img src="wechet-qr.png"
+                     alt="월량번역행정사사무소 위챗 QR코드"
+                     loading="lazy">
+              </button>
+              <figcaption>WeChat · hyelim314</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
 </main>
 <footer>
+
   <div class="container">
+
 
     <div class="footer-top">
 
+
       <div class="footer-info">
-        <div class="footer-name">월량번역행정사사무소</div>
-        <p class="footer-admin">중국어번역행정사 방혜림 · 方慧碄</p>
+
+        <div class="footer-name">
+          월량번역행정사사무소
+        </div>
+
+        <p class="footer-admin">
+          중국어번역행정사 방혜림 · 方慧碄
+        </p>
 
         <p>
           경기 안양시 동안구 부림로 121 지하층 B113호<br>
@@ -1170,44 +1438,124 @@ footer {
           자격증 번호 22310005509
         </p>
 
-        <p>사업자등록번호 542-03-03050</p>
+        <p>
+          사업자등록번호 542-03-03050
+        </p>
+
       </div>
 
+
       <div class="footer-contact">
-        <strong>상담 문의</strong>
+
+        <strong>
+          상담 문의
+        </strong>
 
         <p>
           TEL. 010-8639-5165<br>
           E-mail. hyelim314@naver.com
         </p>
 
-        <a href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener">
+        <a href="https://pf.kakao.com/_vxoCEX"
+           target="_blank"
+           rel="noopener">
           카카오톡 채널 →
         </a>
 
         <a href="index.html#contact">
           상담방법 자세히 보기 →
         </a>
+
       </div>
 
+
     </div>
+
+
 
     <div class="footer-nav">
       <a href="translation.html">중국어 번역</a>
-      <a href="translation-notary.html">번역공증·아포스티유</a>
+      <a href="translation-confirmation.html">번역확인증명서</a>
+      <a href="translation-notary.html">한국 번역공증·아포스티유</a>
       <a href="china-apostille.html">중국 공증·아포스티유</a>
       <a href="cases.html">업무사례</a>
-      <a href="about.html">사무소 소개</a>
+      <a href="about.html">행정사 소개</a>
       <a href="index.html#contact">상담문의</a>
-      <a href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener">블로그</a>
+      <a class="nav-blog" href="https://blog.naver.com/hyelim314" target="_blank" rel="noopener noreferrer">블로그</a>
       <a href="privacy.html">개인정보처리방침</a>
     </div>
 
+
+
     <div class="footer-bottom">
-      © 월량번역행정사사무소. All rights reserved.
+
+      <span>
+        © 월량번역행정사사무소. All rights reserved.
+      </span>
+
     </div>
 
+
   </div>
+
 </footer>
+  <dialog id="contact-qr-dialog"
+          class="contact-qr-dialog"
+          aria-labelledby="contact-qr-title">
+    <div class="contact-qr-dialog-top">
+      <h2 id="contact-qr-title">QR코드</h2>
+      <button type="button" id="contact-qr-close" autofocus>닫기</button>
+    </div>
+    <img id="contact-qr-image" alt="">
+  </dialog>
+
+  <script>
+    (() => {
+      const dialog = document.getElementById("contact-qr-dialog");
+      const qrImage = document.getElementById("contact-qr-image");
+      const title = document.getElementById("contact-qr-title");
+
+      document.querySelectorAll("[data-contact-qr]").forEach(button => {
+        button.setAttribute("aria-haspopup", "dialog");
+        button.setAttribute("aria-controls", "contact-qr-dialog");
+
+        button.addEventListener("click", () => {
+          qrImage.src = button.dataset.contactQr;
+          qrImage.alt = button.dataset.contactTitle + " QR코드";
+          title.textContent = button.dataset.contactTitle;
+          dialog.showModal();
+        });
+      });
+
+      document.getElementById("contact-qr-close")
+        .addEventListener("click", () => dialog.close());
+
+      dialog.addEventListener("click", event => {
+        const bounds = dialog.getBoundingClientRect();
+
+        if (
+          event.target === dialog &&
+          (
+            event.clientX < bounds.left ||
+            event.clientX > bounds.right ||
+            event.clientY < bounds.top ||
+            event.clientY > bounds.bottom
+          )
+        ) {
+          dialog.close();
+        }
+      });
+
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.open = false;
+        });
+      });
+    })();
+  </script>
+
+
 </body>
 </html>
