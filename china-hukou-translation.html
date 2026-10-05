@@ -206,7 +206,7 @@
       margin: 20px 0 27px;
       color: var(--navy);
       font-size: clamp(28px, 3.2vw, 38px);
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.5;
       letter-spacing: -1px;
       word-break: keep-all;
@@ -228,6 +228,28 @@
 
     .hero-description p:last-child {
       margin-bottom: 0;
+    }
+
+    .hero-description h2 {
+      margin: 22px 0 8px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.6;
+      letter-spacing: -.4px;
+    }
+
+    .hero-uses {
+      margin: 0 0 18px;
+      padding-left: 22px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+      word-break: keep-all;
+    }
+
+    @media (max-width:600px) {
+      .hero-description h2 { font-size: 17px; }
+      .hero-uses { font-size: 14px; line-height: 1.8; }
     }
 
     .hero-actions {
@@ -936,8 +958,18 @@
         <p class="detail-cn" lang="zh-CN">中国户口簿（户口本）公证·海牙认证及韩文翻译公证</p>
         <h1>중국 호구부(户口簿·户口本)<br><span class="title-black">중국 공증·아포스티유 / 국문 번역·번역공증</span></h1>
         <div class="hero-description">
-          <p>중국 호구부(户口簿·户口本)를 한국에 제출하기 위한 중국 현지 공증·아포스티유를 대행합니다.</p>
-          <p>국문 번역과 번역공증 촉탁도 진행합니다. 비자 변경, 가족관계 확인 등 제출 목적에 맞춰 필요한 절차를 안내해 드립니다.</p>
+          <h2>호구부(户口簿·户口本)란?</h2>
+          <p>중국의 세대별 호적 등록 서류로, 호주와 세대원의 인적사항 및 호주와의 관계 등이 기재되어 있습니다.</p>
+          <h2>이런 목적으로 호구부를 준비합니다.</h2>
+          <ul class="hero-uses">
+            <li>비자 변경 등 출입국 제출</li>
+            <li>구치소 면회·병원·통신사 제출 시 가족관계 확인</li>
+            <li>유언공증에 필요한 가족관계 확인</li>
+            <li>차량 이전등록 시 가족관계 및 상속 관련 확인</li>
+            <li>대학 외국인전형 지원 — 해당 학교에서 호구부를 인정하는 경우</li>
+          </ul>
+          <h2>중국 공증·아포스티유 및 국문 번역·번역공증</h2>
+          <p>제출 목적과 기관의 요구사항에 맞춰 중국 현지 공증·아포스티유, 국문 번역 및 번역공증 촉탁을 진행합니다. 필요한 경우 추가 증빙서류도 함께 안내해 드립니다.</p>
         </div>
         <div class="hero-actions">
           <a href="https://pf.kakao.com/_vxoCEX" target="_blank" rel="noopener noreferrer">카카오톡 상담 →</a>
@@ -971,7 +1003,7 @@
             <li><strong>필요한 가족의 정보가 모두 있는지 확인합니다.</strong><p>호구부가 여러 권으로 나뉘어 있거나 필요한 가족의 정보가 누락된 경우에는 보완서류가 필요한지 확인합니다.</p></li>
             <li><strong>중국 공증·아포스티유와 한국 번역공증을 구분합니다.</strong><p>중국 공증처의 공증과 아포스티유가 필요한 경우인지, 한국에서 국문 번역공증을 받아야 하는 경우인지 확인합니다. 번역확인증명서로 제출 가능한 경우도 제출기관의 요구사항에 맞춰 안내합니다.</p></li>
           </ol>
-          <div class="required-notes"><p>같은 호구부라도 제출 목적과 기관에 따라 준비 방법이 달라질 수 있습니다. 원문에 잘못 기재된 내용을 번역문에서 임의로 수정하지 않고, 오류가 있으면 진행 전에 안내합니다.</p></div>
+          <div class="required-notes"><p>같은 호구부라도 제출 목적과 기관에 따라 준비 방법이 달라질 수 있습니다.</p></div>
         </div>
         <p class="section-cn" lang="zh-CN">办理流程</p>
         <h2>진행절차</h2>
