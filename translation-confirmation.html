@@ -841,6 +841,12 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
 .hero-title .domestic-badge{background:#fff0f0;border-color:#e7b8bd;color:#b95f64}
 .translation-direction{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none}
 @media(max-width:700px){.translation-direction{grid-template-columns:1fr}}
+/* 간결한 절차와 섹션 안 비교 버튼 */
+.china-process .comparison-row{width:100%;margin:20px 0 0;padding:0}
+.china-process .translation-direction{margin-top:20px}
+.china-process .direction-card{padding:22px 24px}
+.china-process .direction-card span{margin-bottom:10px}
+.china-process .direction-card strong{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -891,7 +897,7 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
   <section class="page-hero">
     <div class="container">
 
-      <div class="section-label">中文翻译 · 翻译确认书</div>
+      <div class="section-label">中文翻译 · 翻译确认证明书</div>
 
      <h1 class="hero-title">
   번역확인증명서
@@ -935,11 +941,15 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
         <strong>행정사법 제2조 제1항 제3호</strong>는
         행정사의 업무로 ‘행정기관의 업무에 관련된 서류의 번역’을 규정하고 있습니다.
        
-        또한 <strong>행정사법 제20조 제2항</strong>에 따라
+        </p>
+
+      <p>또한 <strong>행정사법 제20조 제2항</strong>에 따라
         외국어번역행정사는 자신이 번역한 번역문에 대하여
         번역확인증명서를 발급할 수 있습니다.
        
-        번역확인증명서는 행정사법 시행규칙 별지 제18호서식에 따라 발급합니다.
+        </p>
+
+      <p>번역확인증명서는 행정사법 시행규칙 별지 제18호서식에 따라 발급합니다.
       </p>
 
     </div>
@@ -950,7 +960,7 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
   <section class="china-process">
     <div class="container">
 
-      <div class="section-label">翻译确认书</div>
+      <div class="section-label">翻译确认证明书</div>
 
       <h2>번역확인증명서란?</h2>
 
@@ -959,46 +969,34 @@ h1{font-size:clamp(32px,4vw,46px);line-height:1.35;letter-spacing:-1.5px}
         원문과 틀림없음을 확인하여 발급하는 증명서입니다.
       </p>
 
+      <div class="comparison-row">
+    <a class="comparison-link" href="translation-certification-guide.html">번역확인증명서·번역공증 차이 | 아포스티유 안내 <span aria-hidden="true">→</span></a>
+  </div>
+
       <div class="translation-direction">
 
         <div class="direction-card">
           <span>01 · 中文原文</span>
           <strong>중국어 원문</strong>
-          <p>
-            국내 행정기관(공공기관 포함)에
-            제출할 중국어 서류를 확인합니다.
-          </p>
         </div>
 
         <div class="direction-card">
           <span>02 · 韩文翻译</span>
           <strong>국문 번역</strong>
-          <p>
-            국가공인 외국어번역행정사가
-            중국어 원문을 직접 국문으로 번역합니다.
-          </p>
         </div>
 
         <div class="direction-card">
-          <span>03 · 翻译确认书</span>
+          <span>03 · 翻译确认证明书</span>
           <strong>번역확인증명서</strong>
-          <p>직접 번역한 번역문에 대하여 번역확인증명서를 발급합니다.</p>
         </div>
 
       </div>
-
-      <p class="process-note">
-        ※ 제출기관마다 요구하는 번역 방식이 다를 수 있으므로,
-        의뢰 전 제출기관의 안내사항을 확인해 주세요.
-      </p>
 
     </div>
   </section>
 
 
-  <div class="container comparison-row">
-    <a class="comparison-link" href="translation-certification-guide.html">번역확인증명서·번역공증 차이 | 아포스티유 안내 <span aria-hidden="true">→</span></a>
-  </div>
+  
 
   <!-- 실제 서류 예시 -->
   <section class="document-types">
