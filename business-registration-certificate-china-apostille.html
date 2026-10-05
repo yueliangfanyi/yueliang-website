@@ -652,6 +652,182 @@ header .container{width:min(1440px,94%);gap:24px}
 footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-bottom{color:#c5cfda}
 @media(max-width:600px){.hero-title{font-size:28px}.apostille-info,.document-types,.china-process,.actual-case,.check-before,.timing-section,.faq-section{padding:32px 0}.page-hero{padding:28px 0}}
 
+    /* 상담안내 */
+    .common-contact {
+      padding: 46px 0;
+      border-top: 1px solid #e2e2df;
+      background: #f3f3f1;
+      color: #222;
+    }
+
+    .common-contact h2 {
+      margin-bottom: 16px;
+    }
+
+    .common-contact-intro {
+      margin-bottom: 26px;
+      color: #606060;
+    }
+
+    .common-contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0,1.7fr) minmax(0,1fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .common-contact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .common-contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 94px;
+      padding: 16px 12px;
+      border: 1px solid #d2d2ce;
+      border-radius: 6px;
+      background: #fff;
+      color: #2b2b2b;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    a.common-contact-card,
+    button.common-contact-card {
+      cursor: pointer;
+    }
+
+    .common-contact-card strong {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .common-contact-card span {
+      color: #606060;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    a.common-contact-card:hover {
+      background: #f0f0ed;
+      border-color: #aaa;
+    }
+
+    .common-contact-card.contact-kakao {
+      background: #fff5cc;
+      border-color: #e8d694;
+      color: #493c20;
+    }
+
+    .contact-kakao span {
+      color: #665737;
+    }
+
+    a.common-contact-card.contact-kakao:hover {
+      background: #ffedaf;
+      border-color: #d7bb63;
+    }
+
+    .common-contact-card.contact-wechat {
+      background: #edf6eb;
+      border-color: #c2d9ba;
+      color: #365c32;
+    }
+
+    .contact-wechat span {
+      color: #52704d;
+    }
+
+    button.common-contact-card.contact-wechat:hover {
+      background: #e1efdd;
+      border-color: #aac79f;
+    }
+
+    .common-contact-qrs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .common-contact-qrs figure {
+      min-width: 0;
+      text-align: center;
+    }
+
+    .common-qr-button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border: 0;
+      background: #fff;
+      cursor: zoom-in;
+    }
+
+    .common-qr-button img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    .common-contact-qrs figcaption {
+      margin-top: 12px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* QR 확대 */
+    .contact-qr-dialog {
+      width: min(460px,90vw);
+      max-height: 90dvh;
+      margin: auto;
+      padding: 20px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .contact-qr-dialog::backdrop {
+      background: rgba(0,0,0,.6);
+    }
+
+    .contact-qr-dialog-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .contact-qr-dialog h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .contact-qr-dialog button {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .contact-qr-dialog img {
+      display: block;
+      width: 100%;
+      max-height: 65dvh;
+      object-fit: contain;
+    }
+
+
+.hero-title-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:20px}.hero-title-row .hero-title{margin:0}.hero-title-row .domestic-badge{margin:0;white-space:nowrap}.process-step p{font-size:14px;font-weight:400;line-height:1.8;color:#666;margin-top:8px;word-break:keep-all}.common-contact .section-cn{color:#e63943;font-size:17px;font-weight:700;margin-bottom:18px}.common-contact-layout{grid-template-columns:1.7fr 1fr}.common-contact-intro{margin-bottom:30px}@media(max-width:1000px){.common-contact-layout{grid-template-columns:1fr;gap:24px}.common-contact-qrs{max-width:440px}}
 </style>
 
 
@@ -733,14 +909,14 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
 
     <div class="container">
 
+<a class="detail-back" href="translation-notary.html">← 한국 번역공증·아포스티유 전체 업무</a>
       <div class="section-label">
         韩国事业者登记证中文翻译公证 · 海牙认证
       </div>
 
 
-      <a class="detail-back" href="translation-notary.html">← 한국 번역공증·아포스티유 전체 업무</a>
-<h1 class="hero-title"><span class="title-keyword">사업자등록증</span> 중국어 번역공증·아포스티유</h1>
-<span class="domestic-badge">한국 서류 → 중국 제출</span>
+      
+<div class="hero-title-row"><h1 class="hero-title"><span class="title-keyword">사업자등록증</span> 중국어 번역공증·아포스티유</h1><span class="domestic-badge">한국 서류 → 중국 제출</span></div>
 
 
       <p>
@@ -863,13 +1039,7 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
       </h2>
 
 
-      <p class="documents-intro">
-
-        사업자등록증과 관련 명세를 파일로 보내 주세요.<br>이번 사례에서는 국내 기업의 사업자등록증과
-        사업자단위과세 관련 내용을 함께 확인하여
-        중국어 번역공증 및 아포스티유를 진행했습니다.
-
-      </p>
+      
 
 
       <div class="document-grid">
@@ -958,38 +1128,8 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
       </p>
 
 
-      <div class="process-steps">
-
-        <div class="process-step">
-          <span>01</span>
-          <strong>서류 확인</strong>
-        </div>
-
-        <div class="process-step">
-          <span>02</span>
-          <strong>파일·스캔<br>상태 확인</strong>
-        </div>
-
-        <div class="process-step">
-          <span>03</span>
-          <strong>중국어 번역</strong>
-        </div>
-
-        <div class="process-step">
-          <span>04</span>
-          <strong>번역공증 촉탁</strong>
-        </div>
-
-        <div class="process-step">
-          <span>05</span>
-          <strong>아포스티유</strong>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+      <div class="process-steps"><div class="process-step"><span>01</span><strong>서류·제출 안내 확인</strong><p>사업자등록증과 종된사업자 명세의 파일 상태, 중국 제출처의 요구사항과 제출 기한을 확인합니다.</p></div><div class="process-step"><span>02</span><strong>중국어 번역</strong><p>사업자등록사항과 제출 대상에 포함된 종된사업자 명세를 확인하여 중국어로 번역합니다.</p></div><div class="process-step"><span>03</span><strong>번역공증 촉탁</strong><p>작성한 중국어 번역문에 대한 번역공증 촉탁을 진행합니다.</p></div><div class="process-step"><span>04</span><strong>한국 아포스티유</strong><p>번역공증 완료 서류의 한국 아포스티유를 진행합니다.</p></div><div class="process-step"><span>05</span><strong>완성 서류 전달</strong><p>완성된 서류를 확인하고 전달 방법을 안내해 드립니다.</p></div></div>
+</div></section>
 
 
 
@@ -1229,65 +1369,77 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
 
   <!-- 咨询联系 -->
 
-  <section class="detail-contact">
+  <section class="common-contact" id="document-contact">
+      <div class="container">
+        <p class="section-cn" lang="zh-CN">咨询联系</p>
+        <h2>서류 상담,<br>편한 방법으로 문의해 주세요.</h2>
+        <p class="common-contact-intro">
+          서류 사본을 보내 주시면 확인 후 진행 방법을 안내해 드립니다.
+        </p>
 
-    <div class="container">
+        <div class="common-contact-layout">
+          <div class="common-contact-cards">
+            <a class="common-contact-card contact-kakao"
+               href="https://pf.kakao.com/_vxoCEX"
+               target="_blank" rel="noopener noreferrer">
+              <strong>카카오톡 채널</strong>
+              <span>1:1 채팅 상담</span>
+            </a>
 
-      <div class="section-label">
-        咨询联系
+            <button class="common-contact-card contact-wechat"
+                    type="button"
+                    data-contact-qr="wechet-qr.png"
+                    data-contact-title="WeChat · hyelim314">
+              <strong>WeChat · hyelim314</strong>
+              <span lang="zh-CN">可用中文咨询</span>
+            </button>
+
+            <div class="common-contact-card">
+              <strong>카카오톡 ID · hyelim314</strong>
+              <span>친구 추가 후 문의</span>
+            </div>
+
+            <a class="common-contact-card" href="tel:01086395165">
+              <strong>전화 상담 · 010-8639-5165</strong>
+              <span>부재 시 문자 요청</span>
+            </a>
+
+            <a class="common-contact-card" href="mailto:hyelim314@naver.com">
+              <strong>이메일 · hyelim314@naver.com</strong>
+              <span>서류 파일 첨부 시 빠른 견적·상담</span>
+            </a>
+          </div>
+
+          <div class="common-contact-qrs">
+            <figure>
+              <button type="button"
+                      class="common-qr-button"
+                      data-contact-qr="kakao-qr.png"
+                      data-contact-title="카카오톡 채널"
+                      aria-label="카카오톡 채널 QR코드 확대">
+                <img src="kakao-qr.png"
+                     alt="월량번역행정사사무소 카카오톡 QR코드"
+                     loading="lazy">
+              </button>
+              <figcaption>카카오톡 채널</figcaption>
+            </figure>
+
+            <figure>
+              <button type="button"
+                      class="common-qr-button"
+                      data-contact-qr="wechet-qr.png"
+                      data-contact-title="WeChat · hyelim314"
+                      aria-label="위챗 QR코드 확대">
+                <img src="wechet-qr.png"
+                     alt="월량번역행정사사무소 위챗 QR코드"
+                     loading="lazy">
+              </button>
+              <figcaption>WeChat · hyelim314</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
-
-      <h2>
-        사업자등록증<br>
-        번역공증·아포스티유 문의
-      </h2>
-
-
-      <p class="contact-intro">
-
-        중국 제출용 사업자등록증의
-        중국어 번역공증 및 아포스티유가 필요한 경우
-        서류를 보내주시면 진행 가능 여부와
-        필요한 준비사항을 안내해 드립니다.
-
-      </p>
-
-
-      <p class="contact-direct">전화 <a href="tel:01086395165">010-8639-5165</a> · WeChat ID: hyelim314</p>
-<div class="contact-actions">
-
-        <a class="contact-button"
-           href="https://pf.kakao.com/_vxoCEX"
-           target="_blank"
-           rel="noopener">
-          카카오톡 상담 →
-        </a>
-
-
-        <a class="contact-button"
-           href="https://blog.naver.com/hyelim314"
-           target="_blank"
-           rel="noopener">
-          네이버 블로그 →
-        </a>
-
-
-        <a class="contact-button"
-           href="cases.html">
-          업무사례 보기 →
-        </a>
-
-
-        <a class="contact-button"
-           href="index.html#contact">
-          상담방법 및 연락처 →
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
 </main>
@@ -1384,6 +1536,63 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
 
 </footer>
 
+
+  <dialog id="contact-qr-dialog"
+          class="contact-qr-dialog"
+          aria-labelledby="contact-qr-title">
+    <div class="contact-qr-dialog-top">
+      <h2 id="contact-qr-title">QR코드</h2>
+      <button type="button" id="contact-qr-close" autofocus>닫기</button>
+    </div>
+    <img id="contact-qr-image" alt="">
+  </dialog>
+
+  <script>
+    (() => {
+      const dialog = document.getElementById("contact-qr-dialog");
+      const qrImage = document.getElementById("contact-qr-image");
+      const title = document.getElementById("contact-qr-title");
+
+      document.querySelectorAll("[data-contact-qr]").forEach(button => {
+        button.setAttribute("aria-haspopup", "dialog");
+        button.setAttribute("aria-controls", "contact-qr-dialog");
+
+        button.addEventListener("click", () => {
+          qrImage.src = button.dataset.contactQr;
+          qrImage.alt = button.dataset.contactTitle + " QR코드";
+          title.textContent = button.dataset.contactTitle;
+          dialog.showModal();
+        });
+      });
+
+      document.getElementById("contact-qr-close")
+        .addEventListener("click", () => dialog.close());
+
+      dialog.addEventListener("click", event => {
+        const bounds = dialog.getBoundingClientRect();
+
+        if (
+          event.target === dialog &&
+          (
+            event.clientX < bounds.left ||
+            event.clientX > bounds.right ||
+            event.clientY < bounds.top ||
+            event.clientY > bounds.bottom
+          )
+        ) {
+          dialog.close();
+        }
+      });
+
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.open = false;
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
