@@ -994,6 +994,11 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 @media(max-width:1200px){header .desktop-nav{display:none}.mobile-menu{display:block;margin-left:auto}.mobile-menu nav{display:flex;flex-direction:column}header .container{position:relative}.mobile-menu[open]{width:100%;margin:0}}
 @media(max-width:1000px){.after-process{grid-template-columns:1fr}.after-card{min-height:160px}.after-branch{min-height:0}.common-contact-layout{grid-template-columns:1fr;gap:24px}.common-contact-qrs{max-width:440px}}
 @media(max-width:700px){.page-hero{padding:34px 0}.hero-title{font-size:32px}.hero-title .domestic-badge{margin:8px 0 0;transform:none}.page-hero p{font-size:16px}.document-grid{grid-template-columns:1fr}.document-item{padding:18px}.china-process,.document-types,.apostille-info,.check-before{padding:36px 0}.common-contact-cards{grid-template-columns:1fr}.common-contact-qrs{gap:14px}.check-item{grid-template-columns:32px 1fr;gap:12px}.logo{font-size:18px}}
+
+.direction-heading{display:flex;justify-content:space-between;align-items:center;gap:32px}.direction-heading h2{margin:0;flex-shrink:0}.direction-heading .process-intro{max-width:650px;text-align:right;font-size:15px;line-height:1.8}.translation-direction{max-width:none}.direction-card{background:#fbeff1;border-color:#ecd6da}
+@media(max-width:800px){.direction-heading{flex-direction:column;align-items:flex-start;gap:12px}.direction-heading .process-intro{text-align:left;max-width:none}}
+
+.certification-guide-link{display:flex;align-items:center;gap:12px;width:fit-content;max-width:100%;margin-top:26px;padding:14px 18px;border:1px solid #ecd6da;border-radius:8px;background:#fff8f8;color:#c94a58;font-size:16px;font-weight:700;line-height:1.6}.certification-guide-link svg{width:22px;height:22px;flex-shrink:0}.certification-guide-link>span:last-child{margin-left:8px;flex-shrink:0;font-size:22px}.certification-guide-link:hover{background:#fbeff1}.certification-guide-link:focus-visible{outline:2px solid #0f3d61;outline-offset:4px}@media(max-width:600px){.certification-guide-link{font-size:14px;padding:12px 14px;gap:9px}}
 </style>
 </head>
 <body>
@@ -1051,14 +1056,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
         <span class="domestic-badge">한국어 ↔ 중국어</span>
       </h1>
 
-      <p>
-        공무원 출신 국가공인 외국어번역행정사가 직접 번역합니다.<br>
-        행정·공공서류부터 기업·법률서류, 학력·가족관계서류, 전문자료까지
-        한국어와 중국어 사이의 다양한 번역 업무를 진행합니다.
-        <br><br>
-        번역만 필요한 경우부터 번역확인증명서, 번역공증·아포스티유가 필요한 경우까지
-        서류의 제출 목적과 제출기관에 맞게 안내합니다.
-      </p>
+      <p>공무원 출신 국가공인 외국어번역행정사가 직접 번역합니다. 행정·공공서류부터 기업·법률서류, 학력·가족관계서류, 전문자료까지 한국어와 중국어 사이의 다양한 번역 업무를 진행합니다. 번역만 필요한 경우부터 번역확인증명서, 번역공증·아포스티유가 필요한 경우까지 서류의 제출 목적과 제출기관에 맞게 안내합니다.</p>
 
       <div class="yueliang-point">
         <div class="point-label">月亮 TIP</div>
@@ -1080,12 +1078,7 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 
       <div class="section-label">双向翻译</div>
 
-      <h2>한중·중한 번역</h2>
-
-      <p class="process-intro">
-        한국에서 발급된 서류의 중국어 번역과
-        중국에서 발급된 서류의 국문 번역을 모두 진행합니다.
-      </p>
+      <div class="direction-heading"><h2>한중·중한 번역</h2><p class="process-intro">한국에서 발급된 서류의 중국어 번역과 중국에서 발급된 서류의 국문 번역을 모두 진행합니다.</p></div>
 
      <div class="translation-direction">
 
@@ -1256,7 +1249,9 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
       제출기관의 요구사항에 따라 필요한 절차만 진행합니다.
     </p>
 
-   <div class="detail-link-buttons">
+   <a class="certification-guide-link" href="translation-certification-guide.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M6 8h3M6 12h3M15 8h3M15 12h3"/></svg><span>번역확인증명서·번역공증 차이 | 아포스티유 안내</span><span aria-hidden="true">→</span></a>
+
+<div class="detail-link-buttons">
 
   <a class="detail-link-button" href="translation-notary.html">
     한국 번역공증·아포스티유 자세히 보기 →
