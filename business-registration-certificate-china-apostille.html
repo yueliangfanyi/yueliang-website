@@ -846,6 +846,12 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
 .hero-purpose{flex-shrink:0}.hero-purpose .purpose-caption{font-size:14px;line-height:1.6;color:#777;margin:0 0 8px}.hero-title-row .purpose-tabs{display:flex;flex-direction:row;align-items:center;gap:10px;margin:0}
 .hero-title-row .purpose-tabs a{text-align:center}.hero-title-row .purpose-tabs .domestic-badge{margin:0;padding:9px 12px;font-size:14px;line-height:inherit;font-weight:800;color:#b9303b;white-space:nowrap;margin-right:8px}
 @media(max-width:1250px){.hero-title-row{flex-wrap:wrap}.hero-title-row .hero-title{flex-basis:100%}.hero-purpose{max-width:100%}.hero-title-row .purpose-tabs{flex-wrap:wrap}}
+
+.hero-purpose{display:grid;grid-template-columns:auto auto;column-gap:18px;row-gap:8px;align-items:center}
+.hero-purpose .purpose-caption{grid-column:2;grid-row:1;margin:0}
+.hero-purpose>.domestic-badge{grid-column:1;grid-row:2;margin:0;padding:9px 12px;font-size:14px;font-weight:800;color:#b9303b;white-space:nowrap}
+.hero-purpose .purpose-tabs{grid-column:2;grid-row:2}
+@media(max-width:600px){.hero-purpose{grid-template-columns:1fr}.hero-purpose>.domestic-badge{grid-column:1;grid-row:1;justify-self:start}.hero-purpose .purpose-caption{grid-column:1;grid-row:2}.hero-purpose .purpose-tabs{grid-column:1;grid-row:3}}
 </style>
 
 
@@ -934,7 +940,7 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
 
 
       
-<div class="hero-title-row"><h1 class="hero-title"><span class="title-keyword">사업자등록증(营业执照)</span><br><span class="title-service">중국어 번역공증·아포스티유</span></h1><div class="hero-purpose"><p class="purpose-caption">제출 목적에 맞는 사례를 확인해 주세요.</p><nav class="purpose-tabs" aria-label="사업자등록증 제출 용도"><span class="domestic-badge">한국 서류 → 중국 제출</span><a href="#business-case">중국 법인 설립용</a><a href="#xiaohongshu-case">샤홍슈 기업계정 개설용</a></nav></div></div>
+<div class="hero-title-row"><h1 class="hero-title"><span class="title-keyword">사업자등록증(营业执照)</span><br><span class="title-service">중국어 번역공증·아포스티유</span></h1><div class="hero-purpose"><span class="domestic-badge">한국 서류 → 중국 제출</span><p class="purpose-caption">제출 목적에 맞는 사례를 확인해 주세요.</p><nav class="purpose-tabs" aria-label="사업자등록증 제출 용도"><a href="#business-case">중국 법인 설립용</a><a href="#xiaohongshu-case">샤홍슈 기업계정 개설용</a></nav></div></div>
 <p>중국 법인 설립 시 국내 사업자등록증의 중국어 번역공증·아포스티유가 완료된 서류를 요구받는 경우가 있습니다. 최근에는 샤홍슈(小红书) 기업계정(企业号) 개설을 위한 사업자등록증 번역공증·아포스티유 문의도 많이 주십니다.</p>
 
 
@@ -1025,7 +1031,6 @@ footer{background:#0f3d61;color:#c5cfda}.footer-contact a,.footer-nav a,.footer-
             사업자단위과세가 적용된 기업의 경우
             본점 사업자등록증과 함께
             종된사업자 관련 내용이 표시될 수 있습니다.
-            실제 제출범위에 따라 함께 확인하여 진행합니다.
 
           </p>
 
