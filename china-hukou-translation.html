@@ -218,6 +218,41 @@
       font-weight: 600;
     }
 
+    .hero-title-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin: 14px 0 18px;
+    }
+
+    .hero-title-row h1 { margin: 0; }
+
+    .hero-service-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hero-service-tabs a {
+      padding: 9px 12px;
+      border: 1px solid #efd0d4;
+      border-radius: 5px;
+      background: #fff1f2;
+      color: #b74752;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .hero-service-tabs a:hover { background: #f9e2e5; }
+
+    @media (max-width: 600px) {
+      .hero-title-row { gap: 12px; }
+      .hero-service-tabs { width: 100%; gap: 6px; }
+      .hero-service-tabs a { padding: 8px 10px; font-size: 13px; }
+    }
+
     .title-note {
       font-size: .55em;
       font-weight: 500;
@@ -470,6 +505,7 @@
     }
 
     .case-card {
+      scroll-margin-top: 110px;
       padding: 24px;
       border: 1px solid #e2ded9;
       border-radius: 8px;
@@ -985,7 +1021,14 @@
       <div class="container">
         <a class="detail-back" href="china-apostille.html">← 중국 공증·아포스티유 전체 업무</a>
         <p class="detail-cn" lang="zh-CN">中国户口簿（户口本）公证·海牙认证及韩文翻译公证</p>
-        <h1>중국 호구부(户口簿·户口本)<br><span class="title-black">중국 공증·아포스티유 / 국문 번역·번역공증 / 번역확인증명서</span></h1>
+        <div class="hero-title-row">
+          <h1>중국 호구부(户口簿·户口本)</h1>
+          <nav class="hero-service-tabs" aria-label="호구부 서비스별 사례">
+            <a href="#hukou-apostille-case">중국 공증·아포스티유</a>
+            <a href="#hukou-notary-case">국문 번역·번역공증</a>
+            <a href="#hukou-certificate-case">번역확인증명서</a>
+          </nav>
+        </div>
         <div class="hero-description">
           <p>한국에 제출할 중국 호구부(户口簿·户口本)의 중국 현지 공증·아포스티유와 국문 번역·번역공증 촉탁을 대행합니다.</p>
           <p>제출처에서 요구하는 서류 종류를 알려 주시면, 필요한 번역·공증·아포스티유 절차를 안내해 드립니다.</p>
@@ -1047,7 +1090,7 @@
         </div>
         <p class="section-cn" lang="zh-CN">实际办理案例</p>
         <h2 id="hukou-case">실제 진행 사례</h2>
-        <article class="case-card">
+        <article class="case-card" id="hukou-apostille-case">
           <span class="case-label">CASE 01 · 비자 변경용 · 중국 공증·아포스티유</span>
           <h3>비자 변경을 위한 호구부(户口簿) 중국 공증·아포스티유</h3>
           <p>비자 변경을 준비하던 의뢰인이 출입국에서 호구부에 아포스티유를 받아 제출하도록 안내받아 의뢰한 사례입니다.</p>
@@ -1055,7 +1098,7 @@
           <div class="case-note"><p>호구부는 첫 페이지부터 기재사항 마지막 페이지까지 확인합니다. 본인 페이지만 보내 주시는 경우 호주 페이지가 누락될 수 있어, 호주 페이지를 반드시 포함하도록 안내합니다.</p><p><strong>블로그 게시일</strong> 2025년 11월 21일 · 제출서류와 인증 방식은 해당 사례에서 안내받은 요구사항입니다.</p></div>
           <a class="case-link" href="https://blog.naver.com/hyelim314/224083018697" target="_blank" rel="noopener noreferrer">비자 변경용 호구부 중국 공증·아포스티유 업무사례 자세히 보기 ↗</a>
         </article>
-        <article class="case-card">
+        <article class="case-card" id="hukou-notary-case">
           <span class="case-label">CASE 02 · 구치소 면회용 · 한국 국문 번역공증</span>
           <h3>구치소 면회를 위한 호구부(户口本) 국문 번역·번역공증 촉탁</h3>
           <p>중국인 수용자의 가족이 구치소 면회를 위해 가족관계를 확인할 수 있는 호구부 번역 서류를 제출하도록 안내받아 의뢰한 사례입니다.</p>
@@ -1066,7 +1109,7 @@
           </div>
           <a class="case-link" href="https://blog.naver.com/hyelim314/224219945006" target="_blank" rel="noopener noreferrer">구치소 면회용 호구부 번역공증 업무사례 자세히 보기 ↗</a>
         </article>
-        <article class="case-card">
+        <article class="case-card" id="hukou-certificate-case">
           <span class="case-label">CASE 03 · 휴대폰 가족결합용 · 번역확인증명서</span>
           <h3>휴대폰 가족결합을 위한 호구부(户口簿)·결혼증(结婚证) 국문 번역 및 번역확인증명서 발급</h3>
           <p>경기도 부천시의 중국 동포 의뢰인이 통신사 휴대폰 가족결합 할인을 신청하기 위해 호구부와 결혼증의 국문 번역을 의뢰한 사례입니다.</p>
