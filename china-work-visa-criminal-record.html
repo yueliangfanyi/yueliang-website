@@ -882,6 +882,42 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     .yueliang-point .point-label { margin-bottom:4px; }
     .yueliang-point > strong { margin-bottom:6px; line-height:1.5; }
     @media(max-width:700px) { .yueliang-point { padding:14px 16px; } }
+    /* 준비사항의 긴 안내 탭 높이 통일·섹션 위치 조정 */
+    .apostille-info .record-consultation,
+    .apostille-info .preparation-item .preparation-note {
+      box-sizing:border-box;
+      min-height:58px;
+      padding:14px 18px;
+      font-size:16px;
+      line-height:1.9;
+      border-left:3px solid transparent;
+      border-radius:4px;
+    }
+    .apostille-info .record-consultation { border-left-color:#b9303b; }
+    .apostille-info { padding-top:36px; }
+    @media(max-width:700px) { .apostille-info { padding-top:20px; } }
+    /* 안내·강조 탭 배색 통일 */
+    .yueliang-point {
+      background:#f3f3f1;
+      border-color:#dededb;
+      color:#444;
+    }
+    .apostille-info .preparation-item .preparation-note {
+      background:#f3f3f1;
+      color:#444;
+    }
+    .visa-flow .flow-highlight,
+    .apostille-info .record-consultation {
+      background:#fce3e7;
+      color:#b9303b;
+    }
+    .visa-flow .flow-highlight .flow-country { color:#b9303b; }
+    .official-issue-link {
+      background:#fff;
+      border-color:#d4d4d0;
+      color:#0f3d61;
+    }
+    .official-issue-link:hover { background:#f3f3f1; }
   </style>
 
   <script type="application/ld+json">
