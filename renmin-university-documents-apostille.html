@@ -924,6 +924,12 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   
     .preparation-item .reissue-notice,.check-item .reissue-notice { display:inline; margin:0; color:#b9303b; font-size:inherit; font-weight:800; line-height:inherit; letter-spacing:inherit; }
 
+  
+    /* 재발급 대행 불가 안내를 바로 윗문장에 가깝게 배치 */
+    .apostille-info .preparation-item p:has(+ .reissue-notice-paragraph) { margin-bottom:0; }
+    .apostille-info .preparation-item .reissue-notice-paragraph,
+    .check-item p + .reissue-notice-paragraph { margin-top:4px; }
+
   </style>
 
   <script type="application/ld+json">
@@ -1067,7 +1073,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         <div class="preparation-item">
           <h3>03 · 재발급 필요 시 본인 학교 신청</h3>
           <p>학교 원본 서류의 재발급이 필요한 경우에는 졸업자가 해당 대학교에 직접 신청해야 합니다.</p>
-          <p class="preparation-separated"><strong class="reissue-notice">월량번역행정사사무소에서는 대학교 졸업증서 재발급 업무를 대행하지 않습니다.</strong></p>
+          <p class="preparation-separated reissue-notice-paragraph"><strong class="reissue-notice">월량번역행정사사무소에서는 대학교 졸업증서 재발급 업무를 대행하지 않습니다.</strong></p>
           <p class="preparation-note">사본을 먼저 보내 주시면 진행 가능 여부를 검토한 후 추가 자료와 원본 전달 방법을 안내해 드립니다.</p>
         </div>
       </div>
@@ -1361,7 +1367,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
               학교 원본 서류의 재발급이 필요한 경우에는
               졸업자가 해당 대학교에 직접 신청해야 합니다.</p>
-            <p><strong class="reissue-notice">월량번역행정사사무소에서는 대학교 졸업증서 재발급 업무를 대행하지 않습니다.</strong>
+            <p class="reissue-notice-paragraph"><strong class="reissue-notice">월량번역행정사사무소에서는 대학교 졸업증서 재발급 업무를 대행하지 않습니다.</strong>
 
             </p>
 
