@@ -926,6 +926,16 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     .check-before .check-item { padding:15px 0; }
     .check-before .check-item strong { margin-bottom:5px; line-height:1.5; }
     .check-before .check-item p { margin:0; line-height:1.65; }
+    /* 경력증명서 안내 영역 높이 축소 */
+    .document-types .document-item { padding:18px 22px; }
+    .document-types .document-item strong { margin-bottom:8px; }
+    .document-types .document-item p { margin:0; line-height:1.7; }
+    .apostille-info .preparation-intro { margin-bottom:14px; }
+    .apostille-info .preparation-list > .preparation-note { margin-top:0; padding:12px 18px; }
+    @media(max-width:700px) {
+      .document-types .document-item { padding:16px 18px; }
+      .apostille-info .preparation-intro { margin-bottom:14px; }
+    }
   </style>
 
 
@@ -1055,27 +1065,11 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <section class="apostille-info"><div class="container">
       <div class="section-label" lang="zh-CN">材料准备</div>
       <h2><span class="heading-navy">의뢰인 준비사항</span>: 경력증명서 발급·전달</h2>
-<p class="preparation-intro">
-
-        중국 취업허가 신청에서 경력 확인이 필요한 경우
-        이전 또는 현재 근무 회사에서
-        경력증명서를 발급받아 준비합니다.
-        발급 전에 필요한 기재사항이 포함되어 있는지
-        확인하는 것이 좋습니다.
-
-      </p>
-<div class="preparation-list"><div class="preparation-item"><h3>01 · 근무기간 확인</h3><p>실제 재직한 시작일과 종료일 등
-        근무기간이 명확하게 기재되어 있는지 확인해 주세요.</p></div><div class="preparation-item"><h3>02 · 직위와 담당업무 확인</h3><p>중국 취업허가에서 경력을 확인해야 하는 경우
-        단순 재직 사실뿐 아니라
-        직위와 담당업무 또는 수행한 업무 내용이
-        확인될 수 있도록 작성하는 것이 좋습니다.</p></div><div class="preparation-item"><h3>03 · 회사 직인 및 발급정보 확인</h3><p>발급 회사명과 직인,
-        담당자 또는 책임자 정보 등
-        발급 주체를 확인할 수 있는 내용도
-        함께 확인해 주세요.</p></div><div class="preparation-item"><h3>04 · 제출 전 서류를 먼저 확인</h3><p>이미 발급받은 경력증명서가 있다면
-        먼저 스캔본을 보내주시면
-        중국어 번역 및 필요한 인증 절차 진행 전에
-        기재 내용을 확인할 수 있습니다.</p></div><p class="preparation-note">중국 취업비자 경력증명서는 근무기간만 적혀 있으면 부족할 수 있습니다. 근무기간뿐 아니라 직위와 담당업무 등 실제 경력을 확인할 수 있는 내용이 충분히 기재되어 있는지 확인하는 것이 중요합니다. 회사에서 발급받기 전에 현지 회사의 요구사항을 먼저 확인해 주세요.</p>
-<p class="preparation-note">경력증명서 서식이 필요하시면 말씀해 주세요. 요청하시면 서식을 제공해 드립니다.</p></div></div></section>
+      <p class="preparation-intro">현지 회사의 요구사항에 맞춰 이전 또는 현재 근무 회사에서 경력증명서를 발급받아 주세요. 발급받은 서류의 스캔본과 제출기관 안내문을 함께 보내 주세요.</p>
+      <div class="preparation-list">
+        <p class="preparation-note">경력증명서 서식이 필요하시면 요청해 주세요. 서식을 제공해 드립니다.</p>
+      </div>
+    </div></section>
 
 
 
@@ -1089,7 +1083,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         办理流程
       </div>
 
-      <h2><span class="heading-navy">월량번역행정사 진행사항</span>: 중국어 번역·필요 시 아포스티유 인증</h2>
+      <h2><span class="heading-navy">월량번역행정사 진행사항</span>: 중국어 번역 / 필요시 번역공증 촉탁 및 아포스티유 인증</h2>
 
 
       <p class="process-intro">경력증명서는 중국어 번역만으로 제출하는 경우가 많으며, 번역공증·아포스티유를 요구하지 않는 경우도 있습니다.<br>현지 회사의 요구사항에 따라 준비해 주세요. 월량에서는 기재사항을 확인한 후 중국어로 번역하고, 필요한 경우 번역공증 촉탁·아포스티유를 진행합니다.</p>
@@ -1288,21 +1282,6 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
 
   <!-- CHECK BEFORE -->
-
-  <section class="check-before">
-    <div class="container">
-      <div class="section-label" lang="zh-CN">办理前确认</div>
-      <h2>진행 전 확인해 주세요</h2>
-      <div class="check-list">
-        <div class="check-item"><span>01</span><div><strong>근무기간</strong><p>입사일·퇴사일 또는 실제 재직기간의 정확한 기재</p></div></div>
-        <div class="check-item"><span>02</span><div><strong>직위·담당업무</strong><p>근무 당시 직위와 담당업무의 구체적인 기재</p></div></div>
-        <div class="check-item"><span>03</span><div><strong>프로젝트 내용</strong><p>현지 회사 요구 시 수행 업무·프로젝트 내용 기재</p></div></div>
-        <div class="check-item"><span>04</span><div><strong>회사 직인·발급정보</strong><p>회사 직인 및 현지 회사에서 요구하는 책임자·담당자 정보·연락처 확인</p></div></div>
-      </div>
-    </div>
-  </section>
-
-
 
   <!-- AUTHOR -->
 
