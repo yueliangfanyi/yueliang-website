@@ -879,6 +879,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     .check-item { grid-template-columns:38px 1fr; gap:14px; padding:17px 0; }
     .check-item strong { font-size:16px; line-height:1.5; letter-spacing:-.3px; margin-bottom:6px; }
     .check-item p { font-size:14px; line-height:1.7; letter-spacing:-.2px; }
+    .check-item p + p { margin-top:12px; }
     .process-steps { grid-template-columns:repeat(4,minmax(0,1fr)); }
     .process-step-note { margin-top:8px; font-size:13px; line-height:1.6; color:#666; word-break:keep-all; }
     .process-followup { margin-top:16px; }
@@ -889,6 +890,34 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       .check-item { grid-template-columns:28px 1fr; gap:10px; padding:16px 0; }
     }
     @media(max-width:600px) { .process-steps { grid-template-columns:1fr; } }
+
+  
+    /* 진행업무·실제 진행사례도 같은 간격 기준 적용 */
+    .china-process h2,.actual-case h2 { font-size:clamp(24px,2.6vw,28px); line-height:1.35; letter-spacing:-1px; margin-bottom:18px; }
+    .process-intro { font-size:15px; line-height:1.7; letter-spacing:-.3px; }
+    .process-followup { margin-top:12px; }
+    .process-steps { margin-top:24px; gap:12px; }
+    .process-step { padding:16px 6px 0; }
+    .process-step span { margin-bottom:6px; }
+    .process-step strong { font-size:15px; line-height:1.5; letter-spacing:-.3px; }
+    .process-step-note { margin-top:6px; line-height:1.5; letter-spacing:-.2px; }
+    .actual-case .case-card { margin-top:22px; padding:24px 26px; }
+    .actual-case .case-tag { margin-bottom:8px; letter-spacing:-.2px; }
+    .actual-case .case-card > strong { font-size:18px; line-height:1.5; letter-spacing:-.4px; margin-bottom:14px; }
+    .actual-case .case-card p { font-size:15px; line-height:1.7; letter-spacing:-.3px; margin-bottom:14px; }
+    .actual-case .case-card a { font-size:14px; margin-top:0; }
+    @media(max-width:700px) { .actual-case .case-card { padding:20px; } }
+
+  
+    /* 지정 문단은 구분하고, 진행업무 설명은 촘촘하게 */
+    .apostille-info .preparation-item .preparation-separated { margin-top:14px; }
+    .china-process .process-intro { margin-bottom:0; line-height:1.65; }
+    .china-process .process-intro + .process-intro { margin-top:5px; }
+
+  
+    /* 짧은 제목과 하단 안내문 */
+    .apostille-info h2,.china-process h2 { margin-bottom:8px; }
+    .apostille-info .section-heading-note,.china-process .section-heading-note { max-width:900px; margin:0 0 18px; font-size:15px; line-height:1.65; letter-spacing:-.3px; color:#555; word-break:keep-all; }
 
   </style>
 
@@ -1016,7 +1045,8 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <section class="apostille-info">
     <div class="container">
       <div class="section-label" lang="zh-CN">材料准备</div>
-      <h2>의뢰인 준비사항 · 학교 발급 서류·제출기관 안내</h2>
+      <h2>의뢰인 준비사항</h2>
+      <p class="section-heading-note">학교 발급 서류와 제출기관 안내문을 보내 주세요.</p>
       <p class="preparation-intro">중국인민대학교 등 중국 대학교에서 발급받은 서류와 한국 제출기관의 요구사항을 먼저 확인합니다.</p>
       <div class="preparation-list">
         <div class="preparation-item">
@@ -1026,12 +1056,14 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         </div>
         <div class="preparation-item">
           <h3>02 · 학신망 조회 여부·제출기관 안내 전달</h3>
-          <p>학신망(学信网) 조회 가능 여부를 알고 계시다면 함께 알려 주세요. 최근 학력정보는 학신망에서 확인되는 경우가 많지만, 오래전에 발급된 학력서류는 온라인 조회가 되지 않는 경우도 있습니다.</p>
+          <p>학신망(学信网) 조회 가능 여부를 알고 계시다면 함께 알려 주세요.</p>
+          <p class="preparation-separated">최근 학력정보는 학신망에서 확인되는 경우가 많지만, 오래전에 발급된 학력서류는 온라인 조회가 되지 않는 경우도 있습니다.</p>
           <p>한국 제출기관에서 안내받은 서류 목록과 필요한 번역·공증·아포스티유 요건을 보내 주시면 진행에 필요한 절차를 확인해 드립니다.</p>
         </div>
         <div class="preparation-item">
           <h3>03 · 재발급 필요 시 본인 학교 신청</h3>
-          <p>학교 원본 서류의 재발급이 필요한 경우에는 졸업자가 해당 대학교에 직접 신청해야 합니다. 월량번역행정사사무소에서는 대학교 졸업증서 재발급 업무를 대행하지 않습니다.</p>
+          <p>학교 원본 서류의 재발급이 필요한 경우에는 졸업자가 해당 대학교에 직접 신청해야 합니다.</p>
+          <p class="preparation-separated">월량번역행정사사무소에서는 대학교 졸업증서 재발급 업무를 대행하지 않습니다.</p>
           <p class="preparation-note">사본을 먼저 보내 주시면 진행 가능 여부를 검토한 후 추가 자료와 원본 전달 방법을 안내해 드립니다.</p>
         </div>
       </div>
@@ -1048,7 +1080,8 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         办理流程
       </div>
 
-      <h2>월량번역행정사 진행업무 · 중국 공증·아포스티유</h2>
+      <h2>월량번역행정사 진행업무</h2>
+      <p class="section-heading-note">서류 확인부터 중국 공증·아포스티유까지 진행합니다.</p>
 
       <p class="process-intro">졸업증서 사본의 발급시기와 학력정보를 확인하고, 중국 현지에서 공증 진행이 가능한지 필요한 확인 절차부터 검토합니다.</p>
       <p class="process-intro process-followup">학신망 조회가 어려운 경우에는 중국 현지 공증기관에서 요구하는 방식에 따라 학교에 학력 사실을 확인해야 할 수 있습니다.</p>
@@ -1324,8 +1357,8 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
             <p>
 
               학교 원본 서류의 재발급이 필요한 경우에는
-              졸업자가 해당 대학교에 직접 신청해야 하며,
-              월량번역행정사사무소에서는
+              졸업자가 해당 대학교에 직접 신청해야 합니다.</p>
+            <p>월량번역행정사사무소에서는
               대학교 졸업증서 재발급 업무를 대행하지 않습니다.
 
             </p>
