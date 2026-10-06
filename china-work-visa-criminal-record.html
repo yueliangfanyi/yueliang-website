@@ -793,7 +793,9 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     .title-primary { color:#0f3d61; }
     .title-secondary { color:#222; }
     .hero-title .domestic-badge { margin:12px 0 0; display:table; background:#fbeff1; border-color:#e7b8bd; color:#b9303b; transform:none; }
-    .hero-specialty { flex:0 0 auto; padding:9px 14px; border:1px solid #e7a1ac; border-radius:4px; background:#fce3e7; color:#b9303b; font-size:13px; font-weight:700; line-height:1.5; word-break:keep-all; }
+    .hero-specialty { flex:0 0 auto; padding:8px 14px; border:1px solid #17263c; border-radius:4px; background:#17263c; color:#fff; font-size:13px; font-weight:700; line-height:1.5; word-break:keep-all; }
+    .tip-heading-row { display:flex; align-items:center; justify-content:space-between; gap:12px 20px; margin-bottom:14px; }
+    .tip-heading-row .point-label { margin-bottom:0; }
     a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid #0f3d61; outline-offset:4px; }
     button { font-family:inherit; }
     h1,h2 { word-break:keep-all; overflow-wrap:break-word; }
@@ -812,16 +814,18 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       .mobile-menu nav { display:flex; position:absolute; right:0; top:48px; width:260px; max-width:85vw; background:#fff; border:1px solid #ddd; padding:18px; flex-direction:column; z-index:10; box-shadow:0 8px 24px #0001; }
       .mobile-menu nav a { padding:6px 0; }
       .hero-heading-row { flex-direction:column; align-items:flex-start; gap:18px; }
-      .hero-specialty { align-self:flex-start; }
+
     }
     @media(max-width:700px) {
       header .container { gap:12px; }
       .logo { font-size:16px; }
       .logo img { width:26px; height:26px; }
       .page-hero { padding:44px 0; }
-      .hero-specialty { align-self:flex-start; }
+
         .page-hero p { font-size:16px; }
       .yueliang-point { padding:20px; }
+      .tip-heading-row { flex-wrap:wrap; align-items:center; }
+      .tip-heading-row .hero-specialty { margin-left:auto; padding:7px 10px; font-size:12px; }
       .apostille-info,.china-process,.document-types,.actual-case,.check-before { padding:44px 0; }
       .check-item { grid-template-columns:30px 1fr; gap:12px; }
       .case-card { padding:24px; }
@@ -910,7 +914,6 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         <span class="title-secondary">중국어 번역공증·아포스티유</span>
         <span class="domestic-badge">한국 서류 → 중국 제출</span>
       </h1>
-      <div class="hero-specialty">월량번역행정사사무소 전문분야</div>
     </div>
 
       <p>
@@ -925,8 +928,11 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
       <div class="yueliang-point">
 
-        <div class="point-label">
+        <div class="tip-heading-row">
+          <div class="point-label">
           月亮 TIP
+        </div>
+          <div class="hero-specialty">월량번역행정사사무소 전문분야</div>
         </div>
 
         <strong>
