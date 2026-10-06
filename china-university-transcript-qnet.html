@@ -937,6 +937,15 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     .document-item { padding:22px; }
     .document-item strong { font-size:17px; letter-spacing:-.3px; margin-bottom:8px; }
     .document-item p { font-size:14px; line-height:1.7; letter-spacing:-.2px; }
+  
+    /* 진행업무 제목 옆 인증방식 비교 탭 */
+    .process-heading-row { display:flex; align-items:center; justify-content:space-between; gap:16px 24px; margin-bottom:18px; }
+    .china-process .process-heading-row h2 { flex:1; min-width:0; margin-bottom:0; }
+    .certification-compare-tab { flex:0 0 auto; display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border:1px solid #e7a1ac; border-radius:5px; background:#fce3e7; color:#b9303b; font-size:13px; font-weight:700; line-height:1.5; letter-spacing:-.3px; }
+    .certification-compare-tab:hover { background:#f8d4db; }
+    @media(max-width:1000px) { .process-heading-row { flex-wrap:wrap; } .china-process .process-heading-row h2 { flex-basis:100%; } .certification-compare-tab { margin-left:auto; } }
+    @media(max-width:600px) { .certification-compare-tab { font-size:12px; padding:8px 11px; max-width:100%; flex-shrink:1; } }
+
   </style>
 
 
@@ -1081,7 +1090,10 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
       <div class="section-label" lang="zh-CN">办理流程</div>
 
-      <h2><span class="heading-role">월량번역행정사 진행업무</span>: 국문 번역·번역확인증명서 발급</h2>
+      <div class="process-heading-row">
+        <h2><span class="heading-role">월량번역행정사 진행업무</span>: 국문 번역·번역확인증명서 발급</h2>
+        <a class="certification-compare-tab" href="translation-certification-guide.html">번역확인증명서와 번역공증 차이 <span aria-hidden="true">→</span></a>
+      </div>
 
 
       <p class="process-intro">성적표와 큐넷 제출 안내문을 확인한 후 학교명·전공명·과목명, 학점·성적·이수정보를 원문에 맞게 국문으로 번역합니다.</p>
