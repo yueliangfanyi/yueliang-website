@@ -829,6 +829,42 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       .case-card { padding:24px; }
     }
 
+  
+    /* 문단·소제목 사이 여백 */
+    .page-hero > .container > p { line-height:1.9; }
+    .yueliang-point > strong { margin-bottom:12px; }
+    .yueliang-point p { line-height:1.9; }
+    .apostille-info h2,.china-process h2,.document-types h2,.actual-case h2,.check-before h2 { margin-bottom:24px; }
+    .apostille-info .preparation-intro { margin-bottom:30px; max-width:900px; }
+    .preparation-list { max-width:900px; }
+    .preparation-item { padding:24px 0; border-top:1px solid #e0ded9; }
+    .preparation-item:last-child { padding-bottom:0; }
+    .preparation-item h3 { font-size:18px; line-height:1.6; color:#222; margin-bottom:12px; }
+    .apostille-info .preparation-item p { max-width:none; line-height:1.9; margin-bottom:16px; }
+    .apostille-info .preparation-item p:last-child { margin-bottom:0; }
+    .preparation-item .preparation-note { margin-top:20px; padding:14px 18px; background:#f3f3f1; border-radius:4px; }
+    .official-issue-link { display:inline-block; margin-top:4px; padding:9px 14px; border:1px solid #c7d6e0; border-radius:4px; color:#0f3d61; background:#f1f6fa; font-size:14px; font-weight:700; }
+    .official-issue-link:hover { background:#e4eef5; }
+    .process-steps { margin-top:32px; }
+    .document-grid { margin-top:28px; }
+    .document-item strong { margin-bottom:12px; }
+    .document-item p { line-height:1.9; }
+    .case-card { margin-top:28px; }
+    .case-card > strong { margin-bottom:20px; }
+    .case-card p { margin-bottom:22px; line-height:1.9; }
+    .case-card a { margin-top:2px; }
+    .check-before h2 { margin-bottom:28px; }
+    .check-item { padding:24px 0; }
+    .check-item strong { margin-bottom:10px; }
+    .check-item p { line-height:1.9; }
+    .common-contact-intro { max-width:900px; line-height:1.9; margin-bottom:30px; }
+    @media(max-width:700px) {
+      .preparation-item { padding:22px 0; }
+      .preparation-item h3 { font-size:17px; }
+      .apostille-info .preparation-intro { margin-bottom:24px; }
+      .case-card p { margin-bottom:20px; }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -926,25 +962,10 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       </p>
 
       <div class="yueliang-point">
-
-        <div class="point-label">
-          月亮 TIP
-        </div>
-
-        <strong>
-          범죄수사경력회보서 발급용도 · 외국입국·체류허가용
-        </strong>
-
-        <p>
-
-          중국 취업허가 및 Z비자 제출을 위한 경우
-          범죄수사경력회보서의 발급용도는
-          <strong>외국입국·체류허가용</strong>으로 선택해 발급받아 주세요.
-          또한 흑백으로 발급하거나 출력한 서류는 진행하지 않으므로
-          컬러로 발급된 서류를 준비해 주세요.
-
-        </p>
-
+        <div class="point-label">月亮 TIP</div>
+        <strong>서류 발급은 의뢰인 · 번역공증·아포스티유는 월량</strong>
+        <p>의뢰인께서 외국입국·체류허가용 범죄수사경력회보서를 발급해 보내 주시면,<br>
+        월량에서 서류를 확인하고 중국어 번역·번역공증 촉탁·아포스티유를 진행합니다.</p>
       </div>
 
     </div>
@@ -954,68 +975,32 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <!-- 材料准备 -->
 
   <section class="apostille-info">
-
     <div class="container">
-
-      <div class="section-label">
-        材料准备
+      <div class="section-label" lang="zh-CN">材料准备</div>
+      <h2>의뢰인 준비사항 · 서류 발급·전달</h2>
+      <p class="preparation-intro">중국 취업허가 및 Z비자 준비 과정에서 무범죄 관련 서류를 요구받은 경우, 한국에서 발급한 범죄수사경력회보서를 준비합니다.</p>
+      <div class="preparation-list">
+        <div class="preparation-item">
+          <h3>01 · 발급용도 선택</h3>
+          <p>발급용도는 <strong>외국입국·체류허가용</strong>으로 선택해 주세요.</p>
+        </div>
+        <div class="preparation-item">
+          <h3>02 · 발급방법 확인</h3>
+          <p>경찰청 범죄경력회보서 발급시스템에서 온라인으로 발급하거나, 경찰서에서 직접 발급받아 준비할 수 있습니다.</p>
+          <a class="official-issue-link" href="https://crims.police.go.kr/main.do" target="_blank" rel="noopener noreferrer">경찰청 범죄경력회보서 발급시스템 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="preparation-item">
+          <h3>03 · 컬러 서류 준비</h3>
+          <p>온라인 발급본과 경찰서 종이 발급본 모두 컬러로 준비해 주세요.<br>월량에서는 흑백 발급본·흑백 출력본·흑백 스캔본으로 진행하지 않습니다.</p>
+        </div>
+        <div class="preparation-item">
+          <h3>04 · 발급 형태에 따른 서류 전달</h3>
+          <p><strong>온라인 발급본</strong> · 컬러 PDF 원본 파일을 그대로 보내 주세요. 출력한 뒤 다시 촬영하거나 스캔할 필요가 없습니다.</p>
+          <p><strong>경찰서 종이 발급본</strong> · 문서 전체 내용과 발급정보가 선명하게 보이는 컬러 스캔본을 먼저 보내 주세요. 서류 확인 후 진행 가능 여부와 원본 전달 방법을 안내해 드립니다.</p>
+          <p class="preparation-note">회사나 현지 담당기관의 제출서류 목록·안내문이 있다면 함께 보내 주세요.</p>
+        </div>
       </div>
-
-      <h2>범죄수사경력회보서 발급·준비</h2>
-
-      <p>
-
-        중국 취업허가 신청 과정에서
-        무범죄 관련 서류를 요구받는 경우
-        한국에서는 범죄수사경력회보서를 준비하여
-        중국 제출용 번역공증 및 아포스티유 절차를 진행할 수 있습니다.
-
-      </p>
-
-      <p>
-
-        <strong>01 · 발급용도 선택 · 외국입국·체류허가용</strong><br>
-
-        중국 취업허가 및 Z비자 제출을 위한
-        범죄수사경력회보서는
-        발급용도를 <strong>외국입국·체류허가용</strong>으로
-        선택하여 발급받아 주세요.
-
-      </p>
-
-      <p>
-
-        <strong>02 · 컬러 서류 준비</strong><br>
-
-        흑백으로 발급하거나 흑백으로 출력한 서류는
-        번역공증 및 아포스티유 진행용으로 받지 않습니다.
-        온라인 발급본 또는 종이 발급본 모두
-        컬러 상태로 준비해 주세요.
-
-      </p>
-
-      <p>
-
-        <strong>03 · 발급방법 · 온라인 PDF 또는 경찰서 방문</strong><br>
-
-        발급 가능한 방식에 따라
-        온라인에서 PDF 파일로 발급하거나
-        경찰서에서 직접 서류를 발급받아 준비할 수 있습니다.
-
-      </p>
-
-      <p>
-
-        <strong>04 · 온라인 발급 PDF 원본 전달</strong><br>
-
-        온라인에서 발급한 경우에는
-        출력한 뒤 다시 촬영하거나 스캔하지 말고
-        발급받은 컬러 PDF 원본 파일을 그대로 보내주세요.
-
-      </p>
-
     </div>
-
   </section>
 
   <!-- 办理流程 -->
@@ -1028,42 +1013,34 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         办理流程
       </div>
 
-      <h2>중국어 번역공증·아포스티유 진행 절차</h2>
+      <h2>월량 진행업무 · 중국어 번역공증·아포스티유</h2>
 
-      <p class="process-intro">
-
-        외국입국·체류허가용으로 발급한
-        컬러 서류를 보내주시면
-        발급 형태와 문서 상태를 확인한 후
-        중국어 번역, 번역공증 촉탁,
-        아포스티유 순서로 진행합니다.
-
-      </p>
+      <p class="process-intro">전달받은 서류의 발급용도·컬러 여부·문서 상태와 제출 목적을 확인한 후, 중국어 번역부터 번역공증 촉탁·아포스티유까지 진행합니다.</p>
 
       <div class="process-steps">
 
         <div class="process-step">
-          <span>01</span>
-          <strong>서류 발급</strong>
+          <span>01 · 의뢰인</span>
+          <strong>서류 발급·전달</strong>
         </div>
 
         <div class="process-step">
-          <span>02</span>
+          <span>02 · 월량</span>
           <strong>발급용도·<br>컬러 여부 확인</strong>
         </div>
 
         <div class="process-step">
-          <span>03</span>
+          <span>03 · 월량</span>
           <strong>중국어 번역</strong>
         </div>
 
         <div class="process-step">
-          <span>04</span>
+          <span>04 · 월량</span>
           <strong>번역공증 촉탁</strong>
         </div>
 
         <div class="process-step">
-          <span>05</span>
+          <span>05 · 월량</span>
           <strong>아포스티유</strong>
         </div>
 
@@ -1217,137 +1194,24 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <!-- 办理前确认 -->
 
   <section class="check-before">
-
     <div class="container">
-
-      <div class="section-label">
-        办理前确认
-      </div>
-
+      <div class="section-label" lang="zh-CN">办理前确认</div>
       <h2>진행 전 확인사항</h2>
-
       <div class="check-list">
-
-        <div class="check-item">
-
-          <span>01</span>
-
-          <div>
-
-            <strong>
-              발급용도 · 외국입국·체류허가용
-            </strong>
-
-            <p>
-
-              중국 취업허가 및 Z비자 제출을 위한
-              범죄수사경력회보서는
-              발급용도가 외국입국·체류허가용인지
-              반드시 확인해 주세요.
-
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="check-item">
-
-          <span>02</span>
-
-          <div>
-
-            <strong>
-              컬러 서류 준비 · 흑백 발급본·출력본 진행 불가
-            </strong>
-
-            <p>
-
-              범죄수사경력회보서는 컬러 상태로 준비해 주세요.
-              온라인 발급본을 흑백으로 출력하거나
-              흑백으로 스캔한 서류는 진행하지 않습니다.
-
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="check-item">
-
-          <span>03</span>
-
-          <div>
-
-            <strong>
-              온라인 발급본 · PDF 원본 파일 전달
-            </strong>
-
-            <p>
-
-              컬러 PDF 원본을 출력한 뒤
-              다시 촬영하거나 스캔할 필요가 없습니다.
-              온라인에서 발급받은 원본 PDF가 있다면
-              해당 파일을 그대로 보내주세요.
-
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="check-item">
-
-          <span>04</span>
-
-          <div>
-
-            <strong>
-              경찰서 발급본 · 전체 내용·발급정보 확인
-            </strong>
-
-            <p>
-
-              종이서류로 발급받은 경우에는
-              문서 전체 내용과 발급정보가
-              선명하게 확인되어야 합니다.
-              컬러 스캔본을 먼저 보내주시면
-              진행 가능 여부를 확인할 수 있습니다.
-
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="check-item">
-
-          <span>05</span>
-
-          <div>
-
-            <strong>
-              추가 제출서류 · 학력·경력서류 확인
-            </strong>
-
-            <p>
-
-              범죄수사경력회보서 외에도
-              학력·경력 관련 서류의
-              번역공증 또는 인증이 필요한 경우가 있습니다.
-              회사나 현지 담당기관에서 안내받은
-              서류 목록이 있다면 함께 확인하는 것이 좋습니다.
-
-            </p>
-
-          </div>
-
-        </div>
-
+        <div class="check-item"><span>01</span><div>
+          <strong>서류 준비 상태</strong>
+          <p>외국입국·체류허가용 여부, 컬러 상태, 문서 전체 내용·발급정보의 선명도를 확인해 주세요.</p>
+        </div></div>
+        <div class="check-item"><span>02</span><div>
+          <strong>제출기관 안내·추가 서류</strong>
+          <p>범죄수사경력회보서 외에 학위·졸업·경력서류도 요구받았다면 함께 알려 주세요. 각 서류의 번역공증·인증 필요 여부를 구분해 확인합니다.</p>
+        </div></div>
+        <div class="check-item"><span>03</span><div>
+          <strong>접수 방법·소요기간·비용</strong>
+          <p>파일을 먼저 보내 주시면 진행 가능 여부와 접수 방법을 확인해 드립니다.<br>제출기한을 함께 알려 주시면 예상 소요기간과 비용을 안내해 드립니다.</p>
+        </div></div>
       </div>
-
     </div>
-
   </section>
 
   <!-- AUTHOR -->
