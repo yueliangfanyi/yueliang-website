@@ -851,7 +851,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     .document-item p { line-height:1.9; }
     .case-card { margin-top:28px; }
     .case-card > strong { margin-bottom:20px; }
-    .case-card p { margin-bottom:22px; line-height:1.9; }
+    .case-card p { margin-bottom:12px; line-height:1.9; }
     .case-card a { margin-top:2px; }
     .check-before h2 { margin-bottom:28px; }
     .check-item { padding:24px 0; }
@@ -862,9 +862,20 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       .preparation-item { padding:22px 0; }
       .preparation-item h3 { font-size:17px; }
       .apostille-info .preparation-intro { margin-bottom:24px; }
-      .case-card p { margin-bottom:20px; }
+      .case-card p { margin-bottom:12px; }
     }
 
+
+    .visa-flow { margin:16px 0 20px; padding-left:24px; color:#444; font-size:15px; line-height:1.8; word-break:keep-all; }
+    .visa-flow li { padding:7px 10px; margin-bottom:4px; }
+    .visa-flow .flow-highlight { background:#fce3e7; border-radius:4px; color:#b9303b; font-weight:700; }
+    .flow-country { color:#666; margin-right:6px; font-size:13px; }
+    .flow-country::before { content:"("; }
+    .flow-country::after { content:")"; }
+    .flow-office { display:inline-block; }
+    .apostille-info .record-consultation { max-width:900px; margin:0 0 26px; padding:16px 20px; background:#fce3e7; border-left:3px solid #b9303b; border-radius:4px; color:#b9303b; }
+    .record-consultation a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+    @media(max-width:700px) { .visa-flow { font-size:14px; padding-left:20px; } .visa-flow li { padding:6px; } }
   </style>
 
   <script type="application/ld+json">
@@ -963,7 +974,14 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
       <div class="yueliang-point">
         <div class="point-label">月亮 TIP</div>
-        <strong>서류 발급은 의뢰인 · 번역공증·아포스티유는 월량번역행정사</strong>
+        <strong>중국 취업비자 발급 흐름</strong>
+        <ol class="visa-flow">
+          <li><span class="flow-country">한국·중국</span> 회사 인사 담당자와 소통 후 필요서류 확인</li>
+          <li class="flow-highlight"><span class="flow-country">한국</span> 서류 중국어 번역공증·아포스티유 <span class="flow-office">— 월량번역행정사</span></li>
+          <li><span class="flow-country">중국</span> 외국인 취업허가 신청</li>
+          <li><span class="flow-country">한국</span> 중국비자센터에서 Z비자 신청</li>
+          <li><span class="flow-country">중국</span> 입국 후 외국인공작허가증·거류증 신청</li>
+        </ol>
         <p>의뢰인께서 외국입국·체류허가용 범죄수사경력회보서를 발급해 보내 주시면,<br>
         월량번역행정사에서 서류를 확인하고 중국어 번역·번역공증 촉탁·아포스티유를 진행합니다.</p>
       </div>
@@ -977,8 +995,9 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <section class="apostille-info">
     <div class="container">
       <div class="section-label" lang="zh-CN">材料准备</div>
-      <h2>의뢰인 준비사항 · 서류 발급·전달</h2>
+      <h2>의뢰인 준비사항: 서류 발급·전달</h2>
       <p class="preparation-intro">중국 취업허가 및 Z비자 준비 과정에서 무범죄 관련 서류를 요구받은 경우, 한국에서 발급한 범죄수사경력회보서를 준비합니다.</p>
+      <p class="record-consultation"><strong>수사기록이 있으신 경우, 서류를 준비하시기 전에 먼저 <a href="tel:01086395165">유선 상담</a>을 진행해 주세요.</strong></p>
       <div class="preparation-list">
         <div class="preparation-item">
           <h3>01 · 발급용도 선택</h3>
@@ -1013,7 +1032,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         办理流程
       </div>
 
-      <h2>월량번역행정사 진행업무 · 중국어 번역공증·아포스티유</h2>
+      <h2>월량번역행정사 진행업무: 중국어 번역공증·아포스티유</h2>
 
       <p class="process-intro">전달받은 서류의 발급용도·컬러 여부·문서 상태와 제출 목적을 확인한 후, 중국어 번역부터 번역공증 촉탁·아포스티유까지 진행합니다.</p>
 
