@@ -1110,6 +1110,17 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 .hero-title .legal-badge { display:inline-block; padding:5px 10px; border:1px solid #afc9b1; border-radius:4px; background:#e6f0e7; color:#365c3c; font-size:13px; font-weight:700; line-height:1.5; }
 .confirmation-definition .definition-legal { margin:8px 0 0; color:#555; font-size:14px; line-height:1.7; word-break:keep-all; }
 @media(max-width:700px) { .hero-title .hero-badges { display:flex; margin:12px 0 0; } .hero-title .hero-badges .domestic-badge { display:inline-block; } }
+
+/* 상단 탭 순서·간격 및 비교 안내 시작점 정렬 */
+.hero-title .hero-badges { gap:12px; }
+.hero-title .hero-badges .domestic-badge,
+.hero-title .hero-badges .legal-badge { line-height:1.5; padding:5px 10px; }
+@media(min-width:901px) {
+  .hero-heading-row { align-items:flex-start; }
+  .hero-heading-row .hero-title { display:flex; align-items:center; }
+  .hero-title .hero-badges { flex-shrink:0; }
+  .hero-comparison { align-self:flex-start; margin-top:calc(clamp(34px, 4vw, 50px) * 0.6 - 15.75px); }
+}
 </style>
 </head>
 <body>
@@ -1165,7 +1176,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
      <div class="hero-heading-row">
 <h1 class="hero-title">
   번역확인증명서
-  <span class="hero-badges"><span class="domestic-badge">중국어 서류 → 한국 제출</span><span class="legal-badge">행정사법 제20조</span></span>
+  <span class="hero-badges"><span class="legal-badge">행정사법 제20조</span><span class="domestic-badge">중국어 서류 → 한국 제출</span></span>
 </h1>
 <div class="hero-comparison">
     <a class="comparison-link" href="translation-certification-guide.html">
