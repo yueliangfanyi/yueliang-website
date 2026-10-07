@@ -893,6 +893,15 @@ header .container{gap:24px;flex-wrap:wrap;padding:18px 0}header nav{flex-wrap:wr
 .check-before .yueliang-tip strong{margin-bottom:6px}
 @media(max-width:700px){.check-before .yueliang-tip{padding:16px 20px}}
 .document-list .document-name{display:inline-block;max-width:100%;vertical-align:top;word-break:keep-all;overflow-wrap:anywhere}
+
+/* 같은 줄의 서류 카드와 사례 상자 높이 정렬 */
+.document-item .case-link{flex-shrink:0}
+@media(min-width:901px){
+  .document-grid .document-item{display:grid;grid-template-rows:subgrid;grid-row:span 3;row-gap:0;min-width:0}
+  .document-grid .document-item .document-title{align-self:start}
+  .document-grid .document-item .document-list{align-self:start}
+  .document-grid .document-item .case-link{margin-top:0;align-self:stretch}
+}
 </style>
 </head>
 
