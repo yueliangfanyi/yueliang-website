@@ -1169,6 +1169,23 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 .document-types .document-title { padding-bottom:12px; margin-bottom:12px; }
 .document-types .document-item img { margin-top:12px !important; }
 @media(max-width:700px) { .document-types .document-item { padding-top:16px; padding-bottom:16px; } }
+
+/* 제출처별 상세페이지 탭 */
+.confirmation-destinations { padding:30px 0 34px; background:#fff; }
+.destination-heading { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:16px; }
+.destination-heading h2 { margin:0; color:#0f3d61; font-size:clamp(26px,3vw,32px); line-height:1.4; letter-spacing:-1px; }
+.destination-heading p { margin:0; color:#555; font-size:14px; line-height:1.6; text-align:right; }
+.destination-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.destination-grid .destination-tab { display:flex; align-items:center; justify-content:center; box-sizing:border-box; min-height:60px; padding:8px 10px; background:#f3f3f1; border:1px solid #dededb; border-radius:4px; color:#222; font-size:15px; font-weight:700; line-height:1.4; text-align:center; text-decoration:none; word-break:keep-all; transition:background-color .15s; }
+.destination-grid .destination-tab:hover { background:#eaeae7; }
+.destination-grid .destination-tab:focus-visible { outline:2px solid #0f3d61; outline-offset:3px; }
+@media(max-width:700px) {
+  .confirmation-destinations { padding:24px 0 28px; }
+  .destination-heading { flex-direction:column; align-items:flex-start; gap:6px; margin-bottom:12px; }
+  .destination-heading p { text-align:left; font-size:13px; }
+  .destination-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+  .destination-grid .destination-tab { min-height:58px; font-size:14px; padding:8px; }
+}
 </style>
 </head>
 <body>
@@ -1332,6 +1349,30 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   
 
 
+
+  <!-- 주요 제출처: 각 상세페이지와 연결 -->
+  <section class="confirmation-destinations">
+    <div class="container">
+      <div class="section-label" lang="zh-CN">提交用途</div>
+      <div class="destination-heading">
+        <h2>주요 제출처</h2>
+        <p>제출처를 눌러 준비서류와 진행사례를 확인하세요.</p>
+      </div>
+      <nav class="destination-grid" aria-label="제출처별 번역확인증명서 안내">
+        <a class="destination-tab" href="translation-confirmation-immigration.html">출입국 사무소</a>
+        <a class="destination-tab" href="translation-confirmation-credit-bank.html">학점은행제</a>
+        <a class="destination-tab" href="translation-confirmation-qnet.html">큐넷(Q-Net)</a>
+        <a class="destination-tab" href="translation-confirmation-education-office.html">교육청</a>
+        <a class="destination-tab" href="translation-confirmation-local-government.html">시청·구청·동<br>행정복지센터</a>
+        <a class="destination-tab" href="translation-confirmation-mfds.html">해외제조업소 등록<br>(식약처)</a>
+        <a class="destination-tab" href="translation-confirmation-court-police.html">법원·경찰서</a>
+        <a class="destination-tab" href="translation-confirmation-student-aid.html">한국장학재단</a>
+        <a class="destination-tab" href="translation-confirmation-social-workers.html">한국사회복지사협회</a>
+        <a class="destination-tab" href="translation-confirmation-distance-university.html">방송통신대·사이버대학교</a>
+        <a class="destination-tab" href="translation-confirmation-telecom.html">통신사</a>
+      </nav>
+    </div>
+  </section>
 
   <!-- CHECK BEFORE -->
   <section class="check-before">
