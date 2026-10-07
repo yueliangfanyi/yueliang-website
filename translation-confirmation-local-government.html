@@ -1255,6 +1255,16 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 /* 실제 진행 사례: 제출용까지만 남색 강조 */
 .additional-case-heading h3 { color:#222; }
 .additional-case-heading h3 .case-purpose { color:#0f3d61; }
+
+/* 상단 제목 두 줄과 전문분야 탭 첫 줄 정렬 */
+.credit-title-row { align-items:flex-start; }
+.credit-title-row .credit-title { min-width:0; }
+.credit-title-row .specialty-badge { margin-top:7px; }
+@media(max-width:700px) {
+  .credit-title-row { flex-wrap:nowrap; gap:10px; }
+  .credit-title-row .credit-title { flex:1; flex-basis:auto; font-size:clamp(20px,4.8vw,26px); }
+  .credit-title-row .specialty-badge { flex-shrink:0; margin:3px 0 0; max-width:112px; padding:5px 7px; font-size:11px; text-align:center; word-break:keep-all; }
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "중국 예방접종카드(儿童预防接种证) 중국어 번역·번역확인증명서 발급 | 월량번역행정사사무소", "description": "시청·구청·동 행정복지센터 제출용 중국어 서류 국문 번역과 번역확인증명서 발급. 서울시청 담배수입판매업 등록용 중국 제조업체 서류·마카오 상업등기증명서와 보건소 제출용 중국 예방접종카드 번역 사례를 소개합니다.", "url": "https://yueliang.kr/translation-confirmation-local-government.html", "inLanguage": "ko", "isPartOf": {"@type": "WebSite", "name": "월량번역행정사사무소", "url": "https://yueliang.kr/"}}</script>
 </head>
@@ -1305,33 +1315,10 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   <nav class="credit-breadcrumb" aria-label="현재 위치"><a href="translation-confirmation.html">번역확인증명서</a> / 시청·구청·동 행정복지센터</nav>
   <div class="section-label" lang="zh-CN">行政机关提交材料 · 翻译确认证明书</div>
   <div class="credit-title-row">
-    <h1 class="hero-title credit-title"><span>중국 예방접종카드(儿童预防接种证)</span> 중국어 번역·번역확인증명서 발급</h1>
+    <h1 class="hero-title credit-title"><span>중국 예방접종카드(儿童预防接种证)</span><br>중국어 번역·번역확인증명서 발급</h1>
     <div class="specialty-badge">월량번역행정사사무소 전문분야</div>
   </div>
   <p class="hero-intro">시청·구청·동 행정복지센터와 보건소에 제출할 중국어 서류를 국문으로 번역하고, 번역확인증명서를 발급합니다. 서울시청 담배수입판매업 등록 서류와 보건소 제출용 중국 예방접종카드 번역 사례를 소개합니다.</p>
-</div></section>
-<section class="credit-section credit-notice"><div class="container">
-  <div class="section-label" lang="zh-CN">材料准备</div><h2>행정기관 제출용 번역 서류</h2>
-  <div class="credit-boxes">
-    <div class="content-box"><strong>중국 영업집조(营业执照) · 영업허가증</strong>
-      <p>제조업체 명칭, 기업 유형, 법정대표자, 설립일자와 주소 등 업체 정보를 확인할 수 있는 서류입니다.</p>
-    </div>
-    <div class="content-box"><strong>담배전매생산기업허가증(烟草专卖生产企业许可证)</strong>
-      <p>제조업체의 허가범위와 전자담배 연간 생산규모 등 허가증에 기재된 내용을 국문으로 번역합니다.</p>
-    </div>
-    <div class="content-box"><strong>제품규격서(产品规格书)</strong>
-      <p>전자담배의 제품 사양과 규격 등이 포함된 자료입니다. 제품 관련 항목과 수치, 단위를 확인하여 번역합니다.</p>
-    </div>
-    <div class="content-box"><strong>마카오 상업등기증명서 · 번체자 서류</strong>
-      <p>마카오 법인의 등기사항을 증명하는 서류입니다. 중국어 번체자로 작성된 내용을 국문으로 번역합니다.</p>
-    </div>
-    <div class="content-box"><strong>중국 예방접종카드(儿童预防接种证) · 보건소 제출용</strong>
-      <p>아이의 인적 사항과 중국에서 받은 예방접종기록을 확인할 수 있는 서류입니다. 인적 사항 페이지와 접종기록 페이지를 함께 번역합니다.</p>
-    </div>
-    <div class="content-box"><strong>국문 번역·번역확인증명서 발급</strong>
-      <p>월량번역행정사사무소는 <strong class="notice-red">국가공인 외국어번역행정사(중국어)가 직접 국문으로 번역하고, 번역문과 함께 제출할 번역확인증명서를 발급</strong>합니다.</p>
-    </div>
-  </div>
 </div></section>
 <section class="credit-section"><div class="container">
   <div class="section-label" lang="zh-CN">业务案例</div><h2>실제 진행 사례</h2>
@@ -1378,12 +1365,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 <section class="credit-section"><div class="container">
   <div class="section-label" lang="zh-CN">委托说明</div><h2>의뢰 안내</h2>
   <div class="content-box">
-    <p>번역할 서류의 모든 페이지를 컬러로 스캔하여 보내 주세요. PDF 원본이 있다면 그대로 보내 주시면 됩니다.</p>
-    <p>서류를 제출할 시청·구청·동 행정복지센터 또는 보건소와 신청할 업무를 함께 알려 주세요.</p>
-  </div>
-  <div class="content-box education-tip">
-    <strong>월량번역행정사 업무 TIP</strong>
-    <p>인천광역시 공무원으로 쌓은 행정 실무 경험과 중국어 역량을 바탕으로, 인허가 심사에서 확인이 필요한 제조업체 정보·허가범위·생산규모 등 서류의 핵심 내용을 직접 살펴보고 번역합니다.</p>
+    <p>번역할 서류의 모든 페이지를 컬러로 스캔하여 보내 주세요.</p>
   </div>
   <a class="inline-link" href="#document-contact">번역 상담하기 →</a>
   <a class="inline-link" href="translation-confirmation.html">번역확인증명서 주요 제출처로 돌아가기 →</a>
