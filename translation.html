@@ -1052,29 +1052,18 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
 
 
 /* 번역행정사 전공·자격과 자격증 */
-.translation-hero-layout { display:grid; grid-template-columns:minmax(0,1fr) 240px; gap:44px; align-items:start; }
-.translation-hero-copy { min-width:0; }
-.translator-credentials { display:flex; flex-wrap:wrap; gap:10px; margin:-8px 0 22px; }
-.translator-credential { display:inline-flex; align-items:center; padding:6px 12px; border:1px solid #afc9b1; border-radius:4px; background:#e6f0e7; color:#365c3c; font-size:13px; font-weight:700; line-height:1.5; word-break:keep-all; }
+/* 제목과 자격 안내 */
+.translation-hero-layout { display:block; }
+.translation-heading-row { display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin-bottom:26px; }
+.translation-heading-row .hero-title { margin:0; }
+.translator-credentials { display:flex; align-items:center; flex-wrap:wrap; gap:10px; }
+.translator-credential,.translation-language-badge { display:inline-flex; align-items:center; padding:6px 12px; border:1px solid #afc9b1; border-radius:4px; background:#e6f0e7; color:#365c3c; font-size:13px; font-weight:700; line-height:1.5; word-break:keep-all; }
+.translation-language-badge { border-color:#e7b8b8; background:#fbeff1; color:#b9303b; }
 .translation-hero-intro p { margin:0 0 12px; line-height:1.8; word-break:keep-all; }
 .translation-hero-intro p:last-child { margin-bottom:0; }
 .translation-hero-copy .yueliang-point { margin-top:24px; width:100%; }
 .translation-hero-copy .yueliang-point p { font-size:14px; }
-.translator-license-figure { margin:0; padding-top:12px; }
-.translator-license-button { display:block; width:100%; padding:8px; border:1px solid #dcd8d2; border-radius:5px; background:#fff; cursor:zoom-in; box-shadow:0 4px 16px #17263c0a; }
-.translator-license-button img { display:block; width:100%; height:auto; }
-.translator-license-button:hover { border-color:#afc9b1; }
-.translator-license-figure figcaption { margin-top:12px; color:#444; font-size:13px; font-weight:600; line-height:1.6; text-align:center; }
-.translator-license-figure figcaption span { display:block; color:#777; font-size:12px; font-weight:400; margin-top:4px; }
-.translator-license-dialog { width:min(760px,92vw); max-height:92dvh; margin:auto; padding:18px; border:0; border-radius:8px; overflow:auto; }
-.translator-license-dialog::backdrop { background:rgba(0,0,0,.65); }
-.translator-license-dialog-top { display:flex; justify-content:space-between; align-items:center; gap:14px; margin-bottom:14px; }
-.translator-license-dialog-top h2 { margin:0; font-size:17px; line-height:1.5; }
-.translator-license-dialog-top button { flex-shrink:0; padding:6px 12px; background:#fff; border:1px solid #ccc; border-radius:4px; cursor:pointer; }
-.translator-license-dialog img { display:block; max-width:100%; max-height:76dvh; width:auto; height:auto; margin:auto; object-fit:contain; }
-.translator-license-button:focus-visible,.translator-license-dialog-top button:focus-visible { outline:2px solid #0f3d61; outline-offset:4px; }
-@media(max-width:900px) { .translation-hero-layout { grid-template-columns:minmax(0,1fr) 200px; gap:24px; } }
-@media(max-width:700px) { .translation-hero-layout { grid-template-columns:1fr; gap:24px; } .translator-credentials { margin:0 0 18px; gap:8px; } .translator-credential { font-size:12px; padding:5px 9px; } .translator-license-figure { width:min(220px,70%); padding-top:0; margin:0 auto; } }
+@media(max-width:700px) { .translation-heading-row { gap:14px; } .translator-credentials { gap:8px; } .translator-credential,.translation-language-badge { font-size:12px; padding:5px 9px; } }
 </style>
 </head>
 <body>
@@ -1126,10 +1115,13 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
     <div class="container translation-hero-layout">
       <div class="translation-hero-copy">
         <div class="section-label" lang="zh-CN">中文翻译</div>
-        <h1 class="hero-title">중국어 번역 <span class="domestic-badge">한국어 ↔ 중국어</span></h1>
-        <div class="translator-credentials" aria-label="번역행정사 전공 및 자격">
-          <span class="translator-credential">중어중문학과 졸업</span>
-          <span class="translator-credential">국가공인 외국어번역행정사(중국어)</span>
+        <div class="translation-heading-row">
+          <h1 class="hero-title">중국어 번역</h1>
+          <div class="translator-credentials" aria-label="번역행정사 전공 및 자격과 번역 언어">
+            <span class="translator-credential">중어중문학과 졸업</span>
+            <span class="translator-credential">국가공인 외국어번역행정사(중국어)</span>
+            <span class="translation-language-badge">한국어 ↔ 중국어</span>
+          </div>
         </div>
         <div class="translation-hero-intro">
           <p><strong>중어중문학을 전공한 공무원 출신 국가공인 외국어번역행정사(중국어)가 직접 번역합니다.</strong></p>
@@ -1142,12 +1134,6 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
           <p>같은 서류라도 제출기관과 사용 목적에 따라 번역만 필요한 경우, 번역확인증명서가 필요한 경우, 번역공증이나 아포스티유까지 필요한 경우가 다릅니다. 번역 의뢰 단계에서 제출 목적을 함께 확인하여 필요한 절차를 안내합니다.</p>
         </div>
       </div>
-      <figure class="translator-license-figure">
-        <button type="button" class="translator-license-button" id="translator-license-open" aria-haspopup="dialog" aria-controls="translator-license-dialog" aria-label="외국어번역행정사 중국어 자격증 확대">
-          <img src="translator-license.jpg" alt="방혜림 외국어번역행정사 중국어 자격증" width="1071" height="1428" decoding="async">
-        </button>
-        <figcaption>외국어번역행정사(중국어) 자격증<span>사진을 누르면 크게 볼 수 있습니다.</span></figcaption>
-      </figure>
     </div>
   </section>
 
@@ -1595,26 +1581,6 @@ a.after-subcard:focus-visible,.after-detail-link:focus-visible{outline:2px solid
 
 
 
-  <dialog id="translator-license-dialog" class="translator-license-dialog" aria-labelledby="translator-license-dialog-title">
-    <div class="translator-license-dialog-top">
-      <h2 id="translator-license-dialog-title">외국어번역행정사(중국어) 자격증</h2>
-      <button type="button" id="translator-license-close" autofocus>닫기</button>
-    </div>
-    <img src="translator-license.jpg" alt="방혜림 외국어번역행정사 중국어 자격증 확대" width="1071" height="1428" loading="lazy">
-  </dialog>
-  <script>
-    (() => {
-      const licenseDialog = document.getElementById('translator-license-dialog');
-      const openButton = document.getElementById('translator-license-open');
-      openButton.addEventListener('click', () => licenseDialog.showModal());
-      document.getElementById('translator-license-close').addEventListener('click', () => licenseDialog.close());
-      licenseDialog.addEventListener('click', event => {
-        if (event.target !== licenseDialog) return;
-        const bounds = licenseDialog.getBoundingClientRect();
-        if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) licenseDialog.close();
-      });
-    })();
-  </script>
 
 </body>
 </html>
