@@ -1264,6 +1264,38 @@ footer .footer-bottom { color:#b9ccd9; }
   background:#edf4ee;
   border-color:#d3e1d5;
 }
+
+/* 비교 안내를 해당 설명 아래로 이동 */
+.page-hero .hero-heading-row { grid-template-columns:minmax(0,1fr); }
+.definition-comparison { display:flex; justify-content:flex-end; margin-top:12px; }
+.definition-comparison .comparison-link {
+  display:inline-flex;
+  align-items:center;
+  padding:8px 14px;
+  background:#fce3e7;
+  border:1px solid #e7a1ac;
+  border-radius:5px;
+  color:#b9303b;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.5;
+  text-decoration:none;
+  word-break:keep-all;
+}
+.definition-comparison .comparison-link:hover { background:#f9d7dd; border-color:#d98290; }
+.definition-comparison .comparison-link:focus-visible { outline:2px solid #b9303b; outline-offset:3px; }
+.destination-heading h2 { min-width:0; }
+.destination-heading p { flex-shrink:0; }
+@media(max-width:1100px) {
+  .destination-heading { flex-wrap:wrap; gap:8px 20px; }
+  .destination-heading p { flex-shrink:1; }
+}
+
+/* 법적 근거 안내는 흰색 박스로 구분 */
+.confirmation-definition .content-box.definition-box {
+  background:#ffffff;
+  border-color:#d3d3cf;
+}
 </style>
 </head>
 <body>
@@ -1323,12 +1355,7 @@ footer .footer-bottom { color:#b9ccd9; }
 </h1>
       <p class="hero-intro">중국에서 발급된 중국어 서류를 국내 행정기관(공공기관 포함)에 제출하는 경우,<br>
         <strong class="translator-qualification">국가공인 외국어번역행정사(중국어)</strong>가 직접 국문으로 번역하고 번역확인증명서를 발급합니다.</p>
-<div class="hero-comparison">
-    <a class="comparison-link" href="translation-certification-guide.html">
-      <strong class="comparison-question">번역확인증명서와 번역공증, 뭐가 다른가요?</strong>
-      <span class="comparison-sub">아포스티유 안내 <span aria-hidden="true">→</span></span>
-    </a>
-  </div>
+
 </div>
 
 
@@ -1356,6 +1383,9 @@ footer .footer-bottom { color:#b9ccd9; }
       <p class="definition-legal"><strong>행정사법 제2조 제1항 제3호</strong>에 따라 외국어번역행정사는 행정기관의 업무에 관련된 서류를 번역할 수 있습니다.<br>
         <strong>행정사법 제20조 제2항</strong>에 따라 외국어번역행정사는 자신이 번역한 번역문에 대해 원문과 틀림없음을 확인하는 번역확인증명서를 발급할 수 있습니다.</p>
       </div>
+      <div class="definition-comparison">
+        <a class="comparison-link" href="translation-certification-guide.html">번역확인증명서와 번역공증 차이 →</a>
+      </div>
 
     </div>
   </section>
@@ -1365,7 +1395,7 @@ footer .footer-bottom { color:#b9ccd9; }
     <div class="container">
       <div class="section-label" lang="zh-CN">提交用途</div>
       <div class="destination-heading">
-        <h2>주요 제출처</h2>
+        <h2>제출처별 번역확인증명서 안내</h2>
         <p>제출처를 눌러 준비서류와 진행사례를 확인하세요.</p>
       </div>
       <nav class="destination-grid" aria-label="제출처별 번역확인증명서 안내">
