@@ -610,6 +610,58 @@ footer { background: #172b3a; }
   .yueliang-point, .blog-case-box { padding: 16px 18px; }
 }
 
+
+/* 사례를 먼저 보여주는 목록 배치 */
+.page-hero { padding: 26px 0 24px; }
+.page-hero h1 { margin-bottom: 12px; }
+.page-hero p { max-width: none; font-size: 16px; }
+.case-tabs-section { padding: 18px 0; }
+.case-tabs-label { margin-bottom: 10px; font-size: 15px; }
+.case-tab { min-height: 44px; padding: 10px 12px; text-align: center; }
+.case-sections-grid .case-section { padding: 24px 0 32px; background: #fff; border-top: 0; }
+.case-sections-grid .case-section:nth-child(even) { background: #fff; }
+.case-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 20px; margin-bottom: 16px; }
+.case-section-heading h2 { margin: 0; font-size: 25px; line-height: 1.4; }
+.case-section-heading p { color: #666; font-size: 14px; }
+.case-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.case-detail { min-width: 0; display: flex; flex-direction: column; padding: 22px; border: 1px solid #deded9; border-radius: 6px; background: #fff; transition: border-color .15s; }
+.case-detail:hover, .case-detail:focus-within { border-color: #9cb7a4; }
+.case-detail h3 { font-size: 20px; line-height: 1.45; font-weight: 700; margin: 0 0 12px; letter-spacing: -.5px; }
+.case-title-link { color: #0f3d61; text-decoration: none; }
+.case-title-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.case-detail .case-description { font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 18px; }
+.case-actions { margin-top: auto; padding-top: 15px; border-top: 1px solid #ecece8; }
+.case-detail-button { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 42px; padding: 9px 12px; border-radius: 4px; color: #0f3d61; background: #edf4ee; border: 1px solid #d3e1d5; font-size: 14px; font-weight: 600; }
+.case-detail-button:hover { background: #e3eee5; }
+.case-blog-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-top: 8px; }
+.case-blog-link { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 7px 0; color: #444; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.case-blog-link:hover { color: #0f3d61; }
+.case-published { color: #777; font-size: 12px; white-space: nowrap; }
+.case-title-link:focus-visible, .case-detail-button:focus-visible, .case-blog-link:focus-visible { outline: 2px solid #0f3d61; outline-offset: 4px; }
+.cases-point-section { background: #f7f5f2; padding: 22px 0; }
+.cases-point-section .yueliang-point { margin: 0; padding: 16px 20px; }
+.cases-point-section .yueliang-point p { font-size: 15px; }
+@media(max-width:700px) {
+ .page-hero { padding: 22px 0; }
+ .case-list { grid-template-columns: 1fr; gap: 12px; }
+ .case-section-heading { flex-direction: column; gap: 6px; }
+ .case-section-heading h2 { font-size: 23px; }
+ .case-sections-grid .case-section { padding: 22px 0 28px; }
+ .case-tab { min-height: 44px; font-size: 14px; }
+ .case-detail { padding: 18px; }
+ .case-detail h3 { font-size: 19px; }
+ .cases-point-section { padding: 20px 0; }
+}
+
+
+.page-hero h1 { font-size: 34px; line-height: 1.3; letter-spacing: -1px; }
+@media(max-width:700px) { .page-hero h1 { font-size: 28px; } }
+
+.cases-point-section .yueliang-point { width: 100%; max-width: 720px; padding: 14px 18px; }
+.cases-point-section .point-label { font-size: 14px; margin-bottom: 5px; }
+.cases-point-section .yueliang-point strong { font-size: 15px; font-weight: 600; margin-bottom: 5px; }
+.cases-point-section .yueliang-point p { font-size: 14px; line-height: 1.6; }
+
 </style>
 </head>
 
@@ -656,28 +708,263 @@ footer { background: #172b3a; }
 </header>
 
 
-<section class="page-hero">
-  <div class="container">
-
-    <div class="section-label">
-      业务案例
-    </div>
-
-    <h1 class="hero-title">
-      <span>주요 업무사례</span>
-      <span class="hero-badges">
+<section class="page-hero"><div class="container">
+<div class="section-label" lang="zh-CN">业务案例</div>
+<h1 class="hero-title"><span>주요 업무사례</span><span class="hero-badges">
         <span class="case-badge">누적 1,000건+</span>
         <span class="case-badge expertise-badge">월량번역행정사사무소 전문분야</span>
-      </span>
-    </h1>
+      </span></h1>
+<p>직접 진행한 중국 관련 서류 업무를 분야별로 확인해 보세요.</p>
+</div></section>
 
-    <p>
-      2023년 5월부터 현재까지, 1,000건 이상의 중국 관련 서류 업무를 진행해 왔습니다.<br>
-      취업·체류, 학력·자격, 혼인·가족관계, 출생·국적, 기업·법인, 소송·법률·증거서류 등
-      실제 진행한 사례를 분야별로 소개합니다.
-    </p>
+<section class="case-tabs-section">
+  <div class="container">
 
-    <div class="yueliang-point">
+    <div class="case-tabs-label" lang="zh-CN">业务分类</div>
+
+    <div class="case-tabs">
+      <button type="button" class="case-tab active" data-target="employment" aria-controls="employment" aria-pressed="true">
+        중국 취업·체류
+      </button>
+
+      <button type="button" class="case-tab" data-target="education" aria-controls="education" aria-pressed="false">
+        학력·자격
+      </button>
+
+      <button type="button" class="case-tab" data-target="family" aria-controls="family" aria-pressed="false">
+        혼인·가족관계
+      </button>
+
+      <button type="button" class="case-tab" data-target="nationality" aria-controls="nationality" aria-pressed="false">
+        출생·국적
+      </button>
+
+      <button type="button" class="case-tab" data-target="corporate" aria-controls="corporate" aria-pressed="false">
+        기업·법인
+      </button>
+
+      <button type="button" class="case-tab" data-target="other" aria-controls="other" aria-pressed="false">
+        소송·법률·증거서류
+      </button>
+    </div>
+
+  </div>
+</section>
+<div class="case-sections-grid">
+
+  <!-- 01 중국 취업·체류 -->
+  <section class="case-section" id="employment"><div class="container">
+<div class="case-section-heading"><h2>중국 취업·체류 업무사례</h2><p>상세 안내와 블로그 실제 사례를 확인하세요.</p></div>
+<div class="case-list">
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-work-visa-criminal-record.html">중국 취업허가용 범죄수사경력회보서</a></h3>
+<p class="case-description">중국 취업허가 제출용 범죄수사경력회보서를 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-work-visa-criminal-record.html" aria-label="중국 취업허가용 범죄수사경력회보서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224391364582" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 범죄수사경력회보서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-08-27" title="블로그 게시일">2026.08.27</time></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-work-visa-diploma.html">중국 취업허가용 졸업증명서·학위증명서</a></h3>
+<p class="case-description">국내 대학교 졸업증명서의 기재 내용을 확인한 뒤 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-work-visa-diploma.html" aria-label="중국 취업허가용 졸업증명서·학위증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224268903594" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 졸업증명서·학위증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-04-29" title="블로그 게시일">2026.04.29</time></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-work-visa-career-certificate.html">중국 취업허가용 경력증명서</a></h3>
+<p class="case-description">경력증명서의 기재사항과 제출처 요구에 따라 중국어 번역 또는 번역공증 촉탁을 진행하는 사례입니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-work-visa-career-certificate.html" aria-label="중국 취업허가용 경력증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224259018426" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 경력증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-04-21" title="블로그 게시일">2026.04.21</time></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-doctor-medical-practice-license.html">중국 의사 단기의료행위 면허(임시수술허가)</a></h3>
+<p class="case-description">중국 내 단기의료행위 허가 신청에 필요한 의사면허증·졸업증명서 등을 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-doctor-medical-practice-license.html" aria-label="중국 의사 단기의료행위 면허(임시수술허가) 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224254945170" target="_blank" rel="noopener noreferrer" aria-label="중국 의사 단기의료행위 면허(임시수술허가) 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-04-17" title="블로그 게시일">2026.04.17</time></div>
+</div></article>
+</div></div></section>
+
+
+  <!-- 02 학력·자격 -->
+  <section class="case-section" id="education"><div class="container">
+<div class="case-section-heading"><h2>학력·자격 업무사례</h2><p>상세 안내와 블로그 실제 사례를 확인하세요.</p></div>
+<div class="case-list">
+<article class="case-detail">
+<h3><a class="case-title-link" href="renmin-university-documents-apostille.html">국내 대학원 지원용 중국 대학교 학력서류</a></h3>
+<p class="case-description">중국 대학교 졸업증서·학위증서·성적표의 번역공증 촉탁과 중국 아포스티유를 대행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="renmin-university-documents-apostille.html" aria-label="국내 대학원 지원용 중국 대학교 학력서류 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224326784498" target="_blank" rel="noopener noreferrer" aria-label="국내 대학원 지원용 중국 대학교 학력서류 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-university-documents-translation-notary.html">한국외대 통번역대학원 지원용 복단대학교 서류</a></h3>
+<p class="case-description">복단대학교 학사학위증서와 성적표를 국문으로 번역하고 번역공증 촉탁을 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-university-documents-translation-notary.html" aria-label="한국외대 통번역대학원 지원용 복단대학교 서류 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224399577010" target="_blank" rel="noopener noreferrer" aria-label="한국외대 통번역대학원 지원용 복단대학교 서류 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-university-transcript-qnet.html">큐넷 응시자격 심사용 중국 대학교 성적표</a></h3>
+<p class="case-description">큐넷 응시자격 및 관련학과 심사에 필요한 중국 대학교 성적표를 국문으로 번역하고 번역확인증명서를 발급했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-university-transcript-qnet.html" aria-label="큐넷 응시자격 심사용 중국 대학교 성적표 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224352531527" target="_blank" rel="noopener noreferrer" aria-label="큐넷 응시자격 심사용 중국 대학교 성적표 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-university-documents-credit-bank.html">학점은행제 제출용 중국 대학교 학력서류</a></h3>
+<p class="case-description">중국 대학교 졸업증서·학위증서·성적표를 국문으로 번역하고, 학점은행제 제출용 번역확인증명서를 발급했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-university-documents-credit-bank.html" aria-label="학점은행제 제출용 중국 대학교 학력서류 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224340262800" target="_blank" rel="noopener noreferrer" aria-label="학점은행제 제출용 중국 대학교 학력서류 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+</div></div></section>
+
+
+  <!-- 03 혼인·가족관계 -->
+  <section class="case-section" id="family"><div class="container">
+<div class="case-section-heading"><h2>혼인·가족관계 업무사례</h2><p>상세 안내와 블로그 실제 사례를 확인하세요.</p></div>
+<div class="case-list">
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-marriage-registration-korean-certificate.html">중국 혼인신고용 혼인관계증명서</a></h3>
+<p class="case-description">중국에서 먼저 혼인신고하기 위해 혼인관계증명서(상세)의 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-marriage-registration-korean-certificate.html" aria-label="중국 혼인신고용 혼인관계증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/223958688953" target="_blank" rel="noopener noreferrer" aria-label="중국 혼인신고용 혼인관계증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-marriage-certificate-apostille.html">한국 혼인신고용 중국 결혼증</a></h3>
+<p class="case-description">중국에서 혼인신고를 마친 뒤 한국에 제출할 결혼증의 중국 현지 공증과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-marriage-certificate-apostille.html" aria-label="한국 혼인신고용 중국 결혼증 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224335169914" target="_blank" rel="noopener noreferrer" aria-label="한국 혼인신고용 중국 결혼증 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-kinship-notarization-apostille.html">외국인특별전형 제출용 중국 친속관계공증서</a></h3>
+<p class="case-description">외국인특별전형 지원자의 가족관계 증빙을 위해 중국 친속관계공증서의 공증과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-kinship-notarization-apostille.html" aria-label="외국인특별전형 제출용 중국 친속관계공증서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224385858657" target="_blank" rel="noopener noreferrer" aria-label="외국인특별전형 제출용 중국 친속관계공증서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-hukou-f4-visa-apostille.html">F-4 비자 변경용 중국 호구부</a></h3>
+<p class="case-description">E-7에서 F-4로 체류자격 변경 중 출입국에서 추가 요구한 중국 호구부의 공증과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-hukou-f4-visa-apostille.html" aria-label="F-4 비자 변경용 중국 호구부 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224298078049" target="_blank" rel="noopener noreferrer" aria-label="F-4 비자 변경용 중국 호구부 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="original-pronunciation-chinese-name-naturalization.html">귀화 신청용 중국인 성명 원지음 번역</a></h3>
+<p class="case-description">출입국 안내에 따라 본인과 부모의 중국어 성명을 원지음으로 한글 표기하여 친속공증서 번역을 보완했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="original-pronunciation-chinese-name-naturalization.html" aria-label="귀화 신청용 중국인 성명 원지음 번역 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/223689011006" target="_blank" rel="noopener noreferrer" aria-label="귀화 신청용 중국인 성명 원지음 번역 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+</div></div></section>
+
+
+  <!-- 04 출생·국적 -->
+  <section class="case-section" id="nationality"><div class="container">
+<div class="case-section-heading"><h2>출생·국적 업무사례</h2><p>상세 안내와 블로그 실제 사례를 확인하세요.</p></div>
+<div class="case-list">
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-hukou-registration-birth-certificate.html">중국 호구 등록용 국내 출생증명서</a></h3>
+<p class="case-description">한국 병원에서 발급한 출생증명서를 중국어로 번역하고, 중국 호구 등록용 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-hukou-registration-birth-certificate.html" aria-label="중국 호구 등록용 국내 출생증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224212868160" target="_blank" rel="noopener noreferrer" aria-label="중국 호구 등록용 국내 출생증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="naturalization-same-person-certificate.html">한국 귀화 후 중국 제출용 동일인증명서</a></h3>
+<p class="case-description">한국 귀화 후 필요한 동일인증명서를 작성하고 공증·아포스티유 절차를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="naturalization-same-person-certificate.html" aria-label="한국 귀화 후 중국 제출용 동일인증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/223909745603" target="_blank" rel="noopener noreferrer" aria-label="한국 귀화 후 중국 제출용 동일인증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-hukou-cancellation-nationality-certificate.html">중국 호구 말소용 국적취득사실증명서</a></h3>
+<p class="case-description">한국 귀화 후 중국 호구 말소에 필요한 국적취득사실증명서의 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-hukou-cancellation-nationality-certificate.html" aria-label="중국 호구 말소용 국적취득사실증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224250626585" target="_blank" rel="noopener noreferrer" aria-label="중국 호구 말소용 국적취득사실증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="death-certificate-china-apostille.html">중국 은행 제출용 사망진단서</a></h3>
+<p class="case-description">중국 은행 제출용 사망진단서 번역공증 촉탁 후 아포스티유를 추가 진행했습니다. 고인의 신분증 원본 제출이 어려워 기본증명서로 보완했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="death-certificate-china-apostille.html" aria-label="중국 은행 제출용 사망진단서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224137505837" target="_blank" rel="noopener noreferrer" aria-label="중국 은행 제출용 사망진단서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+</div></div></section>
+
+
+  <!-- 05 기업·법인 -->
+  <section class="case-section" id="corporate"><div class="container">
+<div class="case-section-heading"><h2>기업·법인 업무사례</h2><p>상세 안내와 블로그 실제 사례를 확인하세요.</p></div>
+<div class="case-list">
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-company-establishment-documents-apostille.html">중국 법인 설립용 한국 법인서류</a></h3>
+<p class="case-description">정관·주주명부·주주총회 의사록 등 한국 기업서류를 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-company-establishment-documents-apostille.html" aria-label="중국 법인 설립용 한국 법인서류 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224074972564" target="_blank" rel="noopener noreferrer" aria-label="중국 법인 설립용 한국 법인서류 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-joint-venture-company-documents-apostille.html">중국 합자법인 설립용 기업서류</a></h3>
+<p class="case-description">국내 법인의 등기사항전부증명서·사업자등록증명·대표자 여권 등의 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-joint-venture-company-documents-apostille.html" aria-label="중국 합자법인 설립용 기업서류 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224237537883" target="_blank" rel="noopener noreferrer" aria-label="중국 합자법인 설립용 기업서류 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="business-registration-certificate-china-apostille.html">중국 제출용 사업자등록증</a></h3>
+<p class="case-description">사업자등록증 2건과 사업자단위과세 적용 종된사업자 명세를 함께 확인하여 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="business-registration-certificate-china-apostille.html" aria-label="중국 제출용 사업자등록증 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/223353053892" target="_blank" rel="noopener noreferrer" aria-label="중국 제출용 사업자등록증 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+</div></div></section>
+
+
+  <!-- 06 소송·법률·증거서류 -->
+  <section class="case-section" id="other"><div class="container">
+<div class="case-section-heading"><h2>소송·법률·증거서류 업무사례</h2><p>상세 안내와 블로그 실제 사례를 확인하세요.</p></div>
+<div class="case-list">
+<article class="case-detail">
+<h3><a class="case-title-link" href="china-litigation-power-of-attorney-apostille.html">중국 소송대리용 수권위탁서·법정대표자 신분증명서</a></h3>
+<p class="case-description">매매계약 분쟁의 중국 현지 소송대리를 위해 수권위탁서·법정대표자 신분증명서 등을 준비하고 총 17부의 공증·아포스티유를 진행했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="china-litigation-power-of-attorney-apostille.html" aria-label="중국 소송대리용 수권위탁서·법정대표자 신분증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224415899347" target="_blank" rel="noopener noreferrer" aria-label="중국 소송대리용 수권위탁서·법정대표자 신분증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="police-submission-chinese-bank-documents-translation.html">경찰서 제출용 중국 은행서류·영업집조</a></h3>
+<p class="case-description">법무법인의 의뢰로 은행송금통지서·해외송금신청서·영업집조를 국문으로 번역하고 경찰서 제출용 번역확인증명서를 발급했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="police-submission-chinese-bank-documents-translation.html" aria-label="경찰서 제출용 중국 은행서류·영업집조 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/223974564246" target="_blank" rel="noopener noreferrer" aria-label="경찰서 제출용 중국 은행서류·영업집조 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="school-violence-chinese-transcript.html">학교폭력 증거 제출용 중국어 녹취록</a></h3>
+<p class="case-description">여러 학생이 참여한 40분 분량의 중국어 음성파일을 전사하고, 변호사·학교폭력 심의 절차·경찰서 제출용 녹취록 3부를 작성했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="school-violence-chinese-transcript.html" aria-label="학교폭력 증거 제출용 중국어 녹취록 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224278074242" target="_blank" rel="noopener noreferrer" aria-label="학교폭력 증거 제출용 중국어 녹취록 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+<article class="case-detail">
+<h3><a class="case-title-link" href="wechat-chat-police-evidence-translation.html">경찰서 증거 제출용 위챗 대화 내역</a></h3>
+<p class="case-description">금전 분쟁의 증거자료인 위챗 대화 내역을 시간순으로 정리하여 국문으로 번역하고 번역확인증명서를 발급했습니다.</p>
+<div class="case-actions">
+<a class="case-detail-button" href="wechat-chat-police-evidence-translation.html" aria-label="경찰서 증거 제출용 위챗 대화 내역 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/223916371197" target="_blank" rel="noopener noreferrer" aria-label="경찰서 증거 제출용 위챗 대화 내역 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
+</div></article>
+</div></div></section>
+
+</div>
+
+
+<section class="cases-point-section"><div class="container">    <div class="yueliang-point">
 
       <div class="point-label">
         月亮提示
@@ -692,1098 +979,7 @@ footer { background: #172b3a; }
         각 의뢰의 특이사항을 세밀하게 살피고, 필요한 경우 중국 현지와 직접 소통합니다.
       </p>
 
-    </div>
-
-  </div>
-</section>
-
-<section class="case-tabs-section">
-  <div class="container">
-
-    <div class="case-tabs-label" lang="zh-CN">业务分类</div>
-
-    <div class="case-tabs">
-      <button type="button" class="case-tab active" data-target="employment" aria-controls="employment" aria-pressed="true">
-        <span>01</span>
-        중국 취업·체류
-      </button>
-
-      <button type="button" class="case-tab" data-target="education" aria-controls="education" aria-pressed="false">
-        <span>02</span>
-        학력·자격
-      </button>
-
-      <button type="button" class="case-tab" data-target="family" aria-controls="family" aria-pressed="false">
-        <span>03</span>
-        혼인·가족관계
-      </button>
-
-      <button type="button" class="case-tab" data-target="nationality" aria-controls="nationality" aria-pressed="false">
-        <span>04</span>
-        출생·국적
-      </button>
-
-      <button type="button" class="case-tab" data-target="corporate" aria-controls="corporate" aria-pressed="false">
-        <span>05</span>
-        기업·법인
-      </button>
-
-      <button type="button" class="case-tab" data-target="other" aria-controls="other" aria-pressed="false">
-        <span>06</span>
-        소송·법률·증거서류
-      </button>
-    </div>
-
-  </div>
-</section>
-<div class="case-sections-grid">
-
-  <!-- 01 중국 취업·체류 -->
-  <section class="case-section" id="employment">
-    <div class="container">
-
-      <div class="section-label">
-        01 · 中国就业与居留
-      </div>
-
-      <h2>
-        중국 취업·체류 업무사례
-      </h2>
-
-      <p class="case-section-intro">
-        중국 취업허가·비자·체류 절차에 제출하는 한국 발급 서류의
-        중국어 번역부터 번역공증 촉탁 및 아포스티유까지 진행한 사례입니다.
-      </p>
-
-      <div class="case-list">
-
-        <a href="china-work-visa-criminal-record.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 01
-            </span>
-
-            <h3>
-              범죄수사경력회보서 중국어 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              중국 취업허가 제출용 범죄수사경력회보서를 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>범죄수사경력회보서</span>
-              <span>중국 취업</span>
-              <span>중국어 번역공증 촉탁</span>
-              <span>아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-work-visa-diploma.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 02
-            </span>
-
-            <h3>
-              졸업증명서·학위증명서 중국어 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              국내 대학교 졸업증명서의 기재 내용을 확인한 뒤 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>졸업증명서</span>
-              <span>학위증명서</span>
-              <span>중국 취업</span>
-              <span>중국어 번역공증 촉탁</span>
-              <span>아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-work-visa-career-certificate.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 03
-            </span>
-
-            <h3>
-              경력증명서 중국어 번역·번역공증 촉탁
-            </h3>
-
-            <p>
-              경력증명서의 기재사항과 제출처 요구에 따라 중국어 번역 또는 번역공증 촉탁을 진행하는 사례입니다.
-            </p>
-
-            <div class="case-tags">
-              <span>경력증명서</span>
-              <span>중국 취업</span>
-              <span>중국어 번역</span>
-              <span>번역공증 촉탁</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-doctor-medical-practice-license.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 04
-            </span>
-
-            <h3>
-              중국 의사 행의비자｜단기의료행위 면허(임시수술허가) 서류 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              중국 내 단기의료행위 허가 신청에 필요한 의사면허증·졸업증명서 등을 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 의사 행의비자</span>
-              <span>단기의료행위 면허</span>
-              <span>의사면허증</span>
-              <span>학위증명서</span>
-              <span>번역공증 촉탁·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-<div class="blog-case-box">
-  <div class="blog-case-title">네이버 블로그 실제 업무사례</div>
-
-  <a href="https://blog.naver.com/hyelim314/224391364582"
-     target="_blank" rel="noopener">
-    <span class="blog-case-date">블로그 게시일 <time datetime="2026-08-27">2026. 08. 27.</time></span>
-    <span class="blog-case-text">중국 취업비자 범죄수사경력회보서 번역공증 촉탁·아포스티유 실제 사례 →</span>
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224268903594"
-     target="_blank" rel="noopener">
-    <span class="blog-case-date">블로그 게시일 <time datetime="2026-04-29">2026. 04. 29.</time></span>
-    <span class="blog-case-text">중국 취업허가 졸업증명서·학위증명서 진행 사례 →</span>
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224259018426"
-     target="_blank" rel="noopener">
-    <span class="blog-case-date">블로그 게시일 <time datetime="2026-04-21">2026. 04. 21.</time></span>
-    <span class="blog-case-text">중국 취업허가 경력증명서 번역공증 촉탁 사례 →</span>
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224254945170"
-     target="_blank" rel="noopener">
-    <span class="blog-case-date">블로그 게시일 <time datetime="2026-04-17">2026. 04. 17.</time></span>
-    <span class="blog-case-text">중국 의사 행의비자 관련 서류 진행 사례 →</span>
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 02 학력·자격 -->
-  <section class="case-section" id="education">
-    <div class="container">
-
-      <div class="section-label">
-        02 · 学历与资格
-      </div>
-
-      <h2>
-        학력·자격 업무사례
-      </h2>
-
-      <p class="case-section-intro">
-        국내 대학·대학원 입학 및 각종 자격·행정절차에 제출하는
-        중국 발급 학력·자격 서류를 진행한 사례입니다.
-      </p>
-
-      <div class="case-list">
-
-        <a href="renmin-university-documents-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 01
-            </span>
-
-            <h3>
-              국내 대학원 입학 지원｜중국 대학교 졸업증서·학위증서·성적표 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              중국 대학교 졸업증서·학위증서·성적표의 번역공증 촉탁과 중국 아포스티유를 대행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 대학교</span>
-              <span>졸업증서·학위증서</span>
-              <span>성적표</span>
-              <span>대학원 입학</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-university-documents-translation-notary.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 02
-            </span>
-
-            <h3>
-              한국외대 통번역대학원 지원｜복단대학교 학위증서·성적표 국문 번역공증 촉탁
-            </h3>
-
-            <p>
-              복단대학교 학사학위증서와 성적표를 국문으로 번역하고 번역공증 촉탁을 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>복단대학교</span>
-              <span>학위증서</span>
-              <span>성적표</span>
-              <span>국문 번역공증 촉탁</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-university-transcript-qnet.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 03
-            </span>
-
-            <h3>
-              큐넷 기사자격증 응시자격 심사｜중국 대학교 성적표 번역확인증명서
-            </h3>
-
-            <p>
-              큐넷 응시자격 및 관련학과 심사에 필요한 중국 대학교 성적표를 국문으로 번역하고 번역확인증명서를 발급했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>큐넷</span>
-              <span>중국 대학교 성적표</span>
-              <span>국문 번역</span>
-              <span>번역확인증명서</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-university-documents-credit-bank.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 04
-            </span>
-
-            <h3>
-              학점은행제 등록｜중국 대학교 졸업증서·학위증서·성적표 번역확인증명서
-            </h3>
-
-            <p>
-              중국 대학교 졸업증서·학위증서·성적표를 국문으로 번역하고, 학점은행제 제출용 번역확인증명서를 발급했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>학점은행제</span>
-              <span>중국 대학교</span>
-              <span>학력서류</span>
-              <span>번역확인증명서</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-<div class="blog-case-box">
-  <div class="blog-case-title">네이버 블로그 실제 업무사례</div>
-
-  <a href="https://blog.naver.com/hyelim314/224326784498"
-     target="_blank" rel="noopener">
-    중국인민대학교 학력서류 아포스티유 실제 진행 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224399577010"
-     target="_blank" rel="noopener">
-    복단대학교 학위증서·성적표 국문 번역공증 촉탁 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224352531527"
-     target="_blank" rel="noopener">
-    큐넷 제출 중국 대학교 성적표 번역확인증명서 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224340262800"
-     target="_blank" rel="noopener">
-    학점은행제 제출 중국 대학교 학력서류 번역 사례 →
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 03 혼인·가족관계 -->
-  <section class="case-section" id="family">
-    <div class="container">
-
-      <div class="section-label">
-        03 · 婚姻与亲属关系
-      </div>
-
-      <h2>
-        혼인·가족관계 업무사례
-      </h2>
-
-      <p class="case-section-intro">
-        한중 혼인신고와 가족관계 절차에 필요한 한국·중국 발급 서류의
-        번역공증 촉탁 및 아포스티유를 진행한 사례입니다.
-      </p>
-
-      <div class="case-list">
-
-        <a href="china-marriage-registration-korean-certificate.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 01
-            </span>
-
-            <h3>
-              한중 커플 선중국 혼인신고｜혼인관계증명서 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              중국에서 먼저 혼인신고하기 위해 혼인관계증명서(상세)의 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>한중 커플</span>
-              <span>선중국 혼인신고</span>
-              <span>혼인관계증명서</span>
-              <span>아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-marriage-certificate-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 02
-            </span>
-
-            <h3>
-              한중 커플 후한국 혼인신고｜중국 결혼증 공증·아포스티유
-            </h3>
-
-            <p>
-              중국에서 혼인신고를 마친 뒤 한국에 제출할 결혼증의 중국 현지 공증과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>한중 커플</span>
-              <span>후한국 혼인신고</span>
-              <span>중국 결혼증</span>
-              <span>중국 공증·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-kinship-notarization-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 03
-            </span>
-
-            <h3>
-              한국 대학교 외국인특별전형｜중국 친속관계공증서 공증·아포스티유
-            </h3>
-
-            <p>
-              외국인특별전형 지원자의 가족관계 증빙을 위해 중국 친속관계공증서의 공증과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>외국인특별전형</span>
-              <span>친속관계공증서</span>
-              <span>중국 공증</span>
-              <span>중국 아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-hukou-f4-visa-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 04
-            </span>
-
-            <h3>
-              F-4 비자 변경｜중국 호구부 공증·아포스티유
-            </h3>
-
-            <p>
-              E-7에서 F-4로 체류자격 변경 중 출입국에서 추가 요구한 중국 호구부의 공증과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>F-4 비자</span>
-              <span>중국 호구부</span>
-              <span>중국 공증</span>
-              <span>중국 아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="original-pronunciation-chinese-name-naturalization.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 05
-            </span>
-
-            <h3>
-              원지음 발음 번역｜중국인 부모 성명 한글 표기·귀화 신청
-            </h3>
-
-            <p>
-              출입국 안내에 따라 본인과 부모의 중국어 성명을 원지음으로 한글 표기하여 친속공증서 번역을 보완했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>원지음 발음 번역</span>
-              <span>귀화 신청</span>
-              <span>중국인 성명</span>
-              <span>친속공증서</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-<div class="blog-case-box">
-  <div class="blog-case-title">네이버 블로그 실제 업무사례</div>
-
-  <a href="https://blog.naver.com/hyelim314/223958688953"
-     target="_blank" rel="noopener">
-    한중 커플 중국 혼인신고 혼인관계증명서 번역공증 촉탁·아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224335169914"
-     target="_blank" rel="noopener">
-    중국 결혼증 공증·아포스티유 후 한국 혼인신고 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224385858657"
-     target="_blank" rel="noopener">
-    외국인특별전형 중국 친속관계공증서 아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224298078049"
-     target="_blank" rel="noopener">
-    F-4 비자 중국 호구부 공증·아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/223689011006"
-     target="_blank" rel="noopener">
-    귀화 신청 중국인 성명 원지음 번역 실제 사례 →
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 04 출생·국적 -->
-  <section class="case-section" id="nationality">
-    <div class="container">
-
-      <div class="section-label">
-        04 · 出生与国籍
-      </div>
-
-      <h2>
-        출생·국적 업무사례
-      </h2>
-
-      <p class="case-section-intro">
-        출생신고·호구 등록·국적 관련 절차에 필요한 한국·중국 발급 서류의
-        번역공증 촉탁 및 아포스티유를 진행한 사례입니다.
-      </p>
-
-      <div class="case-list">
-
-        <a href="china-hukou-registration-birth-certificate.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 01
-            </span>
-
-            <h3>
-              중국 호구 등록｜한중커플 아기 국내 출생증명서
-            </h3>
-
-            <p>
-              한국 병원에서 발급한 출생증명서를 중국어로 번역하고, 중국 호구 등록용 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 호구 등록</span>
-              <span>한중커플 아기</span>
-              <span>국내 출생증명서</span>
-              <span>번역공증 촉탁·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="naturalization-same-person-certificate.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 02
-            </span>
-
-            <h3>
-              중국인 한국 귀화 후｜동일인증명서(同一人证明)
-            </h3>
-
-            <p>
-              한국 귀화 후 필요한 동일인증명서를 작성하고 공증·아포스티유 절차를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>한국 귀화</span>
-              <span>동일인증명서</span>
-              <span>공증</span>
-              <span>아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-hukou-cancellation-nationality-certificate.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 03
-            </span>
-
-            <h3>
-              중국 호구 말소｜국적취득사실증명서
-            </h3>
-
-            <p>
-              한국 귀화 후 중국 호구 말소에 필요한 국적취득사실증명서의 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 호구 말소</span>
-              <span>한국 귀화</span>
-              <span>국적취득사실증명서</span>
-              <span>번역공증 촉탁·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="death-certificate-china-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 04
-            </span>
-
-            <h3>
-              사망진단서(死亡诊断书)｜중국어 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              중국 은행 제출용 사망진단서 번역공증 촉탁 후 아포스티유를 추가 진행했습니다. 고인의 신분증 원본 제출이 어려워 기본증명서로 보완했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>사망진단서</span>
-              <span>중국어 번역공증 촉탁</span>
-              <span>아포스티유</span>
-              <span>중국 은행 제출</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-<div class="blog-case-box">
-  <div class="blog-case-title">네이버 블로그 실제 업무사례</div>
-
-  <a href="https://blog.naver.com/hyelim314/224212868160"
-     target="_blank" rel="noopener">
-    중국 호구 등록용 국내 출생증명서 번역공증 촉탁·아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/223909745603"
-     target="_blank" rel="noopener">
-    한국 귀화 후 중국 제출용 동일인증명서 실제 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224250626585"
-     target="_blank" rel="noopener">
-    중국 호구 말소·국적취득사실증명서 관련 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224137505837"
-     target="_blank" rel="noopener">
-    중국 은행 제출용 사망진단서 번역공증 촉탁·아포스티유 사례 →
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 05 기업·법인 -->
-  <section class="case-section" id="corporate">
-    <div class="container">
-
-      <div class="section-label">
-        05 · 企业与法人
-      </div>
-
-      <h2>
-        기업·법인 업무사례
-      </h2>
-
-      <p class="case-section-intro">
-        중국 법인 설립·변경 및 기업 업무에 필요한 한국·중국 발급 서류의
-        번역공증 촉탁 및 아포스티유를 진행한 사례입니다.
-      </p>
-
-      <div class="case-list">
-
-        <a href="china-company-establishment-documents-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 01
-            </span>
-
-            <h3>
-              중국 법인 설립｜한국 법인서류 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              정관·주주명부·주주총회 의사록 등 한국 기업서류를 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 법인 설립</span>
-              <span>정관·주주명부</span>
-              <span>주주총회 의사록</span>
-              <span>번역공증 촉탁·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="china-joint-venture-company-documents-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 02
-            </span>
-
-            <h3>
-              중국 합자법인 설립｜기업서류 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              국내 법인의 등기사항전부증명서·사업자등록증명·대표자 여권 등의 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 합자법인 설립</span>
-              <span>등기사항전부증명서</span>
-              <span>사업자등록증명</span>
-              <span>번역공증 촉탁·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="business-registration-certificate-china-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 03
-            </span>
-
-            <h3>
-              营业执照｜중국 제출용 사업자등록증 번역공증 촉탁·아포스티유
-            </h3>
-
-            <p>
-              사업자등록증 2건과 사업자단위과세 적용 종된사업자 명세를 함께 확인하여 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>营业执照</span>
-              <span>사업자등록증</span>
-              <span>사업자단위과세</span>
-              <span>번역공증 촉탁·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-<div class="blog-case-box">
-  <div class="blog-case-title">네이버 블로그 실제 업무사례</div>
-
-  <a href="https://blog.naver.com/hyelim314/224074972564"
-     target="_blank" rel="noopener">
-    중국 법인 설립용 정관·주주명부·주주총회 의사록 아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224237537883"
-     target="_blank" rel="noopener">
-    중국 합자회사 설립용 한국 법인서류 번역공증 촉탁·아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/223353053892"
-     target="_blank" rel="noopener">
-    중국 제출용 사업자등록증 번역공증 촉탁·아포스티유 사례 →
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 06 소송·법률·증거서류 -->
-  <section class="case-section" id="other">
-    <div class="container">
-
-      <div class="section-label">
-        06 · 诉讼、法律与证据材料
-      </div>
-
-      <h2>
-        소송·법률·증거서류 업무사례
-      </h2>
-
-      <p class="case-section-intro">
-        중국 소송·법률 절차와 경찰서·법원 등에 제출하는 증거자료의
-        중국어 번역, 번역확인증명서, 공증·아포스티유를 진행한 사례입니다.
-      </p>
-
-      <div class="case-list">
-
-        <a href="china-litigation-power-of-attorney-apostille.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 01
-            </span>
-
-            <h3>
-              중국 현지 로펌 소송대리 위임｜수권위탁서·법정대표자 신분증명서 공증·아포스티유
-            </h3>
-
-            <p>
-              매매계약 분쟁의 중국 현지 소송대리를 위해 수권위탁서·법정대표자 신분증명서 등을 준비하고 총 17부의 공증·아포스티유를 진행했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>중국 소송</span>
-              <span>수권위탁서</span>
-              <span>법정대표자 신분증명서</span>
-              <span>공증·아포스티유</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="police-submission-chinese-bank-documents-translation.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 02
-            </span>
-
-            <h3>
-              경찰서 제출용 중국어 번역｜은행송금통지서·해외송금신청서·영업집조
-            </h3>
-
-            <p>
-              법무법인의 의뢰로 은행송금통지서·해외송금신청서·영업집조를 국문으로 번역하고 경찰서 제출용 번역확인증명서를 발급했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>경찰서 제출</span>
-              <span>은행송금통지서</span>
-              <span>해외송금신청서</span>
-              <span>번역확인증명서</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="school-violence-chinese-transcript.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 03
-            </span>
-
-            <h3>
-              학교폭력 중국어 녹취록｜학폭위·경찰서·변호사 제출용
-            </h3>
-
-            <p>
-              여러 학생이 참여한 40분 분량의 중국어 음성파일을 전사하고, 변호사·학교폭력 심의 절차·경찰서 제출용 녹취록 3부를 작성했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>학교폭력</span>
-              <span>중국어 녹취록</span>
-              <span>학폭위 제출</span>
-              <span>경찰서 제출</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-
-
-        <a href="wechat-chat-police-evidence-translation.html"
-           class="case-detail-link">
-
-          <article class="case-detail">
-
-            <span class="case-number">
-              案例 04
-            </span>
-
-            <h3>
-              위챗 대화 내역 번역｜경찰서 증거 제출용 번역확인증명서
-            </h3>
-
-            <p>
-              금전 분쟁의 증거자료인 위챗 대화 내역을 시간순으로 정리하여 국문으로 번역하고 번역확인증명서를 발급했습니다.
-            </p>
-
-            <div class="case-tags">
-              <span>위챗 대화 내역</span>
-              <span>경찰서 제출</span>
-              <span>증거자료</span>
-              <span>번역확인증명서</span>
-            </div>
-
-            <div class="case-more">
-              상세 사례 보기 →
-            </div>
-
-          </article>
-        </a>
-<div class="blog-case-box">
-  <div class="blog-case-title">네이버 블로그 실제 업무사례</div>
-
-  <a href="https://blog.naver.com/hyelim314/224415899347"
-     target="_blank" rel="noopener">
-    중국 소송 수권위탁서·법정대표자 신분증명서 공증·아포스티유 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/223974564246"
-     target="_blank" rel="noopener">
-    경찰서 제출용 중국 은행서류 국문 번역·번역확인증명서 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/224278074242"
-     target="_blank" rel="noopener">
-    학교폭력 중국어 녹취록 작성·증거자료 제출 사례 →
-  </a>
-
-  <a href="https://blog.naver.com/hyelim314/223916371197"
-     target="_blank" rel="noopener">
-    위챗 대화 내역 국문 번역·경찰서 증거 제출 사례 →
-  </a>
-</div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-
+    </div></div></section>
 <footer>
   <div class="container">
 
