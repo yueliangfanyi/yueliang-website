@@ -942,6 +942,51 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
     footer .footer-contact a, footer .footer-nav a { color: #c5cfda; }
     footer .footer-contact a:hover, footer .footer-nav a:hover { color: #fff; }
     footer .footer-bottom { color: #acbacb; }
+  /* 상단 제목과 두 배지를 함께 정렬 */
+    .hero-heading-row { display:block; max-width:none; }
+    .hero-heading-row .hero-title {
+      display:grid;
+      grid-template-columns:max-content 1fr;
+      align-items:center;
+      gap:8px 18px;
+    }
+    .hero-title .title-primary { grid-column:1; }
+    .hero-title .title-secondary { grid-column:1 / -1; }
+    .hero-badges {
+      display:flex;
+      align-items:center;
+      flex-wrap:nowrap;
+      gap:8px;
+      letter-spacing:0;
+    }
+    .hero-badges .domestic-badge,
+    .hero-badges .hero-specialty {
+      display:inline-flex;
+      align-items:center;
+      flex:0 0 auto;
+      margin:0;
+      padding:6px 10px;
+      font-size:12px;
+      font-weight:700;
+      line-height:1.5;
+      white-space:nowrap;
+      transform:none;
+      align-self:auto;
+    }
+    @media(max-width:1100px) {
+      .hero-heading-row .hero-title { grid-template-columns:minmax(0,1fr); gap:12px; }
+      .hero-title .title-primary,
+      .hero-title .title-secondary { grid-column:1; }
+      .hero-badges { grid-column:1; }
+    }
+    @media(max-width:560px) {
+      .hero-badges { gap:6px; }
+      .hero-badges .domestic-badge,
+      .hero-badges .hero-specialty {
+        padding:6px;
+        font-size:clamp(8.5px,2.5vw,11px);
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -1021,12 +1066,15 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       </div>
 
       <div class="hero-heading-row">
-      <h1 class="hero-title"><span class="title-primary">중국 취업비자 범죄수사경력회보서</span><br>
-        <span class="title-secondary">중국어 번역공증 촉탁·아포스티유</span>
-        <span class="domestic-badge">한국 서류 → 중국 제출</span>
-      </h1>
-      <div class="hero-specialty">월량번역행정사사무소 전문분야</div>
-    </div>
+        <h1 class="hero-title">
+          <span class="title-primary">중국 취업비자 범죄수사경력회보서</span>
+          <span class="hero-badges">
+            <span class="domestic-badge">한국 서류 → 중국 제출</span>
+            <span class="hero-specialty">월량번역행정사사무소 전문분야</span>
+          </span>
+          <span class="title-secondary">중국어 번역공증 촉탁·아포스티유</span>
+        </h1>
+      </div>
 
       <p>
 
