@@ -1098,7 +1098,17 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
  
     .actual-case .case-card + .case-card { margin-top:20px; }
-  </style>
+  
+    /* 준비사항은 간결하게, 완료 서류 전달은 진행업무에 모아 안내 */
+    .apostille-info .medical-original-note { margin:16px 0 0; padding-left:14px; border-left:3px solid #99b19f; font-size:16px; line-height:1.7; color:#555; }
+    .medical-original-note > strong { color:#0f3d61; font-weight:700; }
+    .medical-delivery-note { margin-top:24px; padding:16px 20px; background:#edf4ee; border:1px solid #d3e1d5; border-radius:6px; }
+    .medical-delivery-note > strong { display:block; margin-bottom:6px; color:#0f3d61; font-size:17px; }
+    .china-process .medical-delivery-note p { margin:0; max-width:none; font-size:16px; line-height:1.7; color:#555; word-break:normal; overflow-wrap:break-word; }
+    .medical-delivery-note p strong { display:inline; color:#3e6549; font-size:inherit; margin:0; }
+    @media(max-width:560px) { .medical-delivery-note { padding:14px 16px; } }
+
+ </style>
 
   <script type="application/ld+json">
   {
@@ -1275,12 +1285,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
       <p class="preparation-intro">중국 현지 담당자가 안내한 서류 목록에 맞춰 의사면허증과 학력서류 등을 발급받아 보내 주세요.</p>
 
-      <div class="yueliang-point hospital-guide-tip">
-        <div class="point-label">月亮提示</div>
-        <strong>중국 제출서류는 일반적으로 원본으로 진행합니다.</strong>
-        <p>수임이 확정되면 준비하실 서류와 발급 방법을 안내해 드립니다.</p>
-        <p class="hospital-guide-notice">병원에서 의뢰해 주시는 경우, 실제 진행 흐름도와 준비사항을 담은 안내문을 작성해 드립니다.</p>
-      </div>
+      <p class="medical-original-note"><strong>중국 제출서류는 일반적으로 원본으로 진행합니다.</strong><br>수임이 확정되면 준비하실 서류와 발급 방법을 안내해 드립니다.</p>
 
     </div>
   </section>
@@ -1304,7 +1309,13 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       </div>
 
 
+      
+      <div class="medical-delivery-note">
+        <strong>서류 전달·병원 담당자 안내</strong>
+        <p>완료된 서류는 <strong>우체국 등기우편·직접 전달·퀵 전달</strong> 중 편하신 방법으로 전달해 드립니다.<br>병원 담당자께는 진행 순서와 준비사항을 정리한 안내문을 제공해 드립니다.</p>
       </div>
+
+    </div>
   </section>
 
 
