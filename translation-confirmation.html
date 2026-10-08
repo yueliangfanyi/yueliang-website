@@ -1259,10 +1259,10 @@ footer .footer-bottom { color:#b9ccd9; }
 .confirmation-definition .definition-box > .confirmation-core { margin:0 0 14px; }
 .confirmation-definition .definition-box > .definition-legal { margin:0; line-height:1.7; }
 
-/* 월량 서비스 안내에만 연초록 적용 */
+/* 월량 서비스 안내를 흰색으로 정리 */
 .page-hero .yueliang-point {
-  background:#edf4ee;
-  border-color:#d3e1d5;
+  background:#ffffff;
+  border-color:#d3d3cf;
 }
 
 /* 비교 안내를 해당 설명 아래로 이동 */
@@ -1295,6 +1295,52 @@ footer .footer-bottom { color:#b9ccd9; }
 .confirmation-definition .content-box.definition-box {
   background:#ffffff;
   border-color:#d3d3cf;
+}
+
+/* 질문 제목과 비교 탭을 설명 박스 위에 정렬 */
+.confirmation-definition .definition-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  margin-bottom:16px;
+}
+.confirmation-definition .definition-heading h2 {
+  font-size:26px;
+  font-weight:700;
+  line-height:1.4;
+  margin:0;
+  min-width:0;
+}
+.definition-heading .definition-comparison { margin:0; margin-left:auto; }
+.confirmation-destinations .destination-heading h2 { color:#222222; }
+.page-hero .yueliang-point .service-summary {
+  color:#444444;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.7;
+  margin:0;
+  max-width:none;
+}
+@media(max-width:700px) {
+  .confirmation-definition .definition-heading { flex-direction:column; align-items:flex-start; gap:10px; }
+  .confirmation-definition .definition-heading h2 { font-size:22px; }
+  .definition-heading .definition-comparison { margin-left:0; justify-content:flex-start; }
+}
+
+/* 페이지 내 핑크 탭 색상을 아래 비교 안내 탭에 맞춤 */
+.hero-title .hero-badges .domestic-badge,
+header .nav-blog,
+.mobile-menu .nav-blog {
+  background:#fce3e7;
+  border:1px solid #e7a1ac;
+  color:#b9303b;
+}
+header .nav-blog:hover,
+.mobile-menu .nav-blog:hover {
+  background:#f9d7dd;
+  border-color:#d98290;
 }
 </style>
 </head>
@@ -1363,7 +1409,7 @@ footer .footer-bottom { color:#b9ccd9; }
       <div class="yueliang-point">
         <div class="point-label">月亮服务</div>
 
-        <strong>서류 검토부터 국문 번역, 번역확인증명서 발급까지 직접 진행합니다.</strong>
+        <p class="service-summary">제출기관에서 번역확인증명서를 인정하는 경우, 별도의 번역공증 없이 제출할 수 있도록 준비합니다.</p>
       </div>
 
     </div>
@@ -1376,16 +1422,19 @@ footer .footer-bottom { color:#b9ccd9; }
 
       <div class="section-label">翻译确认证明书</div>
 
+      <div class="definition-heading">
       <h2>번역확인증명서, 번역공증 대신 제출할 수 있나요?</h2>
+      <div class="definition-comparison">
+        <a class="comparison-link" href="translation-certification-guide.html">번역확인증명서와 번역공증 차이 →</a>
+      </div>
+      </div>
 
       <div class="content-box definition-box">
       <p class="confirmation-core">행정기관(공공기관 포함)에서 번역확인증명서를 인정하는 경우, <span class="notary-alternative">별도의 번역공증 대신</span> 국문 번역문과 번역확인증명서를 제출할 수 있습니다.</p>
       <p class="definition-legal"><strong>행정사법 제2조 제1항 제3호</strong>에 따라 외국어번역행정사는 행정기관의 업무에 관련된 서류를 번역할 수 있습니다.<br>
         <strong>행정사법 제20조 제2항</strong>에 따라 외국어번역행정사는 자신이 번역한 번역문에 대해 원문과 틀림없음을 확인하는 번역확인증명서를 발급할 수 있습니다.</p>
       </div>
-      <div class="definition-comparison">
-        <a class="comparison-link" href="translation-certification-guide.html">번역확인증명서와 번역공증 차이 →</a>
-      </div>
+
 
     </div>
   </section>
