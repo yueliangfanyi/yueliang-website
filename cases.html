@@ -636,7 +636,6 @@ footer { background: #172b3a; }
 .case-blog-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-top: 8px; }
 .case-blog-link { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 7px 0; color: #444; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
 .case-blog-link:hover { color: #0f3d61; }
-.case-published { color: #777; font-size: 12px; white-space: nowrap; }
 .case-title-link:focus-visible, .case-detail-button:focus-visible, .case-blog-link:focus-visible { outline: 2px solid #0f3d61; outline-offset: 4px; }
 .cases-point-section { background: #f7f5f2; padding: 22px 0; }
 .cases-point-section .yueliang-point { margin: 0; padding: 16px 20px; }
@@ -667,17 +666,17 @@ footer { background: #172b3a; }
 .cases-hero-grid { display: grid; grid-template-columns: minmax(0,1fr) 340px; gap: 28px; align-items: center; }
 .cases-hero-copy { min-width: 0; }
 .cases-hero-copy .hero-title { gap: 8px 12px; }
-.cases-hero-tip { width: 100%; margin: 0; padding: 12px 16px; border-left: 2px solid #e63943; background: #fff; }
-.cases-hero-tip .point-label { margin: 0 0 5px; font-size: 14px; font-weight: 600; }
-.page-hero .cases-hero-tip p { margin: 0; max-width: none; font-size: 14px; line-height: 1.55; color: #606060; }
+.cases-hero-tip { width: 100%; margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.cases-hero-tip .point-label { margin: 0 0 5px; color: #777; font-size: 12px; font-weight: 500; letter-spacing: 0; }
+.page-hero .cases-hero-tip p { margin: 0; max-width: none; font-size: 13px; line-height: 1.55; color: #666; }
 /* 분야명 옆 중문 병기 */
-.case-section-heading { display: block; }
+.case-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px 24px; }
 .case-section-heading h2 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 5px 12px; font-size: 25px; }
 .case-section-cn { color: #777; font-size: .68em; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
-.case-section-heading > p { margin-top: 5px; font-size: 13px; }
+.case-section-heading > p { margin: 0 0 0 auto; font-size: 13px; text-align: right; flex-shrink: 0; }
 /* 용도와 서류명 구분 */
 .case-title-link { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0; }
-.case-purpose { color: #0f3d61; font-size: 16px; font-weight: 500; line-height: 1.5; }
+.case-purpose { color: #0f3d61; font-size: 20px; font-weight: 500; line-height: 1.5; }
 .case-title-document-group { display: inline-flex; align-items: baseline; max-width: 100%; min-width: 0; }
 .case-title-separator { color: #bbb; font-size: 17px; font-weight: 400; flex-shrink: 0; margin: 0 5px; }
 .case-document { color: #0f3d61; font-size: 20px; font-weight: 700; line-height: 1.45; word-break: keep-all; overflow-wrap: anywhere; }
@@ -686,8 +685,10 @@ footer { background: #172b3a; }
  .cases-hero-tip { max-width: 360px; }
 }
 @media(max-width:700px) {
+ .case-section-heading { align-items: stretch; gap: 6px; }
+ .case-section-heading > p { margin-left: 0; }
  .case-section-heading h2 { font-size: 23px; }
- .case-purpose { font-size: 15px; }
+ .case-purpose { font-size: 19px; }
  .case-document { font-size: 19px; }
 }
 
@@ -793,28 +794,28 @@ footer { background: #172b3a; }
 <p class="case-description">중국 취업허가 제출용 범죄수사경력회보서를 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
 <div class="case-actions">
 <a class="case-detail-button" href="china-work-visa-criminal-record.html" aria-label="중국 취업허가용 범죄수사경력회보서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
-<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224391364582" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 범죄수사경력회보서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-08-27" title="블로그 게시일">2026.08.27</time></div>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224391364582" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 범죄수사경력회보서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
 </div></article>
 <article class="case-detail">
 <h3><a class="case-title-link" href="china-work-visa-diploma.html"><span class="case-purpose">중국 취업허가용</span><span class="case-title-document-group"><span class="case-title-separator" aria-hidden="true">｜</span><span class="case-document">졸업증명서·학위증명서</span></span></a></h3>
 <p class="case-description">국내 대학교 졸업증명서의 기재 내용을 확인한 뒤 중국어 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
 <div class="case-actions">
 <a class="case-detail-button" href="china-work-visa-diploma.html" aria-label="중국 취업허가용 졸업증명서·학위증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
-<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224268903594" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 졸업증명서·학위증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-04-29" title="블로그 게시일">2026.04.29</time></div>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224268903594" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 졸업증명서·학위증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
 </div></article>
 <article class="case-detail">
 <h3><a class="case-title-link" href="china-work-visa-career-certificate.html"><span class="case-purpose">중국 취업허가용</span><span class="case-title-document-group"><span class="case-title-separator" aria-hidden="true">｜</span><span class="case-document">경력증명서</span></span></a></h3>
 <p class="case-description">경력증명서의 기재사항과 제출처 요구에 따라 중국어 번역 또는 번역공증 촉탁을 진행하는 사례입니다.</p>
 <div class="case-actions">
 <a class="case-detail-button" href="china-work-visa-career-certificate.html" aria-label="중국 취업허가용 경력증명서 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
-<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224259018426" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 경력증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-04-21" title="블로그 게시일">2026.04.21</time></div>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224259018426" target="_blank" rel="noopener noreferrer" aria-label="중국 취업허가용 경력증명서 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
 </div></article>
 <article class="case-detail">
-<h3><a class="case-title-link" href="china-doctor-medical-practice-license.html"><span class="case-purpose">중국 의사</span><span class="case-title-document-group"><span class="case-title-separator" aria-hidden="true">｜</span><span class="case-document">단기의료행위 면허(임시수술허가)</span></span></a></h3>
-<p class="case-description">중국 내 단기의료행위 허가 신청에 필요한 의사면허증·졸업증명서 등을 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
+<h3><a class="case-title-link" href="china-doctor-medical-practice-license.html"><span class="case-purpose">중국 단기의료행위 면허 신청용</span><span class="case-title-document-group"><span class="case-title-separator" aria-hidden="true">｜</span><span class="case-document">의사면허증·학위증명서 등</span></span></a></h3>
+<p class="case-description">한국 의사의 중국 내 단기의료행위 면허(임시수술허가) 신청에 필요한 의사면허증·학위증명서·졸업증명서 등을 중국어로 번역하고, 번역공증 촉탁과 아포스티유를 진행했습니다.</p>
 <div class="case-actions">
-<a class="case-detail-button" href="china-doctor-medical-practice-license.html" aria-label="중국 의사 단기의료행위 면허(임시수술허가) 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
-<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224254945170" target="_blank" rel="noopener noreferrer" aria-label="중국 의사 단기의료행위 면허(임시수술허가) 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a><time class="case-published" datetime="2026-04-17" title="블로그 게시일">2026.04.17</time></div>
+<a class="case-detail-button" href="china-doctor-medical-practice-license.html" aria-label="중국 단기의료행위 면허 신청용 의사면허증·학위증명서 등 상세 안내 보기">상세 안내 보기 <span aria-hidden="true">→</span></a>
+<div class="case-blog-row"><a class="case-blog-link" href="https://blog.naver.com/hyelim314/224254945170" target="_blank" rel="noopener noreferrer" aria-label="중국 단기의료행위 면허 신청용 의사면허증·학위증명서 등 블로그 실제 사례 보기">블로그 실제 사례 <span aria-hidden="true">↗</span></a></div>
 </div></article>
 </div></div></section>
 
