@@ -987,6 +987,48 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         font-size:clamp(8.5px,2.5vw,11px);
       }
     }
+  /* 본문 폭·대비·절차·배지 최종 정리 */
+    .yueliang-point,
+    .apostille-info .preparation-intro,
+    .apostille-info .record-consultation,
+    .preparation-list {
+      width:100%;
+      max-width:none;
+    }
+    .page-hero p,
+    .apostille-info .preparation-intro,
+    .apostille-info .preparation-item p,
+    .process-intro,
+    .document-types > .container > p,
+    .document-item p,
+    .case-card p:not(.case-published),
+    .common-contact-intro {
+      font-size:16px;
+      color:#555;
+      line-height:1.8;
+      letter-spacing:normal;
+      word-spacing:normal;
+      word-break:keep-all;
+    }
+    .apostille-info .record-consultation { color:#b9303b; }
+    .process-step { border-top:1px solid #c9cdca; padding-top:16px; }
+    .process-step span { margin-bottom:6px; }
+    .hero-badges { flex-wrap:wrap; min-width:0; }
+    .hero-badges .domestic-badge,
+    .hero-badges .hero-specialty {
+      padding:6px 10px;
+      font-size:13px;
+      white-space:nowrap;
+      max-width:100%;
+    }
+    @media(max-width:560px) {
+      .hero-badges { gap:7px; }
+      .hero-badges .domestic-badge,
+      .hero-badges .hero-specialty {
+        padding:6px 8px;
+        font-size:12px;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
