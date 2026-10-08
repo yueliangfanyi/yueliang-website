@@ -696,7 +696,7 @@
 ========================= */
 
 footer {
-  background: #17263c;
+  background: #0f3d61;
   color: #aaa;
   padding: 55px 0 28px;
   font-size: 13px;
@@ -1214,6 +1214,37 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 }
 .destination-tab { color:#222; }
 .destination-tab:hover { background:#eaeae7; border-color:#bcbcb7; }
+
+/* 최종 정리: 상단 시작 높이·제목과 설명 정렬·단락 간격 */
+.page-hero { padding-top:50px; }
+.hero-heading-row {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:start;
+  column-gap:24px;
+  row-gap:18px;
+  margin-bottom:0;
+}
+.hero-heading-row .hero-title { grid-column:1; grid-row:1; }
+.hero-heading-row .hero-intro { grid-column:1; grid-row:2; margin:0; max-width:none; }
+.hero-heading-row .hero-comparison { grid-column:2; grid-row:1 / span 2; align-self:start; }
+.page-hero .yueliang-point { margin-top:24px; padding:18px 24px; }
+.page-hero .yueliang-point > strong { display:block; margin-bottom:0; font-size:16px; line-height:1.7; }
+.document-types { padding-top:44px; padding-bottom:52px; }
+.check-before { padding-top:52px; }
+footer { color:#d6e0e8; }
+footer .footer-contact a, footer .footer-nav a { color:#d6e0e8; }
+footer .footer-bottom { color:#b9ccd9; }
+@media(max-width:900px) {
+  .hero-heading-row { grid-template-columns:1fr; row-gap:16px; }
+  .hero-heading-row .hero-comparison { grid-column:1; grid-row:3; justify-self:end; margin-top:0; }
+}
+@media(max-width:700px) {
+  .page-hero { padding-top:28px; }
+  .page-hero .yueliang-point { padding:16px 20px; margin-top:20px; }
+  .document-types { padding-top:32px; padding-bottom:38px; }
+  .check-before { padding-top:38px; }
+}
 </style>
 </head>
 <body>
@@ -1271,6 +1302,8 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   번역확인증명서
   <span class="hero-badges"><span class="legal-badge">행정사법 제20조</span><span class="domestic-badge">중국어 서류 → 한국 제출</span></span>
 </h1>
+      <p class="hero-intro">중국에서 발급된 중국어 서류를 국내 행정기관(공공기관 포함)에 제출하는 경우,<br>
+        국가공인 외국어번역행정사(중국어)가 직접 국문으로 번역하고 번역확인증명서를 발급합니다.</p>
 <div class="hero-comparison">
     <a class="comparison-link" href="translation-certification-guide.html">
       <strong class="comparison-question">번역확인증명서와 번역공증, 뭐가 다른가요?</strong>
@@ -1279,17 +1312,12 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
   </div>
 </div>
 
-      <p class="hero-intro">중국에서 발급된 중국어 서류를 국내 행정기관(공공기관 포함)에 제출하는 경우,<br>
-        국가공인 외국어번역행정사(중국어)가 직접 국문으로 번역하고 번역확인증명서를 발급합니다.</p>
+
 
       <div class="yueliang-point">
         <div class="point-label">月亮服务</div>
 
-        <strong>번역부터 번역확인증명서 발급까지 직접 진행합니다.</strong>
-
-        <p>국내 행정기관(공공기관 포함)에 제출하는 중문 서류를 직접 국문으로 번역하고,</p>
-        <p>번역문과 함께 제출할 외국어번역행정사의 번역확인증명서를 발급합니다.</p>
-        <p class="qualification-note">번역확인증명서는 해당 언어의 외국어번역행정사 자격을 갖춘 행정사가 직접 번역한 번역문에 대해 발급할 수 있습니다.</p>
+        <strong>서류 검토부터 국문 번역, 번역확인증명서 발급까지 직접 진행합니다.</strong>
       </div>
 
     </div>
