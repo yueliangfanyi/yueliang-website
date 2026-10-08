@@ -1029,7 +1029,42 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
         font-size:12px;
       }
     }
-  </style>
+  
+    /* 제출서류 카드와 취업비자 흐름 강조 정리 */
+    .document-types .document-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+    .document-types .document-item {
+      min-width:0;
+      padding:18px 20px;
+      background:#f7faf7;
+      border:1px solid #d6dfd7;
+      border-radius:8px;
+    }
+    .document-types .document-item > strong {
+      display:block;
+      padding-bottom:12px;
+      margin-bottom:12px;
+      border-bottom:1px solid #c8d2c9;
+      color:#0f3d61;
+      font-size:17px;
+      line-height:1.5;
+    }
+    .document-types .document-item p { margin:0; }
+    .visa-flow .flow-highlight {
+      background:transparent;
+      color:#0f3d61;
+      font-weight:700;
+      border-radius:0;
+    }
+    .visa-flow .flow-highlight .flow-country { color:#0f3d61; }
+    @media(max-width:700px) {
+      .document-types .document-grid { grid-template-columns:1fr; gap:12px; }
+      .document-types .document-item { padding:16px; }
+    }
+</style>
 
   <script type="application/ld+json">
   {
@@ -1145,75 +1180,6 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
   </section>
 
-  <!-- 材料准备 -->
-
-  <section class="apostille-info">
-    <div class="container">
-      <div class="section-label" lang="zh-CN">材料准备</div>
-      <h2><span class="heading-navy">의뢰인 준비사항</span>: 서류 발급·전달</h2>
-      <p class="preparation-intro">중국 취업허가 및 Z비자 준비 과정에서 무범죄 관련 서류를 요구받은 경우, 한국에서 발급한 범죄수사경력회보서를 준비합니다.</p>
-      <p class="record-consultation"><strong>수사기록이 있으신 경우, 서류를 준비하시기 전에 먼저 <a href="tel:01086395165">유선 상담</a>을 진행해 주세요.</strong></p>
-      <div class="preparation-list">
-        <div class="preparation-item">
-          <h3>01 · 발급용도 선택</h3>
-          <p>발급용도는 <strong>외국입국·체류허가용</strong>으로 선택해 주세요.</p>
-        </div>
-        <div class="preparation-item">
-          <h3>02 · 발급방법 확인</h3>
-          <p>경찰청 범죄경력회보서 발급시스템에서 온라인으로 발급하거나, 경찰서에서 직접 발급받아 준비할 수 있습니다.</p>
-          <a class="official-issue-link" href="https://crims.police.go.kr/main.do" target="_blank" rel="noopener noreferrer">경찰청 범죄경력회보서 발급시스템 <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="preparation-item">
-          <h3>03 · 컬러 서류 준비</h3>
-          <p>온라인 발급본과 경찰서 종이 발급본 모두 컬러로 준비해 주세요.<br>월량번역행정사에서는 흑백 발급본·흑백 출력본·흑백 스캔본으로 진행하지 않습니다.</p>
-        </div>
-        <div class="preparation-item">
-          <h3>04 · 발급 형태에 따른 서류 전달</h3>
-          <p><strong>온라인 발급본</strong> · 컬러 PDF 원본 파일을 그대로 보내 주세요. 출력한 뒤 다시 촬영하거나 스캔할 필요가 없습니다.</p>
-          <p><strong>경찰서 종이 발급본</strong> · 문서 전체 내용과 발급정보가 선명하게 보이는 컬러 스캔본을 먼저 보내 주세요. 서류 확인 후 진행 가능 여부와 원본 전달 방법을 안내해 드립니다.</p>
-          <p class="preparation-note">회사나 현지 담당기관의 제출서류 목록·안내문이 있다면 함께 보내 주세요.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 办理流程 -->
-
-  <section class="china-process">
-
-    <div class="container">
-
-      <div class="section-label">
-        办理流程
-      </div>
-
-      <h2><span class="heading-navy">월량번역행정사 진행사항</span>: 중국어 번역공증 촉탁·아포스티유</h2>
-
-      <p class="process-intro">서류를 보내 주시면 월량번역행정사가 다음 절차를 진행합니다.</p>
-
-      <div class="process-steps">
-        <div class="process-step">
-          <span>01</span>
-          <strong>서류 확인</strong>
-        </div>
-        <div class="process-step">
-          <span>02</span>
-          <strong>중국어 번역</strong>
-        </div>
-        <div class="process-step">
-          <span>03</span>
-          <strong>번역공증 촉탁</strong>
-        </div>
-        <div class="process-step">
-          <span>04</span>
-          <strong>아포스티유</strong>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
   <!-- 所需材料 -->
 
   <section class="document-types">
@@ -1292,6 +1258,76 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
 
   </section>
 
+  <!-- 材料准备 -->
+
+  <section class="apostille-info">
+    <div class="container">
+      <div class="section-label" lang="zh-CN">材料准备</div>
+      <h2><span class="heading-navy">의뢰인 준비사항</span>: 서류 발급·전달</h2>
+      <p class="preparation-intro">중국 취업허가 및 Z비자 준비 과정에서 무범죄 관련 서류를 요구받은 경우, 한국에서 발급한 범죄수사경력회보서를 준비합니다.</p>
+      <p class="record-consultation"><strong>수사기록이 있으신 경우, 서류를 준비하시기 전에 먼저 <a href="tel:01086395165">유선 상담</a>을 진행해 주세요.</strong></p>
+      <div class="preparation-list">
+        <div class="preparation-item">
+          <h3>01 · 발급용도 선택</h3>
+          <p>발급용도는 <strong>외국입국·체류허가용</strong>으로 선택해 주세요.</p>
+        </div>
+        <div class="preparation-item">
+          <h3>02 · 발급방법 확인</h3>
+          <p>경찰청 범죄경력회보서 발급시스템에서 온라인으로 발급하거나, 경찰서에서 직접 발급받아 준비할 수 있습니다.</p>
+          <a class="official-issue-link" href="https://crims.police.go.kr/main.do" target="_blank" rel="noopener noreferrer">경찰청 범죄경력회보서 발급시스템 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="preparation-item">
+          <h3>03 · 컬러 서류 준비</h3>
+          <p>온라인 발급본과 경찰서 종이 발급본 모두 컬러로 준비해 주세요.<br>월량번역행정사에서는 흑백 발급본·흑백 출력본·흑백 스캔본으로 진행하지 않습니다.</p>
+        </div>
+        <div class="preparation-item">
+          <h3>04 · 발급 형태에 따른 서류 전달</h3>
+          <p><strong>온라인 발급본</strong> · 컬러 PDF 원본 파일을 그대로 보내 주세요. 출력·촬영·재스캔한 파일은 보내지 마세요.<br><strong>경찰서 종이 발급본</strong> · 선명한 컬러 스캔본을 먼저 보내 주세요. 서류 확인 후 원본 전달 방법을 안내해 드립니다.</p>
+          <p class="preparation-note">회사나 현지 담당기관의 제출서류 목록·안내문이 있다면 함께 보내 주세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 办理流程 -->
+
+  <section class="china-process">
+
+    <div class="container">
+
+      <div class="section-label">
+        办理流程
+      </div>
+
+      <h2><span class="heading-navy">월량번역행정사 진행사항</span>: 중국어 번역공증 촉탁·아포스티유</h2>
+
+      <p class="process-intro">서류를 보내 주시면 월량번역행정사가 다음 절차를 진행합니다.</p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <span>01</span>
+          <strong>서류 확인</strong>
+        </div>
+        <div class="process-step">
+          <span>02</span>
+          <strong>중국어 번역</strong>
+        </div>
+        <div class="process-step">
+          <span>03</span>
+          <strong>번역공증 촉탁</strong>
+        </div>
+        <div class="process-step">
+          <span>04</span>
+          <strong>아포스티유</strong>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
   <!-- 办理案例 -->
 
   <section class="actual-case">
@@ -1339,7 +1375,7 @@ header .nav-blog,.mobile-menu .nav-blog{background:#fbeff1;color:#b9303b;border:
       <div class="container">
         <p class="section-cn" lang="zh-CN">咨询联系</p>
         <h2>상담안내</h2>
-        <p class="common-contact-intro">외국입국·체류허가용으로 발급한 컬러 범죄수사경력회보서와 제출기관 안내문을 보내 주시면, 서류 확인 후 진행 방법·소요기간·비용을 안내해 드립니다.</p>
+        <p class="common-contact-intro">범죄수사경력회보서를 카카오톡·위챗·이메일로 보내 주세요.<br>서류 확인 후 필요한 절차와 소요기간·비용을 안내해 드립니다.</p>
 
         <div class="common-contact-layout">
           <div class="common-contact-cards">
