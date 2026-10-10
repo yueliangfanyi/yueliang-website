@@ -1354,6 +1354,28 @@ footer .footer-bottom { color: #acbacb; }
     font-size: 13px;
   }
 }
+/* 메인 상단 버튼: 연초록 */
+.hero-buttons .btn-outline {
+  background: #edf6eb;
+  border-color: #c2d9ba;
+  color: #365c32;
+}
+.hero-buttons .btn-outline:hover {
+  background: #e2efde;
+  border-color: #a8c79e;
+}
+.hero-buttons .btn-outline:focus-visible {
+  outline-color: #365c32;
+}
+/* 모바일 소개 간격과 업무지역 정돈 */
+.hero-region-mobile { display: none; }
+@media (max-width: 600px) {
+  .hero h1 { margin-bottom: 14px; }
+  .hero-info-row { margin-bottom: 5px; }
+  .hero-text { margin-bottom: 16px; }
+  .hero-region-desktop { display: none; }
+  .hero-region-mobile { display: inline; }
+}
 </style>
   <script type="application/ld+json">
 {
@@ -1428,7 +1450,7 @@ footer .footer-bottom { color: #acbacb; }
 <span class="hero-info-row"><strong>자격</strong><span class="hero-info-value">국가공인 외국어번역행정사(10기)<span class="hero-certificate"> · 자격증 번호 22310005509 (행정안전부)</span></span></span>
 <span class="hero-info-row"><strong>번역</strong><span class="hero-info-value">중국어 직접 번역 · 번역확인증명서 발급</span></span>
 <span class="hero-info-row"><strong>공증·인증</strong><span class="hero-info-value">번역공증 촉탁 및 한국/중국 아포스티유 대행</span></span>
-<span class="hero-info-row"><strong>업무지역</strong><span class="hero-info-value">서울 · 경기(안양·평촌역) · 인천 중심 · 전국 대응</span></span>
+<span class="hero-info-row"><strong>업무지역</strong><span class="hero-info-value"><span class="hero-region-desktop">서울 · 경기(안양·평촌역) · 인천 중심 · 전국 대응</span><span class="hero-region-mobile">서울 · 경기 · 인천 중심 · 전국 대응</span></span></span>
 </p>
 
         <div class="hero-buttons">
