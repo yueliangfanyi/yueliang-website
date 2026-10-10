@@ -1395,6 +1395,33 @@ footer .footer-bottom { color: #acbacb; }
   .hero-case-desktop { display: none; }
   .hero-case-mobile { display: inline; }
 }
+/* 모바일 메뉴 버튼: 담백한 흰색과 가는 메뉴 표시 */
+@media (max-width: 600px) {
+  .mobile-menu summary {
+    min-height: 44px;
+    padding: 8px 10px;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    color: #444;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .mobile-menu summary::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 12px;
+    background: linear-gradient(#666, #666) left top / 15px 1px no-repeat,
+                linear-gradient(#666, #666) left center / 15px 1px no-repeat,
+                linear-gradient(#666, #666) left bottom / 15px 1px no-repeat;
+  }
+  .mobile-menu[open] summary::after {
+    content: '';
+    background: linear-gradient(#666, #666) center / 15px 1px no-repeat;
+  }
+}
 </style>
   <script type="application/ld+json">
 {
