@@ -1880,5 +1880,265 @@ footer .footer-bottom { color: #acbacb; }
   });
 })();
 </script>
+  
+<!-- 월량 최근 처리 사례 누적 업데이트: 2026.10.21 -->
+<script>
+(() => {
+  const section = document.getElementById("recent-cases");
+  if (!section) return;
+
+  const list = section.querySelector("#home-case-list");
+  if (!list) return;
+
+  const newCases = [
+    {
+      date: "2026-10-21T12:00",
+      category: "korea",
+      title: "중국 형사사건 변호사 선임, 수권위탁서·가족관계증명서 공증",
+      desc: "중국 형사사건 변호사 선임에 필요한 수권위탁서 공증 촉탁과 가족관계증명서 중국어 번역공증을 긴급 지원한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224448790167"
+    },
+    {
+      date: "2026-10-20T11:53",
+      category: "confirmation",
+      title: "중국 협력사업 설명서·담보서(担保函), 법원 제출용 번역확인증명서",
+      desc: "한국 법원 제출을 위해 중국 회사의 협력사업 설명서와 부동산 담보서를 국문으로 번역하고 번역확인증명서를 발급한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224447569353"
+    },
+    {
+      date: "2026-10-19T14:30",
+      category: "confirmation",
+      title: "대련외국어대학교 졸업증서·학위증서·성적표 번역확인증명서",
+      desc: "학점은행제 보완 요청에 따라 중국 대련외국어대학교 학적 서류를 국문으로 번역하고 번역확인증명서를 발급한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224446552474"
+    },
+    {
+      date: "2026-10-17T23:08",
+      category: "confirmation",
+      title: "중국 신규분양주택(一手房) 대출내역, 출입국 제출용 번역확인증명서",
+      desc: "출입국사무소 제출을 위해 중국 신규분양주택 대출·상환 내역을 국문으로 번역하고 번역확인증명서를 발급한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224445034805"
+    },
+    {
+      date: "2026-10-17T14:40",
+      category: "china",
+      title: "호주 파트너비자 제출용 중국 무범죄증명 영문번역공증",
+      desc: "호주 파트너비자를 신청하는 한국인을 위해 중국 체류 당시 무범죄증명서 발급과 중국 현지 영문번역공증을 대행한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224444685399"
+    },
+    {
+      date: "2026-10-16T11:50",
+      category: "korea",
+      title: "중국 자회사 설립용 사업자등록증·여권 번역공증·아포스티유",
+      desc: "한국 법인이 지분 100%를 보유할 중국 자회사 설립을 위해 사업자등록증과 대표이사 여권의 중국어 번역공증·아포스티유를 진행한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224443562828"
+    },
+    {
+      date: "2026-10-15T19:20",
+      category: "korea",
+      title: "중국 회사 발송용 이행최고통지문 번역공증·아포스티유",
+      desc: "중국 회사에 발송할 이행최고통지문을 번역공증·아포스티유 처리한 후 순풍택배를 통해 발송한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224442908745"
+    },
+    {
+      date: "2026-10-13T20:28",
+      category: "confirmation",
+      title: "카카오뱅크 계좌동결 소명자료, 위챗 대화내역 번역확인증명서",
+      desc: "카카오뱅크 계좌동결 관련 소명을 위해 위챗 대화내역 45페이지를 국문으로 번역하고 번역확인증명서를 발급한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224440619781"
+    },
+    {
+      date: "2026-10-08T11:43",
+      category: "china",
+      title: "D-8 비자 중국인 운전면허증 교환, 중국 공증·아포스티유",
+      desc: "D-8 비자 소지 중국인의 한국 운전면허증 교환을 위해 중국 운전면허증 정본·부본의 현지 공증·아포스티유를 대행한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224435054012"
+    },
+    {
+      date: "2026-10-07T09:47",
+      category: "confirmation",
+      title: "CHSI 학신망 중국고등교육 학력인증보고서 번역확인증명서",
+      desc: "학점은행제 학습자등록을 위해 중국고등교육 학력인증보고서를 국문으로 번역하고 당일 번역확인증명서를 발급한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224433803623"
+    },
+    {
+      date: "2026-10-06T10:27",
+      category: "korea",
+      title: "중국 취업비자 제출용 범죄수사경력회보서 번역공증·아포스티유",
+      desc: "중국 취업허가 신청에 필요한 범죄수사경력회보서를 중국어로 번역하고 번역공증 촉탁·아포스티유를 진행한 사례입니다.",
+      url: "https://blog.naver.com/hyelim314/224432691586"
+    }
+  ];
+
+  const labels = {
+    confirmation: "번역확인증명서",
+    korea: "한국 번역공증·아포스티유",
+    china: "중국 공증·아포스티유"
+  };
+
+  const badgeClasses = {
+    confirmation: "",
+    korea: "badge-notary-apostille",
+    china: "badge-china-apostille"
+  };
+
+  // 기존 사례를 보존하고 동일 URL의 중복 등록을 방지합니다.
+  const existingUrls = new Set(
+    Array.from(list.querySelectorAll(".home-recent-card h3 a"))
+      .map(a => a.href.split("?")[0].replace(/\/$/, ""))
+  );
+
+  newCases.forEach(item => {
+    if (existingUrls.has(item.url)) return;
+
+    const card = document.createElement("article");
+    card.className = "home-recent-card";
+    card.dataset.category = item.category;
+
+    const badgeWrap = document.createElement("div");
+    const badge = document.createElement("span");
+    badge.className = "home-recent-badge " + badgeClasses[item.category];
+    badge.textContent = labels[item.category];
+    badgeWrap.appendChild(badge);
+
+    const date = document.createElement("p");
+    date.className = "home-recent-date";
+    date.append("블로그 게시일 · ");
+
+    const time = document.createElement("time");
+    time.dateTime = item.date;
+    time.textContent = item.date.slice(0,10).replaceAll("-", ".") + ".";
+    date.appendChild(time);
+
+    const heading = document.createElement("h3");
+    const titleLink = document.createElement("a");
+    titleLink.href = item.url;
+    titleLink.target = "_blank";
+    titleLink.rel = "noopener noreferrer";
+    titleLink.textContent = item.title;
+    heading.appendChild(titleLink);
+
+    const summary = document.createElement("p");
+    summary.className = "home-recent-summary";
+    summary.textContent = item.desc;
+
+    const blogLink = document.createElement("a");
+    blogLink.className = "home-recent-link";
+    blogLink.href = item.url;
+    blogLink.target = "_blank";
+    blogLink.rel = "noopener noreferrer";
+    blogLink.textContent = "블로그에서 사례 보기 ↗";
+
+    card.append(badgeWrap, date, heading, summary, blogLink);
+    list.appendChild(card);
+    existingUrls.add(item.url);
+  });
+
+  // 기존 분류 버튼의 이벤트를 교체합니다.
+  const originalFilters = Array.from(
+    section.querySelectorAll(".home-case-filter")
+  );
+  const filters = originalFilters.map(button => {
+    const fresh = button.cloneNode(true);
+    button.replaceWith(fresh);
+    return fresh;
+  });
+
+  const cards = Array.from(
+    list.querySelectorAll(".home-recent-card")
+  );
+
+  // 게시일 기준 최신순으로 정렬합니다.
+  cards.sort((a, b) => {
+    const getDate = card =>
+      card.querySelector("time[datetime]")?.dateTime || "";
+    return getDate(b).localeCompare(getDate(a));
+  });
+  cards.forEach(card => list.appendChild(card));
+
+  // 더 보기 버튼 생성 또는 재사용
+  let more = section.querySelector("#home-more-cases");
+  if (more) {
+    more.replaceWith(more.cloneNode(true));
+    more = section.querySelector("#home-more-cases");
+  } else {
+    const wrapper = document.createElement("div");
+    wrapper.className = "home-more-wrap";
+    wrapper.style.cssText =
+      "display:flex;justify-content:center;margin-top:24px";
+
+    more = document.createElement("button");
+    more.type = "button";
+    more.id = "home-more-cases";
+    more.className = "home-more-button";
+    more.setAttribute("aria-controls", "home-case-list");
+    wrapper.appendChild(more);
+    list.after(wrapper);
+  }
+
+  more.style.cssText =
+    "padding:12px 32px;border:1px solid #0f3d61;" +
+    "border-radius:9px;background:#fff;color:#0f3d61;" +
+    "font-weight:700;cursor:pointer;min-height:44px";
+
+  const status = section.querySelector(".home-filter-status");
+  const PAGE_SIZE = 6;
+  let category = "all";
+  let limit = PAGE_SIZE;
+
+  function render() {
+    const matched = cards.filter(card =>
+      category === "all" || card.dataset.category === category
+    );
+
+    cards.forEach(card => {
+      card.hidden = true;
+      card.style.display = "none";
+    });
+
+    matched.slice(0, limit).forEach(card => {
+      card.hidden = false;
+      card.style.display = "";
+    });
+
+    const shown = Math.min(limit, matched.length);
+    const remaining = matched.length - shown;
+
+    more.hidden = remaining === 0;
+    more.style.display = remaining ? "inline-block" : "none";
+    more.textContent = `더 보기 (${remaining}건 남음)`;
+    more.setAttribute("aria-expanded", String(shown > PAGE_SIZE));
+
+    if (status) {
+      const name = category === "all" ? "전체" : labels[category];
+      status.textContent =
+        `${name} 사례 ${shown}건 표시 / 총 ${matched.length}건`;
+    }
+
+    filters.forEach(button => {
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.filter === category)
+      );
+    });
+  }
+
+  filters.forEach(button => {
+    button.addEventListener("click", () => {
+      category = button.dataset.filter;
+      limit = PAGE_SIZE;
+      render();
+    });
+  });
+
+  more.addEventListener("click", () => {
+    limit += PAGE_SIZE;
+    render();
+  });
+
+  render();
+})();
+</script>
+<!-- 최근 처리 사례 업데이트 끝 -->
 </body>
 </html>
